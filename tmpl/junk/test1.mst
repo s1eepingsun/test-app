@@ -1,0 +1,17 @@
+<div class="sum sum-number{{id}}">
+    {{sum}}
+</div>
+<div class="answers">
+    <div class="answer1">
+        <i>Ответ 1:</i> {{answer1}}
+    </div>
+    <div class="answer2">
+        <i>Ответ 2:</i> {{answer2}}
+    </div>
+    <div class="answer3">
+        <i>Ответ 3:</i> {{answer3}}
+    </div>
+    <div class="answer4">
+        <i>Ответ 4:</i> {{answer4}}
+    </div>
+</div>

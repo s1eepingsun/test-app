@@ -1,0 +1,13 @@
+<div class="result">
+    <div>
+        <h2>Результат теста</h2>
+        <div>Набранные баллы: {{totalPoints}} из {{maxPoints}}</div>
+    </div>
+    <div>
+        <div>Статистика</div>
+        <div>Правильные ответы: {{correctAnswers.length}}</div>
+        <div>Неправильные ответы: {{wrongAnswers.length}}</div>
+        <div>Пропущено заданий: {{tasksSkipped}}</div>
+        <div>Затрачено времени:  {{#each hours}} {{.}} ч. {{/each}} {{#each minutes}} {{.}} мин. {{/each}} {{seconds}} ceк.</div>
+    </div>
+</div>

@@ -1,0 +1,316 @@
+body {
+    background: #fff;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+}
+.clear {
+	clear: both;
+}
+div.answers > div:hover {
+    cursor: pointer;
+}
+.form-left, .form-left {
+    float: left;
+    max-width: 49%;
+}
+.form-left div {
+    float: right;
+    clear: both;
+    min-width: 40%;
+    margin-top: 3px;
+}
+.form-right div {
+    float: left;
+    min-width: 60%;
+    margin-top: 2px;
+    margin-left: 10px;
+}
+#task-form {
+	max-width: 1000px;
+}
+.answers div:hover {
+    color: blue;
+}
+
+/***** form css *****/
+h3 {
+	text-align: center;
+	font-family: georgia;
+	color: #727272;
+	border-bottom: 1px solid #EEE;
+	padding: 5px;
+	font-size: x-large;
+	margin-top: 50px;
+}
+
+/* Basic Grey */
+.basic-grey {
+	margin-left:auto;
+	margin-right:auto;
+    max-width: 577px;
+    padding: 25px 15px 25px 10px;
+    font: 12px Georgia, "Times New Roman", Times, serif;
+    color: #888;
+    text-shadow: 1px 1px 1px #FFF;
+}
+.basic-grey h1 {
+    font-size: 25px;
+    padding: 0px 0px 10px 40px;
+    display: block;
+    border-bottom:1px solid #E4E4E4;
+    margin: -10px -15px 30px -10px;;
+    color: #888;
+}
+.basic-grey h1>span {
+    display: block;
+    font-size: 11px;
+}
+.basic-grey label {
+    display: block;
+    margin: 0px;
+}
+.basic-grey label>span {
+    float: left;
+    width: 30%;
+    text-align: right;
+    padding-right: 10px;
+    margin-top: 10px;
+    color: #888;
+}
+.basic-grey input[type="text"], .basic-grey input[type="email"], .basic-grey textarea, .basic-grey select {
+	border: 1px solid #DADADA;
+	color: #888;
+	height: 30px;
+	margin-bottom: 16px;
+	margin-right: 6px;
+	margin-top: 2px;
+	outline: 0 none;
+	padding: 3px 3px 3px 5px;
+	width: 50%;
+	font-size: 12px;
+	line-height:15px;
+	box-shadow: inset 0px 1px 4px #ECECEC;
+	-moz-box-shadow: inset 0px 1px 4px #ECECEC;
+	-webkit-box-shadow: inset 0px 1px 4px #ECECEC;
+}
+.basic-grey textarea{
+	padding: 5px 3px 3px 5px;
+}
+.basic-grey select {
+    background: #FFF url('down-arrow.png') no-repeat right;
+    background: #FFF url('down-arrow.png') no-repeat right);
+    appearance:none;
+    -webkit-appearance:none; 
+    -moz-appearance: none;
+    text-indent: 0.01px;
+    text-overflow: '';
+    width: 70%;
+    height: 35px;
+	line-height: 25px;
+}
+.basic-grey textarea{
+    height:100px;
+}
+.basic-grey .button {
+	background: #E27575;
+	border: none;
+	padding: 10px 25px 10px 25px;
+	color: #FFF;
+	box-shadow: 1px 1px 5px #B6B6B6;
+	border-radius: 3px;
+	text-shadow: 1px 1px 1px #9E3F3F;
+	cursor: pointer;
+}
+.basic-grey .button:hover {
+    background: #CF7A7A
+}
+.basic-grey .radio-label input {
+    margin-top: 2px;
+}
+
+/***** COPY CSS *****/
+
+#iq_ui {
+    text-align: center;
+    min-width: 1100px;
+}
+#iq_ui_in {
+    text-align: center;
+}
+.mc_iq {
+    margin-left: 10px !important;
+    background: #D3D3D3;
+    display: block;
+    margin: 0 auto;
+    margin-top: 15px;
+    width: 587px;
+    max-heightL: 650px padding-left:0px;
+    padding-right: 0px !important;
+    overflow-x: hidden;
+    overflow: hidden;
+    display: inline-block;
+    padding-bottom: 5px;
+    overflow: hidden;
+    text-align: left;
+}
+.lp_top_1 {
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+    height: 88px;
+    position: relative;
+    overflow: hidden;
+}
+#nav1 {
+    position: relative;
+    display: block;
+    clear: both;
+    height: 29px;
+    width: 587px;
+    vertical-align: middle;
+    padding-top: 3px;
+    font-family: Verdana,Geneva,sans-serif;
+    font-size: 13px;
+    letter-spacing: 0.2em;
+        text-align: center;
+            margin: 0px;
+}
+.lp_top_in {
+    margin-top: 1px;
+    position: relative;
+    padding: 0;
+    padding-left: 4px;
+    font-size: 12pt;
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 2px;
+    border: 3px solid #000;
+}
+#nav2 {
+    position: relative;
+    margin-top: 3px;
+    border: none;
+    width: 590px;
+    overflow-x: hidden;
+    margin-left: -3px;
+    position: relative;
+    display: block;
+    clear: both;
+    height: 44px;
+    margin: 0px;
+    text-align: center;
+}
+#top_nav_pan {
+    text-align: center !important;
+    display: inline-block;
+    height: 40px;
+    overflow: hidden;
+    margin-left: -5px;
+    width: 587px;
+}
+.top_p_b_nav_iq {
+    margin-right: -1px;
+    margin-left: -2px;
+    width: 143px;
+    height: 25px;
+}
+.top_p_b_nav_iq {
+    display: inline-block;
+    border: 1px solid #808080;
+    text-align: center;
+    background: #FFF;
+    width: 117px;
+    height: 28px;
+    overflow: hidden;
+    padding: 5px 0px;
+    vertical-align: top;
+    cursor: pointer;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    font-size: 12pt;
+    letter-spacing: 0px;
+    font-weight: normal;
+    margin-right: 4px;
+        max-width: 25%;
+}
+.top_p_b_nav_iq_notactive {
+    display: inline-block;
+    border: 1px solid #D3D3D3;
+    background: #FFF;
+    width: 143px;
+    height: 28px;
+    overflow: hidden;
+    padding: 5px 0px;
+    vertical-align: top;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    font-size: 12pt;
+    letter-spacing: 0px;
+    font-weight: normal;
+    margin-right: 4px;
+    margin-left: -2px;
+    color: #878282;
+        max-width: 25%;
+}
+#forward_iq {
+    margin-right: 1px;
+}
+.top_p_b_nav_iq_notactive {
+    width: 191px;
+    margin-left: -7px;
+    font-family: Verdana,Geneva,sans-serif;
+}
+.top_p_b_nav_iq_notactive {
+    display: inline-block;
+    border: 1px solid #808080!important;
+    text-align: center;
+}
+.t_co_nav {
+    width: 99%;
+    height: 98%;
+    overflow: hidden;
+    display: table;
+}
+.co_nav {
+    width: 100%;
+    height: 100%;
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 8pt;
+}
+/** footer **/
+#activityDiv p, #regStats p {
+    color: #000;
+    padding-top: 0px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+#vstats p {
+    margin: 0 0 5px 0;
+    color: #000;
+}
+#copyright {
+    color: #000;
+}
+#copyright a {
+    text-decoration: none;
+    color: #000;
+}
+
+
+
+
+
+
+
+
+
+
+

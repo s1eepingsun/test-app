@@ -1,0 +1,51 @@
+body {
+    background: #fff;
+    padding: 10px;
+}
+.container {
+    width: 100%;
+}
+#field {
+    height: 746px;
+    font-size: 16px;
+    font-family: "Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, sans-serif";
+}
+.test-preview, .editing-window {
+    max-width: 620px;
+}
+.result {
+    padding-top: 0;
+}
+#left-side-bar {
+    position: static;
+    display: block;
+    padding: 0;
+}
+#task-form {
+    display: none;
+}
+#field .in-task-description {
+    display: block;
+}
+.list-form input, .list-form label {
+    float: left;
+}
+.list-form .row {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#task-form  .points-table td {
+    text-align: left;
+}
+.editors-block form {
+    margin-bottom: 10px;
+}
+.test-time div:last-child label {
+    font-weight: normal;
+}
+.test-time input {
+    margin: 0 5px;
+}
+.single-test-data p, .task-number, .in-task-description {
+    font-family: Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, sans-serif;
+}

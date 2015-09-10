@@ -1,0 +1,47 @@
+body {
+	padding-top: 10px;
+}
+.single-test-data {
+	border: 1px solid black;
+    padding: 10px 10px 10px 10px;
+    max-width: 570px;
+    display: none;
+    margin: 5px 0 5px 0;
+}
+.task-short {
+    display: black;
+    border: 1px solid black;
+    max-width: 570px;
+    padding: 5px 10px 5px 10px;
+    margin: 5px 0 5px 0;
+}
+.task-short:hover, .task-full:hover {
+    cursor: pointer;
+}
+.form-right {
+	padding-top: 2px;
+}
+#task-form {
+    max-width: 620px;
+}
+textarea.cke_dialog_ui_input_textarea {
+	resize: both !important;
+}
+.list-form label {
+	margin-top: 3px;
+	margin-bottom: 3px;
+    height: 24px;
+}
+.list-form input {
+	margin-top: 3px;
+	margin-bottom: 3px;
+}
+#sidebar .side-bar-tasks {
+    overflow-y: auto;
+    width: 200px;
+	position: fixed;
+	height: 97%;
+}
+#sidebar {
+	posdition: relative;
+}

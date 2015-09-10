@@ -1,0 +1,25 @@
+
+SB2
+<table class="side-bar-table" border="0" cellspacing="0" bordercolor="#999" rules="groups">
+    <thead>
+    <tr>
+        <th>№</th><th>Тип</th><th>Баллы</th>
+    </tr>
+    </thead>
+    <tbody>
+    {{#models}}
+    {{#attributes}}
+    <tr class="task-item" id="qn{{view_number}}">
+        <td>{{view_number}}</td>
+        <td>{{type}}</td>
+        <td>{{max_points}}</td>
+    </tr>
+    {{/attributes}}
+    {{/models}}
+    </tbody>
+</table>
+
+
+
+
+

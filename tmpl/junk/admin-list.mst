@@ -1,0 +1,38 @@
+<div class="result">
+    <h3>Админка mst</h3>
+
+    <h3>Задачи:</h3>
+		
+	<div class="test-tasks">
+		{{#tasks}}
+		<div class="single-test-data" id="task_{{task_id}}">
+			<div>Id: <span class="task-id">{{task_id}}</span> Тип вопроса (название): {{type}}</div>
+			<div>Порядковый номер: {{order_num}}</div>
+			<div>Задание</div>
+			<div class="task-content">{{{task_content}}}</div>
+			<div class="clear">&nbsp;</div>
+			<div>
+				<div class="form-left">
+					<div>Варианты ответов</div>
+					{{#answers}}
+					<div>{{.}}&nbsp;</div>
+					{{/answers}}
+				</div>
+				<div class="form-right">
+					<div>Баллы за ответ</div>
+					{{#answer_points}}
+					<div>{{.}}&nbsp;</div>
+					{{/answer_points}}
+				</div>
+			</div>
+			<div class="clear">&nbsp;</div>
+			<button type="button" class="btn btn-default delete-task">Удалить задачу</button>
+			<button type="button" class="btn btn-default modify-task">Редактировать задачу</button>
+		</div>
+		<div class="clear">&nbsp;</div>
+		{{/tasks}}	
+
+	</div>
+    
+    <div class="response"></div>
+</div>

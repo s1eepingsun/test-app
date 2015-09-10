@@ -1,0 +1,19 @@
+<table class="side-bar-table" border="0" cellspacing="0" bordercolor="#999" rules="groups">
+    <thead>
+    <tr>
+        <th>№</th><th>Id</th><th>Order</th><th>Баллы</th>
+    </tr>
+    </thead>
+    <tbody>
+    {{#models}}
+    {{#attributes}}
+    <tr class="task-item" id="qn{{id}}">
+        <td>{{#plus1}}{{@index}}{{/plus1}}</td>
+        <td>{{id}}</td>
+        <td>{{order_num}}</td>
+        <td>{{#sum answer_points}} {{.}} {{/sum}}</td>
+    </tr>
+    {{/attributes}}
+    {{/models}}
+    </tbody>
+</table>
