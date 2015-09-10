@@ -30,6 +30,7 @@ $i18n = $s->getI18n();
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Тест Математика</title>
+    <link rel="shortcut icon" type="image/x-icon" href="http://logic-games.spb.ru/freecell/favicon.ico">
 
     <script type="text/javascript">
         var _sessionId = "<?php echo $s->getSessionId(); ?>";
@@ -48,18 +49,27 @@ $i18n = $s->getI18n();
     echo "<script type='text/javascript' src='/js/lang/lang.".$s->getI18n()->get("locale", "id").".js?v=$v'></script> \n\r";
     echo "<link media='screen' href='/css/build/shared.css?v=$v' rel='stylesheet' type='text/css'>\n\r";
     ?>
+
+
     <?php include 'controllers/testDataToJS.php'; ?>
+
+    <!-- css -->
+    <link media="screen" href="./Example_files/game-layout.css" rel="stylesheet" type="text/css">
+    <link media="screen" href="css/test-main.css" rel="stylesheet" type="text/css">
+
+    <!-- thrid-party libraries -->
     <script type="text/javascript" src="js/libs/handlebars-v3.0.3.js"></script>
     <script type="text/javascript" src="js/libs/underscore-min.js"></script>
     <script type="text/javascript" src="js/libs/backbone.js"></script>
+    <script type="text/javascript" src="http://test.logic-games.spb.ru//js/lib/mathjax/MathJax.js?config=TeX-AMS_HTML"></script>
+
+    <!-- application core -->
+    <script type="text/javascript" src="js/main.js"></script>
+
+    <!-- modules -->
     <script type="text/javascript" src="js/Timer.js"></script>
     <script type="text/javascript" src="js/models/Test.js"></script>
     <script type="text/javascript" src="js/views/TestView.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
-    <link media="screen" href="./Example_files/game-layout.css" rel="stylesheet" type="text/css">
-    <link media="screen" href="css/test-main.css" rel="stylesheet" type="text/css">
-    <link rel="shortcut icon" type="image/x-icon" href="http://logic-games.spb.ru/freecell/favicon.ico">
-    <script type="text/javascript" src="http://test.logic-games.spb.ru//js/lib/mathjax/MathJax.js?config=TeX-AMS_HTML"></script>
 </head>
 <body>
 

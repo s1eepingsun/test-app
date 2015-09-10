@@ -1,5 +1,6 @@
 //модель общей информации о тесте
-var TestInfo = Backbone.Model.extend({
+var testApp = testApp || {};
+testApp.TestInfo = Backbone.Model.extend({
     url: 'controllers/adminAjax2.php',
     initialize: function() {
         this.on("invalid", this.handleInvalid);
@@ -38,7 +39,7 @@ var TestInfo = Backbone.Model.extend({
                 console.log('Successfully saved!', model, response, options);
 
                 var successText = 'Данные записаны!';
-                adminTestApp.testEdit.testInfoSaved(successText);
+                testApp.testEdit.testInfoSaved(successText);
             },
             error: function(model, error) {
                 console.log('error logs', model, error);
@@ -49,6 +50,6 @@ var TestInfo = Backbone.Model.extend({
     //показывает ошибку валидации
     handleInvalid: function(model, error) {
         console.log('validation error in Task', model, error);
-        adminTestApp.testEdit.showInvalidTestInfo(error);
+        testApp.testEdit.showInvalidTestInfo(error);
     }
 });

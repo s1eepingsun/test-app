@@ -1,8 +1,6 @@
-/**
- * Created by User on 26.08.2015.
- */
-var MainTestView;
-MainTestView = Backbone.View.extend({
+//вьюшка окна детального отображения задач
+var testApp = testApp || {};
+testApp.MainTestView = Backbone.View.extend({
     initialize: function () {
         this.activeTaskID = 0;//задача активная в данный момет
         this.resultMode = false;//служит для переключения стилей: false)прохождение теста; true)просмотр результатов

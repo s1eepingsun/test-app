@@ -18,41 +18,39 @@ $(function() {
     Backbone.emulateHTTP = true;
     Backbone.emulateJSON = true;
 
-    //инициализация теста
-    window.adminTestApp = new AdminTestApp();
-    adminTestApp.init();
+    //инициализация теста, testApp - главный объект админки теста, он сознаёт namespace и запускает тест
+    testApp.init();
 
     //Подключение mathjax
     MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
 });
 
-//главный класс админки теста, он запускает модели и вьюшки Backbone'a
-function AdminTestApp() {
-    //инициализация админки
-    this.init = function() {
-        //инициализация коллекции заданий
-        var modelsArr =  _.values(phpTestData.tasks);
-        console.log('_.values', _.values(phpTestData.tasks));
-        this.testTasks = new TestTasks(modelsArr);
+//инициализирует админку теста
+testApp.init = function() {
+    console.log('testApp', testApp);
 
-        //создаёт модель общей инфы о тесте
-        var testInfoArr = phpTestData;
-        delete testInfoArr['tasks'];
-        this.testInfo = new TestInfo(testInfoArr);
-        console.log('testTasks 45', this.testTasks);
+    //инициализация коллекции заданий
+    var modelsArr =  _.values(phpTestData.tasks);
+    testApp.testTasks = new testApp.TestTasks(modelsArr);
 
-        //подключение View списка задач
-        this.taskListView = new TaskListView({model: this.testTasks}, {templateFile: 'side-bar-admin.hbs'});
-        $('#left-side-bar').html(this.taskListView.render().el);
+    //создаёт модель общей инфы о тесте
+    var testInfoObj = {};
+    _.each(phpTestData, function(item, i) {
+        if(i !== 'tasks') testInfoObj[i] = item;
+    });
+    testApp.testInfo = new testApp.TestInfo(testInfoObj);
 
-        //подключение View детального показа задач
-        this.mainTestView = new MainTestView({model: this.testTasks});
-        $('.test-tasks').html(this.mainTestView.render().el);
+    //подключение View списка задач
+    testApp.taskListView = new testApp.TaskListView({model: testApp.testTasks}, {templateFile: 'side-bar-admin.hbs'});
+    $('#left-side-bar').html(testApp.taskListView.render().el);
 
-        //подключение View редактирования теста
-        this.testEdit = new TestEdit({model: this.testInfo});
-    }
-}
+    //подключение View детального показа задач
+    testApp.mainTestView = new testApp.MainTestView({model: testApp.testTasks});
+    $('.test-tasks').html(testApp.mainTestView.render().el);
+
+    //подключение View редактирования теста
+    testApp.testEdit = new testApp.TestEdit({model: testApp.testInfo});
+};
 
 
 //регистрация хэлперов handlebars.js

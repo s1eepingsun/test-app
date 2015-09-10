@@ -1,5 +1,6 @@
-var TestEdit;
-TestEdit = Backbone.View.extend({
+//вьюшка блока редактирования общей инфы о тесте и отдельных заданий
+var testApp = testApp || {};
+testApp.TestEdit = Backbone.View.extend({
     el: '.editors-block',
     initialize: function () {
         var that = this;
@@ -24,8 +25,8 @@ TestEdit = Backbone.View.extend({
         var that = this;
         var id = $(e.currentTarget).parents('form').find('input[name="id"]').val();
         console.log('Delete id: ', id);
-        console.log('this model: ', adminTestApp.testTasks.get(id));
-        var model = adminTestApp.testTasks.get(id);
+        console.log('this model: ', testApp.testTasks.get(id));
+        var model = testApp.testTasks.get(id);
         if(typeof model === 'undefined') {
             var errorText = 'Ошибка: У сохраняемой модели нет id';
             this.showInvalidTask(errorText);
@@ -49,7 +50,7 @@ TestEdit = Backbone.View.extend({
     //отправляет данные задания из формы в модель для сохранения изменений
     submitTask: function(e) {
         console.log('testEdit submit Task: ', this, e);
-        console.log('size of collection: ', _.size(adminTestApp.testTasks.models));
+        console.log('size of collection: ', _.size(testApp.testTasks.models));
 
         setTimeout(function() {//без таймаута на сервер отправляются путые строки вместо данных из ckeditor
             var formDataArr = $('#task-form').serializeArray();
@@ -77,7 +78,7 @@ TestEdit = Backbone.View.extend({
             });
 
             console.log('formDataObj ', formDataObj);
-            var newTask = new Task(formDataObj);
+            var newTask = new testApp.Task(formDataObj);
             newTask.submitTask();
 
         }, 200);
@@ -86,7 +87,7 @@ TestEdit = Backbone.View.extend({
     //отправляет общие данные теста из формы в модель для сохранения на сервер
     submitTestInfo: function(e) {
         console.log('testEdit submit test info: ', this, e);
-        console.log('size of collection: ', _.size(adminTestApp.testTasks));
+        console.log('size of collection: ', _.size(testApp.testTasks));
         setTimeout(function() {//без таймаута на сервер отправляются путые строки вместо данных из ckeditor
             var formDataArr = $('#test-general-form').serializeArray();
             console.log('formDataArr : ', formDataArr);
@@ -100,7 +101,7 @@ TestEdit = Backbone.View.extend({
             console.log('formDataObj ', formDataObj);
 
             //сохранение новых данных
-            adminTestApp.testInfo.submitInfo(formDataObj);
+            testApp.testInfo.submitInfo(formDataObj);
         }, 200);
     },
 
@@ -108,10 +109,10 @@ TestEdit = Backbone.View.extend({
     showTask: function(id) {
         console.log('testEdit show Task: ', id);
         console.log('this: ', this);
-        if(typeof adminTestApp.testTasks.get(id) === 'undefined') return;
-        var data = adminTestApp.testTasks.get(id)['attributes'];
-        console.log('this.model', adminTestApp.testTasks);
-        console.log('this.model.get(id)', adminTestApp.testTasks.get(id));
+        if(typeof testApp.testTasks.get(id) === 'undefined') return;
+        var data = testApp.testTasks.get(id)['attributes'];
+        console.log('this.model', testApp.testTasks);
+        console.log('this.model.get(id)', testApp.testTasks.get(id));
         console.log('data', data);
 
         for (var property in data.answers) {
@@ -136,7 +137,7 @@ TestEdit = Backbone.View.extend({
 
     //заполняет форму редактирования общих данных о тесте
     showTestInfo: function() {
-        var data = adminTestApp.testInfo.attributes;
+        var data = testApp.testInfo.attributes;
         console.log('showTestInfo ', data);
 
         $('#cke_editor-d1').find('.cke_wysiwyg_frame').contents().find('body').html(data.description);

@@ -6,46 +6,47 @@
     <title>Admin 3</title>
     <link rel="icon" href="http://getbootstrap.com/favicon.ico">
     <script src="./Example_files/openapi.js" type="text/javascript"></script><script type="text/javascript" src="./Example_files/public-main.min.js"></script><style type="text/css"></style>
-<!--    <script type="text/javascript" src="./Example_files/shared-main.js"></script>-->
-<!--    <script type="text/javascript" src="./Example_files/lang.ru.js"></script>-->
+    <!-- <script type="text/javascript" src="./Example_files/shared-main.js"></script>-->
+    <!-- <script type="text/javascript" src="./Example_files/lang.ru.js"></script>-->
 
+    <!-- styles -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <!--<link href="css/offcanvas.css" rel="stylesheet">-->
-    <script src="js/libs/bootstrap.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="js/libs/ie10-viewport-bug-workaround.js"></script>
-    <!--<script src="js/libs/offcanvas.js"></script>-->
-    <script type="text/javascript" src="../ckeditor/ckeditor.js"></script>
+    <link media="screen" href="./Example_files/shared.css" rel="stylesheet" type="text/css">
+    <link media="screen" href="./Example_files/game-layout.css" rel="stylesheet" type="text/css">
+    <link media="screen" href="css/test-main.css" rel="stylesheet" type="text/css">
+    <link href="css/admin3.css" rel="stylesheet" type="text/css">
 
+    <!-- assigning php data to js variable -->
     <?php include 'controllers/testDataToJS.php'; ?>
+
+    <!-- thrid-party libraries -->
+    <script src="js/libs/bootstrap.min.js"></script>
+    <script src="js/libs/ie10-viewport-bug-workaround.js"></script><!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script type="text/javascript" src="../ckeditor/ckeditor.js"></script>
     <script type="text/javascript" src="js/libs/handlebars-v3.0.3.js"></script>
     <script type="text/javascript" src="js/libs/underscore-min.js"></script>
     <script type="text/javascript" src="js/libs/backbone.js"></script>
-    <link media="screen" href="./Example_files/shared.css" rel="stylesheet" type="text/css">
-    <script type="text/javascript" src="js/Timer.js"></script>
-<!--    <script type="text/javascript" src="js/models/AdminTest.js"></script>-->
-<!--    <script type="text/javascript" src="js/views/AdminTestView.js"></script>-->
+    <script type="text/javascript" src="../mathjax/MathJax.js?config=TeX-AMS_HTML"></script>
+
+
+
+    <!-- modules -->
     <script type="text/javascript" src="js/models/Task.js"></script>
-    <script type="text/javascript" src="js/collections/TestTasks.js"></script>
     <script type="text/javascript" src="js/models/TestInfo.js"></script>
+    <script type="text/javascript" src="js/collections/TestTasks.js"></script>
     <script type="text/javascript" src="js/views/MainTestView.js"></script>
     <script type="text/javascript" src="js/views/TaskListView.js"></script>
     <script type="text/javascript" src="js/views/TestEdit.js"></script>
-<!--    <script type="text/javascript" src="js/main.js"></script>-->
-    <link media="screen" href="./Example_files/game-layout.css" rel="stylesheet" type="text/css">
-    <link media="screen" href="css/test-main.css" rel="stylesheet" type="text/css">
 
-    <link href="css/admin3.css" rel="stylesheet" type="text/css">
+    <!-- application core -->
     <script src="js/admin3.js"></script>
-<!--    <script src="js/admin2.js"></script>-->
-    <script type="text/javascript" src="../mathjax/MathJax.js?config=TeX-AMS_HTML"></script>
 </head>
 <body>
 
 <div class="container">
     <div class="row">
             <div class="col-xs-6 col-sm-2" id="left-side-bar">
-<!--                --><?php //include 'controllers/testSidebar.php'; ?>
+                <?php //include 'controllers/testSidebar.php'; ?>
             </div>
             <div class="col-xs-6 col-sm-5 test-preview">
                 <!-- TOP LINKS -->

@@ -1,5 +1,6 @@
-var TaskListView;
-TaskListView = Backbone.View.extend({
+//вьюшка списка задач
+var testApp = testApp || {};
+testApp.TaskListView = Backbone.View.extend({
     defaults: {
         templateFile: 'side-bar2.hbs'
     },
@@ -32,9 +33,9 @@ TaskListView = Backbone.View.extend({
         console.log('taskListView id', id);
 
         //this.model.selectTask(id);
-        adminTestApp.mainTestView.showTask(id);
-        adminTestApp.testEdit.showTask(Number(id));
-        adminTestApp.testEdit.showTaskEditBlock();
+        testApp.mainTestView.showTask(id);
+        testApp.testEdit.showTask(Number(id));
+        testApp.testEdit.showTaskEditBlock();
 
         console.log('THIS:', this);
 

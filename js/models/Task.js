@@ -1,5 +1,6 @@
 //модель задания
-var Task = Backbone.Model.extend({
+var testApp = testApp || {};
+testApp.Task = Backbone.Model.extend({
     initialize: function() {
         this.on("sync", this.syncViews);
         this.on("invalid", this.handleInvalid);
@@ -32,14 +33,14 @@ var Task = Backbone.Model.extend({
     syncViews: function(model) {
         console.log('syncViews new model id', model.id);
 
-        adminTestApp.mainTestView.render();
-        adminTestApp.taskListView.render();
+        testApp.mainTestView.render();
+        testApp.taskListView.render();
 
         //показывает сохранённую задачу и перерисовывает мат.формулы
         setTimeout(function() {
-            adminTestApp.mainTestView.showTask(Number(model.id));
-            adminTestApp.testEdit.showTask(Number(model.id));
-            adminTestApp.testEdit.showTaskEditBlock();
+            testApp.mainTestView.showTask(Number(model.id));
+            testApp.testEdit.showTask(Number(model.id));
+            testApp.testEdit.showTaskEditBlock();
             MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
             MathJax.Hub.Queue(["Rerender",MathJax.Hub]);
         }, 100);
@@ -60,11 +61,11 @@ var Task = Backbone.Model.extend({
                 newModel.order_num = Number(newModel.order_num);
 
                 console.log('response object: ', newModel);
-                adminTestApp.testTasks.set(newModel, {remove: false});
-                console.log(' that.testTasks: ', adminTestApp.testTasks);
+                testApp.testTasks.set(newModel, {remove: false});
+                console.log(' that.testTasks: ', testApp.testTasks);
 
                 var successText = 'Данные записаны!';
-                adminTestApp.testEdit.taskSaved(successText);
+                testApp.testEdit.taskSaved(successText);
             },
             error: function(model, error) {
                 console.log('error logs', model, error);
@@ -75,6 +76,6 @@ var Task = Backbone.Model.extend({
     //показывает ошибку валидации
     handleInvalid: function(model, error, options) {
         console.log('validation error in Task', model, error, options);
-        adminTestApp.testEdit.showInvalidTask(error);
+        testApp.testEdit.showInvalidTask(error);
     }
 });
