@@ -6,21 +6,13 @@ testApp.MainTestView = Backbone.View.extend({
         this.resultMode = false;//служит для переключения стилей: false)прохождение теста; true)просмотр результатов
         this.listenTo(Backbone, 'showResult', this.showResult);
     },
+    template: Handlebars.compile($('#test-main-tmpl').html()),
 
-    //отображает шаблон результата теста
+    //отображает шаблон детального окна задач
     render: function() {
-        var that = this;
-        console.log('render tmpl data main test view: ', this.model);
         var data = this.model;
-
-        $.get('./tmpl/test-main2.hbs', function(source) {
-            console.log('render tmpl data main test view: ', data);
-            var template = Handlebars.compile(source);
-            var rendered = template(data);
-            $('.single-test-data').hide();
-            $('#test-result').show();
-            $(that.el).html(rendered);
-        });
+        var rendered = this.template(data);
+        $(this.el).html(rendered);
         return this;
     },
 

@@ -19,6 +19,14 @@
     <!-- assigning php data to js variable -->
     <?php include 'controllers/testDataToJS.php'; ?>
 
+    <!-- handlebars templates -->
+    <script id="admin-task-list-tmpl" src="tmpl/side-bar-admin.hbs" type="text/x-handlebars-template">
+        <?php include 'tmpl/side-bar-admin.hbs'; ?>
+    </script>
+    <script id="test-main-tmpl" src="tmpl/test-main2.hbs" type="text/x-handlebars-template">
+        <?php include 'tmpl/test-main2.hbs'; ?>
+    </script>
+
     <!-- thrid-party libraries -->
     <script src="js/libs/bootstrap.min.js"></script>
     <script src="js/libs/ie10-viewport-bug-workaround.js"></script><!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
@@ -46,7 +54,7 @@
 <div class="container">
     <div class="row">
             <div class="col-xs-6 col-sm-2" id="left-side-bar">
-                <?php //include 'controllers/testSidebar.php'; ?>
+                <?php include 'controllers/adminTaskList.php'; ?>
             </div>
             <div class="col-xs-6 col-sm-5 test-preview">
                 <!-- TOP LINKS -->
@@ -107,7 +115,7 @@
 
                 <!-- GAME FIELD !! важно чтобы был див с таким айдишников и центрированием, относительного него и будет центрироваться блок с авторизацией !!-->
                 <div id="field">
-                    <?php include 'controllers/testMain.php'; ?>
+                    <?php include 'controllers/adminMain.php'; ?>
                 </div>
             </div>
 

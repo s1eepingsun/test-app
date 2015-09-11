@@ -64,7 +64,7 @@
       <div class="row row-offcanvas row-offcanvas-left">
       
         <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
-             <?php include('controllers/adminSidebar.php'); ?>
+             <?php include('controllers/adminTaskList.php'); ?>
         </div><!--/.sidebar-offcanvas-->
 
         <div class="col-xs-12 col-sm-9">

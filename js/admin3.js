@@ -1,6 +1,3 @@
-/**
- * Created by User on 31.08.2015.
- */
 /*console.log('loading', _gameVariationId, _userId, _username);
 LogicGame.init(onInit);
 function onInit(){
@@ -14,7 +11,7 @@ $(function() {
     //регистрация хэлперов handlebars.js
     registerHandlebarsHelpers();
 
-    //эмуляция JSON и REST
+    //эмуляция REST и JSON
     Backbone.emulateHTTP = true;
     Backbone.emulateJSON = true;
 
@@ -24,6 +21,7 @@ $(function() {
     //Подключение mathjax
     MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
 });
+
 
 //инициализирует админку теста
 testApp.init = function() {
@@ -36,17 +34,17 @@ testApp.init = function() {
     testApp.testInfo = new testApp.TestInfo(phpTestData, {parse: true});
 
     //подключение View списка задач
-    testApp.taskListView = new testApp.TaskListView({model: testApp.testTasks}, {templateFile: 'side-bar-admin.hbs'});
-    $('#left-side-bar').html(testApp.taskListView.render().el);
+    testApp.taskListView = new testApp.TaskListView({model: testApp.testTasks});
+    //$('#left-side-bar').html(testApp.taskListView.render().el);
+    testApp.taskListView.setElement($('#left-side-bar'));
 
     //подключение View детального показа задач
     testApp.mainTestView = new testApp.MainTestView({model: testApp.testTasks});
-    $('.test-tasks').html(testApp.mainTestView.render().el);
+    testApp.mainTestView.setElement($('.test-tasks'));
 
     //подключение View редактирования теста
     testApp.testEdit = new testApp.TestEdit({model: testApp.testInfo});
 };
-
 
 //регистрация хэлперов handlebars.js
 function registerHandlebarsHelpers() {

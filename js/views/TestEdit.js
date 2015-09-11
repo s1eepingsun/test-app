@@ -62,7 +62,6 @@ testApp.TestEdit = Backbone.View.extend({
             formDataObj['answer_points'] = {};
             var expr1 = /answer[0-9]$/;
             var expr2 = /answer[0-9]_points$/;
-            var maxPoints = 0;
 
             formDataArr.forEach(function(item) {
                 if(expr1.test(item.name)) {
@@ -70,12 +69,17 @@ testApp.TestEdit = Backbone.View.extend({
                         formDataObj['answers'][item.name] = item.value;
                     }
                 } else if(expr2.test(item.name)) {
+                    //убирает пробелвы в числах
+                    item.value = item.value.replace(/\s+/g, "");
+
                     formDataObj['answer_points'][item.name] = item.value;
-                    maxPoints += Number(item.value);
                 } else {
                     formDataObj[item.name] = item.value;
                 }
             });
+
+            //убирает пробелвы в числах
+            formDataObj['order_num'] = formDataObj['order_num'].replace(/\s+/g, "");
 
             console.log('formDataObj ', formDataObj);
             var newTask = new testApp.Task(formDataObj);
@@ -99,6 +103,11 @@ testApp.TestEdit = Backbone.View.extend({
             });
             if(formDataObj.id == '') delete formDataObj.id;
             console.log('formDataObj ', formDataObj);
+
+            //убирает пробелы в числах
+            formDataObj.test_hours = formDataObj.test_hours.replace(/\s+/g, "");
+            formDataObj.test_minutes =formDataObj.test_minutes.replace(/\s+/g, "");
+            formDataObj.test_seconds = formDataObj.test_seconds.replace(/\s+/g, "");
 
             //сохранение новых данных
             testApp.testInfo.submitInfo(formDataObj);

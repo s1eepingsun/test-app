@@ -1,27 +1,16 @@
 //вьюшка списка задач
 var testApp = testApp || {};
 testApp.TaskListView = Backbone.View.extend({
-    defaults: {
-        templateFile: 'side-bar2.hbs'
-    },
-    initialize: function (attributes, options) {
-        console.log('SidebarView init model, options:', this, options);
-        this.templateFile = options.templateFile;
-    },
+    template: Handlebars.compile($('#admin-task-list-tmpl').html()),
     events: {
         'click .task-item': 'selectTask'//клик на задачу на сайдбаре
     },
 
     //отображает шаблон списка задач
     render: function() {
-        var that = this;
         var data = this.model;
-        $.get('./tmpl/' + this.templateFile, function(source) {
-            console.log('TaskListView render tmpl data 3: ', data);
-            var template = Handlebars.compile(source);
-            var rendered = template(data);
-            $(that.el).html(rendered);
-        });
+        var rendered = this.template(data);
+        $(this.el).html(rendered);
         return this;
     },
 
