@@ -49,6 +49,7 @@ testApp.TestEdit = Backbone.View.extend({
 
     //отправляет данные задания из формы в модель для сохранения изменений
     submitTask: function(e) {
+        var that = this;
         console.log('testEdit submit Task: ', this, e);
         console.log('size of collection: ', _.size(testApp.testTasks.models));
 
@@ -65,7 +66,11 @@ testApp.TestEdit = Backbone.View.extend({
 
             formDataArr.forEach(function(item) {
                 if(expr1.test(item.name)) {
+                    console.log('item', item);
                     if(item.value != '') {
+                        //заменить инлайновый mathjax на блочный
+                        item.value = that.inlineMathToBlock(item.value);
+
                         formDataObj['answers'][item.name] = item.value;
                     }
                 } else if(expr2.test(item.name)) {
@@ -86,6 +91,16 @@ testApp.TestEdit = Backbone.View.extend({
             newTask.submitTask();
 
         }, 200);
+    },
+
+    //заменить инлайновый mathjax на блочный (в нем font-size одинаковый у всех элементов)
+    //делается заменой /( и /) на /[ и /]
+    inlineMathToBlock: function(string) {
+        var expr = /(.+?)(\\\))/g;
+        var expr2 = /(.+?)(\\\()/g;
+        string = string.replace(expr, '$1\\\]');
+        string = string.replace(expr2, '$1\\\[');
+        return string;
     },
 
     //отправляет общие данные теста из формы в модель для сохранения на сервер

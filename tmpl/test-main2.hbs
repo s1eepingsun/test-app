@@ -9,9 +9,8 @@
             <div class="tb-next-task test-button disabled"><div></div><div>Следующий<br>вопрос</div></div>
             <div>
                 {{#each answers}}
-                    {{#.}}<div answer="<? //=$key;?>" class="answer hoverable">{{{.}}}</div>{{/.}}
+                    {{#.}}<div answer="{{#plus1}}{{@index}}{{/plus1}}" class="answer hoverable">{{{.}}}</div>{{/.}}
                 {{/each}}
-
             </div>
         </div>
         <div class="clear">&nbsp;</div>
