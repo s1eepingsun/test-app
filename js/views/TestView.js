@@ -1,12 +1,10 @@
-/**
- * Created by User on 26.08.2015.
- */
-var TestView;
-TestView = Backbone.View.extend({
+var testApp = testApp || {};
+testApp.TestView = Backbone.View.extend({
     el: '#gameArea',
     initialize: function () {
-        this.activeTaskID = 0;//задача активная в данный момет
+        this.activeTaskID = 0;//id задачи активной в данный момет
         this.resultMode = false;//служит для переключения стилей: false)прохождение теста; true)просмотр результатов
+        this.sorted = false;//сделана ли сортировка, чтобы не сортировать дважды
         this.listenTo(Backbone, 'testTimerTick', this.testTimerShow);//передаётся из Timer.js
     },
     events: {
@@ -73,6 +71,7 @@ TestView = Backbone.View.extend({
     showNextTask: function(event) {
         if(this.activeTaskID > 0) { //если тест запущен
             var element = event.currentTarget;
+            console.log('showNextTask', this, element);
             if (!$(element).hasClass('disabled')) {
                 var id = Number(this.activeTaskID);
                 if (id < this.model.tasksCount) this.showTask(id + 1);
@@ -103,6 +102,7 @@ TestView = Backbone.View.extend({
         this.testTimerShow();
     },
 
+    //отображает таймер
     testTimerShow: function() {
         var timeString = this.model.timer.timeObToString(this.model.timer.timeNow);
         $('#time-left').html(timeString);
@@ -289,15 +289,20 @@ TestView = Backbone.View.extend({
     sortAnswers: function() {
         var config = this.model.attributes.testConfig;
         var tasksCount = this.model.tasksCount;
+        console.log('sorting answers config', config);
 
-        //console.log('model 898989', config);
+        //сортировка dec - по убыванию
         if(config['answerOrder'] === 'dec') {
-            //console.log('config[answerOrder] 898989', config['answerOrder']);
+            //сортировка переворачивает список ответов, поэтому если сделать дважы снова будет дефолтный порядок
+            if(this.sorted == true) return;
             for(var i = 1; i < tasksCount; i++) {
                 var divs = $( '#vn' + i + ' .answers .answer').get().reverse();
                 var answersHTML = domToString(divs);
                 $( '#vn' + i + ' .answers').html(answersHTML);
             }
+            this.sorted = true;
+
+        //сортировка rand - случайный порядок
         } else if(config['answerOrder'] === 'rand') {
             for(i = 1; i < tasksCount; i++) {
                 divs = $( '#vn' + i + ' .answers > div:last-child .answer').get();

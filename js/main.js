@@ -5,8 +5,9 @@ console.log("init");
 }
 
 $(function() {
-    //инициализировать тест
-    new Test({
+    //инициализирует тест
+    //answerOrder - сортировка ответов: rand - случайный порядок, dec - по убыванию order_num
+    testApp.init({
         testConfig: {answerOrder: 'rand'} //случайный порядок для вопросов
     });
 
@@ -14,6 +15,7 @@ $(function() {
     MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
 });
 
-/**
- * Created by User on 25.08.2015.
- */
+testApp.init = function(attrs) {
+    testApp.test = new testApp.Test(attrs);
+};
+

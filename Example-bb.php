@@ -32,13 +32,13 @@
     <script type="text/javascript" src="js/libs/backbone.js"></script>
     <script type="text/javascript" src="../mathjax/MathJax.js?config=TeX-AMS_HTML"></script>
 
-    <!-- application core -->
-    <script type="text/javascript" src="js/main.js"></script>
-
     <!-- modules -->
     <script type="text/javascript" src="js/Timer.js"></script>
     <script type="text/javascript" src="js/models/Test.js"></script>
     <script type="text/javascript" src="js/views/TestView.js"></script>
+
+    <!-- application core -->
+    <script type="text/javascript" src="js/main.js"></script>
 </head>
 <body>
 

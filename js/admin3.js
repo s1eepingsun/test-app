@@ -30,15 +30,10 @@ testApp.init = function() {
     console.log('testApp', testApp);
 
     //инициализация коллекции заданий
-    var modelsArr =  _.values(phpTestData.tasks);
-    testApp.testTasks = new testApp.TestTasks(modelsArr);
+    testApp.testTasks = new testApp.TestTasks(phpTestData, {parse: true});
 
     //создаёт модель общей инфы о тесте
-    var testInfoObj = {};
-    _.each(phpTestData, function(item, i) {
-        if(i !== 'tasks') testInfoObj[i] = item;
-    });
-    testApp.testInfo = new testApp.TestInfo(testInfoObj);
+    testApp.testInfo = new testApp.TestInfo(phpTestData, {parse: true});
 
     //подключение View списка задач
     testApp.taskListView = new testApp.TaskListView({model: testApp.testTasks}, {templateFile: 'side-bar-admin.hbs'});

@@ -15,8 +15,6 @@
 </div> 
 <div id="close-result-task"><img src="images/icon_close.png"></div>
 
-
-
 <div class="start-message">
     <?=$testData['start_message'];?>
 </div>
@@ -51,7 +49,6 @@
 <div id="nothing-answered">
 Вы не решили ни одного задания.
 </div>
-
 
 <div id="test-result"></div>
 <div class="response"></div>

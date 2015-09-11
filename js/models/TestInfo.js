@@ -51,5 +51,14 @@ testApp.TestInfo = Backbone.Model.extend({
     handleInvalid: function(model, error) {
         console.log('validation error in Task', model, error);
         testApp.testEdit.showInvalidTestInfo(error);
+    },
+
+    parse: function(data) {
+        console.log('parsing test info', data);
+        var newData = {};
+        _.each(data, function(item, i) {
+            if(i !== 'tasks') newData[i] = item;
+        });
+        return newData;
     }
 });

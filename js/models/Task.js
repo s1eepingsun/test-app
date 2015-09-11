@@ -18,7 +18,7 @@ testApp.Task = Backbone.Model.extend({
             }
         });
 
-        if(attrs.order_num !== '') {
+            if(attrs.order_num !== '') {
             if(!$.isNumeric(attrs.order_num)) message = attrs.order_num + ' Порядковый номер должен быть числом';
         }
         if(attrs.order_num < 0) message = attrs.order_num + ' Порядковый номер должен быть больше 0';

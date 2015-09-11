@@ -77,7 +77,7 @@ class TestsDB
         //записывает данные в файл
         if(file_put_contents($file, $newData)) {
             echo $newData;
-        }  else {
+        } else {
             echo ' error, failed to fwrite test info';
         }
 

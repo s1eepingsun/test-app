@@ -1,20 +1,17 @@
 /**
 Конфиг:
 testConfig: {
-    taskOrder: 'inc',  //сортировка заданий
     answerOrder: 'inc' //сортировка вопросов
 }
 Варианты сортировки для конфига:
-inc - по возрастанию порядкового номера (как в админке),
-dec - наоборот,
+dec - по убыванию order_num,
 rand - случайный порядок
  */
 
-var Test;
-Test = Backbone.Model.extend({
+var testApp = testApp || {};
+testApp.Test = Backbone.Model.extend({
     defaults: {
         testConfig: {
-            taskOrder: 'inc',
             answerOrder: 'inc'
         }
     },
@@ -24,14 +21,13 @@ Test = Backbone.Model.extend({
         this.answersGiven = [];
         this.tasksCount = 0;
         this.realTimeGiven = phpTestData.timerData;
-        console.log('data: ', this.data);
+        console.log('this data: ', this);
 
-        //Задает номер отображаемый в html и заполняет массив correctAnswers
-        //также считает max points (needed for side-bar.mst), считает задачи
+        //заполняет массив correctAnswers и считает задачи
         this.prepareData();
 
         //передаёт обработчик во View
-        this.testView = new TestView({model: this});
+        this.testView = new testApp.TestView({model: this});
 
         //слушает каждое изменение таймеры, если время == 0, заканчивает тест
         this.listenTo(Backbone, 'testTimerTick', this.testTimerCheck);//передаётся из Timer.js
@@ -45,36 +41,34 @@ Test = Backbone.Model.extend({
 
     //проводит первичную обработку полученных с сервера данных
     prepareData: function() {
-        var j = 1;
         var data = this.data;
+
+        data = this.sortByOrderNum(data);
+
         for (var property in data.tasks) {
             if(data.tasks.hasOwnProperty(property)) {
                 //заполняет correctAnswers
-                this.correctAnswers[j] = data.tasks[property]['answer_points'];
-
-                //считает maxPoints
-                var maxPoints = 0;
-                for(var i=0; i<data.tasks[property]['answer_points'].length; i++) {
-                    var points = Number(data.tasks[property]['answer_points'][i]);
-
-                    if($.isNumeric(points)) {
-                        maxPoints = maxPoints + points;
-                    }
-                }
-                data.tasks[property]['max_points'] = maxPoints;
-
-                //ставит новые индексы и задаёт view_number
-                data.tasks[j] = data.tasks[property];
-                j++;
-                data.tasks[property]['view_number'] = j;
+                console.log(' data.tasks[property]',  data.tasks[property]);
+                this.correctAnswers[property] = data.tasks[property]['answer_points'];
 
                 //считает задачи
                 this.tasksCount++;
             }
         }
+
         this.data = data;
         console.log('data after prepareData: ', this.data);
         console.log('this.correctAnswers: ', this.correctAnswers);
+    },
+
+    //сортирует задания по order_num
+    sortByOrderNum: function(data) {
+        var sorted = _.sortBy(data.tasks, 'order_num');
+        data.tasks = {};
+        sorted.forEach(function(item, i) {
+            data.tasks[i + 1] = item; //if not put +1 here, 0 index will break assignments
+        });
+        return data;
     },
 
     //запускает таймер
