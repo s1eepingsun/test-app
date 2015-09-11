@@ -96,10 +96,10 @@ testApp.TestEdit = Backbone.View.extend({
     //заменить инлайновый mathjax на блочный (в нем font-size одинаковый у всех элементов)
     //делается заменой /( и /) на /[ и /]
     inlineMathToBlock: function(string) {
-        var expr = /(.+?)(\\\))/g;
-        var expr2 = /(.+?)(\\\()/g;
-        string = string.replace(expr, '$1\\\]');
-        string = string.replace(expr2, '$1\\\[');
+        var expr = /\\\)/g;
+        var expr2 = /\\\(/g;
+        string = string.replace(expr, '\\\]');
+        string = string.replace(expr2, '\\\[');
         return string;
     },
 
