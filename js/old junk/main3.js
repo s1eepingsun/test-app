@@ -14,7 +14,7 @@ $(function() {
   //загружает тест
   var test = new Test(testConfig);
   test.loadTest();
-  
+
   
   //Подключение mathjax
   MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
@@ -35,7 +35,7 @@ $(function() {
   }); */
 	
 
-})
+});
 
 function Test(testConfig) {
   var that = this;

@@ -138,6 +138,22 @@ class TestsDB
             }
         }
 
+        //удалить время на выполнение задания, если оно не валидное
+        foreach($model['taskTimerData'] as $key => $value) {
+            if(!is_numeric($value) || $value == '') $value = 0;
+            if($value < 0) $value = -$value;
+            $model['taskTimerData'][$key] = intval($value);
+        }
+
+        //записывает время числом (в миллисекундах)
+        $timestamp = ($model['taskTimerData']['task_seconds'] +
+                $model['taskTimerData']['task_minutes'] * 60 +
+                $model['taskTimerData']['task_hours'] * 3600) * 1000;
+
+        $model['taskTimerData'] = $timestamp;
+        if(!is_numeric($model['taskTimerData']) || $model['taskTimerData'] <= 0) unset($model['taskTimerData']);
+
+
         $oldData['tasks'][$id] = $model;
 
         //возвращаемая модель для backbone.js
@@ -243,6 +259,33 @@ class TestsDB
         } else {
             echo 'error, failed to fwrite short data<br>';
         }
+    }
+
+    //перевод времени из таймстампа (в миллисекундах) в массив
+    public function timestampToArray($timestamp) {
+        $timeArr = array();
+
+        $seconds = $timestamp/1000;
+
+        //hours
+        $timeArr['h'] = [];
+        if($seconds > 3600) {
+            $timeArr['h'] = floor($seconds/3600);
+            $seconds = $seconds%3600;
+        }
+        if(count( $timeArr['h']) == 0) $timeArr['h'] = 0;
+
+        //minutes
+        $timeArr['m'] = [];
+        if($seconds > 60) {
+            $timeArr['m'] = floor($seconds/60);
+            $seconds = $seconds%60;
+        }
+        if(count( $timeArr['m']) == 0) $timeArr['m'] = 0;
+
+        $timeArr['s'] = floor($seconds);
+
+        return $timeArr;
     }
 
 

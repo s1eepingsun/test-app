@@ -1,6 +1,7 @@
-function Timer(time) {
+function Timer(time, timerInterval) {
     var that = this;
     this.time = time;
+    this.interval = 1000/timerInterval;
 
     //записывает время запуска таймера, и задаёт время выполнения теста
     this.newTimer = function() {
@@ -8,28 +9,41 @@ function Timer(time) {
         this.timeNow = this.time;
     };
 
-    //запускает таймер, запускает event для модели и для вида
-    this.go = function() {
+    /*this.newTaskTimer = function() {
+        this.taskStarted = new Date().getTime();
+        this.taskTimeNow = this.time;
+    };*/
+
+    //запускает таймер обратного отчёта, запускает event
+    this.goDown = function() {
         that.activeTimer = setInterval(function() {
-            that.timeNow = that.timeObDecrease(that.timeNow);
+            that.timeNow -= that.interval;
             Backbone.trigger('testTimerTick');
-        }, 1000);
+        }, this.interval);
+
+    };
+
+    //запускает таймер на увеличение, запускает event
+    this.goUp = function() {
+        that.activeTimer = setInterval(function() {
+            that.timeNow += that.interval;
+            Backbone.trigger('testTimerTick');
+        }, this.interval);
     };
 
     //@return obj - останавливает таймер и записывает время прошедшее с запуска таймера, заканчивает тест
     this.stop = function() {
         clearTimeout(that.activeTimer);
         this.testEnded = new Date().getTime();
-        console.log('test ENded:', this.testEnded);
+        console.log('test/task ENded timestamp:', this.testEnded);
     };
 
+    //возвращает разницу время начала и окончания теста
     this.getTimeSpent = function() {
-        var timeSpent = this.testEnded - this.testStarted;
-        timeSpent = this.timeToObject(timeSpent);
-        return timeSpent;
+        return this.testEnded - this.testStarted;
     };
 
-    //@return obj - уменьшает время в объекте на 1 сек
+    //@return obj - уменьшает время в объекте времени на 1 сек
     this.timeObDecrease = function(time) {
         time.s--;
 
@@ -45,6 +59,23 @@ function Timer(time) {
                 time.h--;
                 time.m = 59;
             }
+        }
+
+        return time;
+    };
+
+    //увеличивает время в объекте времени на 1 сек
+    this.timeObIncrease = function(time) {
+        time.s++;
+
+        if(time.s==60){
+            time.m++;
+            time.s=0;
+        }
+
+        if(time.m==60){
+            time.h++;
+            time.m=0;
         }
 
         return time;
@@ -84,6 +115,7 @@ function Timer(time) {
             timeObject.h.push(Math.floor(seconds/3600));
             seconds = seconds%3600;
         }
+        if(timeObject.h.length == 0) timeObject.h = 0;
 
         //minutes
         timeObject.m = [];
@@ -91,6 +123,7 @@ function Timer(time) {
             timeObject.m.push(Math.floor(seconds/60));
             seconds = seconds%60;
         }
+        if(timeObject.m.length == 0) timeObject.m = 0;
 
         timeObject.s = Math.floor(seconds);
 

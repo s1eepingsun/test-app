@@ -19,8 +19,9 @@ testApp.Test = Backbone.Model.extend({
         this.data = phpTestData; //берёт данные теста из json'а посланного при загрузке страницы
         this.correctAnswers = [];
         this.answersGiven = [];
+        this.taskTimer = []; //array of Timer instances
+        this.tasksTimeSpent = [];
         this.tasksCount = 0;
-        this.realTimeGiven = phpTestData.timerData;
         console.log('this data: ', this);
 
         //заполняет массив correctAnswers и считает задачи
@@ -31,12 +32,35 @@ testApp.Test = Backbone.Model.extend({
 
         //слушает каждое изменение таймеры, если время == 0, заканчивает тест
         this.listenTo(Backbone, 'testTimerTick', this.testTimerCheck);//передаётся из Timer.js
+
+        if(this.attributes.testConfig.taskTimerMode == 'dec') {
+            this.listenTo(Backbone, 'testTimerTick', this.taskTimerCheck);//передаётся из Timer.js
+        }
     },
 
-    //записывает данные ответы в this.answersGiven
-    recieveAnswer: function(args) {
-        this.answersGiven[args[0]] = args[1];
-        console.log('answersGiven: ', this.answersGiven);
+    //записывает данные ответы в this.answersGiven; если элемент найден в массиве, удаляет его
+    //передаёт выбранные ответы в метод вьюшки для отображения ответов
+    recieveAnswer: function(id, answer) {
+        //this.answersGiven[id] = answer;
+        if (!this.answersGiven[id]) this.answersGiven[id] = [];
+        var index = $.inArray(answer, this.answersGiven[id]);
+
+        if(this.attributes.testConfig.multipleChoices == true) {
+            if (index > -1) {
+                this.answersGiven[id].splice(index, 1);
+            } else {
+                this.answersGiven[id].push(answer);
+            }
+        } else {
+            if (index > -1) {
+                this.answersGiven[id] = [];
+            } else {
+                this.answersGiven[id] = [];
+                this.answersGiven[id].push(answer);
+            }
+        }
+
+        this.testView.reflectAnswers(id, this.answersGiven[id]);
     },
 
     //проводит первичную обработку полученных с сервера данных
@@ -71,15 +95,83 @@ testApp.Test = Backbone.Model.extend({
         return data;
     },
 
+    //resets test data (needed for initiating new tests)
+    testDataReset: function() {
+        this.answersGiven = [];
+        this.taskTimer = []; //array of Timer instances
+        this.tasksTimeSpent = [];
+    },
+
+    //при переключении задачи запускает таймер и записывает результат предыдущего таймера, если он был
+    taskChange: function(id, oldId) {
+        console.log('------- taskChange', id, oldId, this.data.tasks[id]);
+        console.log('Test this', this);
+
+        if(this.attributes.testConfig.taskTimer == false) return;
+        if(this.testView.resultMode == true) return;
+        if(id === oldId) return; //защита от нажатия на ту же задачу, что приводит к торможению таймера
+
+        //stop prev timer and save data
+        console.log('is timer an inctance of Timer', this.taskTimer instanceof Timer);
+        if(this.taskTimer[oldId] instanceof Timer) {
+            this.taskTimer[oldId].stop();
+            var timeSpent = this.taskTimer[oldId].getTimeSpent();
+            console.log('taskTimer timespent', timeSpent);
+
+            if(oldId != 0) {
+                this.tasksTimeSpent[oldId] = timeSpent;
+            }
+        }
+
+        //task timer id start
+        if(id === null) return;
+
+        var taskTimer;
+        if(this.attributes.testConfig.taskTimerMode == 'inc') {
+            taskTimer = 0;
+        } else {
+            taskTimer = this.data.tasks[id].taskTimerData;
+        }
+
+        if(typeof taskTimer === 'undefined') return;
+
+        console.log('is taskTimer[id] an inctance of Timer?', this.taskTimer[id] instanceof Timer);
+        if(!(this.taskTimer[id] instanceof Timer)) {
+            this.taskTimer[id] = new Timer(taskTimer, 4);
+            this.taskTimer[id].newTimer();
+        }
+
+        if(this.attributes.testConfig.taskTimerMode == 'inc') {
+            this.taskTimer[id].goUp();
+        } else {
+            this.taskTimer[id].goDown();
+        }
+    },
+
+    //слушает таймер и переходит к след. задаче если время = 0
+    taskTimerCheck: function() {
+        console.log('task timer check');
+        //if(this.taskTimer.timeNow.s == 0 && this.taskTimer.timeNow.m == 0 && this.taskTimer.timeNow.h == 0) {
+        var id = this.testView.activeTaskID;
+        if(this.taskTimer[id].timeNow == 0) {
+            this.taskTimer[id].stop();
+            this.testView.showNextTask(id + 1);
+
+            if (id == this.tasksCount && this.attributes.testConfig.lastTaskFinish == true) {
+                console.log('this.model.tasksCount, id', this.model.tasksCount, id);
+                this.finishTest();
+            }
+        }
+    },
+
     //запускает таймер
     testTimerStart: function() {
         if(typeof  this.timer !== 'undefined') this.timer.stop();
-        var timerData = JSON.parse(JSON.stringify(this.data.timerData));
+        var timerData = JSON.parse(JSON.stringify(this.data.testTimerData));
         console.log('this.data', this.data.tasks);
-        console.log('this.realTimeGiven', this.realTimeGiven);
-        this.timer = new Timer(timerData, this);
+        this.timer = new Timer(timerData, 1);
         this.timer.newTimer();
-        this.timer.go();
+        this.timer.goDown();
         console.log('timer start; Model object: ', this);
     },
 
@@ -87,9 +179,8 @@ testApp.Test = Backbone.Model.extend({
     testTimerCheck: function() {
         //console.log('tick was heard by model ' ,this.timer.timeNow);
         //console.log('time timespent', this.timer.getTimeSpent());
-        if(this.timer.timeNow.s == 0 && this.timer.timeNow.m == 0 && this.timer.timeNow.h == 0) {
+        if(this.timer.timeNow == 0) {
             this.timer.stop();
-            this.timeSpent = this.timer.getTimeSpent();
             //console.log('time stop timespent', this.timeSpent);
             this.finishTest();
         }
@@ -99,20 +190,25 @@ testApp.Test = Backbone.Model.extend({
     finishTest: function() {
         var correctAnswers = this.correctAnswers;
         var answersGiven = this.answersGiven;
-        console.log('FINISHING test answers given', answersGiven);
+        console.log('--- FINISHING TEST answers given, this', answersGiven, this);
 
         //остановка таймера
         this.timer.stop();
 
+        //остановка таймера отдельной задачи
+        if(this.taskTimer instanceof Timer) this.taskTimer.stop();
+        console.log('invoking taskChange from fninishTest');
+        this.taskChange(null, this.testView.activeTaskID);
+
         //затраченное время
         this.timeSpent = this.timer.getTimeSpent();
-        console.log(' this.timeSpent 877 ',  this.timeSpent);
+        this.timeSpent = this.timer.timeToObject(this.timeSpent);
+        console.log(' this.timeSpent ',  this.timeSpent);
         var timeSpent = this.timeSpent;
-        console.log(' this.timeSpent 877  m',  this.timeSpent.m);
-        console.log(' this.timeSpent 877  s',  this.timeSpent.s);
 
-        //подготовка данных для показа результата теста
-
+        /**
+         * подготовка данных для показа результата теста
+         */
         //создает массив всех данных валидных ответов
         var allAnsweredArr = [];
         $.map(answersGiven, function(value, index) {
@@ -128,32 +224,27 @@ testApp.Test = Backbone.Model.extend({
         var correctAnswersArr = [];
         var totalTasks = Number(this.tasksCount);
         console.log('that.taskCount 2: ', this.tasksCount);
-        var answersGivenCount = allAnsweredArr.length;
-        var tasksSkipped = Number(totalTasks) - Number(answersGivenCount);
-        console.log('answersGivenCount: ', answersGivenCount);
+        var tasksAnswered = allAnsweredArr.length;
+        var tasksSkipped = Number(totalTasks) - Number(tasksAnswered);
+        console.log('tasksAnswered: ', tasksAnswered);
         console.log('tasksSkipped: ', tasksSkipped);
         console.log('correctAnswers77: ', correctAnswers);
         console.log('answersGiven: ', answersGiven);
 
         //Заполняет массивы с правильными и непр-ми ответами, с данными ответами, и считает набранные баллы
-        answersGiven.forEach(function(item, i) {
-            var answerPoints = correctAnswers[i][item + '_points'];
-            console.log('answersGiven item: ', item);
-            console.log('correct answers i: ', correctAnswers[i]);
-            console.log('correct answers i item _points: ', answerPoints);
-            console.log('i: ', i);
+        answersGiven.forEach(function(taskAnswers, i) {
+            taskAnswers.forEach(function(answer) {
+                var answerPoints = correctAnswers[i][answer + '_points'];
 
-            if($.isNumeric(answerPoints) && answerPoints > 0) {
-                console.log('answer for question ' + i + ' is correct');
-                totalPoints += Number(answerPoints);
-                correctAnswersArr.push(i);
-            } else {
-                console.log('answer for question ' + i + ' is wrong');
-                wrongAnswersArr.push(i);
-            }
-
-            console.log('correctAnswersArr', correctAnswersArr);
-            console.log('wrongAnswersArr', wrongAnswersArr);
+                if($.isNumeric(answerPoints) && answerPoints > 0) {
+                    //console.log('answer for question ' + i + ' is correct');
+                    totalPoints += Number(answerPoints);
+                    correctAnswersArr.push(i);
+                } else {
+                    //console.log('answer for question ' + i + ' is wrong');
+                    wrongAnswersArr.push(i);
+                }
+            });
         });
 
         //считает макс. сумму баллов за все ответы вместе
@@ -186,7 +277,7 @@ testApp.Test = Backbone.Model.extend({
             wrongAnswers: wrongAnswersArr,
             allAnswered: allAnsweredArr,//массив с индексами всех отвеченных вопросов
             totalPoints: totalPoints,
-            answersGivenCount: answersGivenCount,
+            tasksAnswered: tasksAnswered,
             tasksSkipped: tasksSkipped,
             maxPoints: maxPoints,
             seconds: timeSpent.s,

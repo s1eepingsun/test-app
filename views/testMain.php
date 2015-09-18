@@ -29,6 +29,7 @@
 <div class="test-tasks">
 		<?php foreach($testData['tasks'] as $task):?>
 		<div class="single-test-data" id="vn<?=$task['view_number'];?>">
+            <div class="task-timer"></div>
 			<div class="task-number"><b><?php echo ucfirst($task['type']);?> №<?=$task['view_number'];?></b></div>
 			<div class="task-content"><?=$task['task_content'];?></div>
 			<div class="clear">&nbsp;</div>

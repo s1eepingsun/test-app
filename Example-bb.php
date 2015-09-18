@@ -15,7 +15,7 @@
         var _isVk = false;
     </script>
     <script src="./Example_files/openapi.js" type="text/javascript"></script><script type="text/javascript" src="./Example_files/public-main.min.js"></script><style type="text/css"></style> 
-    <script type="text/javascript" src="./Example_files/shared-main.js"></script> 
+    <script type="text/javascript" src="./Example_files/shared-main.js"></script>
     <script type="text/javascript" src="./Example_files/lang.ru.js"></script>
     <!-- styles -->
     <link rel="shortcut icon" type="image/x-icon" href="http://logic-games.spb.ru/freecell/favicon.ico">
@@ -26,10 +26,15 @@
     <!-- assigning php data to js variable -->
     <?php include 'controllers/testDataToJS.php'; ?>
 
+    <!-- handlebars templates -->
+    <script id="test-result-tmpl" type="text/x-handlebars-template">
+        <?php include 'tmpl/result.hbs'; ?>
+    </script>
+
     <!-- thrid-party libraries -->
     <script type="text/javascript" src="js/libs/handlebars-v3.0.3.js"></script>
     <script type="text/javascript" src="js/libs/underscore-min.js"></script>
-    <script type="text/javascript" src="js/libs/backbone.js"></script>
+    <script type="text/javascript" src="js/libs/backbone-min.js"></script>
     <script type="text/javascript" src="../mathjax/MathJax.js?config=TeX-AMS_HTML"></script>
 
     <!-- modules -->
@@ -37,7 +42,7 @@
     <script type="text/javascript" src="js/models/Test.js"></script>
     <script type="text/javascript" src="js/views/TestView.js"></script>
 
-    <!-- application core -->
+    <!-- application core (should be positioned after modules) -->
     <script type="text/javascript" src="js/main.js"></script>
 </head>
 <body>

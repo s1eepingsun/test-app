@@ -60,7 +60,7 @@ $i18n = $s->getI18n();
     <!-- thrid-party libraries -->
     <script type="text/javascript" src="js/libs/handlebars-v3.0.3.js"></script>
     <script type="text/javascript" src="js/libs/underscore-min.js"></script>
-    <script type="text/javascript" src="js/libs/backbone.js"></script>
+    <script type="text/javascript" src="js/libs/backbone-min.js"></script>
     <script type="text/javascript" src="http://test.logic-games.spb.ru//js/lib/mathjax/MathJax.js?config=TeX-AMS_HTML"></script>
 
     <!-- modules -->
@@ -68,7 +68,7 @@ $i18n = $s->getI18n();
     <script type="text/javascript" src="js/models/Test.js"></script>
     <script type="text/javascript" src="js/views/TestView.js"></script>
 
-    <!-- application core -->
+    <!-- application core (should be positioned after modules) -->
     <script type="text/javascript" src="js/main.js"></script>
 </head>
 <body>
