@@ -14,7 +14,7 @@ function mb_ucfirst($text) {
     return mb_strtoupper(mb_substr($text, 0, 1)) . mb_substr($text, 1);
 }
 
-//set view_number & max_points
+//set view_number & max_points, makes string out of task timer arrays
 foreach($testData['tasks'] as $key => $task) {
     $testData['tasks'][$key]['view_number'] = $key + 1 ;
 
@@ -28,8 +28,6 @@ foreach($testData['tasks'] as $key => $task) {
 
 
     //timer data timestamp to array
-
-
     if(isset($task['taskTimerData'])) {
         $task['taskTimerData'] = $testsDB->timestampToArray($task['taskTimerData']);
 
@@ -42,6 +40,7 @@ foreach($testData['tasks'] as $key => $task) {
         }
         $testData['tasks'][$key]['taskTimerData'] = implode(':', $task['taskTimerData']);
     }
+
 
 }
 

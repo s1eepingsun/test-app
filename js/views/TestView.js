@@ -24,7 +24,7 @@ testApp.TestView = Backbone.View.extend({
         'click .answers .answer': 'giveAnswer',//клик на ответ
         'click #tb-prev-task': 'showPrevTask',//клик на Предыдущий вопрос в верхнем меню
         'click .single-test-data .tb-prev-task div:last-child': 'showPrevTask',//клик на Предыдущий вопрос в верхнем меню
-        'click #tb-next-task': 'showNextTask',//клик на Следующий вопрос в задаче
+        'click #tb-next-task': 'showNextTask',//клик на Следующий вопрос в верхнем меню
         'click .single-test-data .tb-next-task div:last-child': 'showNextTask',//клик на Следующий вопрос в задаче
         'click #tb-finish-test': 'finishTest',//клик на Закончить тест
         'click #left-side-bar .task-item': 'sidebarHandler',//клик на задачу на сайдбаре
@@ -81,21 +81,17 @@ testApp.TestView = Backbone.View.extend({
         var element = event.currentTarget;
         var id = Number(this.activeTaskID);
 
-        if (!$(element).hasClass('disabled')) {
-            if(this.resultMode == true) {
-                var allAnswered = this.model.finalData.allAnswered;
-                if (id > 1) {
-                    while($.inArray(id - 1, allAnswered) < 0) {
-                        id--;
-                    }
-                    this.showTask(id - 1);
-                }
-            } else {
-                if (id > 1) this.showTask(id - 1);
-            }
-        }
+        if ($(element).hasClass('disabled')) return;
 
-        if (!$(element).hasClass('disabled') && this.testConfig.freeTaskChange == true) {
+        if(this.resultMode == true) {
+            var allAnswered = this.model.finalData.allAnswered;
+            if (id > 1) {
+                while($.inArray(id - 1, allAnswered) < 0) {
+                    id--;
+                }
+                this.showTask(id - 1);
+            }
+        } else if (this.testConfig.freeTaskChange == true) {
             if (id > 1) this.showTask(id - 1);
         }
     },
@@ -107,23 +103,22 @@ testApp.TestView = Backbone.View.extend({
         var element = event.currentTarget;
         var id = Number(this.activeTaskID);
 
-        if (!$(element).hasClass('disabled')) {
-            if(this.resultMode == true) {
-                var allAnswered = this.model.finalData.allAnswered;
-                if (id < this.model.tasksCount) {
-                    while($.inArray(id + 1, allAnswered) < 0) {
-                        id++;
-                    }
-                    this.showTask(id + 1);
+        if ($(element).hasClass('disabled')) return;
+
+        if(this.resultMode == true) {
+            var allAnswered = this.model.finalData.allAnswered;
+            if (id < this.model.tasksCount) {
+                while($.inArray(id + 1, allAnswered) < 0) {
+                    id++;
                 }
-            } else {
-                if (id < this.model.tasksCount) this.showTask(id + 1);
+                this.showTask(id + 1);
             }
+        } else {
+            if (id < this.model.tasksCount) this.showTask(id + 1);
         }
 
         //закончить тест если последний вопрос, сейчас действует от прямого вызова метода (по таймеру, не от кнопок)
-        if (id == this.model.tasksCount && this.testConfig.lastTaskFinish == true && !$(element).hasClass('disabled')) {
-            console.log('this.model.tasksCount, id', this.model.tasksCount, id);
+        if (id == this.model.tasksCount && this.testConfig.lastTaskFinish == true) {
             this.finishTest();
         }
     },
@@ -142,7 +137,6 @@ testApp.TestView = Backbone.View.extend({
 
         //если это не первый запуск теста, обнулить данные и стили после показа результата
         if(this.model.answersGiven !== []) {
-            this.model.answersGiven = [];
             this.setModeTestActive();
         }
 
@@ -171,7 +165,6 @@ testApp.TestView = Backbone.View.extend({
 
         var timer = this.model.taskTimer[id];
         //console.log('taskTimerShow', timer.timeNow);
-        //var taskTimerString = timer.timeObToString(timer.taskTimeNow[this.activeTaskID]);
         var taskTimerObj = timer.timeToObject(timer.timeNow);
         var taskTimerString = timer.timeObToString(taskTimerObj);
         //console.log('taskTimerShow id', id, $('#vn' + id + '.task-timer'));
@@ -260,11 +253,12 @@ testApp.TestView = Backbone.View.extend({
 
     //закончить тест
     finishTest: function() {
-        if(this.activeTaskID > 0) { //если тест запущен
-            //запускает метод в модели
-            this.model.finishTest();
-            console.log('finish test', this);
-        }
+        if(this.activeTaskID == 0) return; //если тест не запущен
+
+        //запускает метод в модели
+        this.model.finishTest();
+        console.log('finish test', this);
+
     },
 
     //закрытие ответа при просмотре результатов теста

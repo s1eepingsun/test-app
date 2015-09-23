@@ -9,25 +9,22 @@ function Timer(time, timerInterval) {
         this.timeNow = this.time;
     };
 
-    /*this.newTaskTimer = function() {
-        this.taskStarted = new Date().getTime();
-        this.taskTimeNow = this.time;
-    };*/
-
     //запускает таймер обратного отчёта, запускает event
-    this.goDown = function() {
+    this.goDown = function(id) {
         that.activeTimer = setInterval(function() {
             that.timeNow -= that.interval;
-            Backbone.trigger('testTimerTick');
+            //Backbone.trigger('testTimerTick');
+            if(testApp && testApp.testModel) testApp.testModel.testTimerTick(that.timeNow, that);
         }, this.interval);
 
     };
 
     //запускает таймер на увеличение, запускает event
-    this.goUp = function() {
-        that.activeTimer = setInterval(function() {
+    this.goUp = function(id) {
+            that.activeTimer = setInterval(function() {
             that.timeNow += that.interval;
-            Backbone.trigger('testTimerTick');
+            //Backbone.trigger('testTimerTick');
+            if(testApp && testApp.testModel) testApp.testModel.testTimerTick(that.timeNow, that);
         }, this.interval);
     };
 
@@ -41,44 +38,6 @@ function Timer(time, timerInterval) {
     //возвращает разницу время начала и окончания теста
     this.getTimeSpent = function() {
         return this.testEnded - this.testStarted;
-    };
-
-    //@return obj - уменьшает время в объекте времени на 1 сек
-    this.timeObDecrease = function(time) {
-        time.s--;
-
-        if(time.s < 0){
-            if(time.m >= 0) {
-                time.m--;
-                time.s = 59;
-            }
-        }
-
-        if(time.m < 0){
-            if(time.h > 0) {
-                time.h--;
-                time.m = 59;
-            }
-        }
-
-        return time;
-    };
-
-    //увеличивает время в объекте времени на 1 сек
-    this.timeObIncrease = function(time) {
-        time.s++;
-
-        if(time.s==60){
-            time.m++;
-            time.s=0;
-        }
-
-        if(time.m==60){
-            time.h++;
-            time.m=0;
-        }
-
-        return time;
     };
 
     //@return str - делает из объекта времени {h, m, s} строку hh:mm:ss

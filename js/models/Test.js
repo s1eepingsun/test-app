@@ -12,11 +12,19 @@ var testApp = testApp || {};
 testApp.Test = Backbone.Model.extend({
     defaults: {
         testConfig: {
-            answerOrder: 'inc'
+            answerOrder: 'inc',
+            taskTimer: false,
+            taskTimerMode: 'inc',
+            freeTaskChange: true,
+            lastTaskFinish: true,
+            multipleChoices: false,
+            resultAnswersStyle: 'default',
+            navInResult: true
         }
     },
     initialize: function () {
         this.data = phpTestData; //берёт данные теста из json'а посланного при загрузке страницы
+        if(_.isEmpty(this.attributes.testConfig)) this.attributes.testConfig = this.defaults.testConfig;
         this.correctAnswers = [];
         this.answersGiven = [];
         this.taskTimer = []; //array of Timer instances

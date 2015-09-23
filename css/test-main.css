@@ -245,6 +245,7 @@ body {
     max-width: none;
 }
 #time-left {
+    display: none;
 	float: right;
     margin-right: 10px;
 }

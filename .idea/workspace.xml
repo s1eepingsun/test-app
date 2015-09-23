@@ -2,53 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5f1c9083-e612-4430-86e1-c49db4c5e9d7" name="Default" comment="organized the application properly: made namespace &amp; init function">
-      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\admin.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\admin2.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\admin3.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\classes\TestsDB.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\controllers\adminAjax.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\controllers\adminAjax2.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\controllers\adminMain.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\controllers\adminTaskList.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\css\admin.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\css\admin3.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\js\admin\admin.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\js\admin\admin2.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\js\admin\admin3.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\js\admin\collections\TestTasks.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\js\admin\models\Task.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\js\admin\models\TestInfo.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\js\admin\views\MainTestView.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\js\admin\views\TestEdit.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\js\views\TaskListView.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\tmpl\junk\admin-list.mst" afterPath="" />
-      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\tmpl\junk\result.mst" afterPath="" />
-      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\tmpl\junk\side-bar.mst" afterPath="" />
-      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\tmpl\junk\side-bar2.mst" afterPath="" />
-      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\tmpl\junk\test-main.mst" afterPath="" />
-      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\tmpl\junk\test-main2.mst" afterPath="" />
-      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\tmpl\junk\test1.mst" afterPath="" />
-      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\tmpl\side-bar-admin.hbs" afterPath="" />
-      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\tmpl\side-bar2.hbs" afterPath="" />
-      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\tmpl\test-main2.hbs" afterPath="" />
-      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\views\adminMain.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\views\adminTaskList.php" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Example-bb.php" afterPath="$PROJECT_DIR$/Example-bb.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/controllers/TestController.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example3.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/main2.js" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\js\old junk\main - old копия.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\js\old junk\main - old копия2.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/models/Test.js" afterPath="$PROJECT_DIR$/js/models/Test.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/views/TestView.js" afterPath="$PROJECT_DIR$/js/views/TestView.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/TestsDB2.php" afterPath="$PROJECT_DIR$/classes/TestsDB2.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/Timer.js" afterPath="$PROJECT_DIR$/js/Timer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/clientAjax.php" afterPath="$PROJECT_DIR$/controllers/clientAjax.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/main.js" afterPath="$PROJECT_DIR$/js/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/old junk/main3.js" afterPath="$PROJECT_DIR$/js/old junk/main3.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/old junk/main2 - копия.js" afterPath="$PROJECT_DIR$/js/old junk/main2 - копия.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-data/math1.json" afterPath="$PROJECT_DIR$/test-data/math1.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/test-main.css" afterPath="$PROJECT_DIR$/css/test-main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-data/test.json" afterPath="$PROJECT_DIR$/test-data/test.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/testDataToJS.php" afterPath="$PROJECT_DIR$/controllers/testDataToJS.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/testMain.php" afterPath="$PROJECT_DIR$/controllers/testMain.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/testMain.php" afterPath="$PROJECT_DIR$/views/testMain.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/testSidebar.php" afterPath="$PROJECT_DIR$/controllers/testSidebar.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="newtest2.iws" />
@@ -77,53 +43,71 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Example-bb.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Example-bb.php">
+      <file leaf-file-name="Timer.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/js/Timer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="13" column="33" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
+            <state vertical-scroll-proportion="0.27014756">
+              <caret line="14" column="42" selection-start-line="14" selection-start-column="42" selection-end-line="14" selection-end-column="42" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/js/main.js">
+      <file leaf-file-name="main2.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/main2.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.55618614">
-              <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Test.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/models/Test.js">
+      <file leaf-file-name="TestModel.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/models/TestModel.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="231" column="52" selection-start-line="231" selection-start-column="52" selection-end-line="231" selection-end-column="52" />
-              <folding>
-                <element signature="e#0#163#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TestView.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/views/TestView.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="236" column="77" selection-start-line="236" selection-start-column="77" selection-end-line="236" selection-end-column="77" />
+              <caret line="28" column="37" selection-start-line="28" selection-start-column="6" selection-end-line="28" selection-end-column="37" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test-main.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/test-main.css">
+      <file leaf-file-name="ListView.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/views/ListView.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="360" column="42" selection-start-line="360" selection-start-column="42" selection-end-line="360" selection-end-column="42" />
+              <caret line="7" column="65" selection-start-line="7" selection-start-column="65" selection-end-line="7" selection-end-column="65" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainView.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/views/MainView.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TestController.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/controllers/TestController.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="habr.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/views/habr.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="28" column="51" selection-start-line="28" selection-start-column="51" selection-end-line="28" selection-end-column="51" />
               <folding />
             </state>
           </provider>
@@ -134,8 +118,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -145,18 +129,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/js/admin2.js" />
-        <option value="$PROJECT_DIR$/../ckeditor/config.js" />
-        <option value="$PROJECT_DIR$/classes/TestsDB.php" />
-        <option value="$PROJECT_DIR$/test-data/math1-short.json" />
-        <option value="$PROJECT_DIR$/tmpl/side-bar2.mst" />
-        <option value="$PROJECT_DIR$/tmpl/side-bar-admin.hbs" />
-        <option value="$PROJECT_DIR$/js/views/TaskEdit.js" />
-        <option value="$PROJECT_DIR$/js/views/AdminTestView.js" />
-        <option value="$PROJECT_DIR$/tmpl/test-main2.mst" />
-        <option value="$PROJECT_DIR$/tmpl/result.mst" />
-        <option value="$PROJECT_DIR$/tmpl/result.hbs" />
-        <option value="$PROJECT_DIR$/test-data/math1test.json" />
         <option value="$PROJECT_DIR$/controllers/adminAjax2.php" />
         <option value="$PROJECT_DIR$/test-data/test.json" />
         <option value="$PROJECT_DIR$/tmpl/side-bar2.hbs" />
@@ -188,14 +160,26 @@
         <option value="$PROJECT_DIR$/controllers/testSidebar.php" />
         <option value="$PROJECT_DIR$/js/old junk/main3.js" />
         <option value="$PROJECT_DIR$/classes/TestsDB2.php" />
-        <option value="$PROJECT_DIR$/controllers/testMain.php" />
-        <option value="$PROJECT_DIR$/test-data/math1.json" />
-        <option value="$PROJECT_DIR$/js/Timer.js" />
+        <option value="$PROJECT_DIR$/js/old junk/main2 - копия.js" />
+        <option value="$PROJECT_DIR$/js/views/habr.js" />
         <option value="$PROJECT_DIR$/js/models/Test.js" />
+        <option value="$PROJECT_DIR$/js/main.js" />
+        <option value="$PROJECT_DIR$/js/views/mainView.js" />
+        <option value="$PROJECT_DIR$/js/views/listView.js" />
+        <option value="$PROJECT_DIR$/js/models/testModel.js" />
+        <option value="$PROJECT_DIR$/js/controllers/testController.js" />
+        <option value="$PROJECT_DIR$/js/views/TestView.js" />
+        <option value="$PROJECT_DIR$/test-data/math1.json" />
         <option value="$PROJECT_DIR$/css/test-main.css" />
         <option value="$PROJECT_DIR$/views/testMain.php" />
-        <option value="$PROJECT_DIR$/js/views/TestView.js" />
-        <option value="$PROJECT_DIR$/js/main.js" />
+        <option value="$PROJECT_DIR$/controllers/testMain.php" />
+        <option value="$PROJECT_DIR$/js/controllers/TestController.js" />
+        <option value="$PROJECT_DIR$/example3.php" />
+        <option value="$PROJECT_DIR$/js/models/TestModel.js" />
+        <option value="$PROJECT_DIR$/js/views/ListView.js" />
+        <option value="$PROJECT_DIR$/js/views/MainView.js" />
+        <option value="$PROJECT_DIR$/js/main2.js" />
+        <option value="$PROJECT_DIR$/js/Timer.js" />
       </list>
     </option>
   </component>
@@ -256,7 +240,7 @@
         </expanded-state>
         <selected-state>
           <State>
-            <id>HtmlUnknownAttribute</id>
+            <id>BadExpressionStatementJS</id>
           </State>
         </selected-state>
       </profile-state>
@@ -269,7 +253,7 @@
     <OptionsSetting value="true" id="Update" />
     <OptionsSetting value="true" id="Status" />
     <OptionsSetting value="true" id="Edit" />
-    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="2" id="Add" />
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectView">
@@ -419,35 +403,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="newtest2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="newtest2" />
+              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="newtest2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="newtest2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="classes" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -586,12 +546,11 @@
     <frame x="-1288" y="48" width="1296" height="1040" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20711975" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21035598" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32857144" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928804" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32637364" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -604,6 +563,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="CSS Styles" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32967034" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32637364" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
@@ -628,57 +588,15 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="12" />
+      <option name="time" value="17" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Example-bb.php">
+    <entry file="file://$PROJECT_DIR$/js/views/habr.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="13" column="33" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="32" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/models/Test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="178" column="67" selection-start-line="178" selection-start-column="67" selection-end-line="178" selection-end-column="67" />
-          <folding>
-            <element signature="e#0#163#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/views/TestView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="321" column="32" selection-start-line="321" selection-start-column="32" selection-end-line="321" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/Timer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="56" selection-start-line="15" selection-start-column="56" selection-end-line="15" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test-data/math1.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="106" column="7" selection-start-line="106" selection-start-column="7" selection-end-line="106" selection-end-column="7" />
           <folding />
         </state>
       </provider>
@@ -687,7 +605,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="13" column="33" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -695,7 +612,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="20" column="33" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -736,7 +652,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="209" column="14" selection-start-line="209" selection-start-column="14" selection-end-line="209" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -744,7 +659,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="26" column="6" selection-start-line="26" selection-start-column="6" selection-end-line="26" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -752,7 +666,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="13" column="33" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -760,7 +673,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="12" column="73" selection-start-line="12" selection-start-column="73" selection-end-line="12" selection-end-column="73" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -786,7 +698,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -816,7 +727,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -834,37 +744,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/old junk/main2 - копия.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.8866214">
-          <caret line="388" column="73" selection-start-line="388" selection-start-column="73" selection-end-line="388" selection-end-column="73" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/old junk/main - old копия2.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.61904764">
-          <caret line="469" column="45" selection-start-line="469" selection-start-column="45" selection-end-line="469" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/old junk/main - old копия.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.2800453">
-          <caret line="216" column="9" selection-start-line="216" selection-start-column="9" selection-end-line="216" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/old junk/AdminTest.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="2.792517">
           <caret line="159" column="29" selection-start-line="159" selection-start-column="29" selection-end-line="159" selection-end-column="29" />
-          <folding>
-            <element signature="e#42#299#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -872,9 +755,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.2777778">
           <caret line="198" column="6" selection-start-line="198" selection-start-column="6" selection-end-line="198" selection-end-column="6" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -889,7 +769,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.7307692">
           <caret line="19" column="34" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -897,7 +776,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-22.23077">
           <caret line="70" column="65" selection-start-line="70" selection-start-column="65" selection-end-line="70" selection-end-column="65" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -947,15 +825,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.3961406">
           <caret line="152" column="27" selection-start-line="152" selection-start-column="27" selection-end-line="152" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Example-bb.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="13" column="33" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -966,13 +835,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/testMain.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6623832">
-          <caret line="38" column="37" selection-start-line="38" selection-start-column="37" selection-end-line="38" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tmpl/result.hbs">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.19859813">
@@ -980,60 +842,133 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test-data/math1.json">
+    <entry file="file://$PROJECT_DIR$/Example-bb.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.4853802">
-          <caret line="3" column="9" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
-          <folding />
+        <state vertical-scroll-proportion="-1.9615384">
+          <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/Timer.js">
+    <entry file="file://$PROJECT_DIR$/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.05788876">
-          <caret line="3" column="39" selection-start-line="3" selection-start-column="39" selection-end-line="3" selection-end-column="39" />
-          <folding />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="26" column="28" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test-data/math1.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.439252">
+          <caret line="1" column="10" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/test-main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="360" column="42" selection-start-line="360" selection-start-column="42" selection-end-line="360" selection-end-column="42" />
-          <folding />
+        <state vertical-scroll-proportion="0.2777778">
+          <caret line="242" column="27" selection-start-line="242" selection-start-column="27" selection-end-line="242" selection-end-column="27" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/testMain.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5368421">
-          <caret line="29" column="53" selection-start-line="29" selection-start-column="53" selection-end-line="29" selection-end-column="53" />
+        <state vertical-scroll-proportion="0.05724299">
+          <caret line="11" column="30" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/testMain.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.18574767">
+          <caret line="13" column="71" selection-start-line="13" selection-start-column="71" selection-end-line="13" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/old junk/main2 - копия.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.019274376">
+          <caret line="20" column="54" selection-start-line="20" selection-start-column="54" selection-end-line="20" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example3.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.45497075">
+          <caret line="34" column="79" selection-start-line="34" selection-start-column="79" selection-end-line="34" selection-end-column="79" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/models/Test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="231" column="52" selection-start-line="231" selection-start-column="52" selection-end-line="231" selection-end-column="52" />
+        <state vertical-scroll-proportion="0.3552781">
+          <caret line="182" column="42" selection-start-line="182" selection-start-column="41" selection-end-line="182" selection-end-column="42" />
           <folding>
             <element signature="e#0#163#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/views/TestView.js">
+    <entry file="file://$PROJECT_DIR$/js/models/TestModel.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="236" column="77" selection-start-line="236" selection-start-column="77" selection-end-line="236" selection-end-column="77" />
+          <caret line="28" column="37" selection-start-line="28" selection-start-column="6" selection-end-line="28" selection-end-column="37" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/main.js">
+    <entry file="file://$PROJECT_DIR$/js/views/ListView.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.55618614">
-          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="65" selection-start-line="7" selection-start-column="65" selection-end-line="7" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/views/MainView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/views/habr.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="28" column="51" selection-start-line="28" selection-start-column="51" selection-end-line="28" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/main2.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/controllers/TestController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/views/TestView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.246311">
+          <caret line="129" column="30" selection-start-line="129" selection-start-column="28" selection-end-line="129" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/Timer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.27014756">
+          <caret line="14" column="42" selection-start-line="14" selection-start-column="42" selection-end-line="14" selection-end-column="42" />
           <folding />
         </state>
       </provider>

@@ -1,7 +1,7 @@
 console.log('loading', _gameVariationId, _userId, _username);
 LogicGame.init(onInit);
 function onInit(){
-console.log("init");
+    console.log("init");
 }
 
 $(function() {
@@ -22,14 +22,14 @@ $(function() {
      *      'right-wrong-borders' - все данные ответы - серай фон, правильные - зелёная граница, неправильные - красная граница
      */
     testApp.init({
-        testConfig: {
-            answerOrder: 'inc',
+        config: {
+            answerOrder: 'rand',
             taskTimer: true,
-            taskTimerMode: 'inc',
+            taskTimerMode: 'dec',
             freeTaskChange: true,
             lastTaskFinish: true,
             multipleChoices: false,
-            resultAnswersStyle: 'answered-borders',
+            resultAnswersStyle: 'default',
             navInResult: true
         }
     });
@@ -40,10 +40,84 @@ $(function() {
 
 
 testApp.init = function(attrs) {
-    testApp.test = new testApp.Test(attrs);
+    //добавление возможности запускать и слушать события
+    extend(testApp.TestModel, Observable);
+    extend(testApp.ListView, Observable);
+    extend(testApp.MainView, Observable);
+    extend(testApp.TestController, Observable);
+
+    testApp.listView = new testApp.ListView();
+    testApp.listView.init();
+
+    testApp.mainView = new testApp.MainView({resultTmeplate: '#test-result-tmpl'});
+    testApp.mainView.init();
+
+    testApp.testModel = new testApp.TestModel();
+    testApp.testModel.init(attrs);
+
+    testApp.testController = new testApp.TestController();
 };
 
-//модуль для кэша селекторов jquery
+//наследование классов
+function extend(Child, Parent) {
+    var F = function() { };
+    F.prototype = Parent.prototype;
+    Child.prototype = new F();
+    Child.prototype.constructor = Child;
+    Child.superclass = Parent.prototype;
+}
+
+//event listener
+var Observable;
+(Observable = function() {
+}).prototype = {
+    listen: function(type, method, scope, context) {
+        var listeners, handlers;
+        if (!(listeners = this.listeners)) {
+            listeners = this.listeners = {};
+        }
+        if (!(handlers = listeners[type])){
+            handlers = listeners[type] = [];
+        }
+        scope = (scope ? scope : window);
+        handlers.push({
+            method: method,
+            scope: scope,
+            context: (context ? context : scope)
+        });
+    },
+    fireEvent: function(type, data, context) {
+        var listeners, handlers, i, n, handler, scope;
+        if (!(listeners = this.listeners)) {
+            return;
+        }
+        if (!(handlers = listeners[type])){
+            return;
+        }
+        for (i = 0, n = handlers.length; i < n; i++){
+            handler = handlers[i];
+            if (typeof(context)!=="undefined" && context !== handler.context) continue;
+            if (handler.method.call(
+                    handler.scope, this, type, data
+                )===false) {
+                return false;
+            }
+        }
+        return true;
+    }
+};
+
+//нахождение максимального значения массива
+Array.max = function( array ){
+    return Math.max.apply( Math, array );
+};
+
+//нахождение минимального значения массива
+Array.min = function( array ){
+    return Math.min.apply( Math, array );
+};
+
+//модуль для кэширования селекторов jquery
 (function($){
     $.cache = function (selector) {
         if (!$.cache[selector]) {
@@ -53,4 +127,8 @@ testApp.init = function(attrs) {
         return $.cache[selector];
     };
 })(jQuery);
+
+
+
+
 

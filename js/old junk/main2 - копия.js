@@ -26,7 +26,7 @@ $(function() {
       $('html,body').off('mousewheel');
   }); */
 
-})
+});
 
 function Test() {
   var that = this;
@@ -324,20 +324,20 @@ Test.prototype.getTimeSpent = function() {
   timeSpent.hours = [];
   if(secondsSpent > 3600) {
     timeSpent.hours.push(Math.floor(secondsSpent/3600));
-    var secondsSpent = secondsSpent%3600;
+    secondsSpent = secondsSpent%3600;
   }
   
   timeSpent.minutes = [];
   if(secondsSpent > 60) {
     timeSpent.minutes.push(Math.floor(secondsSpent/60));
-    var secondsSpent = secondsSpent%60;
+    secondsSpent = secondsSpent%60;
   }
   timeSpent.seconds = secondsSpent;
-  
-  return timeSpent;
-  
+
   console.log('time spent Object: ', timeSpent);
-}
+
+  return timeSpent;
+};
 
 
 //Показывает результат теста
