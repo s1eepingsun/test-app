@@ -4,22 +4,22 @@ testApp.TestModel = function() {
     this.config = {
         answerOrder: 'rand',
         taskTimer: false,
-        taskTimerMode: 'dec',
+        taskTimerMode: 'inc',
         freeTaskChange: true,
         lastTaskFinish: true,
         multipleChoices: false,
         resultAnswersStyle: 'default',
-        navInResult: true
+        navInResult: false
     };
 
     this.data = phpTestData; //берёт данные теста из json'а посланного при загрузке страницы
-    this.correctAnswers = [];
-    this.answersGiven = [];
+    this.correctAnswers = []; //массив с баллами за ответы, полученный с сервера
+    this.answersGiven = []; //массив с ответами данными пользователем
     this.taskTimer = []; //array of Timer instances
-    this.tasksTimeSpent = [];
-    this.tasksCount = 0;
-    this.resultMode = false;
-    this.activeTaskID = 0;
+    this.tasksTimeSpent = []; //время затраченное на прохождение каждого отдельного задания
+    this.tasksCount = 0; //заданий всего
+    this.resultMode = false; //служит для переключения стилей: false)прохождение теста; true)просмотр результатов
+    this.selectedTaskID = 0; //id задачи выбранной в данный момет
 
     //метод для запуска событий
     this.fireEvent = function(type, data, context) {
@@ -50,7 +50,7 @@ testApp.TestModel = function() {
 
         //отключает возможность переключаться на предыдущий вопрос
         if(this.config.freeTaskChange == false) {
-            testApp.mainView.disableFreeTaskChange();
+            this.fireEvent('test:disableFreeTaskChange');
         }
     };
 
@@ -58,30 +58,25 @@ testApp.TestModel = function() {
     this.startNewTest = function() {
         console.log('test model start new test');
 
-        //обнуляет заполненные данные из прошлых тестов
+        //обнуляет данные, заполненные при прошлых прохождениях теста
         this.answersGiven = [];
-        this.taskTimer = []; //array of Timer instances
+        this.taskTimer = [];
         this.tasksTimeSpent = [];
-        this.activeTaskID = 0;
+        this.selectedTaskID = 0;
         this.resultMode = false;
 
-        testApp.mainView.startNewTest();
+        this.fireEvent('test:setModeTestActive');
 
-        if(this.answersGiven !== []) {
-            this.fireEvent('test:setModeTestActive');
-            //testApp.mainView.setModeTestActive();
-            //testApp.listView.setModeTestActive();
-        }
+        this.fireEvent('test:startNewTest');
 
-        var oldID = 0;
-        var id = 1;
-
+        var oldID = 0; //предыдущего задания не было
+        var id = 1; //первое задание
         this.showTask(id, oldID);
 
         //запускает таймер
         this.testTimerStart();
 
-        this.activeTaskID = id;//for active task id to be available for other functions
+        this.selectedTaskID = id;//for active task id to be available for other functions
     };
 
     this.testTimerStart = function() {
@@ -90,36 +85,43 @@ testApp.TestModel = function() {
         var timerData = this.data.testTimerData;
         console.log('testTimerStart this.data', this.data);
         this.timer = new Timer(timerData, 1);
-        testApp.mainView.testTimerShow(timerData);
+        this.fireEvent('test:testTimerShow', timerData);
+
         this.timer.newTimer();
         this.timer.goDown();
         console.log('timer start timerData: ', timerData);
     };
 
     //слушает каждое изменение таймера, если время == 0, заканчивает тест
-    this.testTimerTick = function(timeNow, that) {
+    this.timersTick = function(timeNow, that) {
         var recievedTimerID = that.activeTimer; //id таймера данные которого получены
         var testTimerID = this.timer.activeTimer; //id таймера теста
-        var taskTimerID = this.taskTimer[this.activeTaskID].activeTimer; //id таймера задачи
+
+
 
         //таймер теста, вывести значение и проверить не равен ли он 0
         if(testTimerID == recievedTimerID) {
             //console.log('this.timer, that', testTimerID, recievedTimerID);
             //timeNow = this.timer.timeNow;
-            testApp.mainView.testTimerShow(timeNow);
+            this.fireEvent('test:testTimerShow', timeNow);
             this.testTimerCheck(timeNow);
         }
 
         //таймер задания, вывести значение и проверить не равен ли он 0
-        if(taskTimerID == recievedTimerID) {
-            //console.log('this.taskTimer, that', taskTimerID, recievedTimerID);
-            //timeNow = this.timer.timeNow;
-            testApp.mainView.taskTimerShow(timeNow);
+        if(this.config.taskTimer == true) {
+            var taskTimerID = this.taskTimer[this.selectedTaskID].activeTimer; //id таймера задачи
 
-            if(this.config.taskTimerMode == 'dec') {
-                this.taskTimerCheck();
+            if(taskTimerID == recievedTimerID) {
+                //console.log('this.taskTimer, that', taskTimerID, recievedTimerID);
+                //timeNow = this.timer.timeNow;
+                this.fireEvent('test:taskTimerShow', timeNow);
+
+                if(this.config.taskTimerMode == 'dec') {
+                    this.taskTimerCheck();
+                }
             }
         }
+
     };
 
     //если врямя на прохождение теста = 0, заканчивает тест
@@ -133,7 +135,7 @@ testApp.TestModel = function() {
 
     //при переключении задачи запускает таймер и записывает результат предыдущего таймера, если он был
     this.taskChange = function(id) {
-        var oldID = this.activeTaskID;
+        var oldID = this.selectedTaskID;
         console.log('------- taskChange', id, oldID, this.data.tasks[id]);
         console.log('Test this', this);
 
@@ -150,10 +152,10 @@ testApp.TestModel = function() {
         if(id === null) return;
 
         var taskTimer;
-        if(this.config.taskTimerMode == 'inc') {
-            taskTimer = 0;
-        } else {
+        if(this.config.taskTimerMode == 'dec') {
             taskTimer = this.data.tasks[id].taskTimerData;
+        } else {
+            taskTimer = 0;
         }
 
         if(typeof taskTimer === 'undefined') return;
@@ -162,23 +164,24 @@ testApp.TestModel = function() {
         if(!(this.taskTimer[id] instanceof Timer)) {
             this.taskTimer[id] = new Timer(taskTimer, 4);
             this.taskTimer[id].newTimer();
+            console.log('************* task Timer started', id);
         }
 
-        if(this.config.taskTimerMode == 'inc') {
-            this.taskTimer[id].goUp(id);
-        } else {
+        if(this.config.taskTimerMode == 'dec') {
             this.taskTimer[id].goDown(id);
+        } else {
+            this.taskTimer[id].goUp(id);
         }
     };
 
     //записывает timestamp время затраченное на каждую задчу в массив tasksTimeSpent
     this.writeDownSpentTime = function() {
-        var oldID = this.activeTaskID;
+        var oldID = this.selectedTaskID;
 
         if(this.config.taskTimer == false) return;
 
         //stop prev timer and save data
-        console.log('is timer an inctance of Timer', this.taskTimer instanceof Timer);
+        //console.log('is task timer an inctance of Timer-2', this.taskTimer[oldID] instanceof Timer);
         if(this.taskTimer[oldID] instanceof Timer) {
             this.taskTimer[oldID].stop();
             var timeSpent = this.taskTimer[oldID].getTimeSpent();
@@ -192,7 +195,7 @@ testApp.TestModel = function() {
 
     //слушает таймер задания и переходит к след. заданию если время = 0
     this.taskTimerCheck = function() {
-        var id = this.activeTaskID;
+        var id = this.selectedTaskID;
         //console.log('this.taskTimerCheck, id, timeNow', id, this.taskTimer[id].timeNow);
         if(this.taskTimer[id].timeNow == 0) {
             this.taskTimer[id].stop();
@@ -249,7 +252,7 @@ testApp.TestModel = function() {
 
     //клик на сайдбар
     this.sidebarClick = function(id, element){
-        var oldID = this.activeTaskID;
+        var oldID = this.selectedTaskID;
         var maxID = this.tasksCount;
 
         console.log('result mode: ', this.resultMode);
@@ -259,41 +262,43 @@ testApp.TestModel = function() {
             if ($(element).parent().hasClass('answer-given')) {
                 this.showTask(id, oldID, maxID);
             }
-        } else if (this.activeTaskID > 0 && this.config.freeTaskChange == true) { //если тест запущен
+        } else if (this.selectedTaskID > 0 && this.config.freeTaskChange == true) { //если тест запущен
             this.showTask(id, oldID, maxID);
         }
     };
 
     //показывает задачу
     this.showTask = function(id) {
-        var oldID = this.activeTaskID;
+        var oldID = this.selectedTaskID;
         console.log('testMOdel SHOW TASK!', id, oldID);
         var maxID, minID;
+        var data = {id: id, oldID: oldID};
         var freeTaskChange = this.config.freeTaskChange;
-        testApp.listView.highlightTask(id);
-        testApp.mainView.showTask(id, oldID);
 
-        if(this.resultMode != true) this.taskChange(id, oldID);
+        this.fireEvent('test:showTask', data);
+
+        //отображение времени задачи при переключении задания
+        if(this.resultMode != true && this.config.taskTimer == true) this.taskChange(id, oldID);
 
         //отключает/включает кнопки навигции когда ответ последний или первый
         if(this.resultMode != true) {
             maxID = this.tasksCount;
-            id == maxID? testApp.mainView.disableNextButtons(): testApp.mainView.enableNextButtons();
-            id == 1 || freeTaskChange != true? testApp.mainView.disablePrevButtons(): testApp.mainView.enablePrevButtons();
+            id == maxID? this.fireEvent('test:disableNextButtons'): this.fireEvent('test:enableNextButtons');
+            id == 1 || freeTaskChange != true? this.fireEvent('test:disablePrevButtons'): this.fireEvent('test:enablePrevButtons');
         } else if(this.config.navInResult == true) {
             maxID =  Array.max(this.finalData.allAnswered);
             minID =  Array.min(this.finalData.allAnswered);
-            id == maxID? testApp.mainView.disableNextButtons(): testApp.mainView.enableNextButtons();
-            id == minID? testApp.mainView.disablePrevButtons(): testApp.mainView.enablePrevButtons();
+            id == maxID? this.fireEvent('test:disableNextButtons'): this.fireEvent('test:enableNextButtons');
+            id == minID? this.fireEvent('test:disablePrevButtons'): this.fireEvent('test:enablePrevButtons');
         }
 
-        this.activeTaskID = id;
+        this.selectedTaskID = id;
     };
 
     //показывает следующую задачу
     this.showNextTask = function() {
-        if(this.activeTaskID == 0) return;
-        var id = Number(this.activeTaskID);
+        if(this.selectedTaskID == 0) return;
+        var id = Number(this.selectedTaskID);
         console.log('showNextTask, id, this.tasksCount', id, this.tasksCount);
         if(this.resultMode == true) {
             console.log('showNextTask this.resultMode == true');
@@ -318,8 +323,8 @@ testApp.TestModel = function() {
 
     //показывает предыдущую задачу
     this.showPrevTask = function() {
-        if(this.activeTaskID == 0) return;
-        var id = Number(this.activeTaskID);
+        if(this.selectedTaskID == 0) return;
+        var id = Number(this.selectedTaskID);
         console.log('showPrevTask', id);
 
         if(this.resultMode == true) {
@@ -357,11 +362,11 @@ testApp.TestModel = function() {
             }
         }
 
-        //передаёт выбранные ответы в методы вьюшек для оформления данных ответов
+        //передаёт выбранные ответы в методы вьюшек для визуального отображения данных ответов
         console.log('this.answersGiven', this.answersGiven);
         if(this.answersGiven.length > 0) {
-            testApp.mainView.reflectAnswers(id, this.answersGiven[id]);
-            testApp.listView.reflectAnswers(id, this.answersGiven[id]);
+            var data = {id: id, answers: this.answersGiven[id]};
+            this.fireEvent('test:reflectAnswers', data);
         }
 
         //показывает след. вопрос, в случае если это был последний вопрос показывает результат теста
@@ -377,7 +382,7 @@ testApp.TestModel = function() {
 
     //заканчивает тест, подсчитывает и показывает результат
     this.finishTest = function() {
-        if(this.activeTaskID == 0) return;
+        if(this.selectedTaskID == 0) return;
 
         var correctAnswers = this.correctAnswers;
         var answersGiven = this.answersGiven;
@@ -389,7 +394,6 @@ testApp.TestModel = function() {
         //остановка таймера отдельной задачи
         if(this.taskTimer instanceof Timer) this.taskTimer.stop();
         console.log('invoking taskChange from fninishTest');
-        //this.taskChange(null, this.testView.activeTaskID);
         this.writeDownSpentTime();
 
         //затраченное время
@@ -480,10 +484,9 @@ testApp.TestModel = function() {
         //показать результат теста во вьюшках
         this.resultMode = true;
         this.fireEvent('test:showResult', this.finalData);
-        //testApp.listView.showResult(this.finalData);
-        //testApp.mainView.showResult(this.finalData);
-
     };
 
 };
 
+//добавление возможности запускать и слушать события
+extend(testApp.TestModel, Observable);

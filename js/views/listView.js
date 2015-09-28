@@ -1,5 +1,7 @@
 var testApp = testApp || {};
-testApp.ListView = function() {
+testApp.ListView = function(model) {
+    this.model = model;
+
     //метод для прослушивания событий
     this.listen = function(type, method, scope, context) {
         this.constructor.superclass.listen(type, method, scope, context);
@@ -7,9 +9,12 @@ testApp.ListView = function() {
 
     //метод который запускается сразу после инициализации объекта
     this.init = function() {
+        console.log('ListVIew model', this.model);
         //event listeners
         this.listen('test:setModeTestActive', this.setModeTestActive, this);
         this.listen('test:showResult', this.showResult, this);
+        this.listen('test:reflectAnswers', this.reflectAnswers, this);
+        this.listen('test:showTask', this.showTask, this);
     };
 
     //включение режима стилей для прохождения теста
@@ -23,13 +28,16 @@ testApp.ListView = function() {
     };
 
     //выделяет выбранную задачу
-    this.highlightTask = function(id) {
+    this.showTask = function(observable, eventType, data) {
+        var id = data['id'];
         $.cache('#left-side-bar').find('.task-item').removeClass('active-task');
         $('#qn' + id).addClass('active-task');
     };
 
     //визуально отображает данные ответы
-    this.reflectAnswers = function(id, answers) {
+    this.reflectAnswers = function(observable, eventType, data) {
+        var id = data['id'];
+        var answers = data['answers'];
         console.log('ListView reflectAnswers id, answer: ', id, answers);
         answers.length > 0? $('#qn' + id).addClass('answer-given'): $('#qn' + id).removeClass('answer-given');
     };
@@ -60,3 +68,5 @@ testApp.ListView = function() {
 
 };
 
+//добавление возможности запускать и слушать события
+extend(testApp.ListView, Observable);

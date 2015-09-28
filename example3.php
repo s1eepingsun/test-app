@@ -17,6 +17,7 @@
     <script src="./Example_files/openapi.js" type="text/javascript"></script><script type="text/javascript" src="./Example_files/public-main.min.js"></script><style type="text/css"></style>
     <script type="text/javascript" src="./Example_files/shared-main.js"></script>
     <script type="text/javascript" src="./Example_files/lang.ru.js"></script>
+
     <!-- styles -->
     <link rel="shortcut icon" type="image/x-icon" href="http://logic-games.spb.ru/freecell/favicon.ico">
     <link media="screen" href="./Example_files/shared.css" rel="stylesheet" type="text/css">
@@ -33,10 +34,10 @@
 
     <!-- thrid-party libraries -->
     <script type="text/javascript" src="js/libs/handlebars-v3.0.3.js"></script>
-    <!--<script type="text/javascript" src="js/libs/underscore-min.js"></script>-->
     <script type="text/javascript" src="../mathjax/MathJax.js?config=TeX-AMS_HTML"></script>
 
     <!-- modules -->
+    <script type="text/javascript" src="js/helpers.js"></script>
     <script type="text/javascript" src="js/Timer.js"></script>
     <script type="text/javascript" src="js/models/TestModel.js"></script>
     <script type="text/javascript" src="js/views/ListView.js"></script>
@@ -64,7 +65,7 @@
                             <tbody><tr>
                                 <td width="1%" style="white-space: nowrap;">
                             <span class="titleBandLink" id="title">
-                                Математика
+                                ЕГЭ по математике
                             </span>
                                 </td>
 
@@ -123,9 +124,9 @@
                 <div class="controlPanel nonSelectable">
                     <table class="controlPanelLayout">
                         <tbody><tr>
-                            <td id="bbParameters" class="cpButton cpNormal nonSelectable">Параметры</td>
-                            <td id="bbHistory" class="cpButton cpNormal nonSelectable">История</td>
-                            <td id="bbRatings" class="cpButton cpNormal nonSelectable">Рейтинг</td>
+                            <td id="bbParameters" class="cpButton cpNormal nonSelectable disabled">Параметры</td>
+                            <td id="bbHistory" class="cpButton cpNormal nonSelectable disabled">История</td>
+                            <td id="bbRatings" class="cpButton cpNormal nonSelectable disabled">Рейтинг</td>
                             <td id="bbLoginRegister" class="cpButton cpNormal nonSelectable" style="display: none;"> Авторизация </td>
                             <td id="bbProfile" class="cpButton cpNormal nonSelectable"> <span id="bbProfileLabel" style="display: none;">Личный кабинет</span> <span id="bbUnreadMsgCount" style="font-size: 8pt;">Новых сообщений: 1</span> </td>
                         </tr>

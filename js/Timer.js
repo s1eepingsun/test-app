@@ -10,21 +10,20 @@ function Timer(time, timerInterval) {
     };
 
     //запускает таймер обратного отчёта, запускает event
-    this.goDown = function(id) {
+    this.goDown = function() {
         that.activeTimer = setInterval(function() {
             that.timeNow -= that.interval;
             //Backbone.trigger('testTimerTick');
-            if(testApp && testApp.testModel) testApp.testModel.testTimerTick(that.timeNow, that);
+            if(testApp && testApp.testModel) testApp.testModel.timersTick(that.timeNow, that);
         }, this.interval);
-
     };
 
     //запускает таймер на увеличение, запускает event
-    this.goUp = function(id) {
+    this.goUp = function() {
             that.activeTimer = setInterval(function() {
             that.timeNow += that.interval;
             //Backbone.trigger('testTimerTick');
-            if(testApp && testApp.testModel) testApp.testModel.testTimerTick(that.timeNow, that);
+            if(testApp && testApp.testModel) testApp.testModel.timersTick(that.timeNow, that);
         }, this.interval);
     };
 
@@ -65,7 +64,6 @@ function Timer(time, timerInterval) {
     //@return obj - делает объект времени {h, m, s} из timestamp
     this.timeToObject = function(time) {
         var timeObject = {};
-
         var seconds = time/1000;
 
         //hours
@@ -84,6 +82,7 @@ function Timer(time, timerInterval) {
         }
         if(timeObject.m.length == 0) timeObject.m = 0;
 
+        //seconds
         timeObject.s = Math.floor(seconds);
 
         return timeObject;

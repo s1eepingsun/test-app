@@ -18,27 +18,34 @@
     <script type="text/javascript" src="./Example_files/shared-main.js"></script>
     <script type="text/javascript" src="./Example_files/lang.ru.js"></script>
 
+    <!-- styles -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/offcanvas.css" rel="stylesheet">
-    <script src="js/libs/bootstrap.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="js/libs/ie10-viewport-bug-workaround.js"></script>
-    <script src="js/libs/offcanvas.js"></script>
-
-    <?php include 'controllers/testDataToJS.php'; ?>
-    <script type="text/javascript" src="js/libs/handlebars-v3.0.3.js"></script>
-    <script type="text/javascript" src="js/libs/underscore-min.js"></script>
-    <script type="text/javascript" src="js/libs/backbone.js"></script>
     <link media="screen" href="./Example_files/shared.css" rel="stylesheet" type="text/css">
-    <script type="text/javascript" src="js/Timer.js"></script>
-    <!--    <script type="text/javascript" src="js/tests-timer.js"></script>-->
-    <script type="text/javascript" src="js/models/Test.js"></script>
-    <script type="text/javascript" src="js/views/TestView.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
     <link media="screen" href="./Example_files/game-layout.css" rel="stylesheet" type="text/css">
     <link media="screen" href="css/test-main2.css" rel="stylesheet" type="text/css">
     <link rel="shortcut icon" type="image/x-icon" href="http://logic-games.spb.ru/freecell/favicon.ico">
+
+    <!-- assigning php data to js variable -->
+    <?php include 'controllers/testDataToJS.php'; ?>
+
+    <!-- thrid-party libraries -->
+    <script src="js/libs/bootstrap.min.js"></script>
+    <script src="js/libs/ie10-viewport-bug-workaround.js"></script>
+    <script src="js/libs/offcanvas.js"></script>
+    <script type="text/javascript" src="js/libs/handlebars-v3.0.3.js"></script>
+    <!--<script type="text/javascript" src="js/libs/underscore-min.js"></script>-->
     <script type="text/javascript" src="../mathjax/MathJax.js?config=TeX-AMS_HTML"></script>
+
+    <!-- modules -->
+    <script type="text/javascript" src="js/Timer.js"></script>
+    <script type="text/javascript" src="js/models/TestModel.js"></script>
+    <script type="text/javascript" src="js/views/ListView.js"></script>
+    <script type="text/javascript" src="js/views/MainView.js"></script>
+    <script type="text/javascript" src="js/controllers/TestController.js"></script>
+
+    <!-- application core (should be positioned after modules) -->
+    <script type="text/javascript" src="js/main2.js"></script>
 </head>
 <body>
 
@@ -48,9 +55,52 @@
         <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="left-side-bar">
              <?php include 'controllers/testSidebar.php'; ?>
         </div>
-        <div class="col-xs-12 col-sm-9 main-col">
+        <nav class="col-xs-12 col-sm-9 main-col">
             <!-- TOP LINKS -->
-            <div class="titleBand">
+            <!--<div class="container-fluid top-menu" role="navigation">
+                <div class="row">
+                    <div class="col-sm-2">Математика</div>
+                    <div class="col-sm-2">Описаниие</div>
+                    <div class="col-sm-4">Вопросы и отзывы</div>
+                    <div class="col-sm-4">Перейти на другие игры</div>
+                </div>
+            </div>-->
+
+
+            <!--<div class="" role="navigation">
+                <ul class="nav nav-pills nav-justified">
+                    <li role="presentation" class="active"><a href="#">Математика</a></li>
+                    <li role="presentation" class=""><a href="#">Описаниие</a></li>
+                    <li role="presentation" class=""><a href="#">Вопросы и отзывы</a></li>
+                    <li role="presentation" class=""><a href="#">Перейти на другие игры</a></li>
+                </ul>
+            </div>-->
+
+
+            <nav class="navbar navbar-default top-menu">
+                <div class="container-fluid">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">Математика</a>
+                    </div>
+
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="#">Описаниие <span class="sr-only">(current)</span></a></li>
+                            <li><a href="#">Вопросы и отзывы</a></li>
+                            <li><a href="#">Перейти на другие игры</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <!--<div class="titleBand">
                 <div class="titleBandInner">
                     <table cellspacing="0" cellpadding="0" width="100%" border="0">
                         <tbody><tr>
@@ -83,7 +133,7 @@
                         </tr>
                         </tbody></table>
                 </div>
-            </div>
+            </div>-->
 
             <!-- TOP BUTTONS -->
             <div class="controlPanel top-c-panel nonSelectable">

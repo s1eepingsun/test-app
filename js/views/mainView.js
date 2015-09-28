@@ -1,5 +1,5 @@
 var testApp = testApp || {};
-testApp.MainView = function(attrs) {
+testApp.MainView = function() {
     //метод для прослушивания событий
     this.listen = function(event, listenerHandler, listener) {
         this.constructor.superclass.listen(event, listenerHandler, listener);
@@ -10,6 +10,35 @@ testApp.MainView = function(attrs) {
         //event listeners
         this.listen('test:setModeTestActive', this.setModeTestActive, this);
         this.listen('test:showResult', this.showResult, this);
+        this.listen('test:reflectAnswers', this.reflectAnswers, this);
+        this.listen('test:showTask', this.showTask, this);
+        this.listen('test:disableFreeTaskChange', this.disableFreeTaskChange, this);
+        this.listen('test:startNewTest', this.startNewTest, this);
+        this.listen('test:testTimerShow', this.testTimerShow, this);
+        this.listen('test:taskTimerShow', this.taskTimerShow, this);
+
+        this.listen('test:disablePrevButtons', this.disablePrevButtons, this);
+        this.listen('test:disableNextButtons', this.disableNextButtons, this);
+        this.listen('test:enablePrevButtons', this.enablePrevButtons, this);
+        this.listen('test:enableNextButtons', this.enableNextButtons, this);
+
+        //отключает прокрутку страницы при прокрутке центрального блока
+        $.cache('#field').on('mouseenter', function () {
+            if($.cache('#field')[0].scrollHeight > $.cache('#field')[0].offsetHeight) {
+                $.cache('html, body').on('mousewheel', function (e) {
+                    e.preventDefault();
+                });
+                $.cache('#field').on('mousewheel', function (e) {
+                    var step = 15;
+                    var direction = e.originalEvent.deltaY > 0 ? 1 : -1;
+                    $(this).scrollTop($(this).scrollTop() + step * direction);
+                });
+            }
+
+        });
+        $.cache('#field').on('mouseleave', function () {
+            $.cache('html,body').off('mousewheel');
+        });
     };
 
     //начинает новый тест
@@ -18,6 +47,7 @@ testApp.MainView = function(attrs) {
         $.cache('#tb-finish-test').removeClass('disabled');
         $.cache('#left-side-bar').show();
 
+        //сортировка ответов
         if(testApp.testModel.config.answerOrder) {
             this.sortAnswers(testApp.testModel.config.answerOrder);
         }
@@ -25,8 +55,8 @@ testApp.MainView = function(attrs) {
 
     //рендерит результат теста по шаблону
     this.renderResultScore = function(data) {
-        var templateSource = attrs.resultTmeplate;
-        var template = Handlebars.compile($(templateSource).html());
+        var templateSource = $('#test-result-tmpl').html();
+        var template = Handlebars.compile(templateSource);
         var rendered = template(data);
         $.cache('.single-test-data').hide();
         $.cache('#test-result').show();
@@ -61,7 +91,9 @@ testApp.MainView = function(attrs) {
         //отключает навигацию
         $.cache('#tb-prev-task').addClass('disabled');
         $.cache('#tb-next-task').addClass('disabled');
-        $.cache('.single-test-data').find('.test-button').hide();
+        if(testApp.testModel.config.navInResult != true) {
+            $.cache('.single-test-data').find('.test-button').hide();
+        }
 
         $.cache('#tb-finish-test').addClass('disabled');
         $.cache('.single-test-data').find('.answers .answer').removeClass('hoverable');
@@ -72,7 +104,8 @@ testApp.MainView = function(attrs) {
     };
 
     //отображает таймер теста
-    this.testTimerShow = function(timeNow) {
+    this.testTimerShow = function(observable, eventType, timeNow) {
+        //console.log('timeNow 1', timeNow);
         var timer = testApp.testModel.timer;
         var testTimerObj = timer.timeToObject(timeNow);
         var timeString = timer.timeObToString(testTimerObj);
@@ -80,8 +113,8 @@ testApp.MainView = function(attrs) {
     };
 
     //отображает таймер отдельной задачи
-    this.taskTimerShow = function() {
-        var id = testApp.testModel.activeTaskID;
+    this.taskTimerShow = function(observable, eventType, timeNow) {
+        var id = testApp.testModel.selectedTaskID;
         if(!testApp.testModel.taskTimer[id]) return;
 
         var timer = testApp.testModel.taskTimer[id];
@@ -93,7 +126,9 @@ testApp.MainView = function(attrs) {
     };
 
     //показать задание
-    this.showTask = function(id, oldID) {
+    this.showTask = function(observable, eventType, data) {
+        var id = data['id'];
+        var oldID = data['oldID'];
         //testApp.testModel.taskChange(id, oldID);//передаёт в модель новость о показе задачи
         this.taskTimerShow();
         console.log('mainVIew showTask id, oldID', id, oldID);
@@ -109,7 +144,9 @@ testApp.MainView = function(attrs) {
     };
 
     //визуально отображает данные ответы
-    this.reflectAnswers = function(id, answers) {
+    this.reflectAnswers = function(observable, eventType, data) {
+        var id = data['id'];
+        var answers = data['answers'];
         console.log('MainView reflectAnswers id, answer: ', id, answers);
         $('#vn' + id + ' .answers .answer').removeClass('answer-chosen');
         answers.forEach(function(item) {
@@ -268,5 +305,8 @@ testApp.MainView = function(attrs) {
     };
 
 };
+
+//добавление возможности запускать и слушать события
+extend(testApp.MainView, Observable);
 
 

@@ -1,8 +1,8 @@
-console.log('loading', _gameVariationId, _userId, _username);
+/*console.log('loading', _gameVariationId, _userId, _username);
 LogicGame.init(onInit);
 function onInit(){
     console.log("init");
-}
+}*/
 
 $(function() {
     /**
@@ -23,14 +23,14 @@ $(function() {
      */
     testApp.init({
         config: {
-            answerOrder: 'rand',
-            taskTimer: true,
-            taskTimerMode: 'dec',
-            freeTaskChange: true,
-            lastTaskFinish: true,
-            multipleChoices: false,
-            resultAnswersStyle: 'default',
-            navInResult: true
+            //answerOrder: 'rand',
+            //taskTimer: true
+            //taskTimerMode: 'inc'
+            //freeTaskChange: true,
+            //lastTaskFinish: true,
+            //multipleChoices: false,
+            //resultAnswersStyle: 'wrong-border'
+            //navInResult: true
         }
     });
 
@@ -40,16 +40,10 @@ $(function() {
 
 
 testApp.init = function(attrs) {
-    //добавление возможности запускать и слушать события
-    extend(testApp.TestModel, Observable);
-    extend(testApp.ListView, Observable);
-    extend(testApp.MainView, Observable);
-    extend(testApp.TestController, Observable);
-
-    testApp.listView = new testApp.ListView();
+    testApp.listView = new testApp.ListView(testApp.testModel);
     testApp.listView.init();
 
-    testApp.mainView = new testApp.MainView({resultTmeplate: '#test-result-tmpl'});
+    testApp.mainView = new testApp.MainView();
     testApp.mainView.init();
 
     testApp.testModel = new testApp.TestModel();
@@ -57,78 +51,4 @@ testApp.init = function(attrs) {
 
     testApp.testController = new testApp.TestController();
 };
-
-//наследование классов
-function extend(Child, Parent) {
-    var F = function() { };
-    F.prototype = Parent.prototype;
-    Child.prototype = new F();
-    Child.prototype.constructor = Child;
-    Child.superclass = Parent.prototype;
-}
-
-//event listener
-var Observable;
-(Observable = function() {
-}).prototype = {
-    listen: function(type, method, scope, context) {
-        var listeners, handlers;
-        if (!(listeners = this.listeners)) {
-            listeners = this.listeners = {};
-        }
-        if (!(handlers = listeners[type])){
-            handlers = listeners[type] = [];
-        }
-        scope = (scope ? scope : window);
-        handlers.push({
-            method: method,
-            scope: scope,
-            context: (context ? context : scope)
-        });
-    },
-    fireEvent: function(type, data, context) {
-        var listeners, handlers, i, n, handler, scope;
-        if (!(listeners = this.listeners)) {
-            return;
-        }
-        if (!(handlers = listeners[type])){
-            return;
-        }
-        for (i = 0, n = handlers.length; i < n; i++){
-            handler = handlers[i];
-            if (typeof(context)!=="undefined" && context !== handler.context) continue;
-            if (handler.method.call(
-                    handler.scope, this, type, data
-                )===false) {
-                return false;
-            }
-        }
-        return true;
-    }
-};
-
-//нахождение максимального значения массива
-Array.max = function( array ){
-    return Math.max.apply( Math, array );
-};
-
-//нахождение минимального значения массива
-Array.min = function( array ){
-    return Math.min.apply( Math, array );
-};
-
-//модуль для кэширования селекторов jquery
-(function($){
-    $.cache = function (selector) {
-        if (!$.cache[selector]) {
-            $.cache[selector] = $(selector);
-        }
-
-        return $.cache[selector];
-    };
-})(jQuery);
-
-
-
-
 

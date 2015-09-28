@@ -1,11 +1,11 @@
 var testApp = testApp || {};
 testApp.TestController = function() {
-    //клик на Новый тест
+    //клик на "Новый тест"
     $.cache('#tb-new-test').click(function () {
         testApp.testModel.startNewTest();
     });
 
-    //клик на Закончить тест
+    //клик на "Закончить тест"
     $.cache('#tb-finish-test').click(function () {
         testApp.testModel.finishTest();
     });
@@ -23,25 +23,25 @@ testApp.TestController = function() {
         testApp.testModel.giveAnswer(id, answer);
     });
 
-    //клик на Предыдущий вопрос в верхнем меню
+    //клик на "Предыдущий вопрос" в верхнем меню
     $.cache('#tb-prev-task').click(function (e) {
         if ($(e.currentTarget).hasClass('disabled')) return;
         testApp.testModel.showPrevTask();
     });
 
-    //клик на Предыдущий вопрос в задаче
+    //клик на "Предыдущий вопрос" в задаче
     $.cache('.single-test-data').find('.tb-prev-task div:last-child').click(function (e) {
         if ($(e.currentTarget).hasClass('disabled')) return;
         testApp.testModel.showPrevTask();
     });
 
-    //клик на Следующий вопрос в верхнем меню
+    //клик на "Следующий вопрос" в верхнем меню
     $.cache('#tb-next-task').click(function (e) {
         if ($(e.currentTarget).hasClass('disabled')) return;
         testApp.testModel.showNextTask();
     });
 
-    //клик на Следующий вопрос в задаче
+    //клик на "Следующий вопрос" в задаче
     $.cache('.single-test-data').find('.tb-next-task div:last-child').click(function (e) {
         if ($(e.currentTarget).hasClass('disabled')) return;
         testApp.testModel.showNextTask();
@@ -61,7 +61,7 @@ testApp.TestController = function() {
         testApp.mainView.closeTask();
     });
 
-    //клик на Описание
+    //клик на "Описание"
     $.cache('#showDescription').click(function () {
         testApp.mainView.showDescription();
     });
@@ -72,3 +72,6 @@ testApp.TestController = function() {
     });
 
 };
+
+//добавление возможности запускать и слушать события
+extend(testApp.TestController, Observable);

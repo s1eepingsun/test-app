@@ -4,16 +4,21 @@ body {
 }    	
 
 #field {
-	height: 700px;
-   /*  overflow-y: auto; */
+	/*height: 700px;*/
+    height: 573px;
+    overflow-y: auto;
 	padding-bottom: 0 !important;
 }
 #gameArea {
 	background: #d3d3d3;
 }
-
+.gameAreaLayout {
+    /*padding-left: 175px;*/
+}
 .mainLayout .gameArea, .mainLayout .bottomArea {
     width: 590px;
+    /*left: 40%;
+    margin-left: -40px;*/
 }
 .mainLayout .task-content {
     padding-top: 5px;
@@ -82,7 +87,8 @@ body {
     background: linear-gradient(135deg, rgba(0,0,0,0.04) 0%,rgba(0,0,0,0.06) 51%,rgba(0,0,0,0.04) 99%,rgba(0,0,0,0.04) 100%);
 }
 .mainLayout #gbShow {
-	color: #000 !important;
+	color: #000;
+    padding-right: 0;
 }
 .mainLayout .titleBand tr td:first-child, .titleBand tr td:first-child a {
 	font-weight: 700 !important;
@@ -286,8 +292,8 @@ body {
 	position: absolute;
     display: none;
     top: 0;
-    left: 11px;
-	width: 535px;
+    left: 16px;
+	width: 525px;
 	padding: 15px;
 	min-height: 100px;
 	overflow-x: hidden;
@@ -324,7 +330,7 @@ body {
     border: none;
 	background: #d3d3d3;
 	/*height: 752px;*/
-	height: 812px;
+	height: 686px;
     display: none;
 }
 #left-side-bar .active-task {
@@ -399,4 +405,13 @@ body {
     text-align: right;
 }
 
+@media (max-width: 1200px) {
+    #left-side-bar {
+        /*background-color: #007A00;*/
+       /* top: 20px;
+        left: 10px;
+        z-index: 10;
+        border: 1px solid black;*/
+    }
+}
 

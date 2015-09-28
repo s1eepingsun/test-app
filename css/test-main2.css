@@ -1,6 +1,7 @@
 body {
     background: #8B8B83;
     font-family: Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, sans-serif;
+    overflow: visible;
 }
 .container {
     width: 788px;
@@ -385,3 +386,33 @@ body {
     border-left: none;
     text-align: right;
 }
+
+/*** top menu ***/
+.top-menu .nav>li>a {
+    padding: 5px 13px;
+}
+.top-menu .navbar-brand {
+    padding: 5px 15px;
+    height: 30px;
+}
+.top-menu.navbar {
+    height: 32px;
+    min-height: 32px;
+    margin-bottom: 5px;
+}
+.top-menu button.navbar-toggle {
+    margin-top: 5px;
+    padding: 2px 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
