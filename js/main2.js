@@ -26,8 +26,8 @@ $(function() {
         config: {
             //answerOrder: 'rand',
             //taskTimer: true,
-            //taskTimerMode: 'inc',
-            //freeTaskChange: true,
+            //taskTimerMode: 'inc'
+            //freeTaskChange: false
             //lastTaskFinish: true,
             //multipleChoices: false,
             //resultAnswersStyle: 'wrong-border',
@@ -50,6 +50,7 @@ testApp.init = function(attrs) {
     testApp.mainView = new testApp.MainView(testApp.testModel);
     testApp.mainView.init();
 
-    testApp.testController = new testApp.TestController();
+    testApp.testController = new testApp.TestController(testApp.testModel, testApp.mainView, testApp.listView);
+    testApp.testController.init();
 };
 

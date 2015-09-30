@@ -6,6 +6,11 @@ testApp.MainView = function(model) {
 //добавление возможности запускать и слушать события
 extend(testApp.MainView, Observable);
 
+//метод для запуска событий
+testApp.MainView.prototype.fireEvent = function(type, data, context) {
+    this.constructor.superclass.fireEvent(type, data, context);
+};
+
 //метод для прослушивания событий
 testApp.MainView.prototype.listen = function(event, listenerHandler, listener) {
     this.constructor.superclass.listen(event, listenerHandler, listener);
@@ -13,37 +18,79 @@ testApp.MainView.prototype.listen = function(event, listenerHandler, listener) {
 
 //метод который запускается сразу после инициализации объекта
 testApp.MainView.prototype.init = function() {
+    var that = this;
     console.log('MainView init');
-    //event listeners
-    this.listen('test:setModeTestActive', this.setModeTestActive, this);
-    this.listen('test:showResult', this.showResult, this);
-    this.listen('test:reflectAnswers', this.reflectAnswers, this);
-    this.listen('test:showTask', this.showTask, this);
-    this.listen('test:disableFreeTaskChange', this.disableFreeTaskChange, this);
-    this.listen('test:startNewTest', this.startNewTest, this);
-    this.listen('test:testTimerShow', this.testTimerShow, this);
-    this.listen('test:taskTimerShow', this.taskTimerShow, this);
-    this.listen('test:disablePrevButtons', this.disablePrevButtons, this);
-    this.listen('test:disableNextButtons', this.disableNextButtons, this);
-    this.listen('test:enablePrevButtons', this.enablePrevButtons, this);
-    this.listen('test:enableNextButtons', this.enableNextButtons, this);
+
+    /**
+     * UI events block
+     */
+
+    //клик на ответ
+    $.cache('.answers').find('.answer').click(function (e) {
+        var element = e.currentTarget;
+        if ($(element).hasClass('disabled')) return;
+
+        var id = $(element).parents('.single-test-data').attr('id');
+        id = Number(id.substring(2));
+        var answer = $(element).attr('answer');
+
+        var data = {id: id, answer: answer};
+        //отправляет данные в модель для записи
+        that.fireEvent('view:giveAnswer', data);
+    });
+
+    //клик на "Новый тест"
+    $.cache('#tb-new-test').click(function () {
+        that.fireEvent('view:clickStart');
+    });
+
+    //клик на "Закончить тест"
+    $.cache('#tb-finish-test').click(function () {
+        that.fireEvent('view:clickFinish');
+    });
+
+    //клик на "Предыдущий вопрос" в верхнем меню
+    $.cache('#tb-prev-task').click(function (e) {
+        if ($(e.currentTarget).hasClass('disabled')) return;
+        that.fireEvent('view:clickPrev');
+    });
+
+    //клик на "Предыдущий вопрос" в задаче
+    $.cache('.single-test-data').find('.tb-prev-task div:last-child').click(function (e) {
+        if ($(e.currentTarget).hasClass('disabled')) return;
+        that.fireEvent('view:clickPrev');
+    });
+
+    //клик на "Следующий вопрос" в верхнем меню
+    $.cache('#tb-next-task').click(function (e) {
+        if ($(e.currentTarget).hasClass('disabled')) return;
+        that.fireEvent('view:clickNext');
+    });
+
+    //клик на "Следующий вопрос" в задаче
+    $.cache('.single-test-data').find('.tb-next-task div:last-child').click(function (e) {
+        if ($(e.currentTarget).hasClass('disabled')) return;
+        that.fireEvent('view:clickNext');
+    });
+
+    //клик на крестик для закрытия задания при показе результата теста
+    $.cache('#close-result-task').click(function () {
+        that.closeTask();
+    });
+
+    //клик на "Описание"
+    $.cache('#showDescription').click(function () {
+        $.cache('.test-description').toggle();
+    });
+
+    //клик на крестик для зарытия описания
+    $.cache('.close-test-description').click(function (e) {
+        $.cache('.test-description').hide();
+    });
+
 
     //отключает прокрутку страницы при прокрутке центрального блока
-    $.cache('#field').on('mouseenter', function () {
-        if($.cache('#field')[0].scrollHeight > $.cache('#field')[0].offsetHeight) {
-            $.cache('html, body').on('mousewheel', function (e) {
-                e.preventDefault();
-            });
-            $.cache('#field').on('mousewheel', function (e) {
-                var step = 30;
-                var direction = e.originalEvent.deltaY > 0 ? 1 : -1;
-                $(this).scrollTop($(this).scrollTop() + step * direction);
-            });
-        }
-    });
-    $.cache('#field').on('mouseleave', function () {
-        $.cache('html,body').off('mousewheel');
-    });
+    this.singleScrolling();
 };
 
 //начинает новый тест
@@ -109,7 +156,7 @@ testApp.MainView.prototype.setModeTestResult = function() {
 };
 
 //отображает таймер теста
-testApp.MainView.prototype.testTimerShow = function(observable, eventType, timeNow) {
+testApp.MainView.prototype.testTimerShow = function(timeNow) {
     //console.log('timeNow 1', timeNow);
     var timer = this._model.timer;
     var testTimerObj = timer.timeToObject(timeNow);
@@ -118,7 +165,7 @@ testApp.MainView.prototype.testTimerShow = function(observable, eventType, timeN
 };
 
 //отображает таймер отдельной задачи
-testApp.MainView.prototype.taskTimerShow = function(observable, eventType, timeNow) {
+testApp.MainView.prototype.taskTimerShow = function(timeNow) {
     var id = this._model.selectedTaskID;
     if(!this._model.taskTimer[id]) return;
 
@@ -131,7 +178,7 @@ testApp.MainView.prototype.taskTimerShow = function(observable, eventType, timeN
 };
 
 //показать задание
-testApp.MainView.prototype.showTask = function(observable, eventType, data) {
+testApp.MainView.prototype.showTask = function(data) {
     var id = data['id'];
     var oldID = data['oldID'];
     //this._model.taskChange(id, oldID);//передаёт в модель новость о показе задачи
@@ -149,7 +196,7 @@ testApp.MainView.prototype.showTask = function(observable, eventType, data) {
 };
 
 //визуально отображает данные ответы
-testApp.MainView.prototype.reflectAnswers = function(observable, eventType, data) {
+testApp.MainView.prototype.reflectAnswers = function(data) {
     var id = data['id'];
     var answers = data['answers'];
     console.log('MainView reflectAnswers id, answer: ', id, answers);
@@ -161,7 +208,7 @@ testApp.MainView.prototype.reflectAnswers = function(observable, eventType, data
 };
 
 //показывает результат прохождения теста
-testApp.MainView.prototype.showResult = function(observable, eventType, data) {
+testApp.MainView.prototype.showResult = function(data) {
     //ставит режим стилей и работы кнопок для показа результата теста
     this.setModeTestResult();
 
@@ -284,7 +331,7 @@ testApp.MainView.prototype.sortAnswers = function(answerOrder) {
         }
         this.sorted = true;
 
-        //сортировка rand - случайный порядок
+    //сортировка rand - случайный порядок
     } else if(answerOrder === 'rand') {
         for(i = 1; i <= tasksCount; i++) {
             divs = $( '#vn' + i + ' .answers > div:last-child .answer').get();
@@ -311,5 +358,22 @@ testApp.MainView.prototype.sortAnswers = function(answerOrder) {
 
 
 
-
+//отключает прокрутку страницы при прокрутке центрального блока
+testApp.MainView.prototype.singleScrolling = function() {
+    $.cache('#field').on('mouseenter', function () {
+        if ($.cache('#field')[0].scrollHeight > $.cache('#field')[0].offsetHeight) {
+            $.cache('html, body').on('mousewheel', function (e) {
+                e.preventDefault();
+            });
+            $.cache('#field').on('mousewheel', function (e) {
+                var step = 30;
+                var direction = e.originalEvent.deltaY > 0 ? 1 : -1;
+                $(this).scrollTop($(this).scrollTop() + step * direction);
+            });
+        }
+    });
+    $.cache('#field').on('mouseleave', function () {
+        $.cache('html,body').off('mousewheel');
+    });
+}
 
