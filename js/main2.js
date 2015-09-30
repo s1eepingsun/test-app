@@ -4,6 +4,7 @@ function onInit(){
     console.log("init");
 }*/
 
+
 $(function() {
     /**
      * метод инициализирует тест
@@ -24,12 +25,12 @@ $(function() {
     testApp.init({
         config: {
             //answerOrder: 'rand',
-            //taskTimer: true
-            //taskTimerMode: 'inc'
+            //taskTimer: true,
+            //taskTimerMode: 'inc',
             //freeTaskChange: true,
             //lastTaskFinish: true,
             //multipleChoices: false,
-            //resultAnswersStyle: 'wrong-border'
+            //resultAnswersStyle: 'wrong-border',
             //navInResult: true
         }
     });
@@ -40,14 +41,14 @@ $(function() {
 
 
 testApp.init = function(attrs) {
+    testApp.testModel = new testApp.TestModel();
+    testApp.testModel.init(attrs);
+
     testApp.listView = new testApp.ListView(testApp.testModel);
     testApp.listView.init();
 
-    testApp.mainView = new testApp.MainView();
+    testApp.mainView = new testApp.MainView(testApp.testModel);
     testApp.mainView.init();
-
-    testApp.testModel = new testApp.TestModel();
-    testApp.testModel.init(attrs);
 
     testApp.testController = new testApp.TestController();
 };

@@ -56,9 +56,8 @@ var Observable;
         for (i = 0, n = handlers.length; i < n; i++){
             handler = handlers[i];
             if (typeof(context)!=="undefined" && context !== handler.context) continue;
-            if (handler.method.call(
-                    handler.scope, this, type, data
-                )===false) {
+            //console.log('handler', handler);
+            if (handler.method.call(handler.scope, this, type, data) === false) {
                 return false;
             }
         }

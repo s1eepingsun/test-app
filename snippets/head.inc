@@ -5,8 +5,8 @@
 
 <!-- styles -->
 <link rel="shortcut icon" type="image/x-icon" href="http://logic-games.spb.ru/freecell/favicon.ico">
-<link media="screen" href="./Example_files/shared.css" rel="stylesheet" type="text/css">
-<link media="screen" href="./Example_files/game-layout.css" rel="stylesheet" type="text/css">
+<link media="screen" href="css/shared.css" rel="stylesheet" type="text/css">
+<link media="screen" href="css/game-layout.css" rel="stylesheet" type="text/css">
 <link media="screen" href="css/test-main.css" rel="stylesheet" type="text/css">
 
 <!-- assigning php data to js variable -->
@@ -19,7 +19,7 @@
 
 <!-- thrid-party libraries -->
 <script type="text/javascript" src="js/libs/handlebars-v3.0.3.js"></script>
-<script type="text/javascript" src="../mathjax/MathJax.js?config=TeX-AMS_HTML"></script>
+<script type="text/javascript" src="//logic-games.spb.ru/js/lib/mathjax//MathJax.js?config=TeX-AMS_HTML"></script>
 
 <!-- modules -->
 <script type="text/javascript" src="js/helpers.js"></script>

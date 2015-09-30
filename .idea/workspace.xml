@@ -2,26 +2,155 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5f1c9083-e612-4430-86e1-c49db4c5e9d7" name="Default" comment="organized the application properly: made namespace &amp; init function">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/helpers.js" />
-      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\snippets\shared_buttons.htm" afterPath="" />
-      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\test-data\math1 -2.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\Example-bb.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\Example-bb2.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\Example-copy.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\Example-new.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\Example_files\close.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\Example_files\game-layout.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\Example_files\hit" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\Example_files\icon_close.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\Example_files\lang.ru.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\Example_files\loading(1).gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\Example_files\loading.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\Example_files\loading_transparent.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\Example_files\main.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\Example_files\nophoto-ru.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\Example_files\openapi.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\Example_files\poker.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\Example_files\public-main.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\Example_files\shared-main.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\Example_files\shared.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\Example_files\vk_logo.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\Example_files\watch.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\README.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\bootstrap.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\controllers\clientAjax.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\css\bootstrap-theme.min.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\css\bootstrap.min.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\css\build\shared-main.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\css\build\shared.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\css\game-layout 2.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\css\main-b.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\css\offcanvas.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\css\shared\lg-layout.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\css\test-main2.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\example3.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\example32.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\example\css\game-layout.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\example\index.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\example\js\main.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\example\snippets\description.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\example\snippets\example-description.en.htm" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\example\snippets\example-description.ru.htm" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\example\snippets\field.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\example\snippets\head.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\example\snippets\left.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\example\snippets\right.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\example\snippets\top.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\fonts\glyphicons-halflings-regular.eot" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\fonts\glyphicons-halflings-regular.svg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\fonts\glyphicons-halflings-regular.ttf" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\fonts\glyphicons-halflings-regular.woff" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\fonts\glyphicons-halflings-regular.woff2" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\img\icons\accept_12_12_a64.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\img\icons\camera.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\img\icons\cross_12_12_a64.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\img\icons\fav-2.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\img\icons\fav.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\img\icons\icon_close.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\img\icons\icon_close_white.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\img\icons\infinity.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\img\icons\loading.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\img\icons\loading_transparent.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\img\icons\sort-asc.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\img\icons\sort-both.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\img\icons\sort-desc.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\img\icons\vk_logo.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\index2.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\js\build\public-all.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\js\build\public-main.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\js\build\public-main.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\js\build\public.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\js\build\shared-all.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\js\build\shared-main.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\js\build\shared-main.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\js\build\shared.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\js\build\underscore-min.map" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\js\lang\i18n.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\js\lang\lang.en.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\js\lang\lang.ru.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\js\libs\backbone-min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\js\libs\backbone.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\js\libs\bootstrap.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\js\libs\ie-emulation-modes-warning.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\js\libs\ie10-viewport-bug-workaround.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\js\libs\mustache.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\js\libs\offcanvas.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\js\libs\underscore-min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\js\main -old.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\js\models\Test.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\js\old junk\AdminTest.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\js\old junk\ege-timer.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\js\old junk\ege.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\js\old junk\main2 - копия.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\js\old junk\main3.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\js\old junk\tests-timer.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\js\old junk\timer.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\js\old junk\Копия main.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\js\views\TestView.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\js\views\habr.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\scheme.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\sharedAPI\LogicGameConfig.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\sharedAPI\LogicGameI18n.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\sharedAPI\lang\Lang.en.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\sharedAPI\lang\Lang.ru.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\snippets\auth.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\snippets\description.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\snippets\example-description.en.htm" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\snippets\example-description.ru.htm" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\snippets\field2.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\snippets\fireworks.htm" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\snippets\lg-activity.htm" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\snippets\lg-beacon.htm" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\snippets\lg-game-info.htm" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\snippets\lg-game-list.htm" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\snippets\lg-guestbook.htm" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\snippets\lg-history.htm" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\snippets\lg-login-register.htm" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\snippets\lg-main-rating.htm" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\snippets\lg-parameters.htm" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\snippets\lg-profile.htm" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\snippets\lg-ratings.htm" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\snippets\right.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\snippets\top.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\test-data\junk\data - копия broken.txt" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\test-data\junk\data.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\test-data\junk\math1 - 24 08.txt" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\test-data\junk\math1 - копия (2).txt" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\test-data\junk\math1 - копия 20 08 pic aligned.txt" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\test-data\junk\math1 - копия 21 08.txt" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\test-data\junk\math1 - копия.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\test-data\junk\math1 - копия.txt" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\test-data\math1 - 2 with id.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\workspace.txt" afterPath="" />
       <change type="MOVED" beforePath="C:\Server\apache\htdocs\newtest2\js\controllers\testController.js" afterPath="$PROJECT_DIR$/js/controllers/TestController.js" />
       <change type="MOVED" beforePath="C:\Server\apache\htdocs\newtest2\js\models\testModel.js" afterPath="$PROJECT_DIR$/js/models/TestModel.js" />
       <change type="MOVED" beforePath="C:\Server\apache\htdocs\newtest2\js\views\listView.js" afterPath="$PROJECT_DIR$/js/views/ListView.js" />
       <change type="MOVED" beforePath="C:\Server\apache\htdocs\newtest2\js\views\mainView.js" afterPath="$PROJECT_DIR$/js/views/MainView.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Example-bb2.php" afterPath="$PROJECT_DIR$/Example-bb2.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/Timer.js" afterPath="$PROJECT_DIR$/js/Timer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/snippets/example-description.en.htm" afterPath="$PROJECT_DIR$/snippets/example-description.en.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/snippets/example-description.ru.htm" afterPath="$PROJECT_DIR$/snippets/example-description.ru.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/example3.php" afterPath="$PROJECT_DIR$/example3.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/snippets/field.inc" afterPath="$PROJECT_DIR$/snippets/field.inc" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/game-layout.css" afterPath="$PROJECT_DIR$/css/game-layout.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/snippets/head.inc" afterPath="$PROJECT_DIR$/snippets/head.inc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/helpers.js" afterPath="$PROJECT_DIR$/js/helpers.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/snippets/lg-parameters.htm" afterPath="$PROJECT_DIR$/snippets/lg-parameters.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/main.js" afterPath="$PROJECT_DIR$/js/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/snippets/left.inc" afterPath="$PROJECT_DIR$/snippets/left.inc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/snippets/lg-template-local.inc" afterPath="$PROJECT_DIR$/snippets/lg-template-local.inc" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/main2.js" afterPath="$PROJECT_DIR$/js/main2.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-data/math1-short.json" afterPath="$PROJECT_DIR$/test-data/math1-short.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-data/math1.json" afterPath="$PROJECT_DIR$/test-data/math1.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/test-main.css" afterPath="$PROJECT_DIR$/css/test-main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/test-main2.css" afterPath="$PROJECT_DIR$/css/test-main2.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/testDataToJS.php" afterPath="$PROJECT_DIR$/controllers/testDataToJS.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="newtest2.iws" />
@@ -50,11 +179,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="main2.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main2.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/main2.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.09637188">
-              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -65,8 +194,18 @@
       <file leaf-file-name="TestModel.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/models/TestModel.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-20.275862">
-              <caret line="85" column="59" selection-start-line="85" selection-start-column="59" selection-end-line="85" selection-end-column="59" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="25" column="56" selection-start-line="25" selection-start-column="56" selection-end-line="25" selection-end-column="56" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="helpers.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/helpers.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -76,7 +215,17 @@
         <entry file="file://$PROJECT_DIR$/js/views/MainView.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="24" column="71" selection-start-line="24" selection-start-column="71" selection-end-line="24" selection-end-column="71" />
+              <caret line="118" column="0" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ListView.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/js/views/ListView.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.7517007">
+              <caret line="39" column="2" selection-start-line="39" selection-start-column="2" selection-end-line="39" selection-end-column="2" />
               <folding />
             </state>
           </provider>
@@ -86,63 +235,7 @@
         <entry file="file://$PROJECT_DIR$/js/controllers/TestController.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="73" column="2" selection-start-line="73" selection-start-column="2" selection-end-line="73" selection-end-column="2" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="example3.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/example3.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.961538">
-              <caret line="56" column="48" selection-start-line="56" selection-start-column="11" selection-end-line="56" selection-end-column="48" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#1;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#1;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.230769">
-              <caret line="8" column="42" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="42" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="lg-template-local.inc" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/snippets/lg-template-local.inc">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-23.5">
-              <caret line="87" column="18" selection-start-line="87" selection-start-column="18" selection-end-line="87" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="field2.inc" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/snippets/field2.inc">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-211.84616">
-              <caret line="324" column="54" selection-start-line="324" selection-start-column="54" selection-end-line="324" selection-end-column="54" />
-              <folding>
-                <element signature="n#style#0;n#span#1;n#td#4;n#tr#0;n#tbody#0;n#table#0;n#div#3;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="left.inc" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/snippets/left.inc">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.3076923">
-              <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+              <caret line="80" column="9" selection-start-line="80" selection-start-column="9" selection-end-line="80" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -151,8 +244,8 @@
       <file leaf-file-name="head.inc" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/snippets/head.inc">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.1923075">
-              <caret line="11" column="42" selection-start-line="11" selection-start-column="42" selection-end-line="11" selection-end-column="42" />
+            <state vertical-scroll-proportion="-14.384615">
+              <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -174,8 +267,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/controllers/adminTaskList.php" />
-        <option value="$PROJECT_DIR$/controllers/adminMain.php" />
         <option value="$PROJECT_DIR$/views/adminMain.php" />
         <option value="$PROJECT_DIR$/views/adminTaskList.php" />
         <option value="$PROJECT_DIR$/tmpl/test-main2.hbs" />
@@ -190,7 +281,6 @@
         <option value="$PROJECT_DIR$/admin3.php" />
         <option value="$PROJECT_DIR$/Example-bb.php" />
         <option value="$PROJECT_DIR$/controllers/clientAjax.php" />
-        <option value="$PROJECT_DIR$/controllers/testDataToJS.php" />
         <option value="$PROJECT_DIR$/controllers/testSidebar.php" />
         <option value="$PROJECT_DIR$/js/old junk/main3.js" />
         <option value="$PROJECT_DIR$/classes/TestsDB2.php" />
@@ -210,21 +300,24 @@
         <option value="$PROJECT_DIR$/Example-bb2.php" />
         <option value="$PROJECT_DIR$/css/test-main2.css" />
         <option value="$PROJECT_DIR$/example32.php" />
-        <option value="$PROJECT_DIR$/css/test-main.css" />
-        <option value="$PROJECT_DIR$/js/models/TestModel.js" />
-        <option value="$PROJECT_DIR$/js/views/ListView.js" />
-        <option value="$PROJECT_DIR$/js/controllers/TestController.js" />
-        <option value="$PROJECT_DIR$/js/helpers.js" />
-        <option value="$PROJECT_DIR$/js/views/MainView.js" />
         <option value="$PROJECT_DIR$/snippets/lg-head.inc" />
         <option value="$PROJECT_DIR$/index-lg.php" />
-        <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/snippets/head.inc" />
-        <option value="$PROJECT_DIR$/snippets/left.inc" />
         <option value="$PROJECT_DIR$/example3.php" />
         <option value="$PROJECT_DIR$/snippets/field2.inc" />
+        <option value="$PROJECT_DIR$/snippets/left.inc" />
         <option value="$PROJECT_DIR$/snippets/lg-template-local.inc" />
+        <option value="$PROJECT_DIR$/test-data/math1-short.json" />
+        <option value="$PROJECT_DIR$/controllers/testDataToJS.php" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/css/test-main.css" />
+        <option value="$PROJECT_DIR$/snippets/field.inc" />
+        <option value="$PROJECT_DIR$/snippets/head.inc" />
+        <option value="$PROJECT_DIR$/js/models/TestModel.js" />
+        <option value="$PROJECT_DIR$/js/views/MainView.js" />
+        <option value="$PROJECT_DIR$/js/helpers.js" />
         <option value="$PROJECT_DIR$/js/main2.js" />
+        <option value="$PROJECT_DIR$/js/controllers/TestController.js" />
+        <option value="$PROJECT_DIR$/js/views/ListView.js" />
       </list>
     </option>
   </component>
@@ -314,7 +407,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -331,6 +423,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="newtest2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="newtest2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="newtest2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -362,8 +468,95 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="newtest2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="newtest2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="newtest2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="newtest2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="newtest2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="newtest2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="libs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="newtest2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="newtest2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="newtest2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="newtest2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -495,12 +688,11 @@
     <frame x="-1288" y="48" width="1296" height="1040" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22006473" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22653721" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32857144" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928804" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.50109893" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -513,6 +705,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="CSS Styles" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32967034" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4477448" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
@@ -542,20 +735,142 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/js/models/Test.js">
+    <entry file="file://$PROJECT_DIR$/js/main2.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="76" column="47" selection-start-line="76" selection-start-column="47" selection-end-line="76" selection-end-column="47" />
+          <caret line="43" column="48" selection-start-line="43" selection-start-column="48" selection-end-line="43" selection-end-column="48" />
           <folding>
-            <element signature="e#0#163#0" expanded="false" />
+            <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/views/TestView.js">
+    <entry file="file://$PROJECT_DIR$/js/models/TestModel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="593" column="44" selection-start-line="593" selection-start-column="44" selection-end-line="593" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/helpers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="31" column="16" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/views/MainView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="460" column="4" selection-start-line="460" selection-start-column="4" selection-end-line="460" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/views/ListView.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/controllers/TestController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="25" column="48" selection-start-line="25" selection-start-column="48" selection-end-line="25" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/snippets/head.inc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/snippets/field.inc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="63" column="108" selection-start-line="63" selection-start-column="108" selection-end-line="63" selection-end-column="108" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/test-main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="339" column="17" selection-start-line="339" selection-start-column="17" selection-end-line="339" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/main2.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="26" column="28" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/models/TestModel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="29" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/views/MainView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/views/ListView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="71" column="0" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/controllers/TestController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="43" column="41" selection-start-line="43" selection-start-column="41" selection-end-line="43" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/snippets/head.inc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/snippets/field.inc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="63" column="108" selection-start-line="63" selection-start-column="108" selection-end-line="63" selection-end-column="108" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/test-main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="339" column="17" selection-start-line="339" selection-start-column="17" selection-end-line="339" selection-end-column="17" />
           <folding />
         </state>
       </provider>
@@ -575,20 +890,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/old junk/ege.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.46031746">
-          <caret line="566" column="22" selection-start-line="566" selection-start-column="17" selection-end-line="566" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/old junk/ege-timer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.11564626">
-          <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/testSidebar.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.27803737">
@@ -600,20 +901,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.0">
           <caret line="0" column="36" selection-start-line="0" selection-start-column="36" selection-end-line="0" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/old junk/AdminTest.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.792517">
-          <caret line="159" column="29" selection-start-line="159" selection-start-column="29" selection-end-line="159" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/old junk/Копия main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2777778">
-          <caret line="198" column="6" selection-start-line="198" selection-start-column="6" selection-end-line="198" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -631,45 +918,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/libs/backbone.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.52099884">
-          <caret line="171" column="7" selection-start-line="171" selection-start-column="7" selection-end-line="171" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/testDataToJS.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.03976608">
-          <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/controllers/testSidebar.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.65384614">
           <caret line="1" column="30" selection-start-line="1" selection-start-column="30" selection-end-line="1" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/clientAjax.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.03976608">
-          <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/old junk/timer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.17366628">
-          <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/old junk/main3.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.3961406">
-          <caret line="152" column="27" selection-start-line="152" selection-start-column="27" selection-end-line="152" selection-end-column="27" />
         </state>
       </provider>
     </entry>
@@ -687,20 +939,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Example-bb.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.9615384">
-          <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="26" column="28" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/testMain.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.05724299">
@@ -715,13 +953,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/views/habr.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.9489217">
-          <caret line="101" column="46" selection-start-line="101" selection-start-column="46" selection-end-line="101" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../newtest/bootstrap.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4567757">
@@ -729,123 +960,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/test-main2.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="403" column="20" selection-start-line="403" selection-start-column="20" selection-end-line="403" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Example-bb2.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33761683">
-          <caret line="80" column="45" selection-start-line="80" selection-start-column="45" selection-end-line="80" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/example32.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3411215">
-          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/views/TestView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.13492064">
-          <caret line="7" column="80" selection-start-line="7" selection-start-column="80" selection-end-line="7" selection-end-column="80" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/models/Test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="182" column="42" selection-start-line="182" selection-start-column="41" selection-end-line="182" selection-end-column="42" />
-          <folding>
-            <element signature="e#0#163#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/old junk/main2 - копия.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4240363">
-          <caret line="26" column="8" selection-start-line="13" selection-start-column="1" selection-end-line="26" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/test-main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.47052154">
-          <caret line="295" column="17" selection-start-line="295" selection-start-column="17" selection-end-line="295" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/Timer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="42" selection-start-line="23" selection-start-column="42" selection-end-line="23" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/views/ListView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="71" column="0" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/controllers/TestController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="73" column="2" selection-start-line="73" selection-start-column="2" selection-end-line="73" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/views/MainView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="24" column="71" selection-start-line="24" selection-start-column="71" selection-end-line="24" selection-end-column="71" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/helpers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.23129252">
-          <caret line="12" column="44" selection-start-line="12" selection-start-column="44" selection-end-line="12" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/snippets/lg-parameters.htm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.17873831">
-          <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/models/TestModel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-20.275862">
-          <caret line="85" column="59" selection-start-line="85" selection-start-column="59" selection-end-line="85" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../lg-template/snippets/lg-template-local.inc">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.80140185">
           <caret line="85" column="25" selection-start-line="85" selection-start-column="25" selection-end-line="85" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -853,89 +971,151 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.0">
           <caret line="0" column="5" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/snippets/left.inc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.07943925">
+          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test-data/math1-short.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-128.8077">
+          <caret line="197" column="6" selection-start-line="197" selection-start-column="6" selection-end-line="197" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/testDataToJS.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.099415205">
+          <caret line="5" column="33" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/shared.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="280" selection-start-line="5" selection-start-column="276" selection-end-line="5" selection-end-column="280" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/game-layout.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="17" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/snippets/lg-template-local.inc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.41754386">
+          <caret line="84" column="38" selection-start-line="84" selection-start-column="38" selection-end-line="84" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.19296254">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.11929824">
+          <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/test-main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="339" column="17" selection-start-line="339" selection-start-column="17" selection-end-line="339" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/snippets/lg-head.inc">
+    <entry file="file://$PROJECT_DIR$/js/Timer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.62266356">
-          <caret line="33" column="46" selection-start-line="33" selection-start-column="46" selection-end-line="33" selection-end-column="46" />
-          <folding>
-            <marker date="1443437734560" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
+        <state vertical-scroll-proportion="0.44381386">
+          <caret line="23" column="42" selection-start-line="23" selection-start-column="42" selection-end-line="23" selection-end-column="42" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/example/index.php">
+    <entry file="file://$PROJECT_DIR$/snippets/field.inc">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.2651869">
+          <caret line="63" column="108" selection-start-line="63" selection-start-column="108" selection-end-line="63" selection-end-column="108" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/snippets/head.inc">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.1923075">
-          <caret line="11" column="42" selection-start-line="11" selection-start-column="42" selection-end-line="11" selection-end-column="42" />
+        <state vertical-scroll-proportion="-14.384615">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/snippets/left.inc">
+    <entry file="file://$PROJECT_DIR$/js/models/TestModel.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.3076923">
-          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="25" column="56" selection-start-line="25" selection-start-column="56" selection-end-line="25" selection-end-column="56" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/snippets/field2.inc">
+    <entry file="file://$PROJECT_DIR$/js/helpers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-211.84616">
-          <caret line="324" column="54" selection-start-line="324" selection-start-column="54" selection-end-line="324" selection-end-column="54" />
-          <folding>
-            <element signature="n#style#0;n#span#1;n#td#4;n#tr#0;n#tbody#0;n#table#0;n#div#3;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.230769">
-          <caret line="8" column="42" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/example3.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.961538">
-          <caret line="56" column="48" selection-start-line="56" selection-start-column="11" selection-end-line="56" selection-end-column="48" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#1;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#1;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/snippets/lg-template-local.inc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-23.5">
-          <caret line="87" column="18" selection-start-line="87" selection-start-column="18" selection-end-line="87" selection-end-column="18" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/main2.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.09637188">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/controllers/TestController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="80" column="9" selection-start-line="80" selection-start-column="9" selection-end-line="80" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/views/MainView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="118" column="0" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/views/ListView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7517007">
+          <caret line="39" column="2" selection-start-line="39" selection-start-column="2" selection-end-line="39" selection-end-column="2" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -11,6 +11,7 @@ body {
 }
 #gameArea {
 	background: #d3d3d3;
+    border: none !important;
 }
 .gameAreaLayout {
     /*padding-left: 175px;*/
@@ -49,24 +50,24 @@ body {
 .mainLayout .titleBand {
     background: #d3d3d3 !important;
 }
-.mainLayout .titleBandInner {
+.mainLayout .titleBandInner, .gameArea .titleBandInner {
     padding: 3px 7px 0;
     height: 100%;
     border: 3px solid black;
     background-color: #d3d3d3;
 }
-.mainLayout .titleBand, .titleBand a {
+.mainLayout .titleBand, .mainLayout .titleBand,  .titleBand a {
 	color: #000 !important;
 	font-weight: normal !important;
 }
-.mainLayout .controlPanel {
+.mainLayout .controlPanel, .gameArea .controlPanel {
 	background: #d3d3d3;
 }
-.mainLayout .controlPanel.top-c-panel{
+.mainLayout .controlPanel.top-c-panel, .gameArea .controlPanel.top-c-panel{
 	border-top: 3px solid black;
 	margin-top: 2px;
 }
-.mainLayout .controlPanel .cpButton {
+.mainLayout .controlPanel .cpButton, .gameArea .controlPanel .cpButton {
 	background: #fff;
 }
 .controlPanel .disabled {
@@ -86,17 +87,25 @@ body {
     background: -ms-linear-gradient(-45deg, rgba(0,0,0,0.04) 0%,rgba(0,0,0,0.06) 51%,rgba(0,0,0,0.04) 99%,rgba(0,0,0,0.04) 100%);
     background: linear-gradient(135deg, rgba(0,0,0,0.04) 0%,rgba(0,0,0,0.06) 51%,rgba(0,0,0,0.04) 99%,rgba(0,0,0,0.04) 100%);
 }
-.mainLayout #gbShow {
+#gbShow {
 	color: #000;
     padding-right: 0;
 }
 .mainLayout .titleBand tr td:first-child, .titleBand tr td:first-child a {
 	font-weight: 700 !important;
 }
-.mainLayout .titleBand a {
+#title {
+    font-weight: 700 !important;
+}
+.mainLayout .titleBand a,{
     background: #d3d3d3 !important;
 	color: #000 !important;
 	font-weight: normal !important;
+}
+.gameArea .titleBand a, .gameArea .titleBand {
+    background: #d3d3d3 !important;
+    color: #000 !important;
+    font-weight: normal !important;
 }
 /** main task content */
 .single-test-data {
@@ -292,8 +301,8 @@ body {
 	position: absolute;
     display: none;
     top: 0;
-    left: 16px;
-	width: 525px;
+    left: 20px;
+    width: 546px;
 	padding: 15px;
 	min-height: 100px;
 	overflow-x: hidden;
@@ -323,8 +332,11 @@ body {
 }
 
 /** side bar */
+#left-block {
+    width: 171px;
+}
 #left-side-bar {
-	position: absolute;
+	/*position: absolute;*/
     left: -177px;
     width: 171px;
     border: none;
@@ -352,6 +364,9 @@ body {
 }
 #left-side-bar .task-item {
 	padding: 0 5px 0 5px;
+}
+#left-side-bar .task-item:last-child td{
+    padding-bottom: 9px;
 }
 #left-side-bar .task-item:hover {
 	cursor: pointer;
@@ -405,13 +420,10 @@ body {
     text-align: right;
 }
 
-@media (max-width: 1200px) {
-    #left-side-bar {
-        /*background-color: #007A00;*/
-       /* top: 20px;
-        left: 10px;
-        z-index: 10;
-        border: 1px solid black;*/
-    }
+/** bottom block */
+#bottom-block {
+    margin: 1px 104px 0 276px;
 }
+
+
 

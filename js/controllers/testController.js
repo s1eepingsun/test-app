@@ -1,5 +1,8 @@
 var testApp = testApp || {};
-testApp.TestController = function() {
+testApp.TestController = function(model, view) {
+    this._model = model;
+    this._view = view;
+
     //клик на "Новый тест"
     $.cache('#tb-new-test').click(function () {
         testApp.testModel.startNewTest();
@@ -70,6 +73,12 @@ testApp.TestController = function() {
     $.cache('.close-test-description').click(function (e) {
         $(e.currentTarget).parent().hide();
     });
+
+    /*$.cache('#gbShow').click(function() {
+        if(testApp.testModel.selectedTaskID == 0) {
+            $.cache('#bottom-block').css('margin', '0 190px');
+        }
+    });*/
 
 };
 

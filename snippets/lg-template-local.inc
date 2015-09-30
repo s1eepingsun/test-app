@@ -77,10 +77,6 @@ $i18n = new LogicGameI18n($locale, $gvId);
                 <?php
                     @include 'snippets/left.inc'
                 ?>
-
-                <div id="left-side-bar">
-                    <?php include 'controllers/testSidebar.php'; ?>
-                </div>
             </div>
             <div id="middle-block" >
                 <?php
@@ -93,14 +89,8 @@ $i18n = new LogicGameI18n($locale, $gvId);
                 </div>
                 <div id="game-field">
                     <?php
-                       // @include 'snippets/field.inc'
+                        @include 'snippets/field.inc'
                     ?>
-
-                    <div id="field">
-                        <div class="gameArea" id="gameArea">
-                            <?php include 'snippets/field2.inc'; ?>
-                        </div>
-                    </div>
                 </div>
                 <div id="under-field"></div>
             </div>
