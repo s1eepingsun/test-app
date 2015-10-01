@@ -39,7 +39,6 @@ $(function() {
     MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
 });
 
-
 testApp.init = function(attrs) {
     testApp.testModel = new testApp.TestModel();
     testApp.testModel.init(attrs);

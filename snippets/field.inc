@@ -14,7 +14,7 @@
 
                         <td width="1%" align="center" style="white-space: nowrap;">
                                 <span class="titleBandLink" id="showDescription">
-                                    Описаниие
+                                    Описание
                                 </span>
                         </td>
 

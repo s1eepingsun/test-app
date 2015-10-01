@@ -364,9 +364,13 @@ body {
 }
 #left-side-bar .task-item {
 	padding: 0 5px 0 5px;
+    height: 31px;
+}
+#left-side-bar .task-item:last-child {
+    height: 35px;
 }
 #left-side-bar .task-item:last-child td{
-    padding-bottom: 9px;
+    /*padding-bottom: 9px;*/
 }
 #left-side-bar .task-item:hover {
 	cursor: pointer;
@@ -394,7 +398,7 @@ body {
 	font-weight: normal;
 }
 #left-side-bar .side-bar-table th, #left-side-bar .side-bar-table td {
-	padding: 4px 4px 8px 4px;
+	padding: 4px 4px 6px 4px;
 }
 #left-side-bar .side-bar-table th:last-child {
 	padding-right: 5px;
