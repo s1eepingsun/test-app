@@ -6,4 +6,4 @@ ini_set ( "html_errors", "1");
 $pageTitle = 'example';
 $gvId = 36;
 
-include('../snippets/lg-template.inc');
+include('../snippets/lg-template-local.inc');

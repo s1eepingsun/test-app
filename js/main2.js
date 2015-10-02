@@ -24,7 +24,7 @@ $(function() {
      */
     testApp.init({
         config: {
-            //answerOrder: 'rand',
+            //answerOrder: 'inc'
             //taskTimer: true,
             //taskTimerMode: 'inc'
             //freeTaskChange: false

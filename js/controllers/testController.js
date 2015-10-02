@@ -18,7 +18,7 @@ testApp.TestController.prototype = {
 
     //метод который запускается сразу после инициализации объекта
     init: function () {
-        console.log('TestController ', this);
+        if(this._model.config.production != true) console.log('TestController ', this);
 
         //event listeners
         this.listen('view:sidebarClick', this.sidebarClick, this);

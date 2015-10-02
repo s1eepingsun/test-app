@@ -16,23 +16,16 @@ testApp.ListView.prototype = {
 
     //метод который запускается сразу после инициализации объекта
     init: function () {
-        console.log('ListVIew ', this);
+        if(this._model.config.production != true) console.log('ListVIew ', this);
         var that = this;
 
-        /**
-         * UI events block
-         */
-
-            //клик на задачу на сайдбаре
+        //клик на задачу на сайдбаре
         $.cache('#left-side-bar').find('.task-item').click(function (e) {
-            var element = e.target;
-            var id = $(element).parent().attr('id');
+            var element = e.currentTarget;
+            var id = $(element).attr('id');
             id = id.substring(2);
-            var answerGiven;
-            $(element).parent().hasClass('answer-given') ? answerGiven = true : answerGiven = false; //if task has an answer = true
 
-            var data = {id: id, element: element, answerGiven: answerGiven};
-            that.fireEvent('view:sidebarClick', data);
+            that.fireEvent('view:sidebarClick', id);
         });
     },
 
@@ -58,7 +51,7 @@ testApp.ListView.prototype = {
         this._data = data;
         var id = this._data['id'];
         var answers = this._data['answers'];
-        console.log('ListView reflectAnswers id, answer: ', id, answers);
+        if(this._model.config.production != true) console.log('ListView reflectAnswers id, answer: ', id, answers);
         answers.length > 0 ? $('#qn' + id).addClass('answer-given') : $('#qn' + id).removeClass('answer-given');
     },
 
@@ -70,9 +63,9 @@ testApp.ListView.prototype = {
         //окрашивает ответы на задания с данными ответамиданные ответами
         for (var property in data.allAnswered) {
             var taskNumber = data.allAnswered[property];
-            console.log('property', property);
-            console.log('data.allAnswered property', data.allAnswered[property]);
-            console.log('task number', taskNumber);
+            if(this._model.config.production != true) console.log('property', property);
+            if(this._model.config.production != true) console.log('data.allAnswered property', data.allAnswered[property]);
+            if(this._model.config.production != true) console.log('task number', taskNumber);
 
             if ($.inArray(taskNumber, data.correctAnswers) > -1) {
                 $('#qn' + taskNumber).addClass('answered-right');
