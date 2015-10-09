@@ -17,14 +17,14 @@ Array.min = function (array) {
     };
 })(jQuery);
 
-//наследование классов
-function extend(Child, Parent) {
-    var F = function() {};
-    F.prototype = Parent.prototype;
-    Child.prototype = new F();
-    Child.prototype.constructor = Child;
-    Child.superclass = Parent.prototype;
-}
+//console.log работающий только если production != true
+(function() {
+    console.log2 = function(args) {
+        if(testApp.testModel.config.production != true) {
+            console.log.apply(this, arguments);
+        }
+    }
+})();
 
 //добавляет возможность запускать и слушать события
 var Observable;

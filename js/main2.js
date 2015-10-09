@@ -1,10 +1,3 @@
-/*console.log('loading', _gameVariationId, _userId, _username);
-LogicGame.init(onInit);
-function onInit(){
-    console.log("init");
-}*/
-
-
 $(function() {
     /**
      * метод инициализирует тест
@@ -24,19 +17,21 @@ $(function() {
      */
     testApp.init({
         config: {
-            //answerOrder: 'inc'
+            //answerOrder: 'inc',
             //taskTimer: true,
             //taskTimerMode: 'inc'
             //freeTaskChange: false
             //lastTaskFinish: true,
             //multipleChoices: false,
             //resultAnswersStyle: 'wrong-border',
-            //navInResult: true
+            //navInResult: true,
+            production: false
         }
     });
 
-    //Подключение mathjax
+    //подключение mathjax
     MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+
 });
 
 testApp.init = function(attrs) {

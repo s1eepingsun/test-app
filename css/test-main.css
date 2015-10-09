@@ -429,5 +429,9 @@ body {
     margin: 1px 104px 0 276px;
 }
 
+.switchLocale {
+    display: none;
+}
+
 
 

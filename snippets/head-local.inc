@@ -1,5 +1,5 @@
 <?php
-    echo "<script type='text/javascript' src='js/main.js?v=$v'></script> \n\r";
+   // echo "<script type='text/javascript' src='js/main.js?v=$v'></script> \n\r";
     echo "<link media='screen' href='css/game-layout.css?v=$v' rel='stylesheet' type='text/css'>\n\r";
 ?>
 
@@ -34,3 +34,6 @@
 
 <!-- application core (should be positioned after modules) -->
 <script type="text/javascript" src="js/main2.js"></script>
+
+<!-- unit tests -->
+<script type="text/javascript" src="js/unitTests.js"></script>

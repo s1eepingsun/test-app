@@ -8,5 +8,5 @@ $data = $testsDB->getTestsData();
 
 <script type="text/javascript">
     var phpTestData = <?=$data?>;
-    console.log('test data php1: ', phpTestData);
+//    console.log('test data php1: ', phpTestData);
 </script> 

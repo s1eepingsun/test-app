@@ -17,7 +17,7 @@ testApp.MainView.prototype = {
     //метод который запускается сразу после инициализации объекта
     init: function () {
         var that = this;
-        if(this._model.config.production != true) console.log('MainView init');
+        console.log2('MainView init');
 
         //клик на ответ
         $.cache('.answers').find('.answer').click(function (e) {
@@ -89,7 +89,7 @@ testApp.MainView.prototype = {
 
     //начинает новый тест
     startNewTest: function () {
-        if(this._model.config.production != true) console.log('main view start new test');
+        console.log2('main view start new test');
         $.cache('#tb-finish-test').removeClass('disabled');
         $.cache('#left-side-bar').show();
 
@@ -151,7 +151,7 @@ testApp.MainView.prototype = {
 
     //отображает таймер теста
     testTimerShow: function (timeNow) {
-        //if(this._model.config.production != true) console.log('timeNow 1', timeNow);
+        //console.log2('timeNow 1', timeNow);
         var timer = this._model.timer;
         var testTimerObj = timer.timeToObject(timeNow);
         var timeString = timer.timeObToString(testTimerObj);
@@ -164,10 +164,10 @@ testApp.MainView.prototype = {
         if (!this._model.taskTimer[id]) return;
 
         var timer = this._model.taskTimer[id];
-        //if(this._model.config.production != true) console.log('taskTimerShow', timer.timeNow);
+        //console.log2('taskTimerShow', timer.timeNow);
         var taskTimerObj = timer.timeToObject(timer.timeNow);
         var taskTimerString = timer.timeObToString(taskTimerObj);
-        //if(this._model.config.production != true) console.log('taskTimerShow id', id, $('#vn' + id + '.task-timer'));
+        //console.log2('taskTimerShow id', id, $('#vn' + id + '.task-timer'));
         $('#vn' + id + ' .task-timer').html(taskTimerString);
     },
 
@@ -175,12 +175,15 @@ testApp.MainView.prototype = {
     showTask: function (data) {
         var id = data['id'];
         var oldID = data['oldID'];
+        var minID = data['minID'];
+        var maxID = data['maxID'];
+        var freeTaskChange = this._model.config.freeTaskChange;
         //this._model.taskChange(id, oldID);//передаёт в модель новость о показе задачи
         if(this._model.config.taskTimer == true) {
             this.taskTimerShow();
         }
 
-        if(this._model.config.production != true) console.log('mainVIew showTask id, oldID', id, oldID);
+        console.log2('mainVIew showTask id, oldID', id, oldID);
         $.cache('#test-result').hide();
         $.cache('.single-test-data').hide();
         $('#vn' + id).show();
@@ -189,13 +192,23 @@ testApp.MainView.prototype = {
             $.cache('#close-result-task').show();
             $.cache('#field').addClass('result-field');
         }
+
+        //отключает/включает кнопки навигции когда ответ последний или первый
+        if (this._model.resultMode != true) {
+            maxID = this._model.tasksCount;
+            id == maxID ? this.disableNextButtons(): this.enableNextButtons();
+            id == minID || freeTaskChange != true ? this.disablePrevButtons(): this.enablePrevButtons();
+        } else if (this._model.config.navInResult == true) {
+            id == maxID ? this.disableNextButtons(): this.enableNextButtons();
+            id == minID ? this.disablePrevButtons(): this.enablePrevButtons();
+        }
     },
 
     //визуально отображает данные ответы
     reflectAnswers: function (data) {
         var id = data['id'];
         var answers = data['answers'];
-        if(this._model.config.production != true) console.log('MainView reflectAnswers id, answer: ', id, answers);
+        console.log2('MainView reflectAnswers id, answer: ', id, answers);
         $('#vn' + id + ' .answers .answer').removeClass('answer-chosen');
         answers.forEach(function (item) {
             $('#vn' + id + ' .answers .answer[answer="' + item + '"]').addClass('answer-chosen');
@@ -214,9 +227,9 @@ testApp.MainView.prototype = {
             var config = this._model.config;
             var allCorrectAnswers = this._model.correctAnswers;//массив правильных ответов на все вопрсы
             var answersGiven = this._model.answersGiven;
-            if(this._model.config.production != true) console.log('property', property);
-            if(this._model.config.production != true) console.log('data.allAnswered property', data.allAnswered[property]);
-            if(this._model.config.production != true) console.log('task number', taskNumber);
+            console.log2('property', property);
+            console.log2('data.allAnswered property', data.allAnswered[property]);
+            console.log2('task number', taskNumber);
 
             //обработка ответов в основном поле
             for (property in allCorrectAnswers[taskNumber]) {
@@ -322,7 +335,7 @@ testApp.MainView.prototype = {
             if (this.sorted == true) return;
             for (var i = 1; i <= tasksCount; i++) {
                 var divs = $('#vn' + i + ' .answers .answer').get().reverse();
-                if(this._model.config.production != true) console.log('divs after reverse: ', divs);
+                console.log2('divs after reverse: ', divs);
                 $('#vn' + i + ' .answers').append(divs);
             }
             this.sorted = true;
@@ -331,9 +344,9 @@ testApp.MainView.prototype = {
         } else if (answerOrder === 'rand') {
             for (i = 1; i <= tasksCount; i++) {
                 divs = $('#vn' + i + ' .answers > div:last-child .answer').get();
-                //if(this._model.config.production != true) console.log('divs: ', divs);
+                //console.log2('divs: ', divs);
                 divs = shuffle(divs);
-                //if(this._model.config.production != true) console.log('divs after shuffle: ', divs[0]);
+                //console.log2('divs after shuffle: ', divs[0]);
                 $('#vn' + i + ' .answers > div:last-child').append(divs[0]);
             }
         }

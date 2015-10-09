@@ -18,7 +18,7 @@ testApp.TestController.prototype = {
 
     //метод который запускается сразу после инициализации объекта
     init: function () {
-        if(this._model.config.production != true) console.log('TestController ', this);
+        console.log2('TestController ', this);
 
         //event listeners
         this.listen('view:sidebarClick', this.sidebarClick, this);
@@ -36,10 +36,6 @@ testApp.TestController.prototype = {
         this.listen('model:testTimerShow', this.testTimerShow, this);
         this.listen('model:taskTimerShow', this.taskTimerShow, this);
         this.listen('model:disableFreeTaskChange', this.disableFreeTaskChange, this);
-        this.listen('model:disablePrevButtons', this.disablePrevButtons, this);
-        this.listen('model:disableNextButtons', this.disableNextButtons, this);
-        this.listen('model:enablePrevButtons', this.enablePrevButtons, this);
-        this.listen('model:enableNextButtons', this.enableNextButtons, this);
     },
 
     //клик на задачу на сайдбаре
@@ -114,26 +110,6 @@ testApp.TestController.prototype = {
     //отображает таймер отдельной задачи
     taskTimerShow: function (observable, eventType, data) {
         this._mainView.taskTimerShow(data);
-    },
-
-    //отключает кнопки "предыдущий вопрос"
-    disablePrevButtons: function () {
-        this._mainView.disablePrevButtons();
-    },
-
-    //отключает кнопки "следующий вопрос"
-    disableNextButtons: function () {
-        this._mainView.disableNextButtons();
-    },
-
-    //делает кнопки "предыдущий вопрос" активными
-    enablePrevButtons: function () {
-        this._mainView.enablePrevButtons();
-    },
-
-    //делает кнопки "следующий вопрос" активными
-    enableNextButtons: function () {
-        this._mainView.enableNextButtons();
     }
 
 };
