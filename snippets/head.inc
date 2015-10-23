@@ -5,7 +5,6 @@
 
 <!-- styles -->
 <link rel="shortcut icon" type="image/x-icon" href="http://logic-games.spb.ru/freecell/favicon.ico">
-<link rel="stylesheet" type="text/css" href="css/jasmine.css">
 <link media="screen" href="css/test-main.css" rel="stylesheet" type="text/css">
 
 
@@ -17,12 +16,17 @@
     <?php include 'tmpl/result.hbs'; ?>
 </script>
 
+<script id="task-list-tmpl" type="text/x-handlebars-template">
+    <?php include 'tmpl/side-bar.hbs'; ?>
+</script>
+
+<script id="task-main-tmpl" type="text/x-handlebars-template">
+    <?php include 'tmpl/test-main.hbs'; ?>
+</script>
+
 <!-- thrid-party libraries -->
 <script type="text/javascript" src="js/libs/handlebars-v3.0.3.js"></script>
 <script type="text/javascript" src="//logic-games.spb.ru/js/lib/mathjax//MathJax.js?config=TeX-AMS_HTML"></script>
-<script type="text/javascript" src="js/libs/jasmine/jasmine.js"></script>
-<script type="text/javascript" src="js/libs/jasmine/jasmine-html.js"></script>
-<script type="text/javascript" src="js/libs/jasmine/boot.js"></script>
 
 <!-- modules -->
 <script type="text/javascript" src="js/helpers.js"></script>

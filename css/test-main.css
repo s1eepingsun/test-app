@@ -29,7 +29,7 @@ body {
 }
 #field .in-task-description {
     display: none;
-    padding: 0 10px 15px;
+    padding: 0 10px 0;
 }
 #field .in-task-description p {
 	margin: 0 !important;
@@ -235,6 +235,7 @@ body {
 .task-top-panel {
 	width: 100%;
     overflow: hidden;
+    padding-top: 15px;
 }
 #time_left {
     display: inline-block;
@@ -433,5 +434,79 @@ body {
     display: none;
 }
 
+/**options window */
+#options-window {
+    display: none;
+    position: absolute;
+    top: 200px;
+    left: 94px;
+    min-width: 400px;
+    max-width: 400px;
+    height: 200px;
+    background: white;
+    border: 1px solid lightgrey;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    padding: 15px;
+}
+#options-window .close-options-window {
+    float: right;
+}
 
+#options-window .close-options-window:hover {
+    cursor: pointer;
+}
 
+#options-window h1 {
+    text-align: center;
+    font-size: 22px;
+}
+
+#options-window > div {
+    margin-top: 5px;
+}
+
+#options-window input.test-number {
+    margin-left: 10px;
+}
+
+#options-window label:hover {
+    cursor: pointer;
+}
+
+#options-window .option_button {
+    margin-top: 10px;
+    margin-left: 3px;
+    color: #000;
+    font-family: Verdana, sans-serif;
+    height: 24px;
+    width: 100px;
+    text-align: center;
+    background: white;
+    vertical-align: top;
+    cursor: pointer;
+    display: inline-block;
+    border: 1px solid #AAA;
+    text-decoration: none;
+    font-size: 9pt;
+    letter-spacing: 0;
+    font-weight: normal;
+}
+
+#options-window .t_co_nav {
+    width: 99%;
+    height: 98%;
+    overflow: hidden;
+    display: table;
+}
+
+#options-window .co_nav {
+    width: 100%;
+    height: 100%;
+    display: table-cell;
+    vertical-align: middle;
+}
+#options-window .control-buttons {
+    text-align: center;
+}

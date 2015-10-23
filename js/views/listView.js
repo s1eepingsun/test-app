@@ -16,43 +16,49 @@ testApp.ListView.prototype = {
 
     //метод который запускается сразу после инициализации объекта
     init: function () {
-        console.log2('ListVIew ', this);
+        console.log('ListVIew ', this);
         var that = this;
 
         //клик на задачу на сайдбаре
-        $.cache('#left-side-bar').find('.task-item').click(function (e) {
+        $('#left-side-bar').find('.task-item').click(function (e) {
             var element = e.currentTarget;
             var id = $(element).attr('id');
-            id = id.substring(2);
+            id = Number(id.substring(2));
 
             that.fireEvent('view:sidebarClick', id);
         });
     },
 
+    //рендерит список заданий
+    renderTasksList: function (data) {
+        var templateSource = $('#task-list-tmpl').html();
+        var template = Handlebars.compile(templateSource);
+        var rendered = template(data);
+        $('#left-side-bar').html(rendered);
+    },
+
     //включение режима стилей для прохождения теста
     setModeTestActive: function () {
-        $.cache('#left-side-bar').find('.task-item').removeClass('answer-given answered-wrong answered-right');
+        $('#left-side-bar').find('.task-item').removeClass('answer-given answered-wrong answered-right');
     },
 
     //включение режиа стилей для просмотра результатов теста
     setModeTestResult: function () {
-        $.cache('#left-side-bar').find('.task-item').removeClass('active-task');
+        $('#left-side-bar').find('.task-item').removeClass('active-task');
     },
 
     //выделяет выбранную задачу
     showTask: function (data) {
         var id = data['id'];
-        $.cache('#left-side-bar').find('.task-item').removeClass('active-task');
+        $('#left-side-bar').find('.task-item').removeClass('active-task');
         $('#qn' + id).addClass('active-task');
-        return id; //returning data for unit test
     },
 
     //визуально отображает данные ответы
     reflectAnswers: function (data) {
-        this._data = data;
-        var id = this._data['id'];
-        var answers = this._data['answers'];
-        console.log2('ListView reflectAnswers id, answer: ', id, answers);
+        var id = data['id'];
+        var answers = data['answers']; //ответы данные на это задание
+        console.log('ListView reflectAnswers id, answer: ', id, answers);
         answers.length > 0 ? $('#qn' + id).addClass('answer-given') : $('#qn' + id).removeClass('answer-given');
     },
 
@@ -61,21 +67,17 @@ testApp.ListView.prototype = {
         //ставит режим стилей для показа результата теста
         this.setModeTestResult();
 
-        //окрашивает ответы на задания с данными ответамиданные ответами
+        //окрашивает задания с данными ответами
         for (var property in data.allAnswered) {
             var taskNumber = data.allAnswered[property];
-            console.log2('property', property);
-            console.log2('data.allAnswered property', data.allAnswered[property]);
-            console.log2('task number', taskNumber);
+            console.log('property', property);
+            console.log('data.allAnswered property', data.allAnswered[property]);
+            console.log('task number', taskNumber);
 
             if ($.inArray(taskNumber, data.correctAnswers) > -1) {
                 $('#qn' + taskNumber).addClass('answered-right');
             } else {
-                if (this._model.config.resultAnswersStyle == 'wrong-borders') {
-                    $('#qn' + taskNumber).addClass('answered-wrong');
-                } else {
-                    $('#qn' + taskNumber).addClass('answered-wrong');
-                }
+                $('#qn' + taskNumber).addClass('answered-wrong');
             }
         }
     }

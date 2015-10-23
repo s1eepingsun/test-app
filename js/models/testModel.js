@@ -1,4 +1,5 @@
 var testApp = testApp || {};
+
 testApp.TestModel = function() {
     //дефолтный конфиг
     this.config = {
@@ -13,7 +14,8 @@ testApp.TestModel = function() {
         production: true
     };
 
-    this.data = phpTestData; //берёт данные теста из json'а посланного при загрузке страницы
+    //this.data = phpTestData; //берёт данные теста из json'а посланного при загрузке страницы
+    this.wholeTestData; //данные всего теста (полученные аяксом)
     this.correctAnswers = []; //массив с баллами за ответы, полученный с сервера
     this.answersGiven = []; //массив с ответами данными пользователем
     this.taskTimer = []; //array of Timer instances
@@ -21,6 +23,8 @@ testApp.TestModel = function() {
     this.tasksCount = 0; //заданий всего
     this.resultMode = false; //служит для переключения стилей: false)прохождение теста; true)просмотр результатов
     this.selectedTaskID = 0; //id задачи выбранной в данный момет
+    this.testTypeDir = 'ege';
+    this.testType = 'math-ege'; //сейчас это имя файла
 };
 
 testApp.TestModel.prototype = {
@@ -35,11 +39,24 @@ testApp.TestModel.prototype = {
     },
 
     //привотит тест в готовность
-    init: function (attrs) {
+    init: function (attrs, data2) {
         //заменяет дефолтные параметры конфига на указанные при инициализации
-        this.config = this.getMergedConfig(this.config, attrs.config);
+        if(attrs) {
+            this.config = this.getMergedConfig(this.config, attrs.config);
+        }
 
-        console.log2('TestModel this', this);
+        if(data2) {
+            this.data = data2;
+            console.log('this.data = data2;');
+        } else {
+            this.data = phpTestData;
+            console.log('this.data = phpTestData;');
+        }
+        console.log('init data', this.data);
+
+        //this.loadNewTest(this.testTypeDir, this.testType, 2);
+
+        console.log('TestModel this', this);
 
         //проводит первичную обработку полученных с сервера данных: заполняет массив ответов correctAnswers,
         //производит подсчёт задач tasksCount, сортирует задания по order_num
@@ -67,9 +84,27 @@ testApp.TestModel.prototype = {
 
     //начинает новый тест
     startNewTest: function () {
-        console.log2('test model start new test');
+        console.log('test model start new test, data', this.data);
+        /*{{#tasks}}
+        <tr class="task-item" id="qn{{view_number}}">
+            <td>{{#plus1}}{{@index}}{{/plus1}}</td>
+            <td>{{type}}</td>
+            <td>{{#sum answer_points}} {{.}} {{/sum}}</td>
+        </tr>
+        {{/tasks}}*/
 
-        //обнуляет данные, заполненные при прошлых прохождениях теста
+        //var wholeData = JSON.parse(this.wholeTestData);
+
+       /* console.log('testModel parsed', wholeData);
+        testApp.listView.renderTasksList(wholeData);
+        testApp.mainView.renderTaskMainVIew(wholeData);
+
+        this.init();
+        testApp.listView.init();
+        testApp.mainView.init();*/
+        //testApp.testController.init();
+
+        //обнуляет данные, измененные при прошлых прохождениях теста
         this.answersGiven = [];
         this.taskTimer = [];
         this.tasksTimeSpent = [];
@@ -85,34 +120,62 @@ testApp.TestModel.prototype = {
         this.showTask(id, oldID);
 
         //запускает таймер
-        this.testTimerStart();
+        var timerData = this.data.testTimerData;
+        this.testTimerStart(timerData);
 
         this.selectedTaskID = Number(id); //for active task id to be available for other functions
     },
 
-    testTimerStart: function () {
+    loadNewTest: function(testTypeDir, testType, testNumber) {
+        var that = this;
+        var pathname = window.location.pathname;
+        var parts = pathname.split('/');
+        parts.pop();
+        parts.shift();
+        var dir = parts.join('/');
+        dir = '/' + dir + '/';
+        console.log('dir: ', dir);
+        var fileName = testType + '-' + testNumber;
+        var filePath = dir + fileName;
+        console.log('filePath', filePath);
+
+        var reqData = {
+            dir: dir,
+            testTypeDir: testTypeDir,
+            fileName: fileName
+        };
+
+        $.get(dir + 'controllers/testDataAjax.php', reqData, function(data) {
+            //data = $.parseJSON(data);
+            data = JSON.parse(data);
+            //console.log('response data:', data);
+            that.wholeTestData = data;
+        })
+    },
+
+    //запускает таймер теста
+    testTimerStart: function (timerData) {
         if (typeof  this.timer !== 'undefined') this.timer.stop();
         //var timerData = JSON.parse(JSON.stringify(this.data.testTimerData));
-        var timerData = this.data.testTimerData;
-        //console.log2('testTimerStart this.data', this.data);
+        //console.log('testTimerStart this.data', this.data);
         this.timer = new Timer(timerData, 1);
         this.fireEvent('model:testTimerShow', timerData);
 
         this.timer.newTimer();
-        this.timer.goDown();
-        console.log2('timer start timerData: ', timerData);
+        var eventName = 'timer:timerTick';
+        this.timer.goDown(eventName);
+        console.log('timer start timerData: ', timerData);
     },
 
     //слушает каждое изменение таймера, если время == 0, заканчивает тест
-    timersTick: function (timeNow, that) {
-        var recievedTimerID = that.activeTimer; //id таймера данные которого получены
+    timersTick: function (data) {
+        var recievedTimerID = data.that.activeTimer; //id таймера данные которого получены
         var testTimerID = this.timer.activeTimer; //id таймера теста
-        this._timeNow = timeNow;
-
+        this._timeNow = data.timeNow;
 
         //таймер теста, вывести значение и проверить не равен ли он 0
         if (testTimerID == recievedTimerID) {
-            //console.log2('this.timer, that', testTimerID, recievedTimerID);
+            //console.log('this.timer, that', testTimerID, recievedTimerID);
             //timeNow = this.timer.timeNow;
             this.fireEvent('model:testTimerShow', this._timeNow);
             this.testTimerCheck(this._timeNow);
@@ -123,7 +186,7 @@ testApp.TestModel.prototype = {
             var taskTimerID = this.taskTimer[this.selectedTaskID].activeTimer; //id таймера задачи
 
             if (taskTimerID == recievedTimerID) { //checking if this timer is for task and not for test
-                //console.log2('this.taskTimer, that', taskTimerID, recievedTimerID);
+                //console.log('this.taskTimer, that', taskTimerID, recievedTimerID);
                 //timeNow = this.timer.timeNow;
                 this.fireEvent('model:taskTimerShow', this._timeNow);
 
@@ -139,7 +202,7 @@ testApp.TestModel.prototype = {
     testTimerCheck: function (timeNow) {
         this._timeNow = timeNow;
         if (this._timeNow == 0) {
-            //console.log2('testTimerCheck timeNow == 0 => finishTest');
+            //console.log('testTimerCheck timeNow == 0 => finishTest');
             this.timer.stop();
             this.finishTest();
         }
@@ -149,8 +212,8 @@ testApp.TestModel.prototype = {
     taskChange: function (id) {
         var oldID = this.selectedTaskID;
         this._id = id;
-        console.log2('------- taskChange', this._id, oldID, this.data.tasks[this._id]);
-        console.log2('Test this', this);
+        console.log('------- taskChange', this._id, oldID, this.data.tasks[this._id]);
+        console.log('Test this', this);
 
         if (this.config.taskTimer == false) return;
 
@@ -173,17 +236,18 @@ testApp.TestModel.prototype = {
 
         if (typeof taskTimer === 'undefined') return;
 
-        console.log2('is taskTimer[id] an inctance of Timer?', this.taskTimer[this._id] instanceof Timer);
+        console.log('is taskTimer[id] an inctance of Timer?', this.taskTimer[this._id] instanceof Timer);
         if (!(this.taskTimer[this._id] instanceof Timer)) {
             this.taskTimer[this._id] = new Timer(taskTimer, 4);
             this.taskTimer[this._id].newTimer();
-            console.log2('************* task Timer started', this._id);
+            console.log('************* task Timer started', this._id);
         }
 
+        var eventName = 'timer:timerTick';
         if (this.config.taskTimerMode == 'dec') {
-            this.taskTimer[this._id].goDown(this._id);
+            this.taskTimer[this._id].goDown(eventName);
         } else {
-            this.taskTimer[this._id].goUp(this._id);
+            this.taskTimer[this._id].goUp(eventName);
         }
     },
 
@@ -194,11 +258,11 @@ testApp.TestModel.prototype = {
         if (this.config.taskTimer == false) return;
 
         //stop prev timer and save data
-        //console.log2('is task timer an inctance of Timer-2', this.taskTimer[oldID] instanceof Timer);
+        //console.log('is task timer an inctance of Timer-2', this.taskTimer[oldID] instanceof Timer);
         if (this.taskTimer[oldID] instanceof Timer) {
             this.taskTimer[oldID].stop();
             var timeSpent = this.taskTimer[oldID].getTimeSpent();
-            console.log2('taskTimer timespent', timeSpent, oldID);
+            console.log('taskTimer timespent', timeSpent, oldID);
 
             if (oldID != 0) {
                 this.tasksTimeSpent[oldID] = timeSpent;
@@ -209,15 +273,15 @@ testApp.TestModel.prototype = {
     //слушает таймер задания и переходит к след. заданию если время = 0
     taskTimerCheck: function () {
         var id = this.selectedTaskID;
-        //console.log2('this.taskTimerCheck, id, timeNow', id, this.taskTimer[id].timeNow);
+        //console.log('this.taskTimerCheck, id, timeNow', id, this.taskTimer[id].timeNow);
         if (this.taskTimer[id].timeNow == 0) {
             this.taskTimer[id].stop();
-            //console.log2('this.taskTimerCheck this.taskTimer[id].timeNow == 0', id);
+            //console.log('this.taskTimerCheck this.taskTimer[id].timeNow == 0', id);
             this.showNextTask();
 
             //закончить тест если последний вопрос, сейчас действует от прямого вызова по таймеру, не от кнопок
             if (this.resultMode != true && id == this.tasksCount && this.config.lastTaskFinish == true) {
-                console.log2('finish test in taskTimerCheck');
+                console.log('finish test in taskTimerCheck');
                 this.finishTest();
             } else {
                 this.showNextTask();
@@ -231,7 +295,7 @@ testApp.TestModel.prototype = {
         var data = this.data;
 
         data = this.sortByOrderNum(data);
-        console.log2('this.prepareData', data);
+        console.log('this.prepareData', data);
 
         for (var property in data.tasks) {
             if (!data.tasks.hasOwnProperty(property)) continue;
@@ -240,8 +304,8 @@ testApp.TestModel.prototype = {
         }
 
         this.data = data;
-        console.log2('data after prepareData: ', this.data);
-        console.log2('this.correctAnswers: ', this.correctAnswers);
+        console.log('data after prepareData: ', this.data);
+        console.log('this.correctAnswers: ', this.correctAnswers);
     },
 
     //сортирует задания по order_num
@@ -290,7 +354,7 @@ testApp.TestModel.prototype = {
     //показывает задачу
     showTask: function (id) {
         var oldID = this.selectedTaskID;
-        console.log2('testMOdel SHOW TASK!', id, oldID);
+        console.log('testMOdel SHOW TASK!', id, oldID);
         var maxID, minID;
         if (this.resultMode != true) {
             maxID = this.tasksCount;
@@ -314,16 +378,16 @@ testApp.TestModel.prototype = {
     showNextTask: function () {
         var id = this.selectedTaskID;
         if (id == 0 || id >= this.tasksCount) return;
-        console.log2('showNextTask, id, this.tasksCount', id, this.tasksCount);
+        console.log('showNextTask, id, this.tasksCount', id, this.tasksCount);
         if (this.resultMode == true) {
-            console.log2('showNextTask this.resultMode == true');
+            console.log('showNextTask this.resultMode == true');
             var allAnswered = this.finalData.allAnswered;
             while ($.inArray(id + 1, allAnswered) < 0) {
                 id++;
             }
             this.showTask(id + 1);
         } else {
-            console.log2('showNextTask else');
+            console.log('showNextTask else');
             this.showTask(id + 1);
         }
     },
@@ -332,7 +396,7 @@ testApp.TestModel.prototype = {
     showPrevTask: function () {
         var id = this.selectedTaskID;
         if(id <= 1) return;
-        console.log2('showPrevTask', id);
+        console.log('showPrevTask', id);
 
         if (this.resultMode == true) {
             var allAnswered = this.finalData.allAnswered;
@@ -342,7 +406,7 @@ testApp.TestModel.prototype = {
             this.showTask(id - 1);
 
         } else if (this.config.freeTaskChange == true) {
-            console.log2('freeTaskChange == true', id);
+            console.log('freeTaskChange == true', id);
             this.showTask(id - 1);
         }
     },
@@ -356,7 +420,7 @@ testApp.TestModel.prototype = {
         this.writeDownAnswer(id, answer);
 
         //передаёт выбранные ответы в методы вьюшек для визуального отображения данных ответов
-        console.log2('this.answersGiven', this.answersGiven);
+        console.log('this.answersGiven', this.answersGiven);
         if (this.answersGiven.length > 0) {
             var newData = {id: id, answers: this.answersGiven[id]};
             this.fireEvent('model:reflectAnswers', newData);
@@ -402,25 +466,22 @@ testApp.TestModel.prototype = {
 
         var correctAnswers = this.correctAnswers;
         var answersGiven = this.answersGiven;
-        console.log2('--- FINISHING TEST answers given, this', answersGiven, this);
+        console.log('--- FINISHING TEST answers given, this', answersGiven, this);
 
         //остановка таймера
         this.timer.stop();
 
         //остановка таймера отдельной задачи
         if (this.taskTimer instanceof Timer) this.taskTimer.stop();
-        console.log2('invoking taskChange from fninishTest');
+        console.log('invoking taskChange from fninishTest');
         this.saveTaskTimeSpent(); //saves last task time spent
 
         //затраченное на тест время
         this.timeSpent = this.timer.getTimeSpent();
         this.timeSpent = this.timer.timeToObject(this.timeSpent);
-        console.log2(' this.timeSpent ', this.timeSpent);
+        console.log(' this.timeSpent ', this.timeSpent);
         var timeSpent = this.timeSpent;
 
-        /**
-         * подготовка данных для показа результата теста
-         */
         //создает массив всех данных валидных ответов
         var allAnsweredArr = [];
         $.map(answersGiven, function (value, index) {
@@ -428,20 +489,20 @@ testApp.TestModel.prototype = {
                 allAnsweredArr.push(index);
             }
         });
-        console.log2('allAnsweredArr: ', allAnsweredArr);
+        console.log('allAnsweredArr: ', allAnsweredArr);
 
         var totalPoints = 0;
         var maxPoints = 0;
         var wrongAnswersArr = [];
         var correctAnswersArr = [];
         var totalTasks = Number(this.tasksCount);
-        console.log2('that.taskCount 2: ', this.tasksCount);
+        console.log('that.taskCount 2: ', this.tasksCount);
         var tasksAnswered = allAnsweredArr.length;
         var tasksSkipped = Number(totalTasks) - Number(tasksAnswered);
-        console.log2('tasksAnswered: ', tasksAnswered);
-        console.log2('tasksSkipped: ', tasksSkipped);
-        console.log2('correctAnswers77: ', correctAnswers);
-        console.log2('answersGiven: ', answersGiven);
+        console.log('tasksAnswered: ', tasksAnswered);
+        console.log('tasksSkipped: ', tasksSkipped);
+        console.log('correctAnswers77: ', correctAnswers);
+        console.log('answersGiven: ', answersGiven);
 
         //Заполняет массивы с правильными и непр-ми ответами, с данными ответами, и считает набранные баллы
         answersGiven.forEach(function (taskAnswers, i) {
@@ -449,11 +510,11 @@ testApp.TestModel.prototype = {
                 var answerPoints = correctAnswers[i][answer + '_points'];
 
                 if ($.isNumeric(answerPoints) && answerPoints > 0) {
-                    //console.log2('answer for question ' + i + ' is correct');
+                    //console.log('answer for question ' + i + ' is correct');
                     totalPoints += Number(answerPoints);
                     correctAnswersArr.push(i);
                 } else {
-                    //console.log2('answer for question ' + i + ' is wrong');
+                    //console.log('answer for question ' + i + ' is wrong');
                     wrongAnswersArr.push(i);
                 }
             });
@@ -462,7 +523,7 @@ testApp.TestModel.prototype = {
         //считает макс. сумму баллов за все ответы вместе
         correctAnswers.forEach(function (item) {
             for (var property in item) {
-                // console.log2('correctAnswers item property: ', item[property]);
+                // console.log('correctAnswers item property: ', item[property]);
                 if ($.isNumeric(item[property])) {
                     maxPoints += Number(item[property]);
                 }
@@ -474,7 +535,7 @@ testApp.TestModel.prototype = {
             totalTasks: totalTasks,
             correctAnswers: correctAnswersArr,
             wrongAnswers: wrongAnswersArr,
-            allAnswered: allAnsweredArr,//массив с индексами всех отвеченных вопросов
+            allAnswered: allAnsweredArr, //массив с индексами всех отвеченных вопросов
             totalPoints: totalPoints,
             tasksAnswered: tasksAnswered,
             tasksSkipped: tasksSkipped,

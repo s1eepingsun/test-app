@@ -36,6 +36,8 @@ testApp.TestController.prototype = {
         this.listen('model:testTimerShow', this.testTimerShow, this);
         this.listen('model:taskTimerShow', this.taskTimerShow, this);
         this.listen('model:disableFreeTaskChange', this.disableFreeTaskChange, this);
+
+        this.listen('timer:timerTick', this.timerTick, this);
     },
 
     //клик на задачу на сайдбаре
@@ -110,6 +112,11 @@ testApp.TestController.prototype = {
     //отображает таймер отдельной задачи
     taskTimerShow: function (observable, eventType, data) {
         this._mainView.taskTimerShow(data);
+    },
+
+    //передаёт каждое изменение времени таймера
+    timerTick: function (observable, eventType, data) {
+        this._model.timersTick(data);
     }
 
 };

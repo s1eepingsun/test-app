@@ -13,7 +13,7 @@ class TestsDB
         if(file_exists($file) && $data = file_get_contents($file)) {
             return $data;
         } else {
-            return "couldn't get contents";
+            return "couldn't get contents " . $file;
         }
 
     }

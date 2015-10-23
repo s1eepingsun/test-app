@@ -1,3 +1,39 @@
+//регистрация хэлперов handlebars.js
+function registerHandlebarsHelpers() {
+
+    //показывает номера элементов
+    Handlebars.registerHelper('plus1', function(options) {
+        return new Handlebars.SafeString(
+            Number(options.fn(this)) + 1
+        );
+    });
+
+    //математическая сумма элементов (для показа макс. баллов за задание)
+    Handlebars.registerHelper('sum', function(context) {
+        var sum = 0;
+        var valuesArr = [];
+
+        for(prop in context) {
+            if(!context.hasOwnProperty(prop)) continue;
+            valuesArr.push(context[prop]);
+        }
+
+        for(var i=0; i<valuesArr.length; i++) {
+            sum += Number(valuesArr[i]);
+        }
+        return sum;
+    });
+
+    //делает первую букву заглавной
+    Handlebars.registerHelper('upperFirst', function(options) {
+        return new Handlebars.SafeString(
+            options.fn(this).substring(0, 1).toUpperCase() + options.fn(this).substring(1)
+        );
+    });
+}
+
+registerHandlebarsHelpers();
+
 Array.max = function (array) {
     return Math.max.apply(null, array);
 };

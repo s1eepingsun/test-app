@@ -17,10 +17,11 @@ testApp.MainView.prototype = {
     //метод который запускается сразу после инициализации объекта
     init: function () {
         var that = this;
-        console.log2('MainView init');
+        console.log('MainView init');
 
         //клик на ответ
-        $.cache('.answers').find('.answer').click(function (e) {
+        $('.answers').find('.answer').click(function (e) {
+            console.log('click on answer');
             var element = e.currentTarget;
             if ($(element).hasClass('disabled')) return;
 
@@ -34,64 +35,81 @@ testApp.MainView.prototype = {
         });
 
         //клик на "Новый тест"
-        $.cache('#tb-new-test').click(function () {
+        $('#tb-new-test').click(function () {
             that.fireEvent('view:clickStart');
         });
 
         //клик на "Закончить тест"
-        $.cache('#tb-finish-test').click(function () {
+        $('#tb-finish-test').click(function () {
             that.fireEvent('view:clickFinish');
         });
 
         //клик на "Предыдущий вопрос" в верхнем меню
-        $.cache('#tb-prev-task').click(function (e) {
+        $('#tb-prev-task').click(function (e) {
             if ($(e.currentTarget).hasClass('disabled')) return;
             that.fireEvent('view:clickPrev');
         });
 
         //клик на "Предыдущий вопрос" в задаче
-        $.cache('.single-test-data').find('.tb-prev-task div:last-child').click(function (e) {
+        $('.single-test-data').find('.tb-prev-task div:last-child').click(function (e) {
             if ($(e.currentTarget).hasClass('disabled')) return;
             that.fireEvent('view:clickPrev');
         });
 
         //клик на "Следующий вопрос" в верхнем меню
-        $.cache('#tb-next-task').click(function (e) {
+        $('#tb-next-task').click(function (e) {
             if ($(e.currentTarget).hasClass('disabled')) return;
             that.fireEvent('view:clickNext');
         });
 
         //клик на "Следующий вопрос" в задаче
-        $.cache('.single-test-data').find('.tb-next-task div:last-child').click(function (e) {
+        $('.single-test-data').find('.tb-next-task div:last-child').click(function (e) {
             if ($(e.currentTarget).hasClass('disabled')) return;
             that.fireEvent('view:clickNext');
         });
 
         //клик на крестик для закрытия задания при показе результата теста
-        $.cache('#close-result-task').click(function () {
+        $('#close-result-task').click(function () {
             that.closeTask();
         });
 
         //клик на "Описание"
-        $.cache('#showDescription').click(function () {
-            $.cache('.test-description').toggle();
+       /* $('#showDescription').click(function () {
+            $('.test-description').toggle();
+            $('#description').hide();
         });
 
         //клик на крестик для зарытия описания
-        $.cache('.close-test-description').click(function (e) {
-            $.cache('.test-description').hide();
+        $('.close-test-description').click(function (e) {
+            $('.test-description').hide();
+        });*/
+
+        //клик на крестик для зарытия окна параметров
+        /*$('.close-options-window').click(function (e) {
+            $('#options-window').hide();
         });
 
+        $('#bbParameters').click(function(e) {
+            $('#options-window').show();
+        });*/
 
         //отключает прокрутку страницы при прокрутке центрального блока
         this.singleScrolling();
     },
 
+    //рендерит задания в основном окне
+    renderTaskMainVIew: function (data) {
+        var templateSource = $('#task-main-tmpl').html();
+        var template = Handlebars.compile(templateSource);
+        var rendered = template(data);
+        $('#field').html(rendered);
+    },
+
     //начинает новый тест
     startNewTest: function () {
-        console.log2('main view start new test');
-        $.cache('#tb-finish-test').removeClass('disabled');
-        $.cache('#left-side-bar').show();
+        console.log('main view start new test');
+        $('#tb-finish-test').removeClass('disabled');
+        $('#left-side-bar').show();
 
         //сортировка ответов
         if (this._model.config.answerOrder) {
@@ -104,58 +122,59 @@ testApp.MainView.prototype = {
         var templateSource = $('#test-result-tmpl').html();
         var template = Handlebars.compile(templateSource);
         var rendered = template(data);
-        $.cache('.single-test-data').hide();
-        $.cache('#test-result').show();
-        $.cache('#test-result').html(rendered);
+        $('.single-test-data').hide();
+        $('#test-result').show();
+        $('#test-result').html(rendered);
     },
 
     //включение стилей для прохождения теста
     setModeTestActive: function () {
+        console.log('setModeTestActive');
         //подключает навигацию
-        $.cache('#tb-prev-task').removeClass('disabled');
-        $.cache('#tb-next-task').removeClass('disabled');
-        $.cache('.single-test-data').find('.test-button').show();
+        $('#tb-prev-task').removeClass('disabled');
+        $('#tb-next-task').removeClass('disabled');
+        $('.single-test-data').find('.test-button').show();
 
-        $.cache('.start-message').hide();
-        $.cache('#time-left').show();
-        $.cache('#tb-finish-test').removeClass('disabled');
-        $.cache('.single-test-data').find('.answers .answer').addClass('hoverable');
-        $.cache('.single-test-data').find('.answers .answer').removeClass('disabled');
-        $.cache('#field').find('.in-task-description').show();
-        $.cache('.task-timer').removeClass('in-result');
+        $('.start-message').hide();
+        $('#time-left').show();
+        $('#tb-finish-test').removeClass('disabled');
+        $('.single-test-data').find('.answers .answer').addClass('hoverable');
+        $('.single-test-data').find('.answers .answer').removeClass('disabled');
+        $('#field').find('.in-task-description').show();
+        $('.task-timer').removeClass('in-result');
 
         //убирает окраску ответов
-        $.cache('.single-test-data').find('.answer').removeClass('answer-chosen answered-wrong answered-right');
-        $.cache('.single-test-data').find('.answer').removeClass('answered-basic-border answered-right-border answered-wrong-border');
+        $('.single-test-data').find('.answer').removeClass('answer-chosen answered-wrong answered-right');
+        $('.single-test-data').find('.answer').removeClass('answered-basic-border answered-right-border answered-wrong-border');
 
-        $.cache('#close-result-task').hide();
-        $.cache('#field').removeClass('result-field');
+        $('#close-result-task').hide();
+        $('#field').removeClass('result-field');
     },
 
     //включение стилей для просмотра результатов теста
     setModeTestResult: function () {
         //отключает навигацию
-        $.cache('#tb-prev-task').addClass('disabled');
-        $.cache('#tb-next-task').addClass('disabled');
+        $('#tb-prev-task').addClass('disabled');
+        $('#tb-next-task').addClass('disabled');
         if (this._model.config.navInResult != true) {
-            $.cache('.single-test-data').find('.test-button').hide();
+            $('.single-test-data').find('.test-button').hide();
         }
 
-        $.cache('#tb-finish-test').addClass('disabled');
-        $.cache('.single-test-data').find('.answers .answer').removeClass('hoverable');
-        $.cache('.single-test-data').find('.answers .answer').addClass('disabled');
-        $.cache('#field').find('.in-task-description').hide();
-        $.cache('.task-timer').addClass('in-result');
-        $.cache('#time-left').hide();
+        $('#tb-finish-test').addClass('disabled');
+        $('.single-test-data').find('.answers .answer').removeClass('hoverable');
+        $('.single-test-data').find('.answers .answer').addClass('disabled');
+        $('#field').find('.in-task-description').hide();
+        $('.task-timer').addClass('in-result');
+        $('#time-left').hide();
     },
 
     //отображает таймер теста
     testTimerShow: function (timeNow) {
-        //console.log2('timeNow 1', timeNow);
+        //console.log('timeNow 1', timeNow);
         var timer = this._model.timer;
         var testTimerObj = timer.timeToObject(timeNow);
         var timeString = timer.timeObToString(testTimerObj);
-        $('#time-left').html(timeString);
+        $('#time-left span').html(timeString);
     },
 
     //отображает таймер отдельной задачи
@@ -164,10 +183,10 @@ testApp.MainView.prototype = {
         if (!this._model.taskTimer[id]) return;
 
         var timer = this._model.taskTimer[id];
-        //console.log2('taskTimerShow', timer.timeNow);
+        //console.log('taskTimerShow', timer.timeNow);
         var taskTimerObj = timer.timeToObject(timer.timeNow);
         var taskTimerString = timer.timeObToString(taskTimerObj);
-        //console.log2('taskTimerShow id', id, $('#vn' + id + '.task-timer'));
+        //console.log('taskTimerShow id', id, $('#vn' + id + '.task-timer'));
         $('#vn' + id + ' .task-timer').html(taskTimerString);
     },
 
@@ -183,14 +202,19 @@ testApp.MainView.prototype = {
             this.taskTimerShow();
         }
 
-        console.log2('mainVIew showTask id, oldID', id, oldID);
-        $.cache('#test-result').hide();
-        $.cache('.single-test-data').hide();
+        console.log('mainVIew showTask id, oldID', id, oldID);
+        $('#test-result').hide();
+        $('.single-test-data').hide();
+        if(id != 1 && $('#game-field').find('.in-task-description').css('display') != 'none') {
+            $('#game-field').find('.in-task-description').hide();
+        } else if(id == 1 && this._model.resultMode != true) {
+            $('#game-field').find('.in-task-description').show();
+        }
         $('#vn' + id).show();
 
         if (this._model.resultMode == true) {
-            $.cache('#close-result-task').show();
-            $.cache('#field').addClass('result-field');
+            $('#close-result-task').show();
+            $('#field').addClass('result-field');
         }
 
         //отключает/включает кнопки навигции когда ответ последний или первый
@@ -208,7 +232,7 @@ testApp.MainView.prototype = {
     reflectAnswers: function (data) {
         var id = data['id'];
         var answers = data['answers'];
-        console.log2('MainView reflectAnswers id, answer: ', id, answers);
+        console.log('MainView reflectAnswers id, answer: ', id, answers);
         $('#vn' + id + ' .answers .answer').removeClass('answer-chosen');
         answers.forEach(function (item) {
             $('#vn' + id + ' .answers .answer[answer="' + item + '"]').addClass('answer-chosen');
@@ -227,9 +251,9 @@ testApp.MainView.prototype = {
             var config = this._model.config;
             var allCorrectAnswers = this._model.correctAnswers;//массив правильных ответов на все вопрсы
             var answersGiven = this._model.answersGiven;
-            console.log2('property', property);
-            console.log2('data.allAnswered property', data.allAnswered[property]);
-            console.log2('task number', taskNumber);
+            console.log('property', property);
+            console.log('data.allAnswered property', data.allAnswered[property]);
+            console.log('task number', taskNumber);
 
             //обработка ответов в основном поле
             for (property in allCorrectAnswers[taskNumber]) {
@@ -270,59 +294,59 @@ testApp.MainView.prototype = {
 
     //закрытие ответа при просмотре результатов теста
     closeTask: function () {
-        $.cache('#field').removeClass('result-field');
-        $.cache('#test-result').show();
-        $.cache('.single-test-data').hide();
-        $.cache('#close-result-task').hide();
-        $.cache('.mainLayout').find('.in-task-description').hide();
+        $('#field').removeClass('result-field');
+        $('#test-result').show();
+        $('.single-test-data').hide();
+        $('#close-result-task').hide();
+        $('.mainLayout').find('.in-task-description').hide();
     },
 
     //отключает кнопки "предыдущий вопрос"
     disablePrevButtons: function () {
-        $.cache('#tb-prev-task').addClass('disabled');
-        $.cache('.single-test-data').find('.tb-prev-task div:last-child').addClass('disabled');
-        $.cache('.single-test-data').find('.tb-prev-task div:last-child').removeClass('hoverable');
+        $('#tb-prev-task').addClass('disabled');
+        $('.single-test-data').find('.tb-prev-task div:last-child').addClass('disabled');
+        $('.single-test-data').find('.tb-prev-task div:last-child').removeClass('hoverable');
     },
 
     //отключает кнопки "следующий вопрос"
     disableNextButtons: function () {
-        $.cache('#tb-next-task').addClass('disabled');
-        $.cache('.single-test-data').find('.tb-next-task div:last-child').addClass('disabled');
-        $.cache('.single-test-data').find('.tb-next-task div:last-child').removeClass('hoverable');
+        $('#tb-next-task').addClass('disabled');
+        $('.single-test-data').find('.tb-next-task div:last-child').addClass('disabled');
+        $('.single-test-data').find('.tb-next-task div:last-child').removeClass('hoverable');
     },
 
     //делает кнопки "предыдущий вопрос" активными
     enablePrevButtons: function () {
-        $.cache('#tb-prev-task').removeClass('disabled');
-        $.cache('.single-test-data').find('.tb-prev-task div:last-child').removeClass('disabled');
-        $.cache('.single-test-data').find('.tb-prev-task div:last-child').addClass('hoverable');
+        $('#tb-prev-task').removeClass('disabled');
+        $('.single-test-data').find('.tb-prev-task div:last-child').removeClass('disabled');
+        $('.single-test-data').find('.tb-prev-task div:last-child').addClass('hoverable');
     },
 
     //делает кнопки "следующий вопрос" активными
     enableNextButtons: function () {
-        $.cache('#tb-next-task').removeClass('disabled');
-        $.cache('.single-test-data').find('.tb-next-task div:last-child').removeClass('disabled');
-        $.cache('.single-test-data').find('.tb-next-task div:last-child').addClass('hoverable');
+        $('#tb-next-task').removeClass('disabled');
+        $('.single-test-data').find('.tb-next-task div:last-child').removeClass('disabled');
+        $('.single-test-data').find('.tb-next-task div:last-child').addClass('hoverable');
     },
 
     //показывает описание теста
     showDescription: function () {
-        $.cache('.test-description').show();
+        $('.test-description').show();
     },
 
     //закрывает описание теста
     closeDescription: function () {
-        $.cache('.test-description').hide();
+        $('.test-description').hide();
     },
 
     //отключает и убирает кнопки "предыдущий вопрос"
     disableFreeTaskChange: function () {
-        $.cache('#tb-prev-task').addClass('disabled');
-        $.cache('.single-test-data').find('.tb-prev-task div:last-child').addClass('disabled');
-        $.cache('.single-test-data').find('.tb-prev-task div:last-child').removeClass('hoverable');
-        $.cache('.single-test-data').find('.tb-prev-task div:last-child').hide();
-        $.cache('#tb-next-task').html('Пропустить вопрос');
-        $.cache('.single-test-data').find('.tb-next-task div:last-child').html('Пропустить вопрос');
+        $('#tb-prev-task').addClass('disabled');
+        $('.single-test-data').find('.tb-prev-task div:last-child').addClass('disabled');
+        $('.single-test-data').find('.tb-prev-task div:last-child').removeClass('hoverable');
+        $('.single-test-data').find('.tb-prev-task div:last-child').hide();
+        $('#tb-next-task').html('Пропустить вопрос');
+        $('.single-test-data').find('.tb-next-task div:last-child').html('Пропустить вопрос');
     },
 
     //сортировка вопросов
@@ -335,7 +359,7 @@ testApp.MainView.prototype = {
             if (this.sorted == true) return;
             for (var i = 1; i <= tasksCount; i++) {
                 var divs = $('#vn' + i + ' .answers .answer').get().reverse();
-                console.log2('divs after reverse: ', divs);
+                console.log('divs after reverse: ', divs);
                 $('#vn' + i + ' .answers').append(divs);
             }
             this.sorted = true;
@@ -344,9 +368,9 @@ testApp.MainView.prototype = {
         } else if (answerOrder === 'rand') {
             for (i = 1; i <= tasksCount; i++) {
                 divs = $('#vn' + i + ' .answers > div:last-child .answer').get();
-                //console.log2('divs: ', divs);
+                //console.log('divs: ', divs);
                 divs = shuffle(divs);
-                //console.log2('divs after shuffle: ', divs[0]);
+                //console.log('divs after shuffle: ', divs[0]);
                 $('#vn' + i + ' .answers > div:last-child').append(divs[0]);
             }
         }
@@ -367,20 +391,20 @@ testApp.MainView.prototype = {
 
     //отключает прокрутку страницы при прокрутке центрального блока
     singleScrolling: function () {
-        $.cache('#field').on('mouseenter', function () {
-            if ($.cache('#field')[0].scrollHeight > $.cache('#field')[0].offsetHeight) {
-                $.cache('html, body').on('mousewheel', function (e) {
+        $('#field').on('mouseenter', function () {
+            if ($('#field')[0].scrollHeight > $('#field')[0].offsetHeight) {
+                $('html, body').on('mousewheel', function (e) {
                     e.preventDefault();
                 });
-                $.cache('#field').on('mousewheel', function (e) {
+                $('#field').on('mousewheel', function (e) {
                     var step = 30;
                     var direction = e.originalEvent.deltaY > 0 ? 1 : -1;
                     $(this).scrollTop($(this).scrollTop() + step * direction);
                 });
             }
         });
-        $.cache('#field').on('mouseleave', function () {
-            $.cache('html,body').off('mousewheel');
+        $('#field').on('mouseleave', function () {
+            $('html,body').off('mousewheel');
         });
     }
 

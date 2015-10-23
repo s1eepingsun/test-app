@@ -13,7 +13,7 @@
                         <td>&nbsp;</td>
 
                         <td width="1%" align="center" style="white-space: nowrap;">
-                                <span class="titleBandLink" id="showDescription">
+                                <span class="titleBandLink" id="showDescription-disaabled">
                                     Описание
                                 </span>
                         </td>
@@ -70,7 +70,7 @@
         <div class="controlPanel nonSelectable">
             <table class="controlPanelLayout">
                 <tr>
-                    <td id="bbParameters" class="cpButton cpNormal nonSelectable disabled">
+                    <td id="bbParameters" class="cpButton cpNormal nonSelectable">
                         <?=$i18n->get("bottomCP", "parameters")?>
                     </td>
                     <td id="bbHistory" class="cpButton cpNormal nonSelectable disabled">

@@ -1,46 +1,54 @@
 function Timer(time, timerInterval) {
-    var that = this;
-    this.time = time;
-    this.interval = 1000/timerInterval;
+    this._time = time;
+    this._interval = 1000 / timerInterval;
+}
+
+Timer.prototype = {
+    //метод для запуска событий
+    fireEvent: function (type, data, context) {
+        Observable.prototype.fireEvent(type, data, context);
+    },
 
     //записывает время запуска таймера, и задаёт время выполнения теста
-    this.newTimer = function() {
+    newTimer: function () {
         this.testStarted = new Date().getTime();
-        this.timeNow = this.time;
-    };
+        this.timeNow = this._time;
+    },
 
     //запускает таймер обратного отчёта, запускает event
-    this.goDown = function() {
-        that.activeTimer = setInterval(function() {
-            that.timeNow -= that.interval;
-            //Backbone.trigger('testTimerTick');
-            if(testApp && testApp.testModel) testApp.testModel.timersTick(that.timeNow, that);
-        }, this.interval);
-    };
+    goDown: function(eventName) {
+        var that = this;
+        this.activeTimer = setInterval(function() {
+            that.timeNow -= that._interval;
+            var data = {timeNow: that.timeNow, that: that};
+            that.fireEvent(eventName, data);
+        }, this._interval);
+    },
 
     //запускает таймер на увеличение, запускает event
-    this.goUp = function() {
-            that.activeTimer = setInterval(function() {
-            that.timeNow += that.interval;
-            //Backbone.trigger('testTimerTick');
-            if(testApp && testApp.testModel) testApp.testModel.timersTick(that.timeNow, that);
-        }, this.interval);
-    };
+    goUp: function(eventName) {
+        var that = this;
+        this.activeTimer = setInterval(function() {
+            that.timeNow += that._interval;
+            var data = {timeNow: that.timeNow, that: that};
+            that.fireEvent(eventName, data);
+        }, this._interval);
+    },
 
     //@return obj - останавливает таймер и записывает время прошедшее с запуска таймера, заканчивает тест
-    this.stop = function() {
-        clearTimeout(that.activeTimer);
+    stop: function() {
+        clearTimeout(this.activeTimer);
         this.testEnded = new Date().getTime();
         console.log('test/task ENded timestamp:', this.testEnded);
-    };
+    },
 
     //возвращает разницу время начала и окончания теста
-    this.getTimeSpent = function() {
+    getTimeSpent: function() {
         return this.testEnded - this.testStarted;
-    };
+    },
 
     //@return str - делает из объекта времени {h, m, s} строку hh:mm:ss
-    this.timeObToString = function(time) {
+    timeObToString: function(time) {
         var timeString = '';
 
         if(time.s < 10){
@@ -59,10 +67,10 @@ function Timer(time, timerInterval) {
         timeString += strM + ':';
         timeString += strS;
         return  timeString;
-    };
+    },
 
     //@return obj - делает объект времени {h, m, s} из timestamp
-    this.timeToObject = function(time) {
+    timeToObject: function(time) {
         var timeObject = {};
         var seconds = time/1000;
 
@@ -86,6 +94,6 @@ function Timer(time, timerInterval) {
         timeObject.s = Math.floor(seconds);
 
         return timeObject;
-    };
+    }
 
-}
+};
