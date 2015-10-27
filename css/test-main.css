@@ -109,7 +109,8 @@ body {
 }
 /** main task content */
 .single-test-data {
-    display: none;  
+    display: none;
+    position: relative;
 }
 .single-test-data p + p {
   text-indent: 1.5em;
@@ -318,6 +319,17 @@ body {
 .close-test-description:hover {
     cursor: pointer;
 }
+.test-number-div {
+    display: block;
+    position: static;
+    left: 10px;
+    bottom: 5px;
+    width: 100px;
+}
+.options-response {
+    color: red;
+    margin-top: 10px;
+}
 
 /** результат теста */
 .result {
@@ -339,7 +351,7 @@ body {
 #left-side-bar {
 	/*position: absolute;*/
     left: -177px;
-    width: 171px;
+    width: 174px;
     border: none;
 	background: #d3d3d3;
 	/*height: 752px;*/

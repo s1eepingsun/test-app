@@ -17,7 +17,7 @@ $(function() {
      */
     testApp.init({
         config: {
-            //answerOrder: 'inc',
+            //answerOrder: 'inc'
             //taskTimer: true,
             //taskTimerMode: 'inc'
             //freeTaskChange: false
@@ -29,43 +29,17 @@ $(function() {
         }
     });
 
-    $('#bbParameters').click(function(e) {
-        console.log('testApp before', testApp);
+    /*$('#bbParameters').click(function(e) {
+        console.log2('testApp before', testApp);
 
         var testTypeDir = 'ege';
         var testType = 'math-ege';
 
         var data2 = loadNewTest2(testTypeDir, testType, 2);
+        $('#left-side-bar').hide();
         console.log2('testModel Before parsing', data2);
-        //var wholeData = JSON.parse(this.wholeTestData);
-
         console.log2('testModel parsed', data2);
-        //testApp.ListView.renderTasksList(data2);
-        //testApp.MainView.renderTaskMainVIew(data2);
-
-
-
-       /* delete testApp.testModel;
-        delete testApp.listView;
-        delete testApp.mainView;
-        delete testApp.testController;
-
-        console.log('testApp after', testApp);
-
-        testApp.init();
-
-        MathJax.Hub.Queue(["Typeset",MathJax.Hub]);*/
-
-
-
-        /*testApp.loadNewTest(testApp.testTypeDir, testApp.testType, 2);
-        var wholeData = JSON.parse(this.wholeTestData);
-
-         //console.log2('testModel parsed', wholeData);
-         testApp.ListView.renderTasksList(wholeData);
-         testApp.MainView.renderTaskMainVIew(wholeData);
-         testApp.init();*/
-    });
+    });*/
 
     //подключение mathjax
     MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
@@ -89,16 +63,52 @@ testApp.init = function(attrs) {
 /*testApp.testTypeDir = 'ege';
 testApp.testType = 'math-ege';*/
 
-function loadNewTest2(testTypeDir, testType, testNumber) {
+function loadNewTest2(testNumber) {
     var that = this;
+    var testTypeDir = 'ege';
+    var testType = 'math-ege';
     var pathname = window.location.pathname;
     var parts = pathname.split('/');
     parts.pop();
     parts.shift();
     var dir = parts.join('/');
     dir = '/' + dir + '/';
-    console.log('dir: ', dir);
+    console.log2('dir: ', dir);
+
+    function getRandomInt(min, max) {
+        return Math.floor(Math.random() * (max - min + 1) + min);
+    }
+
+    if(testNumber) console.log2('**************** test NUmber', testNumber);
+
+    if(!testNumber) {
+        var randomTests = testApp.testModel.randomTests;
+        var maxTestNumber = testApp.testModel.maxTestNumber;
+        var currentTestNumber = testApp.testModel.currentTestNumber;
+        if(randomTests == true) {
+            testNumber = getRandomInt(1, maxTestNumber);
+            while(testNumber == currentTestNumber) {
+                testNumber = getRandomInt(1, maxTestNumber);
+            }
+        } else {
+            if(currentTestNumber != maxTestNumber) {
+                console.log2('------------------ currentTestNumber != maxTestNumber', currentTestNumber, maxTestNumber);
+                testNumber = Number(currentTestNumber) + 1;
+            } else {
+                console.log2('------------------ currentTestNumber == maxTestNumber');
+                testNumber = 1;
+            }
+        }
+    } else {}
+
+
+    testApp.testModel.currentTestNumber = testNumber;
+
+    console.log2('testNumber, currentTestNumber', testNumber, testApp.testModel.currentTestNumber);
+
     var fileName = testType + '-' + testNumber;
+
+    console.log2('fileName', fileName);
 
     var reqData = {
         dir: dir,
@@ -106,36 +116,80 @@ function loadNewTest2(testTypeDir, testType, testNumber) {
         fileName: fileName
     };
 
-    console.log('reqData', reqData);
+    console.log2('reqData ---------------------------------------------------', reqData);
 
     $.get(dir + 'controllers/testDataAjax.php', reqData, function(data) {
         //data = $.parseJSON(data);
-        data2 = JSON.parse(data);
-        data2 = JSON.parse(data2);
-        console.log('response data1:', data2);
+
+        //data2 = JSON.parse(data);
+        //data2 = JSON.parse(data2);
+        console.log2('response data1:', data);
+        data2 = $.parseJSON(data);
+
+        console.log2('response data2:', data2);
+
+        console.log2('Type of data2', typeof data2);
+        if(typeof data2 !== 'object') {
+            data2 = $.parseJSON(data2);
+        }
+
+        console.log2('response data3:', data2);
         //that.wholeTestData = data2;
-        //console.log('response data2:', that.wholeTestData);
+        //console.log2('response data2:', that.wholeTestData);
         that.data2 = data2;
 
 
         delete testApp.testModel;
-        testApp.testModel = new testApp.TestModel();
-        testApp.testModel.init({config:{}}, data2);
-
-        testApp.listView.renderTasksList(data2);
         delete testApp.listView;
+        delete testApp.mainView;
+        delete testApp.testController;
+        if (window.testApp) {
+            if (window.testApp.testModel) delete testApp.testModel;
+            if (window.testApp.testModel) delete testApp.listView;
+            if (window.testApp.testModel) delete testApp.mainView;
+            if (window.testApp.testModel) delete testApp.testController;
+        }
+
+        delete testApp.observable;
+        testApp.observable = new Observable();
+        
+        testApp.testModel = new testApp.TestModel();
+        testApp.testModel.data = data2;
+        testApp.testModel.randomTests = randomTests;
+        testApp.testModel.currentTestNumber = testNumber;
+        testApp.testModel.init({config:{
+            //answerOrder: 'rand'
+        }}, data2);
+
+
+        console.log2('testModel.data', testApp.testModel.data);
+
+
+        //delete testApp.listView;
         testApp.listView = new testApp.ListView(testApp.testModel);
+        testApp.listView.renderTasksList(data2);
         testApp.listView.init();
 
-        testApp.mainView.renderTaskMainVIew(data2);
-        delete testApp.mainView;
+
+        //delete testApp.mainView;
         testApp.mainView = new testApp.MainView(testApp.testModel);
+        testApp.mainView.renderTaskMainVIew(data2);
         testApp.mainView.init();
 
-        /*delete testApp.testController;
+        //delete testApp.testController;
+        //console.log2('in ajax testApp.testController', testApp.testController);
         testApp.testController = new testApp.TestController(testApp.testModel, testApp.mainView, testApp.listView);
-        testApp.testController.init();*/
+        //console.log2('in ajax testApp.testController', testApp.testController);
+        testApp.testController.init();
+        //console.log2('in ajax testApp.testController', testApp.testController);
+
+        testApp.mainView.fireEvent('view:clickStart');
+
+        MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+
     });
+
+
 
     return this.data2;
 }

@@ -8,17 +8,24 @@ testApp.TestController = function(model, mainView, listView) {
 testApp.TestController.prototype = {
     //метод для запуска событий
     fireEvent: function (type, data, context) {
+        //var fireEvent = JSON.parse(JSON.stringify(Observable.prototype.fireEvent));
         Observable.prototype.fireEvent(type, data, context);
+        //fireEvent(type, data, context);
     },
 
     //метод для прослушивания событий
-    listen: function (type, method, scope, context) {
-        Observable.prototype.listen(type, method, scope, context);
+   listen: function (type, method, scope, context) {
+        //var listen = JSON.parse(JSON.stringify(Observable.prototype.listen));
+       Observable.prototype.listen(type, method, scope, context);
+        //listen(type, method, scope, context);
     },
 
     //метод который запускается сразу после инициализации объекта
     init: function () {
-        console.log2('TestController ', this);
+        /*this._model = testApp.testModel;
+        this._mainView = testApp.mainView;
+        this._listView = testApp.listView;
+        console.log2('TestController init ', this);*/
 
         //event listeners
         this.listen('view:sidebarClick', this.sidebarClick, this);
@@ -27,6 +34,7 @@ testApp.TestController.prototype = {
         this.listen('view:clickPrev', this.clickPrev, this);
         this.listen('view:clickNext', this.clickNext, this);
         this.listen('view:giveAnswer', this.giveAnswer, this);
+        this.listen('view:acceptOptions', this.acceptOptions, this);
 
         this.listen('model:showTask', this.showTask, this);
         this.listen('model:reflectAnswers', this.reflectAnswers, this);
@@ -64,6 +72,9 @@ testApp.TestController.prototype = {
 
     //даёт ответ на задачу
     clickStart: function () {
+        //console.log2('controller clickStart testApp.testModel.data', testApp.testModel.data);
+        //console.log2('controller clickStart testApp.testModel.data', testApp.testModel.data);
+        console.log2('controller clickStart this._model.data', this._model.data);
         this._model.startNewTest();
     },
 
@@ -117,6 +128,10 @@ testApp.TestController.prototype = {
     //передаёт каждое изменение времени таймера
     timerTick: function (observable, eventType, data) {
         this._model.timersTick(data);
+    },
+
+    acceptOptions: function (observable, eventType, data) {
+        this._model.acceptOptions(data);
     }
 
 };

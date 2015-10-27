@@ -54,25 +54,30 @@
 <div class="response"></div>
 
 <div id="options-window">
-    <div class="close-options-window"><img src="images/icon_close.png"></div>
-    <h1>Параметры</h1>
-    <div>
-        <label><input type="radio" name="tests-sequence" value="random">Тесты в случайном порядке</label>
-        <label><input type="radio" name="tests-sequence" value="linear">Тесты подряд</label>
-    </div>
-    <div>
-        <label>Ввести номер теста (1 - 2)<input class="test-number" type="text" name="test-number" maxlength="2" size="1"></label>
-    </div>
-    <div class="control-buttons">
-        <div class="accept option_button">
-            <div class="t_co_nav">
-                <div class="co_nav">ОК</div>
+    <form>
+        <div class="close-options-window"><img src="images/icon_close.png"></div>
+        <h1>Параметры</h1>
+        <div>
+            <label><input type="radio" name="tests-sequence" value="random">Тесты в случайном порядке</label>
+            <label><input type="radio" name="tests-sequence" value="linear" checked>Тесты подряд</label>
+        </div>
+        <div>
+            <label>Ввести номер теста (1 - 4)<input class="test-number" type="text" name="test-number" maxlength="2" size="1"></label>
+        </div>
+        <div class="control-buttons">
+            <div class="accept option_button">
+                <div class="t_co_nav">
+                    <div class="co_nav">ОК</div>
+                </div>
+            </div>
+            <div class="cancel option_button">
+                <div class="t_co_nav">
+                    <div class="co_nav">Отмена</div>
+                </div>
             </div>
         </div>
-        <div class="cancel option_button">
-            <div class="t_co_nav">
-                <div class="co_nav">Отмена</div>
-            </div>
+        <div class="options-response">
+            <div></div>
         </div>
-    </div>
+    </form>
 </div>

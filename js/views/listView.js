@@ -16,7 +16,7 @@ testApp.ListView.prototype = {
 
     //метод который запускается сразу после инициализации объекта
     init: function () {
-        console.log('ListVIew ', this);
+        console.log2('ListVIew ', this);
         var that = this;
 
         //клик на задачу на сайдбаре
@@ -58,7 +58,7 @@ testApp.ListView.prototype = {
     reflectAnswers: function (data) {
         var id = data['id'];
         var answers = data['answers']; //ответы данные на это задание
-        console.log('ListView reflectAnswers id, answer: ', id, answers);
+        console.log2('ListView reflectAnswers id, answer: ', id, answers);
         answers.length > 0 ? $('#qn' + id).addClass('answer-given') : $('#qn' + id).removeClass('answer-given');
     },
 
@@ -70,9 +70,9 @@ testApp.ListView.prototype = {
         //окрашивает задания с данными ответами
         for (var property in data.allAnswered) {
             var taskNumber = data.allAnswered[property];
-            console.log('property', property);
-            console.log('data.allAnswered property', data.allAnswered[property]);
-            console.log('task number', taskNumber);
+            console.log2('property', property);
+            console.log2('data.allAnswered property', data.allAnswered[property]);
+            console.log2('task number', taskNumber);
 
             if ($.inArray(taskNumber, data.correctAnswers) > -1) {
                 $('#qn' + taskNumber).addClass('answered-right');

@@ -66,14 +66,16 @@ Array.min = function (array) {
 var Observable;
 (Observable = function() {
 }).prototype = {
-    listen: function(type, method, scope, context) {
+    listen: function(type, method, scope, context, clear) {
         var listeners, handlers;
+
         if (!(listeners = this.listeners)) {
             listeners = this.listeners = {};
         }
         if (!(handlers = listeners[type])){
             handlers = listeners[type] = [];
         }
+
         scope = (scope ? scope : window);
         handlers.push({
             method: method,
@@ -81,8 +83,9 @@ var Observable;
             context: (context ? context : scope)
         });
     },
-    fireEvent: function(type, data, context) {
+    fireEvent: function(type, data, context, clear) {
         var listeners, handlers, i, n, handler, scope;
+
         if (!(listeners = this.listeners)) {
             return;
         }
@@ -98,5 +101,8 @@ var Observable;
             }
         }
         return true;
+    },
+    clear: function() {
+        this.listeners = {};
     }
 };
