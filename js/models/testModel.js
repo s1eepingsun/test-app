@@ -95,41 +95,9 @@ testApp.TestModel.prototype = {
         return newConfig;
     },
 
-    acceptOptions: function(data) {
-        console.log2('model acceptOptions data', data);
-        if(data.sequence) {
-            if(data.sequence === 'linear') this.randomTests = false;
-            if(data.sequence === 'random') this.randomTests = true;
-        }
-
-        if(data.number) {
-            if(data.number > 0 && data.number <= this.maxTestNumber) {
-                loadNewTest2(data.number);
-            }
-        }
-    },
-
     //начинает новый тест
     startNewTest: function () {
         console.log2('test model start new test, data', this.data);
-        /*{{#tasks}}
-        <tr class="task-item" id="qn{{view_number}}">
-            <td>{{#plus1}}{{@index}}{{/plus1}}</td>
-            <td>{{type}}</td>
-            <td>{{#sum answer_points}} {{.}} {{/sum}}</td>
-        </tr>
-        {{/tasks}}*/
-
-        //var wholeData = JSON.parse(this.wholeTestData);
-
-       /* console.log2('testModel parsed', wholeData);
-        testApp.listView.renderTasksList(wholeData);
-        testApp.mainView.renderTaskMainVIew(wholeData);
-
-        this.init();
-        testApp.listView.init();
-        testApp.mainView.init();*/
-        //testApp.testController.init();
 
         //обнуляет данные, измененные при прошлых прохождениях теста
         this.answersGiven = [];
@@ -401,6 +369,62 @@ testApp.TestModel.prototype = {
         if (this.resultMode != true && this.config.taskTimer == true) this.taskChange(id, oldID);
 
         this.selectedTaskID = Number(id);
+    },
+
+    submitOptions: function(formData) {
+        var data = this.structureOptionsFormData(formData);
+
+        message = this.validateOptionsForm(data);
+
+        if(message) {
+            this.fireEvent('model:optionsFormDataNotValid', message);
+        } else {
+            this.acceptOptions(data);
+            this.fireEvent('model:optionsFormDataAccepted');
+        }
+    },
+
+    acceptOptions: function(data) {
+        this.randomTests = data.sequence === 'random';
+
+        if(data.number > 0 && data.number <= this.maxTestNumber) {
+            testApp.loadNewTest2(data.number);
+        }
+    },
+
+    validateOptionsForm: function(data) {
+        var message = '';
+
+        if(data.number) {
+            if (!(/^[1-4]$/.test(data.number))) {
+                message = 'Номер теста должен быть числом от 1 до 4';
+            }
+        }
+
+        return message;
+    },
+
+    structureOptionsFormData: function(formData) {
+        var data = {};
+
+        for (prop in formData) {
+            if (!formData.hasOwnProperty(prop)) continue;
+
+            switch (formData[prop]['name']) {
+                case 'test-number':
+                    var inputNumber = formData[prop]['value'];
+                    inputNumber = inputNumber.trim();
+                    if (inputNumber.length > 0) {
+                        data.number = inputNumber;
+                    }
+                    break;
+                case 'tests-sequence':
+                    data.sequence = formData[prop]['value'];
+                    break;
+            }
+        }
+
+        return data;
     },
 
     //показывает следующую задачу

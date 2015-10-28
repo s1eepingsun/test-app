@@ -38,7 +38,7 @@ testApp.MainView.prototype = {
         //клик на "Новый тест"
         $('#tb-new-test').off();
         $('#tb-new-test').click(function () {
-            loadNewTest2();
+            testApp.loadNewTest2();
             /*setTimeout(function() {
                 that.fireEvent('view:clickStart');
             }, 200);*/
@@ -118,76 +118,17 @@ testApp.MainView.prototype = {
             $('#options-window').hide();
         });
 
-        /*$('#options-window .accept ').click(function() {
-            var data = {};
-
-            var inputNumber = $('input[name="test-number"]').val();
-            inputNumber = inputNumber.trim();
-            if(inputNumber.length > 0 && /^[1,2,3,4]$/.test(inputNumber)) {
-                console.log2(inputNumber + ' is valid');
-                data.number = inputNumber;
-            }
-
-            var sequence = $('input[name="tests-sequence"]').val();
-
-
-
-            console.log2('input was:', inputNumber, sequence);
-
-            that.fireEvent('view:optionsAccepnt', data);
-            //$('#options-window').hide();
-        });*/
-
         $('#options-window .accept ').click(function() {
             $( "#options-window form" ).submit();
         });
 
-        $("#options-window form").submit(function( event ) {
-            var formData = $( this ).serializeArray();
-            data = {};
-            console.log2(formData);
-            var message = '';
+        $("#options-window form").submit(function(e) {
+            var formData = $(this).serializeArray();
 
-            for(prop in formData) {
-                if(!formData.hasOwnProperty(prop)) continue;
-                if(formData[prop]['name'] === 'test-number') {
-                    var inputNumber = formData[prop]['value'];
-                    inputNumber = inputNumber.trim();
-                    if(inputNumber.length > 0) {
-                        if(/^[1-4]$/.test(inputNumber)) {
-                            data.number = inputNumber;
-                            message = '';
-                        } else {
-                            message = 'Номер теста должен быть числом от 1 до 4';
-                        }
-                    }
-                }
+            that.fireEvent('view:submitOptions', formData);
 
-                if(formData[prop]['name'] === 'tests-sequence') {
-                    data.sequence = formData[prop]['value'];
-                }
-            }
-
-            if(message.length > 0) {
-                $('.options-response div').text(message);
-            } else {
-                that.fireEvent('view:acceptOptions', data);
-                $('#options-window').hide();
-            }
-
-            console.log2('data', data);
-
-            event.preventDefault();
+            e.preventDefault();
         });
-
-        if(testApp.testModel.randomTests == true) {
-            $('#options-window form input[value="random"]').prop('checked', true);
-        } else {
-            $('#options-window form input[value="linear"]').prop('checked', true);
-        }
-
-        var testNumber = testApp.testModel.currentTestNumber;
-        $('.test-number-div span').text(testNumber);
 
         //отключает прокрутку страницы при прокрутке центрального блока
         this.singleScrolling();
@@ -206,6 +147,15 @@ testApp.MainView.prototype = {
         console.log2('main view start new test');
         $('#tb-finish-test').removeClass('disabled');
         $('#left-side-bar').show();
+
+        var testNumber = testApp.testModel.currentTestNumber;
+        $('.test-number-div span').text(testNumber);
+
+        if(testApp.testModel.randomTests == true) {
+            $('#options-window form input[value="random"]').prop('checked', true);
+        } else {
+            $('#options-window form input[value="linear"]').prop('checked', true);
+        }
 
         //сортировка ответов
         if (this._model.config.answerOrder) {
@@ -348,6 +298,15 @@ testApp.MainView.prototype = {
         console.log2('margin3,  var, id ===========', margin, variableHeight, id);
 
         $('.test-number-div').css('margin-top', margin + 'px');
+    },
+
+    optionsFormDataAccepted: function() {
+        $('.options-response').find('div').text('');
+        $('#options-window').hide();
+    },
+
+    optionsFormDataNotValid: function(message) {
+        $('.options-response').find('div').text(message);
     },
 
     //визуально отображает данные ответы

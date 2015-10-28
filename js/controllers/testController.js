@@ -35,6 +35,7 @@ testApp.TestController.prototype = {
         this.listen('view:clickNext', this.clickNext, this);
         this.listen('view:giveAnswer', this.giveAnswer, this);
         this.listen('view:acceptOptions', this.acceptOptions, this);
+        this.listen('view:submitOptions', this.submitOptions, this);
 
         this.listen('model:showTask', this.showTask, this);
         this.listen('model:reflectAnswers', this.reflectAnswers, this);
@@ -44,6 +45,8 @@ testApp.TestController.prototype = {
         this.listen('model:testTimerShow', this.testTimerShow, this);
         this.listen('model:taskTimerShow', this.taskTimerShow, this);
         this.listen('model:disableFreeTaskChange', this.disableFreeTaskChange, this);
+        this.listen('model:optionsFormDataNotValid', this.optionsFormDataNotValid, this);
+        this.listen('model:optionsFormDataAccepted', this.optionsFormDataAccepted, this);
 
         this.listen('timer:timerTick', this.timerTick, this);
     },
@@ -132,7 +135,21 @@ testApp.TestController.prototype = {
 
     acceptOptions: function (observable, eventType, data) {
         this._model.acceptOptions(data);
+    },
+
+    submitOptions: function(observable, eventType, formData) {
+        this._model.submitOptions(formData);
+    },
+
+    optionsFormDataNotValid: function(observable, eventType, message) {
+        this._mainView.optionsFormDataNotValid(message);
+    },
+
+    optionsFormDataAccepted: function() {
+        this._mainView.optionsFormDataAccepted();
     }
+
+
 
 };
 

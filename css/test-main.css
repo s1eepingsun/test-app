@@ -475,7 +475,7 @@ body {
     font-size: 22px;
 }
 
-#options-window > div {
+#options-window form > div {
     margin-top: 5px;
 }
 

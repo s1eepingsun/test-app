@@ -60,10 +60,8 @@ testApp.init = function(attrs) {
     testApp.testController.init();
 };
 
-/*testApp.testTypeDir = 'ege';
-testApp.testType = 'math-ege';*/
 
-function loadNewTest2(testNumber) {
+testApp.loadNewTest2 = function(testNumber) {
     var that = this;
     var testTypeDir = 'ege';
     var testType = 'math-ege';
@@ -79,10 +77,11 @@ function loadNewTest2(testNumber) {
         return Math.floor(Math.random() * (max - min + 1) + min);
     }
 
-    if(testNumber) console.log2('**************** test NUmber', testNumber);
+    if(testNumber) console.log2('**************** test Number', testNumber);
+
+    var randomTests = testApp.testModel.randomTests;
 
     if(!testNumber) {
-        var randomTests = testApp.testModel.randomTests;
         var maxTestNumber = testApp.testModel.maxTestNumber;
         var currentTestNumber = testApp.testModel.currentTestNumber;
         if(randomTests == true) {
@@ -99,7 +98,7 @@ function loadNewTest2(testNumber) {
                 testNumber = 1;
             }
         }
-    } else {}
+    }
 
 
     testApp.testModel.currentTestNumber = testNumber;
@@ -116,11 +115,9 @@ function loadNewTest2(testNumber) {
         fileName: fileName
     };
 
-    console.log2('reqData ---------------------------------------------------', reqData);
+    console.log2('reqData', reqData);
 
     $.get(dir + 'controllers/testDataAjax.php', reqData, function(data) {
-        //data = $.parseJSON(data);
-
         //data2 = JSON.parse(data);
         //data2 = JSON.parse(data2);
         console.log2('response data1:', data);
@@ -134,15 +131,10 @@ function loadNewTest2(testNumber) {
         }
 
         console.log2('response data3:', data2);
-        //that.wholeTestData = data2;
-        //console.log2('response data2:', that.wholeTestData);
+
         that.data2 = data2;
 
 
-        delete testApp.testModel;
-        delete testApp.listView;
-        delete testApp.mainView;
-        delete testApp.testController;
         if (window.testApp) {
             if (window.testApp.testModel) delete testApp.testModel;
             if (window.testApp.testModel) delete testApp.listView;
@@ -165,34 +157,23 @@ function loadNewTest2(testNumber) {
         console.log2('testModel.data', testApp.testModel.data);
 
 
-        //delete testApp.listView;
         testApp.listView = new testApp.ListView(testApp.testModel);
         testApp.listView.renderTasksList(data2);
         testApp.listView.init();
 
-
-        //delete testApp.mainView;
         testApp.mainView = new testApp.MainView(testApp.testModel);
         testApp.mainView.renderTaskMainVIew(data2);
         testApp.mainView.init();
 
-        //delete testApp.testController;
-        //console.log2('in ajax testApp.testController', testApp.testController);
         testApp.testController = new testApp.TestController(testApp.testModel, testApp.mainView, testApp.listView);
-        //console.log2('in ajax testApp.testController', testApp.testController);
         testApp.testController.init();
-        //console.log2('in ajax testApp.testController', testApp.testController);
 
         testApp.mainView.fireEvent('view:clickStart');
 
         MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
-
     });
 
-
-
-    return this.data2;
-}
+};
 
 
 
