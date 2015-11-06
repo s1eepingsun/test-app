@@ -3,6 +3,7 @@
 class TestsDB
 {
     public static $file = 'test-data/math1.json';
+//    public static $file = 'test-data/ege/math-ege-2.json';
     public static $shortFile = 'test-data/math1-short.json';
 
     //возвращает данные теста
@@ -197,8 +198,50 @@ class TestsDB
 
     }
 
+    //делает выборку случайных заданий из разных вариантов теста
+    public function getRandomTasks($tasksQuantity, $fileNamedata)
+    {
+        $dir = $_SERVER['DOCUMENT_ROOT'] . $fileNamedata['dir'] . 'test-data/' . $fileNamedata['testTypeDir'] . '/' . $fileNamedata['fileName'] . '-*.json';
+        $filesArr = [];
+        $len = strlen($fileNamedata['fileName']) + 1;
+
+        $git = new GlobIterator($dir, FilesystemIterator::NEW_CURRENT_AND_KEY|FilesystemIterator::SKIP_DOTS);
+        foreach ($git as $file)
+        {
+            $filename = $file->getBasename();
+            $fileNumber = substr($filename, $len, -5);
+            if(is_numeric($fileNumber)) {
+                $filesArr[] = $_SERVER['DOCUMENT_ROOT'] . $fileNamedata['dir'] . 'test-data/' . $fileNamedata['testTypeDir'] . '/' . $fileNamedata['fileName'] . '-' . intval($fileNumber) . '.json';
+            }
+        }
+
+        $allTasks = [];
+        foreach($filesArr as $key => $file) {
+            $fileData = json_decode(file_get_contents($file), true);
+            $fileData = $fileData['tasks'];
+//            return $fileData;
+
+            $allTasks = array_merge($allTasks, $fileData);
+        }
+
+        $tasksCount = count($allTasks);
+        if($tasksQuantity > $tasksCount) $tasksQuantity = $tasksCount;
+
+        $randTaskKeys = array_rand($allTasks, $tasksQuantity);
+
+        $randTasks = [];
+        foreach($randTaskKeys as $key) {
+            $randTasks[] = $allTasks[$key];
+        }
+
+
+        return $randTasks;
+
+    }
+
     //убирает пробелы в индексах в order_num (порядковый номер)
-    public function resetOrderValues() {
+    public function resetOrderValues()
+    {
         $file = self::$file;
         if(file_exists($file)) {
             $oldData = json_decode(file_get_contents($file), true);

@@ -18,13 +18,6 @@
     <?=$testData['start_message'];?>
 </div>
 
-<div class="test-description">
-    <div class="close-test-description"><img src="images/icon_close.png"></div>
-    <div>
-        <?=$testData['description'];?>
-    </div>
-</div>
-
 <div class="test-tasks">
     <?php foreach($testData['tasks'] as $task):?>
     <div class="single-test-data" id="vn<?=$task['view_number'];?>">
@@ -62,7 +55,7 @@
             <label><input type="radio" name="tests-sequence" value="linear" checked>Тесты подряд</label>
         </div>
         <div>
-            <label>Ввести номер теста (1 - 4)<input class="test-number" type="text" name="test-number" maxlength="2" size="1"></label>
+            <label>Ввести номер теста (1 - 5)<input class="test-number" type="text" name="test-number" maxlength="2" size="1"></label>
         </div>
         <div class="control-buttons">
             <div class="accept option_button">

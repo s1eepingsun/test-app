@@ -40,9 +40,11 @@ testApp.TestController.prototype = {
         this.listen('model:showTask', this.showTask, this);
         this.listen('model:reflectAnswers', this.reflectAnswers, this);
         this.listen('model:setModeTestActive', this.setModeTestActive, this);
+        this.listen('model:setModeTraining', this.setModeTraining, this);
         this.listen('model:startNewTest', this.startNewTest, this);
         this.listen('model:showResult', this.showResult, this);
         this.listen('model:testTimerShow', this.testTimerShow, this);
+        this.listen('model:testTimeSpentShow', this.testTimeSpentShow, this);
         this.listen('model:taskTimerShow', this.taskTimerShow, this);
         this.listen('model:disableFreeTaskChange', this.disableFreeTaskChange, this);
         this.listen('model:optionsFormDataNotValid', this.optionsFormDataNotValid, this);
@@ -87,6 +89,11 @@ testApp.TestController.prototype = {
         this._listView.setModeTestActive();
     },
 
+    setModeTraining: function () {
+        this._mainView.setModeTraining();
+        this._listView.setModeTraining();
+    },
+
     //клик на "Новый тест"
     startNewTest: function () {
         this._mainView.startNewTest();
@@ -121,6 +128,10 @@ testApp.TestController.prototype = {
     //отображает таймер теста
     testTimerShow: function (observable, eventType, data) {
         this._mainView.testTimerShow(data);
+    },
+
+    testTimeSpentShow: function (observable, eventType, now) {
+        this._mainView.testTimeSpentShow(now);
     },
 
     //отображает таймер отдельной задачи

@@ -73,6 +73,7 @@ testApp.loadNewTest2 = function(testNumber) {
     dir = '/' + dir + '/';
     console.log2('dir: ', dir);
 
+
     function getRandomInt(min, max) {
         return Math.floor(Math.random() * (max - min + 1) + min);
     }
@@ -80,6 +81,7 @@ testApp.loadNewTest2 = function(testNumber) {
     if(testNumber) console.log2('**************** test Number', testNumber);
 
     var randomTests = testApp.testModel.randomTests;
+
 
     if(!testNumber) {
         var maxTestNumber = testApp.testModel.maxTestNumber;
@@ -151,6 +153,85 @@ testApp.loadNewTest2 = function(testNumber) {
         testApp.testModel.currentTestNumber = testNumber;
         testApp.testModel.init({config:{
             //answerOrder: 'rand'
+        }}, data2);
+
+
+        console.log2('testModel.data', testApp.testModel.data);
+
+
+        testApp.listView = new testApp.ListView(testApp.testModel);
+        testApp.listView.renderTasksList(data2);
+        testApp.listView.init();
+
+        testApp.mainView = new testApp.MainView(testApp.testModel);
+        testApp.mainView.renderTaskMainVIew(data2);
+        testApp.mainView.init();
+
+        testApp.testController = new testApp.TestController(testApp.testModel, testApp.mainView, testApp.listView);
+        testApp.testController.init();
+
+        testApp.mainView.fireEvent('view:clickStart');
+
+        MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+    });
+
+};
+
+testApp.loadTraining = function(tasksQuantity) {
+    var that = this;
+    console.log2('loadTraining');
+
+    var testTypeDir = 'ege';
+    var testType = 'math-ege';
+    var pathname = window.location.pathname;
+    var parts = pathname.split('/');
+    parts.pop();
+    parts.shift();
+    var dir = parts.join('/');
+    dir = '/' + dir + '/';
+
+    var randomTests = testApp.testModel.randomTests;
+
+
+    function getRandomInt(min, max) {
+        return Math.floor(Math.random() * (max - min + 1) + min);
+    }
+
+    var reqData = {
+        dir: dir,
+        testTypeDir: testTypeDir,
+        fileName: testType,
+        tasksQuantity: tasksQuantity
+    };
+
+    console.log2('reqData:', reqData);
+
+    $.get('controllers/trainingAjax.php', reqData, function(data) {
+        data = $.parseJSON(data);
+
+        console.log2('response data2:', data);
+
+        data2 = {tasks: data};
+
+        that.data2 = data2;
+
+
+        if (window.testApp) {
+            if (window.testApp.testModel) delete testApp.testModel;
+            if (window.testApp.testModel) delete testApp.listView;
+            if (window.testApp.testModel) delete testApp.mainView;
+            if (window.testApp.testModel) delete testApp.testController;
+        }
+
+        delete testApp.observable;
+        testApp.observable = new Observable();
+
+        testApp.testModel = new testApp.TestModel();
+        testApp.testModel.data = data2;
+        testApp.testModel.randomTests = randomTests;
+        testApp.testModel.init({config:{
+            //answerOrder: 'rand'
+            trainingMode: true
         }}, data2);
 
 

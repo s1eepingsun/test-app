@@ -11,7 +11,7 @@ testApp.TestModel = function(data) {
         multipleChoices: false,
         resultAnswersStyle: 'default',
         navInResult: false,
-        production: true
+        production: false
     };
 
     if(data) {
@@ -32,7 +32,7 @@ testApp.TestModel = function(data) {
     this.testType = 'math-ege'; //сейчас это имя файла
 
     this.randomTests = false;
-    this.maxTestNumber = 4;
+    this.maxTestNumber = 5;
     this.currentTestNumber = 0;
 };
 
@@ -106,7 +106,13 @@ testApp.TestModel.prototype = {
         this.selectedTaskID = 0;
         this.resultMode = false;
 
-        this.fireEvent('model:setModeTestActive');
+        if(this.config.trainingMode != true) {
+            this.fireEvent('model:setModeTestActive');
+        } else {
+            this.fireEvent('model:setModeTestActive');
+            this.fireEvent('model:setModeTraining');
+        }
+
 
         this.fireEvent('model:startNewTest');
 
@@ -171,9 +177,11 @@ testApp.TestModel.prototype = {
 
         //таймер теста, вывести значение и проверить не равен ли он 0
         if (testTimerID == recievedTimerID) {
-            //console.log2('this.timer, that', testTimerID, recievedTimerID);
-            //timeNow = this.timer.timeNow;
+            var timerData = this.data.testTimerData;
+            var timeSpentData = {timerData: timerData, timeNow: this._timeNow};
+
             this.fireEvent('model:testTimerShow', this._timeNow);
+            this.fireEvent('model:testTimeSpentShow', timeSpentData);
             this.testTimerCheck(this._timeNow);
         }
 
@@ -396,7 +404,7 @@ testApp.TestModel.prototype = {
         var message = '';
 
         if(data.number) {
-            if (!(/^[1-4]$/.test(data.number))) {
+            if (!(/^[1-5]$/.test(data.number))) {
                 message = 'Номер теста должен быть числом от 1 до 4';
             }
         }
@@ -467,27 +475,55 @@ testApp.TestModel.prototype = {
     //клик на ответ
     giveAnswer: function (data) {
         var id = data['id'];
-        var answer = data['answer'];
+        var answer = data['answer'] + '_points';
 
-        //записывает(если его нет) или удаляет(если он уже есть) ответ из this.answersGiven
-        this.writeDownAnswer(id, answer);
+        if(this.config.trainingMode != true) {
+            //записывает(если его нет) или удаляет(если он уже есть) ответ из this.answersGiven
+            this.writeDownAnswer(id, answer);
 
-        //передаёт выбранные ответы в методы вьюшек для визуального отображения данных ответов
-        console.log2('this.answersGiven', this.answersGiven);
-        if (this.answersGiven.length > 0) {
-            var newData = {id: id, answers: this.answersGiven[id]};
-            this.fireEvent('model:reflectAnswers', newData);
-        }
-
-        //показывает след. вопрос, в случае если это был последний вопрос показывает результат теста
-        if (this.config.multipleChoices != true && this.answersGiven[id].length > 0) {
-            var maxID = this.tasksCount;
-            if (id < maxID) {
-                this.showTask(id + 1);
-            } else if (id == maxID && this.config.lastTaskFinish == true) {
-                this.finishTest();
+            //передаёт выбранные ответы в методы вьюшек для визуального отображения данных ответов
+            console.log2('this.answersGiven', this.answersGiven);
+            if (this.answersGiven.length > 0) {
+                var newData = {id: id, answers: this.answersGiven[id]};
+                this.fireEvent('model:reflectAnswers', newData);
             }
+
+            //показывает след. вопрос, в случае если это был последний вопрос показывает результат теста
+            if (this.config.multipleChoices != true && this.answersGiven[id].length > 0) {
+                var maxID = this.tasksCount;
+                if (id < maxID) {
+                    this.showTask(id + 1);
+                } else if (id == maxID && this.config.lastTaskFinish == true) {
+                    this.finishTest();
+                }
+            }
+        } else {
+            var correctAnswers = this.correctAnswers;
+            var taskCorrectAnswers = correctAnswers[id];
+            var answered = correctAnswers[id][answer];
+
+            console.log('correctAnswers, id, answer', correctAnswers, id, answer);
+            console.log('answered', answered);
+
+            var rightAnswers = [];
+            for(var answerPoints in taskCorrectAnswers) {
+                if(!taskCorrectAnswers.hasOwnProperty(answerPoints)) continue;
+
+                if($.isNumeric(taskCorrectAnswers[answerPoints]) && taskCorrectAnswers[answerPoints] > 0) {
+                    console.log('right answer', taskCorrectAnswers[answerPoints], answerPoints.substr(0, 7));
+
+                    rightAnswers.push(answerPoints.substring(0, 7));
+                }
+            }
+
+            data['rightAnswers'] = rightAnswers;
+
+
+
+
+
         }
+
     },
 
     //записывает данные ответы в this.answersGiven, если элемент найден в массиве, удаляет его

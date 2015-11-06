@@ -13,14 +13,22 @@
                         <td>&nbsp;</td>
 
                         <td width="1%" align="center" style="white-space: nowrap;">
-                                <span class="titleBandLink" id="showDescription-disaabled">
+                                <span class="titleBandLink" id="showDescription">
                                     Описание
                                 </span>
                         </td>
 
+                        <!--<td>&nbsp;</td>
+
+                        <td width="1%" align="" style="white-space: nowrap;">
+                                <span class="titleBandLink" id="showDescription">
+                                      Формулы
+                                </span>
+                        </td>-->
+
                         <td>&nbsp;</td>
 
-                        <td width="1%" align="center" style="white-space: nowrap;">
+                        <td width="1%" align="right" style="white-space: nowrap;">
                                 <span id="gbShow" class="titleBandLink">
                                     Вопросы и отзывы
                                 </span>
@@ -44,8 +52,10 @@
             <table class="controlPanelLayout" cellpadding="0">
                 <tbody>
                 <tr>
-                    <td id="tb-prev-task" class="cpButton cpNormal nonSelectable disabled">Предыдущий вопрос</td>
-                    <td id="tb-next-task" class="cpButton cpNormal nonSelectable  disabled">Следующий вопрос</td>
+                    <td id="tb-prev-task" class="cpButton cpNormal nonSelectable disabled">Предыдущий<br>вопрос</td>
+                    <td id="tb-next-task" class="cpButton cpNormal nonSelectable  disabled">Следующий<br>вопрос</td>
+                    <td id="tb-help-info" class="cpButton cpNormal">Формулы</td>
+                    <td id="tb-training" class="cpButton cpNormal">Тренировка</td>
                     <td id="tbNewGameContainer" class="cpButton cpNormal nonSelectable cpKillHover">
                         <table style="width: 100%; height: 100%;" cellspacing="0" cellpadding="0">
                             <tbody>
@@ -86,6 +96,17 @@
                     </td>
                 </tr>
             </table>
+        </div>
+
+        <!-- HELP INFO -->
+        <div id="help-info-block">
+            <div class="close-help-info"><img src="images/icon_close.png"></div>
+            <div>qwer</div>
+            <div>asdf</div>
+            <div>zxcv</div>
+            <div>
+                yjyj fgyj yjjy fILK GIKG ukgkguk guk f fuk f
+            </div>
         </div>
 
 

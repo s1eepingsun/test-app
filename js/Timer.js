@@ -69,6 +69,53 @@ Timer.prototype = {
         return  timeString;
     },
 
+    //@return str - делает из объекта времени {h, m, s} строку hh:mm:ss
+    timeObToLongString: function(time) {
+        var timeString = '';
+
+        /*if(time.s < 10){
+            var strS = '&nbsp;&nbsp;'+time.s;
+        } else {
+            strS = time.s;
+        }
+
+        if(time.m < 10){
+            var strM = '&nbsp;&nbsp;'+time.m;
+        } else {
+            strM = time.m;
+        }
+
+        if(time.h > 0) timeString += time.h + ' ч ';
+        if(time.m > 0) timeString += strM + ' м ';
+        timeString += strS + ' с';*/
+
+
+
+        if(time.s < 10){
+            var strS = '<span class="invisible-char">0</span>' +time.s;
+        } else {
+            strS = time.s;
+        }
+
+        if(time.m < 10){
+            var strM = '<span class="invisible-char">0</span>' +time.m;
+        } else {
+            strM = time.m;
+        }
+
+        if(time.h > 0) timeString += time.h + ' ч ';
+        if(time.m > 0) timeString += strM + ' м ';
+        timeString += strS + ' с';
+
+
+
+        /*if(time.h > 0) timeString += time.h + ' ч ';
+        if(time.m > 0) timeString += time.m + ' м ';
+        timeString += time.s + ' с';*/
+
+        return  timeString;
+    },
+
     //@return obj - делает объект времени {h, m, s} из timestamp
     timeToObject: function(time) {
         var timeObject = {};

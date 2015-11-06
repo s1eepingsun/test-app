@@ -62,6 +62,10 @@ testApp.ListView.prototype = {
         answers.length > 0 ? $('#qn' + id).addClass('answer-given') : $('#qn' + id).removeClass('answer-given');
     },
 
+    setModeTraining: function() {
+        //$('#left-block').hide();
+    },
+
     //показывает результат прохождения теста
     showResult: function (data) {
         //ставит режим стилей для показа результата теста

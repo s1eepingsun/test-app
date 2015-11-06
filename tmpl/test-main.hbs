@@ -1,22 +1,36 @@
+<div class="test-number-div">
+    Тест №<span></span>
+</div>
+
 <div class="in-task-description">
     {{{in_task_description}}}
 </div>
 
 <div class="task-top-panel">
-    <div id="time-left">Осталось &nbsp;<span></span></div>
+    <!--<div id="time-left">Осталось &nbsp;<span></span></div>-->
+
+    <div id="time-left">
+        <div>Осталось:</div>
+        <div>
+            <span></span>
+        </div>
+    </div>
+
+    <div id="time-spent">
+        <div>Прошло:</div>
+        <div>
+            <span></span>
+        </div>
+    </div>
+
+
+    <!--<div id="time-spent">Прошло &nbsp;<span>0 сек</span></div>-->
     <div>&nbsp;</div>
 </div>
 <div id="close-result-task"><img src="images/icon_close.png"></div>
 
 <div class="start-message">
     {{{start_message}}}
-</div>
-
-<div class="test-description">
-    <div class="close-test-description"><img src="images/icon_close.png"></div>
-    <div>
-        {{{description}}}
-    </div>
 </div>
 
 <div class="test-tasks">
@@ -35,17 +49,9 @@
                 {{/each}}
             </div>
         </div>
-        <div class="helper-height">&nbsp;</div>
-        <div class="test-number-div">
-            Тест №<span></span>
-        </div>
-
         <div class="clear">&nbsp;</div>
     </div>
     {{/each}}
-
-
-
 </div>
 
 <div id="nothing-answered">
@@ -66,7 +72,7 @@
             <label><input type="radio" name="tests-sequence" value="linear">Тесты подряд</label>
         </div>
         <div>
-            <label>Ввести номер теста (1 - 4)<input class="test-number" type="text" name="test-number" maxlength="2" size="1"></label>
+            <label>Ввести номер теста (1 - 5)<input class="test-number" type="text" name="test-number" maxlength="2" size="1"></label>
         </div>
         <div class="control-buttons">
             <div class="accept option_button">

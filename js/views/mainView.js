@@ -86,15 +86,17 @@ testApp.MainView.prototype = {
         });
 
         //клик на "Описание"
-       /* $('#showDescription').click(function () {
-            $('.test-description').toggle();
-            $('#description').hide();
+        $('#showDescription').off();
+        $('#showDescription').click(function () {
+            $('#description').toggle();
+            console.log('click');
         });
 
         //клик на крестик для зарытия описания
-        $('.close-test-description').click(function (e) {
-            $('.test-description').hide();
-        });*/
+        $('#closeDescription').off();
+        $('#closeDescription').click(function () {
+            $('#description').hide();
+        });
 
         //клик на крестик для зарытия окна параметров
         /*$('.close-options-window').click(function (e) {
@@ -129,6 +131,25 @@ testApp.MainView.prototype = {
 
             e.preventDefault();
         });
+
+        $('#tb-help-info').off();
+        $('#tb-help-info').click(function(e) {
+            $('#help-info-block').toggle();
+        });
+
+        $('#help-info-block .close-help-info').off();
+        $('#help-info-block .close-help-info').click(function() {
+            $('#help-info-block').hide();
+        });
+
+        $('#tb-training').off();
+        $('#tb-training').click(function() {
+            testApp.loadTraining(10);
+        });
+
+        //добавляет описание теста
+        var description = this._model.data.description;
+        $('#description .description-container').html(description);
 
         //отключает прокрутку страницы при прокрутке центрального блока
         this.singleScrolling();
@@ -183,6 +204,7 @@ testApp.MainView.prototype = {
 
         $('.start-message').hide();
         $('#time-left').show();
+        $('#time-spent').show();
         $('#tb-finish-test').removeClass('disabled');
         $('.single-test-data').find('.answers .answer').addClass('hoverable');
         $('.single-test-data').find('.answers .answer').removeClass('disabled');
@@ -212,6 +234,13 @@ testApp.MainView.prototype = {
         $('#field').find('.in-task-description').hide();
         $('.task-timer').addClass('in-result');
         $('#time-left').hide();
+        $('#time-spent').hide();
+    },
+
+    setModeTraining: function() {
+        $('.test-number-div').hide();
+        $('.in-task-description').hide();
+        $('.task-top-panel').css({visibility: 'hidden', height: '10px'});
     },
 
     //отображает таймер теста
@@ -219,8 +248,16 @@ testApp.MainView.prototype = {
         //console.log2('timeNow 1', timeNow);
         var timer = this._model.timer;
         var testTimerObj = timer.timeToObject(timeNow);
-        var timeString = timer.timeObToString(testTimerObj);
+        var timeString = timer.timeObToLongString(testTimerObj);
         $('#time-left span').html(timeString);
+    },
+
+    testTimeSpentShow: function (data) {
+        var timer = this._model.timer;
+        var timeSpent = data.timerData - data.timeNow;
+        var timeSpentObj = timer.timeToObject(timeSpent);
+        var timeSpentString = timer.timeObToLongString(timeSpentObj);
+        $('#time-spent span').html(timeSpentString);
     },
 
     //отображает таймер отдельной задачи
@@ -263,7 +300,7 @@ testApp.MainView.prototype = {
             $('#field').addClass('result-field');
         }
 
-        this.readjustTestNumber(id);
+        //this.readjustTestNumber(id);
 
         //отключает/включает кнопки навигции когда ответ последний или первый
         if (this._model.resultMode != true) {
@@ -279,11 +316,11 @@ testApp.MainView.prototype = {
     readjustTestNumber: function(id) {
         $('.test-number-div').css('margin-top', 0);
         var tasksHeight = $('.test-tasks').height();
-        var standard = 573; //it's #field 's height
+        var standard = 552; //it's #field 's height
         if(id == 1) {
-            variableHeight = $('#vn' + id).height() + 109;
+            variableHeight = $('#vn' + id).height() + 100;//109
         } else {
-            variableHeight = $('#vn' + id).height() + 71;
+            variableHeight = $('#vn' + id).height() + 62;//71
         }
 
         var margin = 0;
@@ -411,14 +448,14 @@ testApp.MainView.prototype = {
     },
 
     //показывает описание теста
-    showDescription: function () {
+    /*showDescription: function () {
         $('.test-description').show();
     },
 
     //закрывает описание теста
     closeDescription: function () {
         $('.test-description').hide();
-    },
+    },*/
 
     //отключает и убирает кнопки "предыдущий вопрос"
     disableFreeTaskChange: function () {

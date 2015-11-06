@@ -2,7 +2,7 @@
 require_once("classes/TestsDB2.php");
 
 $testsDB = new TestsDB();
-$testsDB::$file = 'test-data/math1.json';
+$testsDB::$file = 'test-data/ege/math-ege-1.json';
 
 $testData = $testsDB->getTestsData();
 $testData = json_decode($testData, true);
