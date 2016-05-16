@@ -1,7 +1,7 @@
 <div class="result">
     <div>
         <h2>Результат теста</h2>
-        <div>Набранные баллы: {{totalPoints}} из {{maxPoints}}</div>
+        <div class="test-score">Набранные баллы: {{totalPoints}} из {{maxPoints}}</div>
     </div>
     <div>
         <div>Статистика</div>
@@ -10,4 +10,5 @@
         <div>Пропущено заданий: {{tasksSkipped}}</div>
         <div>Затрачено времени:  {{#each hours}} {{.}} ч. {{/each}} {{#each minutes}} {{.}} мин. {{/each}} {{seconds}} ceк.</div>
     </div>
+    <div class="show-wrongs-btn"><div>Неправильные ответы</div></div>
 </div>

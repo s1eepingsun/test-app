@@ -1,0 +1,20 @@
+<div class="result">
+    <div>
+        <h2>Результат экзамена</h2>
+        <div class="test-success">Экзамен сдан</div>
+        <div class="test-fail">Экзамен не сдан</div>
+    </div>
+    <div>
+        <div>Статистика</div>
+        <div>Правильные ответы: {{correctAnswers.length}}</div>
+        <div>Неправильные ответы: {{wrongAnswers.length}}</div>
+        <div>Пропущено заданий: {{tasksSkipped}}</div>
+        <div>Затрачено времени:  {{#each hours}} {{.}} ч. {{/each}} {{#each minutes}} {{.}} мин. {{/each}} {{seconds}} ceк.</div>
+    </div>
+    <div class="show-wrongs-btn"><div>Неправильные ответы</div></div>
+    <div class="link-button">
+    <a href="/math_test/tests/gims/index.php">
+    Перейти к выбору катерории ГИМС
+    </a>
+    </div>
+</div>

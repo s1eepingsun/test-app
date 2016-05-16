@@ -1,0 +1,31 @@
+<div class="background-mocker">&nbsp;</div>
+<div id="test-list">
+    <div class="close-test-list"><img src="/img/icons/icon_close.png"></div>
+    <table class="test-list-table standartTable" border="1" cellspacing="0" bordercolor="#fff" rules="groups">
+        <thead>
+        <tr>
+            {{#if data.1.testTitle}}
+            <th>Название</th>
+            {{else if data.1.testName}}
+            <th>Название</th>
+            {{/if}}
+            <th>Номер теста</th>
+            <th>Заданий</th>
+        </tr>
+        </thead>
+        <tbody>
+        {{#each data}}
+        <tr class="test-link" id="test-num-{{fileNumber}}" data-test-num="{{testType}}-{{fileNumber}}">
+            {{#if testTitle}}
+            <td>{{testTitle}}</td>
+            {{else if testName}}
+            <td class="test-name-td clickable-td">{{testName}}</td>
+            {{/if}}
+            <td class="clickable-td">{{fileNumber}}</td>
+            <td>{{taskCount}}</td>
+        </tr>
+        {{/each}}
+        </tbody>
+    </table>
+</div>
+

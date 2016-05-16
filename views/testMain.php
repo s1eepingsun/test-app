@@ -11,10 +11,10 @@
 <div class="task-top-panel">
 	<div id="time-left">Осталось &nbsp;<span></span></div>
 	<div>&nbsp;</div>
-</div> 
-<div id="close-result-task"><img src="images/icon_close.png"></div>
+</div>
+<div id="close-result-task"><img src="/img/icons/icon_close.png"></div>
 
-<div class="start-message">
+<div class="start-message" style="display: none">
     <?=$testData['start_message'];?>
 </div>
 
@@ -48,14 +48,14 @@
 
 <div id="options-window">
     <form>
-        <div class="close-options-window"><img src="images/icon_close.png"></div>
-        <h1>Параметры</h1>
+        <div class="close-options-window"><img src="/img/icons/icon_close.png"></div>
+        <h1>Настройки</h1>
         <div>
             <label><input type="radio" name="tests-sequence" value="random">Тесты в случайном порядке</label>
             <label><input type="radio" name="tests-sequence" value="linear" checked>Тесты подряд</label>
         </div>
         <div>
-            <label>Ввести номер теста (1 - 5)<input class="test-number" type="text" name="test-number" maxlength="2" size="1"></label>
+            <label>Ввести номер теста (1 - <span class="max-test-number"><?=count($testData['testList'])?></span>)<input class="test-number" type="text" name="test-number" maxlength="2" size="1"></label>
         </div>
         <div class="control-buttons">
             <div class="accept option_button">

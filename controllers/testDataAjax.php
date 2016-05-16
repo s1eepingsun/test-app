@@ -6,9 +6,12 @@ $testsDB = new TestsDB();
 //start logs block
 // $data = $_SERVER['REQUEST_URI'];
 // $data = $_SERVER['REQUEST_METHOD'];
-/*$data = $_REQUEST;
-$data = 'adsf2';
-file_put_contents('./test.json', $data);*/
+// $data = $_SERVER['SCRIPT_FILENAME'];
+// $data = $_SERVER['SCRIPT_NAME'];
+//$data = $_REQUEST;
+//$data = 'adsf2';
+
+//file_put_contents('./test.json', $data);
 //end logs block
 
 //$testsDB::$file = 'test-data/math1-short.json';

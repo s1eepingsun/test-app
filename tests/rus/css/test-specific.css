@@ -1,0 +1,37 @@
+#left-block {
+    width: 80px;
+}
+#left-side-bar {
+    height: 802px;
+    width: 83px;
+}
+#field {
+    height: 692px;
+}
+#field-inside-wrapper {
+    height: 666px;
+}
+#field-inside-wrapper.training-mode {
+    height: 686px;
+}
+.single-test-data {
+    min-height: 598px;
+}
+.single-test-data.first-task-style {
+    min-height: 550px;
+}
+
+#left-side-bar .side-bar-table td:first-child {
+    /*text-align: center;*/
+}
+
+#bottom-block {
+    margin: 1px 150px 0 230px;
+}
+
+.single-test-data .test-button {
+    top: 520px;
+}
+.single-test-data.first-task-style .test-button {
+    top: 476px;
+}

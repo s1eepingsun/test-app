@@ -44,6 +44,10 @@ testApp.ListView.prototype = {
 
     //включение режиа стилей для просмотра результатов теста
     setModeTestResult: function () {
+        this.removeSelection();
+    },
+
+    removeSelection: function() {
         $('#left-side-bar').find('.task-item').removeClass('active-task');
     },
 
@@ -66,22 +70,42 @@ testApp.ListView.prototype = {
         //$('#left-block').hide();
     },
 
+    showTrainingAnswer: function(data) {
+        if(data['rightAnswers']) {
+            if($.inArray(data['answer'][0], data['rightAnswers']) > -1) {
+                $('#qn' + data['id']).addClass('answered-right');
+            } else {
+                $('#qn' + data['id']).addClass('answered-wrong');
+            }
+        } else if(data['rightAnswer']) {
+            if(data['answer'][0] === data['rightAnswer']) {
+                $('#qn' + data['id']).addClass('answered-right');
+            } else {
+                $('#qn' + data['id']).addClass('answered-wrong');
+            }
+        }
+    },
+
     //показывает результат прохождения теста
     showResult: function (data) {
         //ставит режим стилей для показа результата теста
         this.setModeTestResult();
+        if(this._model.config.immediateAnswersOption == false) return;
 
         //окрашивает задания с данными ответами
         for (var property in data.allAnswered) {
-            var taskNumber = data.allAnswered[property];
-            console.log2('property', property);
-            console.log2('data.allAnswered property', data.allAnswered[property]);
-            console.log2('task number', taskNumber);
+            if(!data.allAnswered.hasOwnProperty(property)) continue;
 
-            if ($.inArray(taskNumber, data.correctAnswers) > -1) {
-                $('#qn' + taskNumber).addClass('answered-right');
-            } else {
+            var taskNumber = data.allAnswered[property];
+
+            if(!data.correctAnswers) data.correctAnswers = data.correctAnswersArr;
+            if(!data.skippedAnswers) data.skippedAnswers = data.skippedAnswersArr;
+            if(!data.wrongAnswers) data.wrongAnswers = data.wrongAnswersArr;
+
+            if ($.inArray(taskNumber, data.wrongAnswers) > -1) {
                 $('#qn' + taskNumber).addClass('answered-wrong');
+            } else if ($.inArray(taskNumber, data.correctAnswers) > -1) {
+                $('#qn' + taskNumber).addClass('answered-right');
             }
         }
     }

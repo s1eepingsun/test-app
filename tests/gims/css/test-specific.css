@@ -1,0 +1,100 @@
+#field {
+    height: 724px;
+}
+#left-block {
+    display: none;
+}
+#bottom-block {
+    margin: 1px 197px 0 182px;
+}
+.lg-unwrapped #left-block {
+    margin-left: 49px;
+}
+.task-content p img {
+    margin-left: -1.5em !important;
+    margin-top: 10px !important;
+    max-height: 250px;
+}
+.single-test-data .test-button {
+    top: 388px;
+    bottom: auto;
+    height: auto;
+}
+.single-test-data .test-button.first-task-button {
+    top: 340px;
+    bottom: auto;
+}
+.test-tasks .single-test-data {
+    min-height: 485px;
+}
+.test-tasks .first-task-style {
+    min-height: 450px;
+}
+.single-test-data .task-content {
+    min-height: 320px;
+}
+.single-test-data.first-task-style .task-content {
+    min-height: 291px;
+}
+.single-test-data .answers {
+    position: static;
+    min-height: 132px;
+}
+
+.start-message {
+    padding-top: 5px;
+}
+#gims-chooser div {
+    text-align: left;
+    width: 240px;
+    margin-left: 135px;
+}
+#gims-chooser div a {
+    padding: 9px;
+    width: 236px;
+    background: #F0F0F0;
+    border: 1px solid #AAA;
+    border-radius: 4px;
+    display: block;
+    margin: 5px auto;
+    color: #000;
+    text-decoration: none;
+    text-indent: 10px;
+}
+#gims-chooser div a:hover {
+    cursor: pointer;
+    background: #E7E7E7;
+}
+#gims-tests-number {
+    float: right;
+    margin-right: 60px;
+}
+#gims-tests-number div {
+    padding: 9px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: 1px solid white;
+}
+#gims-tasks-count {
+    float: right;
+    margin-right: 60px;
+}
+#gims-tasks-count div {
+    padding: 9px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: 1px solid white;
+}
+.gims-table-headers div {
+    float: right;
+    margin-right: 35px;
+}
+.gims-table-headers div:first-child {
+    float: right;
+    margin-right: 46px;
+}
+.gims-table-headers div:last-child {
+    float: none;
+    width: 240px;
+    margin-left: 115px;
+}

@@ -1,0 +1,76 @@
+#field {
+    height: 724px;
+}
+.lg-unwrapped #left-block {
+    margin-left: 49px;
+}
+.task-content p img {
+    margin-left: -1.5em !important;
+    margin-top: 10px !important;
+    max-height: 250px;
+}
+.single-test-data .test-button {
+    top: 388px;
+    bottom: auto;
+    height: auto;
+}
+.single-test-data .test-button.first-task-button {
+    top: 344px;
+    bottom: auto;
+}
+.test-tasks .single-test-data {
+    min-height: 485px;
+}
+.test-tasks .first-task-style {
+    min-height: 450px;
+}
+.single-test-data .task-content {
+    min-height: 320px;
+}
+.single-test-data.first-task-style .task-content {
+    min-height: 291px;
+}
+.single-test-data .answers {
+    position: static;
+    min-height: 132px;
+}
+
+/** side bar short */
+#left-block {
+    display: none;
+    width: 100px;
+}
+#bottom-block {
+    margin: 1px 197px 0 182px;
+}
+#left-side-bar {
+    width: 103px;
+    height: 757px;
+}
+#left-side-bar .side-bar-table {
+    outline: none;
+    border-bottom: 1px solid grey;
+}
+#left-side-bar .task-item {
+    height: 38px;
+}
+#left-side-bar .side-bar-table td {
+    padding-right: 6px;
+    padding-left: 6px;
+}
+#left-side-bar .side-bar-table td:last-child {
+    padding-left: 0;
+    padding-right: 10px;
+    border-left: none;
+    text-align: right;
+    width: 22px;
+}
+#left-side-bar .side-bar-table td:first-child {
+    padding-right: 0;
+}
+#horizontal-task-list > div li {
+    width: 47px;
+}
+#test-result .link-button {
+    margin-top: 30px;
+}

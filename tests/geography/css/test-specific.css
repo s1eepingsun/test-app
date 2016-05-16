@@ -1,0 +1,129 @@
+#left-block {
+    width: 80px;
+}
+#left-side-bar {
+    height: 802px;
+    width: 83px;
+}
+#field {
+    /*height: 697px;*/
+    height: 726px;
+}
+#field-inside-wrapper {
+    height: 671px;
+}
+#field-inside-wrapper.training-mode {
+    height: 723px;
+}
+.single-test-data {
+    min-height: 568px;
+    margin-top: 30px;
+}
+
+.single-test-data .answers {
+    min-height: 116px;
+}
+.single-test-data .answers.input1 {
+    min-height: 70px;
+}
+.single-test-data table, .single-test-data th, .single-test-data td {
+    border: 1px solid #aaa;
+    text-align: left;
+}
+.single-test-data th, .single-test-data td {
+    height: 26px;
+    padding: 2px 4px;
+}
+.single-test-data.first-task-style {
+    min-height: 541px;
+}
+
+.single-test-data .test-button {
+    top: 540px;
+}
+.single-test-data.first-task-style .test-button {
+    top: 503px;
+}
+
+#left-side-bar .side-bar-table td:first-child {
+    /*text-align: center;*/
+}
+
+#bottom-block {
+    margin: 1px 150px 0 230px;
+}
+.table-text-center td, .table-text-center th {
+    text-align: center;
+}
+.table-text-left td, .table-text-left th {
+    text-align: left;
+}
+
+.single-test-data table {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-collapse: collapse;
+}
+.single-test-data table td, .single-test-data table th {
+    vertical-align: top;
+}
+.single-test-data table.code-even-rows tr:nth-child(even) {
+    font-family: Monaco,Consolas,monospace;
+}
+
+.single-test-data .legend-square-dark,
+.single-test-data .legend-square-grey,
+.single-test-data .legend-square-white{
+    display: inline-block;
+    border: 1px solid black;
+    width: 24px;
+    height: 16px;
+    margin: 0 2px;
+}
+.single-test-data .legend-square-dark {
+    background: #58585A;
+}
+.single-test-data .legend-square-grey {
+    background: #C6C7C8;
+}
+.single-test-data .legend-square-white {
+    background: #fff;
+}
+
+#horizontal-task-list > div li {
+    width: 14px;
+    padding: 1px 5px 1px 1px;
+}
+#horizontal-task-list > div li:nth-child(-n+9) {
+    padding: 1px 0;
+}
+#horizontal-task-list > div li:nth-child(10) {
+    padding-left: 0;
+}
+
+.single-test-data .task-number {
+    font-size: 18pt;
+    margin-bottom: 10px;
+}
+
+.test-number-div {
+    display: none;
+}
+
+.single-test-data .task-content {
+    text-align: justify;
+}
+.single-test-data p {
+    text-indent: 1.5em;
+}
+.single-test-data img {
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+}
+.single-test-data p + p {
+
+}
+
+#field .single-test-data .answers .input-answer {
+    bottom: 10px;
+}

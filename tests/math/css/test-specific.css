@@ -1,0 +1,22 @@
+.single-test-data {
+    min-height: 505px;
+}
+.single-test-data.first-task-style {
+    min-height: 457px;
+}
+#left-side-bar {
+    height: 805px;
+}
+#left-side-bar .side-bar-table {
+    height: 100%;
+}
+#left-side-bar .task-item {
+    height: auto;
+}
+
+.single-test-data .test-button {
+    top: 550px;
+}
+.single-test-data.first-task-style .test-button {
+    top: 506px;
+}

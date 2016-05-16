@@ -1,13 +1,33 @@
 <?php
-require_once("classes/TestsDB2.php");
+$paths = explode('/', $_SERVER['SCRIPT_NAME']);
+if(count($paths) == 6) {
+    require_once("../../../classes/TestsDB2.php");
+} else {
+    require_once("../../classes/TestsDB2.php");
+}
+
+//require_once("../../classes/TestsDB2.php");
 
 $testsDB = new TestsDB();
-$testsDB::$file = 'test-data/ege/math-ege-1.json';
+
+/*$data = $_SERVER['SCRIPT_NAME'];
+$dir = explode('/', $data);
+array_pop($dir);
+array_pop($dir);
+$type = array_pop($dir);
+file_put_contents('./test.json', $dir);
+print_r($type);*/
+
+$testsDB::$file = 'test-data/common.json';
+//$testsDB::$file = 'test-data/ege/math-ege-1.json';
+
+
 
 $testData = $testsDB->getTestsData();
 $testData = json_decode($testData, true);
 
 $testData['tasks'] = array_values($testData['tasks']);
+
 
 //helper: первая заглавная буква для utf-8 строки
 function mb_ucfirst($text) {
@@ -26,7 +46,6 @@ foreach($testData['tasks'] as $key => $task) {
     }
     $testData['tasks'][$key]['max_points'] = $taskPoints;
 
-
     //timer data timestamp to array
     if(isset($task['taskTimerData'])) {
         $task['taskTimerData'] = $testsDB->timestampToArray($task['taskTimerData']);
@@ -40,10 +59,12 @@ foreach($testData['tasks'] as $key => $task) {
         }
         $testData['tasks'][$key]['taskTimerData'] = implode(':', $task['taskTimerData']);
     }
-
-
 }
 
 //подключить шаблон главного окна теста
-require_once 'views/testMain.php';
+if(count($paths) == 6) {
+    require_once("../../../views/testMain.php");
+} else {
+    require_once("../../views/testMain.php");
+}
 ?>

@@ -1,0 +1,64 @@
+#field {
+    height: 695px;
+}
+#bottom-block {
+    margin: 1px 128px 0 252px;
+}
+#field-inside-wrapper {
+    height: 668px;
+}
+.lg-unwrapped #left-block {
+    width: 147px;
+}
+#left-side-bar {
+    height: 808px;
+    width: 147px;
+}
+.single-test-data {
+    /*min-height: 505px;*/
+    min-height: 600px;
+}
+.single-test-data.first-task-style {
+    min-height: 457px;
+}
+.single-test-data .task-content img {
+    margin-top: 10px !important;
+}
+.single-test-data .task-content, .single-test-data .task-content {
+    text-align: center;
+}
+.single-test-data .test-button {
+    bottom: 130px;
+}
+.single-test-data .test-button.first-task-button {
+    bottom: 40px;
+}
+.single-test-data .answers.img1 .test-button.first-task-button,
+.single-test-data .answers.img2 .test-button.first-task-button {
+    bottom: 108px;
+}
+#left-side-bar .side-bar-table {
+    height: 100%;
+}
+#left-side-bar .task-item {
+    height: auto;
+}
+#left-side-bar .side-bar-table td {
+    font-size: 14px;
+}
+#left-side-bar .side-bar-table td:last-child {
+    text-align: left;
+}
+#left-side-bar .side-bar-table th, #left-side-bar .side-bar-table td {
+    padding: 0 4px 1px 4px;
+}
+#left-side-bar .task-item:last-child {
+    height: 19px;
+}
+
+.single-test-data .test-button {
+    top: 520px;
+}
+.single-test-data.first-task-style .test-button {
+    top: 476px;
+}

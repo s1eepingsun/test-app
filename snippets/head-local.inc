@@ -25,6 +25,10 @@
     <?php include 'tmpl/test-main.hbs'; ?>
 </script>
 
+<script id="test-list-tmpl" type="text/x-handlebars-template">
+    <?php include 'tmpl/test-list.hbs'; ?>
+</script>
+
 <!-- thrid-party libraries -->
 <script type="text/javascript" src="js/libs/handlebars-v3.0.3.js"></script>
 <script type="text/javascript" src="//logic-games.spb.ru/js/lib/mathjax//MathJax.js?config=TeX-AMS_HTML"></script>

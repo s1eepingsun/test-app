@@ -1,3 +1,5 @@
+var testHelpers = {};
+
 //регистрация хэлперов handlebars.js
 function registerHandlebarsHelpers() {
 
@@ -6,6 +8,33 @@ function registerHandlebarsHelpers() {
         return new Handlebars.SafeString(
             Number(options.fn(this)) + 1
         );
+    });
+
+    //assign letter values (АБВГДЕ) to indexes
+    Handlebars.registerHelper('numToLetter', function(options) {
+        var letter;
+        switch(Number(options.fn(this))) {
+            case 0:
+                letter = 'А';
+                break;
+            case 1:
+                letter = 'Б';
+                break;
+            case 2:
+                letter = 'В';
+                break;
+            case 3:
+                letter = 'Г';
+                break;
+            case 4:
+                letter = 'Д';
+                break;
+            case 5:
+                letter = 'Е';
+                break;
+        }
+
+        return new Handlebars.SafeString(letter);
     });
 
     //математическая сумма элементов (для показа макс. баллов за задание)
@@ -62,6 +91,28 @@ Array.min = function (array) {
     }
 })();
 
+//отключает прокрутку страницы при прокрутке элемента
+testHelpers.singleScrolling =  function(selector, stepAttr) {
+    var step;
+    !stepAttr? step = 30: step = stepAttr;
+    $(selector).off('mouseenter mouseleave');
+    $(selector).on('mouseenter', function () {
+        if ($(selector)[0].scrollHeight > $(selector)[0].offsetHeight) {
+            $('html, body').on('mousewheel', function (e) {
+                e.preventDefault();
+            });
+            $(selector).on('mousewheel', function (e) {
+                var direction = e.originalEvent.deltaY > 0 ? 1 : -1;
+                $(this).scrollTop($(this).scrollTop() + step * direction);
+            });
+        }
+    });
+    $(selector).on('mouseleave', function () {
+        $('html,body').off('mousewheel');
+    });
+};
+
+
 //добавляет возможность запускать и слушать события
 var Observable;
 (Observable = function() {
@@ -95,7 +146,6 @@ var Observable;
         for (i = 0, n = handlers.length; i < n; i++){
             handler = handlers[i];
             if (typeof(context)!=="undefined" && context !== handler.context) continue;
-            //console.log('handler', handler);
             if (handler.method.call(handler.scope, this, type, data) === false) {
                 return false;
             }

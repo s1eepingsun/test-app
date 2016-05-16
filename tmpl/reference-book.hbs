@@ -1,0 +1,17 @@
+<div id="reference-book">
+    <h2>Справочник</h2>
+    <div class="ref-menu">
+        <ul>
+            {{#each tasks}}
+            <li id="ref-link-{{#plus1}}{{@index}}{{/plus1}}">{{type}}</li>
+            {{/each}}
+        </ul>
+    </div>
+    <div class="ref-content">
+        {{#each tasks}}
+            <div id="ref-item-{{#plus1}}{{@index}}{{/plus1}}">
+                {{{task_content}}}
+            </div>
+        {{/each}}
+    </div>
+</div>

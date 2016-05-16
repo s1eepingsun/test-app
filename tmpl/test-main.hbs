@@ -1,95 +1,251 @@
-<div class="test-number-div">
-    Тест №<span></span>
-</div>
+<div id="field-inside-wrapper">
+    <div class="test-number-div">
+        {{#unless test_title}}
+        Тест №<span></span>
+        {{/unless}}
+        {{test_title}}
 
-<div class="in-task-description">
-    {{{in_task_description}}}
-</div>
-
-<div class="task-top-panel">
-    <!--<div id="time-left">Осталось &nbsp;<span></span></div>-->
-
-    <div id="time-left">
-        <div>Осталось:</div>
-        <div>
-            <span></span>
-        </div>
     </div>
 
-    <div id="time-spent">
-        <div>Прошло:</div>
-        <div>
-            <span></span>
-        </div>
+    <div class="in-task-description">
+        {{!-- in_task_description--}}
     </div>
 
+    <div class="task-top-panel">
+        <!--<div id="time-left">Осталось &nbsp;<span></span></div>-->
 
-    <!--<div id="time-spent">Прошло &nbsp;<span>0 сек</span></div>-->
-    <div>&nbsp;</div>
-</div>
-<div id="close-result-task"><img src="images/icon_close.png"></div>
-
-<div class="start-message">
-    {{{start_message}}}
-</div>
-
-<div class="test-tasks">
-    {{#each tasks}}
-    <div class="single-test-data" id="vn{{#plus1}}{{@index}}{{/plus1}}">
-        <div class="task-timer"></div>
-        <div class="task-number"><b>{{#upperFirst}}{{type}}{{/upperFirst}} №{{#plus1}}{{@index}}{{/plus1}}</b></div>
-        <div class="task-content">{{{task_content}}}</div>
-        <div class="clear">&nbsp;</div>
-        <div class="answers">
-            <div class="tb-prev-task test-button disabled"><div></div><div>Предыдущий<br>вопрос</div></div>
-            <div class="tb-next-task test-button disabled"><div></div><div>Следующий<br>вопрос</div></div>
+        <div id="time-left">
+            <div>Осталось:</div>
             <div>
-                {{#each answers}}
-                <div answer="{{@key}}" class="answer hoverable">{{{this}}}</div>
-                {{/each}}
+                <span></span>
             </div>
         </div>
-        <div class="clear">&nbsp;</div>
+
+        <div id="time-spent">
+            <div>Прошло:</div>
+            <div>
+                <span></span>
+            </div>
+        </div>
+
+        <!--<div id="time-spent">Прошло &nbsp;<span>0 сек</span></div>-->
+        <div>&nbsp;</div>
     </div>
-    {{/each}}
-</div>
+    <div id="close-result-task"><img src="/img/icons/icon_close.png"></div>
 
-<div id="nothing-answered">
-    Вы не решили ни одного задания.
-</div>
+    <div class="start-message">
+        {{!-- start_message--}}
+    </div>
 
-<div id="test-result"></div>
-<div class="response"></div>
+    <div class="test-tasks">
+        {{#each tasks}}
+            <div class="single-test-data" id="vn{{#plus1}}{{@index}}{{/plus1}}">
+                <div class="task-timer"></div>
+                <div class="task-number"><b>
+                    {{#unless ../tasksCommonName}} {{#upperFirst}}{{type}}{{/upperFirst}} {{/unless}}
+                    {{../tasksCommonName}}
+                    {{#unless type}}Задание{{/unless}}
+                    №{{#plus1}}{{@index}}{{/plus1}}</b></div>
+                <div class="task-content">
+                    {{#if no_image}}
+                        <div class="no-task-image"><div>вопрос без рисунка</div></div>
+                    {{/if}}
+                    {{{task_content}}}
+                </div>
+                <div class="clear">&nbsp;</div>
+                <div class="answers {{answers_view}}">
+                    <!--<div class="tb-prev-task test-button disabled"><div></div><div>Предыдущий<br>вопрос</div></div>
+                    <div class="tb-next-task test-button disabled"><div></div><div>Следующий<br>вопрос</div></div>-->
 
+                    {{#unless complex-answers-view}}
+                    <div class="answers-wrapper">
+                        {{#each answers}}
+                        <div answer="{{@key}}" class="answer hoverable"><div>{{{this}}}</div></div>
+                        {{/each}}
+                    </div>
 
+                    <div class="input-answer">
+                        <div>
+                            <label>Введите ответ: <input type="text" name="input_answer" maxlength="40" size="12" value=""></label>
+                        </div>
+                        <div class="correct-answer"><div>Верный ответ: </div><div></div></div>
+                        <div class="test-button input-button"><div>ОК</div></div>
+                    </div>
+                    {{/unless}}
 
-<div id="options-window">
-    <form>
-        <div class="close-options-window"><img src="images/icon_close.png"></div>
-        <h1>Параметры</h1>
+                    {{#if complex-answers-view}}
+                        <!--<div>complex view</div>-->
+
+                        {{#if input1_answer_view}}
+                        <div class="input-answer">
+                            <div>
+                                <label>Введите ответ: <input type="text" name="input_answer" maxlength="40" size="12" value=""></label>
+                            </div>
+                            <div class="correct-answer"><div>Верный ответ: </div><div></div></div>
+                            <div class="test-button input-button"><div>ОК</div></div>
+                        </div>
+
+                        {{else if sequence_answer_view}}
+                        <div class="sequence_answer_view">
+                            {{#each answers}}
+                            <div>
+                                <input type="text" name="input_answer" maxlength="40" size="18" value="">
+                            </div>
+                            {{/each}}
+                            <div class="test-button input-button"><div>ОК</div></div>
+                        </div>
+
+                        {{else if multiple_answer_view}}
+                        <div class="answers-wrapper">
+                            {{#each answers}}
+                            <div answer="{{@key}}" class="hoverable answer"><div>{{{this}}}</div></div>
+                            {{/each}}
+                            <div class="test-button multiple-confirm"><div>ОК</div></div>
+                        </div>
+
+                        {{else if multiple-thin_answer_view}}
+                        <div class="answers-wrapper">
+                            {{#each answers}}
+                            <div answer="{{@key}}" class="hoverable answer"><div>{{{this}}}</div></div>
+                            {{/each}}
+                            <div class="test-button multiple-confirm"><div>ОК</div></div>
+                        </div>
+
+                        {{else if multiple-wide_answer_view}}
+                        <div class="answers-wrapper">
+                            {{#each answers}}
+                            <div answer="{{@key}}" class="hoverable answer"><div>{{{this}}}</div></div>
+                            {{/each}}
+                            <div class="test-button multiple-confirm"><div>ОК</div></div>
+                        </div>
+
+                        {{else if collate_answer_view}}
+                        <div class="answers-wrapper">
+                            <div class="left-answers collate-type">
+                                {{#each collateAnswers}}
+                                {{#if this}}
+                                <div class="hoverable answer2" data-answer-collate="{{#plus1}}{{@index}}{{/plus1}}" ><div>{{{this}}}</div><hr class="answer-connector"></div>
+                                {{/if}}
+                                {{/each}}
+                            </div>
+                            <canvas class="collate-answers-canvas" width="74" height="100"></canvas>
+                            <div class="right-answers not-collate-type">
+                                {{#each answers}}
+                                <div answer="{{@key}}" class="hoverable answer2"><div>{{{this}}}</div></div>
+                                {{/each}}
+                            </div>
+                            <div class="correct-answers">
+                                <div>Верные ответы:</div>
+                                <div>
+                                    <div class="left-answers"></div>
+                                    <div class="right-answers"></div>
+                                </div>
+                            </div>
+                            <div class="test-button multiple-confirm"><div>ОК</div></div>
+                        </div>
+
+                        {{else if sequence-abv_answer_view}}
+                        <div class="sequence_answer_view">
+                            {{#each answers}}
+                            <div>
+                                <input type="text" name="input_answer" placeholder="{{#numToLetter}}{{@index}}{{/numToLetter}}" maxlength="40" size="18" value="">
+                            </div>
+                            {{/each}}
+                            <div class="test-button input-button"><div>ОК</div></div>
+                        </div>
+                        {{/if}}
+
+                    {{/if}}
+
+                    <div class="tb-prev-task test-button disabled"><div></div><div>Предыдущий<br>вопрос</div></div>
+                    <div class="tb-next-task test-button disabled"><div></div><div>Следующий<br>вопрос</div></div>
+                </div>
+                <div class="clear">&nbsp;</div>
+                {{#if explanation}}
+                    <div class="explanation">
+                        <div>Пояснение к правильному ответу: </div>
+                        {{{explanation}}}
+                    </div>
+                {{/if}}
+            </div>
+        {{/each}}
+    </div>
+
+    <div id="not-all-answered" class="prompt-popup-block">
         <div>
-            <label><input type="radio" name="tests-sequence" value="random">Тесты в случайном порядке</label>
-            <label><input type="radio" name="tests-sequence" value="linear">Тесты подряд</label>
+            <div>Вы не ответили на все вопросы</div>
         </div>
         <div>
-            <label>Ввести номер теста (1 - 5)<input class="test-number" type="text" name="test-number" maxlength="2" size="1"></label>
+            <div>
+                <div class="unanswered-continue prompt-left-button">Продолжить тест</div>
+                <div class="unanswered-finish prompt-right-button">Закончить тест</div>
+            </div>
         </div>
-        <div class="control-buttons">
-            <div class="accept option_button">
-                <div class="t_co_nav">
-                    <div class="co_nav">ОК</div>
+    </div>
+
+    <div id="prompt-quit-test" class="prompt-popup-block">
+        <div>
+            <div>Вы уверены, что хотите покинуть текущий тест?</div>
+        </div>
+        <div>
+            <div>
+                <div class="quit-yes prompt-left-button">Да</div>
+                <div class="quit-no prompt-right-button">Нет</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="test-result"></div>
+    <div class="response"></div>
+
+    <div class="loading-in-progress">
+        <div>Идёт загрузка...</div>
+    </div>
+
+
+
+    <div id="options-window">
+        <form>
+            <div class="close-options-window"><img src="/img/icons/icon_close.png"></div>
+            <h1>Настройки</h1>
+            <div>
+                <label><input type="radio" name="tests-sequence" value="random">Тесты в случайном порядке</label>
+                <label><input type="radio" name="tests-sequence" value="linear">Тесты подряд</label>
+            </div>
+            <div>
+                <label>Ввести номер теста (1 - {{maxTestNumber}})<input class="test-number" type="text" name="test-number" maxlength="2" size="1"></label>
+            </div>
+            <div class="control-buttons">
+                <div class="accept option_button">
+                    <div class="t_co_nav">
+                        <div class="co_nav">ОК</div>
+                    </div>
+                </div>
+                <div class="cancel option_button">
+                    <div class="t_co_nav">
+                        <div class="co_nav">Отмена</div>
+                    </div>
                 </div>
             </div>
-            <div class="cancel option_button">
-                <div class="t_co_nav">
-                    <div class="co_nav">Отмена</div>
-                </div>
+            <div class="options-response">
+                <div></div>
             </div>
+        </form>
+    </div>
+
+
+    <div class="training-end">
+        <div>
+            <div>Все задания пройдены</div>
+            <div>Чтобы начать заново нажмите на кнопку "Тренировка"</div>
         </div>
-        <div class="options-response">
-            <div></div>
-        </div>
-    </form>
+    </div>
 </div>
 
-
+<div id="immediate-answer-check">
+    <div>
+        <label>Сразу проверять правильность ответов
+            <input id="answers-check" type="checkbox" value="answers-check">
+        </label>
+    </div>
+</div>

@@ -1,8 +1,9 @@
 var testApp = testApp || {};
-testApp.TestController = function(model, mainView, listView) {
+testApp.TestController = function (model, mainView, listView, horizontalListView) {
     this._model = model;
     this._mainView = mainView;
     this._listView = listView;
+    this._horizontalListView = horizontalListView;
 };
 
 testApp.TestController.prototype = {
@@ -14,28 +15,39 @@ testApp.TestController.prototype = {
     },
 
     //метод для прослушивания событий
-   listen: function (type, method, scope, context) {
+    listen: function (type, method, scope, context) {
         //var listen = JSON.parse(JSON.stringify(Observable.prototype.listen));
-       Observable.prototype.listen(type, method, scope, context);
+        Observable.prototype.listen(type, method, scope, context);
         //listen(type, method, scope, context);
     },
 
     //метод который запускается сразу после инициализации объекта
     init: function () {
         /*this._model = testApp.testModel;
-        this._mainView = testApp.mainView;
-        this._listView = testApp.listView;
-        console.log2('TestController init ', this);*/
+         this._mainView = testApp.mainView;
+         this._listView = testApp.listView;
+         console.log2('TestController init ', this);*/
 
         //event listeners
         this.listen('view:sidebarClick', this.sidebarClick, this);
         this.listen('view:clickStart', this.clickStart, this);
         this.listen('view:clickFinish', this.clickFinish, this);
+        this.listen('view:clickFinishNoMatterWhat', this.clickFinishNoMatterWhat, this);
         this.listen('view:clickPrev', this.clickPrev, this);
         this.listen('view:clickNext', this.clickNext, this);
         this.listen('view:giveAnswer', this.giveAnswer, this);
         this.listen('view:acceptOptions', this.acceptOptions, this);
         this.listen('view:submitOptions', this.submitOptions, this);
+        this.listen('view:clickShowWrongs', this.clickShowWrongs, this);
+        this.listen('view:clickShowAllAnswers', this.clickShowAllAnswers, this);
+        this.listen('view:showUnanswered', this.showUnanswered, this);
+        this.listen('view:showPrevTest', this.showPrevTest, this);
+        this.listen('view:selectTestFromList', this.selectTestFromList, this);
+        this.listen('view:confirmAnswer', this.confirmAnswer, this);
+        this.listen('view:trainingBtnClick', this.trainingBtnClick, this);
+        this.listen('view:newTestBtnClick', this.newTestBtnClick, this);
+        this.listen('view:clickQuitConfirm', this.clickQuitConfirm, this);
+        this.listen('view:collateAnswerClick', this.collateAnswerClick1, this);
 
         this.listen('model:showTask', this.showTask, this);
         this.listen('model:reflectAnswers', this.reflectAnswers, this);
@@ -49,6 +61,17 @@ testApp.TestController.prototype = {
         this.listen('model:disableFreeTaskChange', this.disableFreeTaskChange, this);
         this.listen('model:optionsFormDataNotValid', this.optionsFormDataNotValid, this);
         this.listen('model:optionsFormDataAccepted', this.optionsFormDataAccepted, this);
+        this.listen('model:showTrainingAnswer', this.showTrainingAnswer, this);
+        this.listen('model:showGivenAnswers', this.showGivenAnswers, this);
+        this.listen('model:disableNext', this.disableNext, this);
+        this.listen('model:showWrongs', this.showWrongs, this);
+        this.listen('model:showAllAnswers', this.showAllAnswers, this);
+        this.listen('model:promptUnanswered', this.promptUnanswered, this);
+        this.listen('model:promptQuitTest', this.promptQuitTest, this);
+        this.listen('model:collateHighlightPending', this.collateHighlightPending, this);
+        this.listen('model:collateHighlightChoices', this.collateHighlightChoices, this);
+        this.listen('model:collateHighlightComplete', this.collateHighlightComplete, this);
+        this.listen('model:collateHighlightOff', this.collateHighlightOff, this);
 
         this.listen('timer:timerTick', this.timerTick, this);
     },
@@ -61,7 +84,8 @@ testApp.TestController.prototype = {
     //показывает задачу
     showTask: function (observable, eventType, data) {
         this._mainView.showTask(data);
-        this._listView.showTask(data);
+        if (this._listView) this._listView.showTask(data);
+        if (this._horizontalListView) this._horizontalListView.showTask(data);
     },
 
     //даёт ответ на задачу
@@ -72,7 +96,8 @@ testApp.TestController.prototype = {
     //визуально отображает данные ответы
     reflectAnswers: function (observable, eventType, data) {
         this._mainView.reflectAnswers(data);
-        this._listView.reflectAnswers(data);
+        if (this._listView) this._listView.reflectAnswers(data);
+        if (this._horizontalListView) this._horizontalListView.reflectAnswers(data);
     },
 
     //даёт ответ на задачу
@@ -86,12 +111,14 @@ testApp.TestController.prototype = {
     //включение стилей для прохождения теста
     setModeTestActive: function () {
         this._mainView.setModeTestActive();
-        this._listView.setModeTestActive();
+        if (this._listView) this._listView.setModeTestActive();
+        if (this._horizontalListView) this._horizontalListView.setModeTestActive();
     },
 
     setModeTraining: function () {
         this._mainView.setModeTraining();
-        this._listView.setModeTraining();
+        //if(this._listView) this._listView.setModeTraining();
+        //if(this._horizontalListView) this._horizontalListView.setModeTraining();
     },
 
     //клик на "Новый тест"
@@ -101,6 +128,10 @@ testApp.TestController.prototype = {
 
     //клик на "Закончить тест"
     clickFinish: function () {
+        this._model.clickFinish();
+    },
+
+    clickFinishNoMatterWhat: function () {
         this._model.finishTest();
     },
 
@@ -117,7 +148,8 @@ testApp.TestController.prototype = {
     //показывает результат прохождения теста
     showResult: function (observable, eventType, data) {
         this._mainView.showResult(data);
-        this._listView.showResult(data);
+        if (this._listView) this._listView.showResult(data);
+        if (this._horizontalListView) this._horizontalListView.showResult(data);
     },
 
     //отключает и убирает кнопки "предыдущий вопрос"
@@ -144,22 +176,104 @@ testApp.TestController.prototype = {
         this._model.timersTick(data);
     },
 
+    confirmAnswer: function (observable, eventType, id) {
+        this._model.confirmAnswer(id);
+    },
+
     acceptOptions: function (observable, eventType, data) {
         this._model.acceptOptions(data);
     },
 
-    submitOptions: function(observable, eventType, formData) {
+    submitOptions: function (observable, eventType, formData) {
         this._model.submitOptions(formData);
     },
 
-    optionsFormDataNotValid: function(observable, eventType, message) {
+    optionsFormDataNotValid: function (observable, eventType, message) {
         this._mainView.optionsFormDataNotValid(message);
     },
 
-    optionsFormDataAccepted: function() {
+    optionsFormDataAccepted: function () {
         this._mainView.optionsFormDataAccepted();
-    }
+    },
 
+    showTrainingAnswer: function (observable, eventType, data) {
+        this._mainView.showTrainingAnswer(data);
+        if (this._listView) this._listView.showTrainingAnswer(data);
+        if (this._horizontalListView) this._horizontalListView.showTrainingAnswer(data);
+    },
+
+    showGivenAnswers: function (observable, eventType, data) {
+        this._mainView.showGivenAnswers(data);
+    },
+
+    disableNext: function () {
+        this._mainView.disableNextButtons();
+    },
+
+    promptUnanswered: function () {
+        this._mainView.promptUnanswered();
+    },
+
+    clickShowWrongs: function (observable, eventType, data) {
+        this._model.showWrongs(data);
+    },
+    clickShowAllAnswers: function () {
+        this._model.showAllAnswers();
+    },
+
+    showUnanswered: function () {
+        this._model.showUnanswered();
+    },
+
+    selectTestFromList: function (observable, eventType, data) {
+        this._model.selectTestFromList(data);
+    },
+
+    trainingBtnClick: function () {
+        this._model.quitTestCheck('trainingBtnClick');
+    },
+
+    showPrevTest: function () {
+        this._model.quitTestCheck('showPrevTest');
+    },
+
+    newTestBtnClick: function() {
+        this._model.quitTestCheck('newTestBtnClick');
+    },
+
+    clickQuitConfirm: function(observable, eventType, event) {
+        this._model.quitTestConfirm(event);
+    },
+
+    collateAnswerClick1: function(observable, eventType, data) {
+        this._model.collateAnswerClick(data);
+    },
+
+    collateHighlightPending: function (observable, eventType, data) {
+        this._mainView.collateHighlightPending(data);
+    },
+
+    collateHighlightComplete: function (observable, eventType, data) {
+        this._mainView.collateHighlightComplete(data);
+    },
+
+    collateHighlightChoices: function (observable, eventType, data) {
+        this._mainView.collateHighlightChoices(data);
+    },
+
+    collateHighlightOff: function (observable, eventType, data) {
+        this._mainView.collateHighlightOff(data);
+    },
+
+    showWrongs: function (observable, eventType, wrongAnswersArr) {
+        this._mainView.showWrongs(wrongAnswersArr);
+        if (this._listView) this._listView.removeSelection();
+        if (this._horizontalListView) this._horizontalListView.removeSelection();
+    },
+
+    promptQuitTest: function (observable, eventType, event) {
+        this._mainView.promptQuitTest(event);
+    }
 
 
 };

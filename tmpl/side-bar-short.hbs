@@ -1,0 +1,16 @@
+<table class="side-bar-table" border="0" cellspacing="0" bordercolor="#999" rules="groups">
+    <thead>
+    <tr>
+        <th>Тип</th><th>№</th>
+    </tr>
+    </thead>
+    <tbody>
+    {{#each tasks}}
+    <tr class="task-item" id="qn{{#plus1}}{{@index}}{{/plus1}}">
+        <!--<td>{{type}}{{#unless type}}задание{{/unless}} №{{#plus1}}{{@index}}{{/plus1}}</td>-->
+        <!--<td>{{type}}{{#unless type}}задание{{/unless}}</td><td>№ {{#plus1}}{{@index}}{{/plus1}}</td>-->
+        <td>{{#plus1}}{{@index}}{{/plus1}}</td><td>{{type}}{{#unless type}}задание{{/unless}}</td>
+    </tr>
+    {{/each}}
+    </tbody>
+</table>

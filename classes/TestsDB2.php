@@ -6,17 +6,180 @@ class TestsDB
 //    public static $file = 'test-data/ege/math-ege-2.json';
     public static $shortFile = 'test-data/math1-short.json';
 
+    public static $filename = 'math-ege';
+
     //возвращает данные теста
     public function getTestsData()
     {
         $file = self::$file;
 
-        if(file_exists($file) && $data = file_get_contents($file)) {
+        if(!file_exists($file)) return "couldn't get contents " . $file;
+
+        $data = file_get_contents($file);
+        $data = json_decode($data, true);
+
+        /*$testList = $this->getTestList();
+        $testList = json_decode($testList, true);
+
+        $data['testList'] = $testList;*/
+
+        $referenceBook = $this->getReferenceBook();
+        if(is_array($referenceBook)) {
+            $data['reference_book'] = $referenceBook;
+        }
+
+
+        $data = json_encode($data);
+
+//        $testList = $this->getTestList(self::$filename);
+
+        return $data;
+
+
+        /*if(file_exists($file) && $data = file_get_contents($file)) {
             return $data;
         } else {
             return "couldn't get contents " . $file;
+        }*/
+
+    }
+
+    public function getTestList($dir = '')
+    {
+
+        $file = self::$file;
+//        $file = 'test-data/math123.json'; // || test-data/common.json
+        if($dir == '') {
+            $dir = $_SERVER['SCRIPT_NAME']; //math_test/tests/gims/index-local.php
+                                       // || /math_test/tests/gims/boat_mp/index-local.php
         }
 
+        /*$data = $_SERVER['SCRIPT_NAME'];
+        $dir2 = explode('/', $data);
+        array_pop($dir2);
+        $testType = array_pop($dir2); //i.e. math
+        $type = array_pop($dir2); //i.e. tests
+        file_put_contents('./test.json', $data);*/
+
+//        file_put_contents('./test.json', $dir);
+
+        $pathArr = explode('/', $dir);
+        array_pop($pathArr);
+        $testType = array_pop($pathArr); //i.e. gims || boat_mp
+        $specificDir = implode('/', $pathArr); //i.e. newtest2* /math_test/tests || /math_test/tests/gims
+        $specificDir = /*'/' .*/ $specificDir . '/' . $testType . '/';
+
+
+
+        /*if($testType === 'math') {
+            $file = 'test-data/ege/math-ege-1.json';
+        } else */if($testType === 'controllers') {
+            $pattern = '#[\w-/]*/(test-data/[\w-/]*\.json)$#';
+            preg_match($pattern, $file, $matches);
+            $fileTmp = $matches[1];
+            $lastPartLen = strlen($fileTmp);
+            $lastPartLen = 0 - $lastPartLen;
+            $firstPartLen = strlen($_SERVER['DOCUMENT_ROOT']);
+            $specificDir = substr($file, $firstPartLen, $lastPartLen);
+//            file_put_contents('./test.json', $specificDir);
+            $file = $fileTmp;
+        } else {
+            $file = 'test-data/ege/' . $testType . '-ege-1.json';
+        }
+
+
+
+        $pathArr = explode('/', $file);
+//        array_pop($pathArr);
+        $filename = array_pop($pathArr); //i.e. math-ege-5.json
+        $pattern = '/^([\w-]*)-[\w]{1,6}\.json$/';
+        preg_match($pattern, $filename, $matches);
+        $filename = $matches[1]; //i.e. gims-ege || boat_mp-ege
+
+
+
+        array_shift($pathArr);
+        $testTypeDir = implode('/', $pathArr);
+//        $testTypeDir = '/' . $testTypeDir . '/'; //i.e. ege
+
+        //$dir = C:/Server/apache/htdocs/math_test/tests/gims/test-data/ege/gims-ege-*.json
+        // ||    C:/Server/apache/htdocs/math_test/tests/gims/boat_mp/test-data/ege/boat_mp-ege-*.json
+        $dir = $_SERVER['DOCUMENT_ROOT'] . $specificDir . 'test-data/' . $testTypeDir . '/' . $filename . '-*.json';
+        $filesArr = [];
+        $len = strlen($filename) + 1;
+//        file_put_contents('./test.json', $_SERVER['SCRIPT_NAME']);
+        $fileNumbers = [];
+
+        $gi = new GlobIterator($dir, FilesystemIterator::NEW_CURRENT_AND_KEY|FilesystemIterator::SKIP_DOTS);
+        foreach ($gi as $file) {
+            $fileBaseName = $file->getBasename();
+            $fileNumber = substr($fileBaseName, $len, -5);
+            $fileNumbers[] = $fileNumber;
+            if(is_numeric($fileNumber)) {
+                $filesArr[$fileNumber] = $_SERVER['DOCUMENT_ROOT'] . $specificDir . 'test-data/' . $testTypeDir . '/' . $filename . '-' . intval($fileNumber) . '.json';
+            }
+        }
+
+        $filesString = '';
+        $folders = [];
+        $testLists = [];
+        if(!count($fileNumbers) > 0) {
+            $gi = new GlobIterator($_SERVER['DOCUMENT_ROOT'] . $specificDir . '*', FilesystemIterator::NEW_CURRENT_AND_KEY|FilesystemIterator::SKIP_DOTS);
+            foreach ($gi as $fileName => $file) {
+                if($file->isDir() && $fileName != "css" && $fileName != "js" && $fileName != 'snippets' && $fileName != 'test-data') {
+                    $filesString = $filesString . ' ' .  $fileName;
+                    $folders[] = $fileName;
+                }
+            }
+
+            if(count($folders) > 0) {
+                foreach($folders as $folder) {
+                    $newDir = $specificDir . $folder . '/index.php';
+//                    $testLists[] = json_decode($this->getTestList($newDir), true);
+                    $testListPart = json_decode($this->getTestList($newDir), true);
+                    $testLists = array_merge($testLists, $testListPart);
+//                    foreach($testListPart)
+                }
+            }
+
+            $testLists['multiple_test_types'] = true;
+//            file_put_contents('./test.json', json_encode($testLists));
+
+            return json_encode($testLists);
+        }
+
+        ksort($filesArr);
+
+        $commonData = json_decode(file_get_contents($_SERVER['DOCUMENT_ROOT'] . $specificDir . 'test-data/common.json'), true);
+        $testTitle = $commonData['test_title'];
+
+        $allTasks = [];
+        $i = 0;
+        foreach($filesArr as $key => $file) {
+            $fileData = json_decode(file_get_contents($file), true);
+            $testName = $fileData['test_title'];
+            $fileData = count($fileData['tasks']);
+            $allTasks[$i]['taskCount'] = $fileData;
+            $allTasks[$i]['fileNumber'] = $key;
+            $allTasks[$i]['testTitle'] = $testTitle;
+            $allTasks[$i]['testType'] = $testType;
+            $allTasks[$i]['testName'] = $testName;
+            $i++;
+        }
+
+        return json_encode($allTasks);
+    }
+
+    public function getReferenceBook()
+    {
+        $file = 'test-data/reference-book.json';
+
+        if(!file_exists($file)) return "couldn't get contents " . $file;
+
+        $data = file_get_contents($file);
+        $data = json_decode($data, true);
+
+        return $data;
     }
 
     //редактирует общие данные о тесте (описание, время на тест)
@@ -199,41 +362,51 @@ class TestsDB
     }
 
     //делает выборку случайных заданий из разных вариантов теста
-    public function getRandomTasks($tasksQuantity, $fileNamedata)
+    public function getRandomTasks($tasksQuantity, $fileNamedata, $taskKeys)
     {
         $dir = $_SERVER['DOCUMENT_ROOT'] . $fileNamedata['dir'] . 'test-data/' . $fileNamedata['testTypeDir'] . '/' . $fileNamedata['fileName'] . '-*.json';
         $filesArr = [];
         $len = strlen($fileNamedata['fileName']) + 1;
 
-        $git = new GlobIterator($dir, FilesystemIterator::NEW_CURRENT_AND_KEY|FilesystemIterator::SKIP_DOTS);
-        foreach ($git as $file)
+        $gi = new GlobIterator($dir, FilesystemIterator::NEW_CURRENT_AND_KEY|FilesystemIterator::SKIP_DOTS);
+        foreach ($gi as $file)
         {
             $filename = $file->getBasename();
             $fileNumber = substr($filename, $len, -5);
+//            if(!in_array($fileNumber, [5])) continue; //delete this later
             if(is_numeric($fileNumber)) {
                 $filesArr[] = $_SERVER['DOCUMENT_ROOT'] . $fileNamedata['dir'] . 'test-data/' . $fileNamedata['testTypeDir'] . '/' . $fileNamedata['fileName'] . '-' . intval($fileNumber) . '.json';
             }
         }
 
         $allTasks = [];
+//        $allTasksCount = 0;
         foreach($filesArr as $key => $file) {
             $fileData = json_decode(file_get_contents($file), true);
             $fileData = $fileData['tasks'];
-//            return $fileData;
-
+//            $data = json_encode($allTasks);
+//            file_put_contents('./test.json', $data);
+//            $allTasksCount++;
             $allTasks = array_merge($allTasks, $fileData);
         }
 
-        $tasksCount = count($allTasks);
-        if($tasksQuantity > $tasksCount) $tasksQuantity = $tasksCount;
+        $allTasksCount = count($allTasks);
+        if($tasksQuantity > $allTasksCount) $tasksQuantity = $allTasksCount;
 
-        $randTaskKeys = array_rand($allTasks, $tasksQuantity);
+        $taskKeysCount = count($taskKeys);
+        if($taskKeysCount > 0 && $allTasksCount > $taskKeysCount) {
+            $allKeys = array_keys($allTasks);
+            $randTaskKeys = array_diff($allKeys, $taskKeys);
+        } elseif($taskKeysCount > 0 && $allTasksCount <= $taskKeysCount) {
+            $randTaskKeys = [];
+        } else {
+            $randTaskKeys = array_rand($allTasks, $tasksQuantity);
+        }
 
         $randTasks = [];
         foreach($randTaskKeys as $key) {
-            $randTasks[] = $allTasks[$key];
+            $randTasks[$key] = $allTasks[$key];
         }
-
 
         return $randTasks;
 

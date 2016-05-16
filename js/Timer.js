@@ -39,7 +39,6 @@ Timer.prototype = {
     stop: function() {
         clearTimeout(this.activeTimer);
         this.testEnded = new Date().getTime();
-        console.log('test/task ENded timestamp:', this.testEnded);
     },
 
     //возвращает разницу время начала и окончания теста

@@ -1,5 +1,5 @@
 <?php
-require_once("classes/TestsDB2.php");
+require_once("../classes/TestsDB2.php");
 
 $testsDB = new TestsDB();
 //$testsDB::$file = 'test-data/ege/math1.json';
@@ -22,6 +22,6 @@ foreach($testData['tasks'] as $key => $task) {
 }
 
 //подключить шаблон сайдбара
-require_once 'views/testSidebar.php';
+require_once '../views/testSidebar.php';
 
 ?>

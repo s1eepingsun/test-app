@@ -1,0 +1,66 @@
+#left-block {
+    width: 80px;
+}
+#left-side-bar {
+    height: 802px;
+    width: 83px;
+}
+#field {
+    /*height: 697px;*/
+    height: 726px;
+}
+#field-inside-wrapper {
+    height: 671px;
+}
+#field-inside-wrapper.training-mode {
+    height: 723px;
+}
+.single-test-data {
+    min-height: 598px;
+}
+.single-test-data table, .single-test-data th, .single-test-data td {
+    border: 1px solid #aaa;
+    text-align: left;
+}
+.single-test-data th, .single-test-data td {
+    height: 26px;
+    padding: 2px 4px;
+}
+.single-test-data.first-task-style {
+    min-height: 550px;
+}
+
+.single-test-data .test-button {
+    top: 530px;
+}
+.single-test-data.first-task-style .test-button {
+    top: 486px;
+}
+
+#left-side-bar .side-bar-table td:first-child {
+    /*text-align: center;*/
+}
+
+#bottom-block {
+    margin: 1px 150px 0 230px;
+}
+.table-text-center td, .table-text-center th {
+    text-align: center;
+}
+.table-text-left td, .table-text-left th {
+    text-align: left;
+}
+#horizontal-task-list > div li {
+    padding: 1px 2px;
+}
+.single-test-data table {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-collapse: collapse;
+}
+.single-test-data table td, .single-test-data table th {
+    vertical-align: top;
+}
+.single-test-data table.code-even-rows tr:nth-child(even) {
+    font-family: Monaco,Consolas,monospace;
+}

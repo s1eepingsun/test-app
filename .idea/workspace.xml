@@ -1,34 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/js/models/TestModel.js" line="655" mnemonic="G" />
+    <bookmark url="file://$PROJECT_DIR$/js/models/TestModel.js" line="888" mnemonic="C" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="5f1c9083-e612-4430-86e1-c49db4c5e9d7" name="Default" comment="organized the application properly: made namespace &amp; init function">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/controllers/trainingAjax.php" />
-      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\test-data\ege\math-ege-1 - копия.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\test-data\ege\math-ege-2 - копия.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\test-data\ege\math-ege-3 - копия.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\test-data\ege\math-ege-4 - копия.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\Server\apache\htdocs\newtest2\test-data\math-ege-1-old.json" afterPath="" />
-      <change type="MOVED" beforePath="C:\Server\apache\htdocs\newtest2\js\controllers\testController.js" afterPath="$PROJECT_DIR$/js/controllers/TestController.js" />
-      <change type="MOVED" beforePath="C:\Server\apache\htdocs\newtest2\js\models\testModel.js" afterPath="$PROJECT_DIR$/js/models/TestModel.js" />
-      <change type="MOVED" beforePath="C:\Server\apache\htdocs\newtest2\js\views\mainView.js" afterPath="$PROJECT_DIR$/js/views/MainView.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/Fireworks.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/views/HorizontalListView.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/math/js/main-init.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmpl/reference-book.hbs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmpl/result-gims.hbs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmpl/result-iq.hbs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmpl/result-mark.hbs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmpl/result-pdd.hbs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmpl/side-bar-short.hbs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmpl/side-bar-short2.hbs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmpl/task-list-horizontal.hbs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmpl/temperament-result-eng.hbs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmpl/temperament-result.hbs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmpl/test-list.hbs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmpl/test-main-all.hbs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/math/css/test-specific.css" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\math_test\controllers\test.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\math_test\snippets\field.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\math_test\test-data\ege\math-ege-1.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\math_test\test-data\ege\math-ege-2.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\math_test\test-data\ege\math-ege-3.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\math_test\test-data\ege\math-ege-4.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\math_test\test-data\ege\math-ege-5.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\math_test\test-data\math1-short.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\math_test\test-data\math1-tmp.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\math_test\test-data\math1.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\math_test\test-data\math2.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Server\apache\htdocs\math_test\test-data\test.json" afterPath="" />
+      <change type="MOVED" beforePath="C:\Server\apache\htdocs\math_test\js\controllers\testController.js" afterPath="$PROJECT_DIR$/js/controllers/TestController.js" />
+      <change type="MOVED" beforePath="C:\Server\apache\htdocs\math_test\js\models\testModel.js" afterPath="$PROJECT_DIR$/js/models/TestModel.js" />
+      <change type="MOVED" beforePath="C:\Server\apache\htdocs\math_test\js\views\listView.js" afterPath="$PROJECT_DIR$/js/views/ListView.js" />
+      <change type="MOVED" beforePath="C:\Server\apache\htdocs\math_test\js\views\mainView.js" afterPath="$PROJECT_DIR$/js/views/MainView.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/TestsDB2.php" afterPath="$PROJECT_DIR$/classes/TestsDB2.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/Timer.js" afterPath="$PROJECT_DIR$/js/Timer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/snippets/field.inc" afterPath="$PROJECT_DIR$/snippets/field.inc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/snippets/head-local.inc" afterPath="$PROJECT_DIR$/snippets/head-local.inc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/snippets/head.inc" afterPath="$PROJECT_DIR$/snippets/head.inc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/helpers.js" afterPath="$PROJECT_DIR$/js/helpers.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/main2.js" afterPath="$PROJECT_DIR$/js/main2.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-data/ege/math-ege-1.json" afterPath="$PROJECT_DIR$/test-data/ege/math-ege-1.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-data/ege/math-ege-2.json" afterPath="$PROJECT_DIR$/test-data/ege/math-ege-2.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-data/ege/math-ege-3.json" afterPath="$PROJECT_DIR$/test-data/ege/math-ege-3.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-data/ege/math-ege-4.json" afterPath="$PROJECT_DIR$/test-data/ege/math-ege-4.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-data/math1-short.json" afterPath="$PROJECT_DIR$/test-data/math1-short.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-data/math1.json" afterPath="$PROJECT_DIR$/test-data/math1.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmpl/result.hbs" afterPath="$PROJECT_DIR$/tmpl/result.hbs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmpl/side-bar.hbs" afterPath="$PROJECT_DIR$/tmpl/side-bar.hbs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/test-main.css" afterPath="$PROJECT_DIR$/css/test-main.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmpl/test-main.hbs" afterPath="$PROJECT_DIR$/tmpl/test-main.hbs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/test.json" afterPath="$PROJECT_DIR$/controllers/test.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/testDataAjax.php" afterPath="$PROJECT_DIR$/controllers/testDataAjax.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/testDataToJS.php" afterPath="$PROJECT_DIR$/controllers/testDataToJS.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/testMain.php" afterPath="$PROJECT_DIR$/controllers/testMain.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/testMain.php" afterPath="$PROJECT_DIR$/views/testMain.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/testSidebar.php" afterPath="$PROJECT_DIR$/controllers/testSidebar.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/trainingAjax.php" afterPath="$PROJECT_DIR$/controllers/trainingAjax.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="newtest2.iws" />
@@ -57,41 +82,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="main2.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/main2.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="234" column="19" selection-start-line="234" selection-start-column="19" selection-end-line="234" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="trainingAjax.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controllers/trainingAjax.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.8461537">
-              <caret line="12" column="53" selection-start-line="12" selection-start-column="53" selection-end-line="12" selection-end-column="53" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="TestModel.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/models/TestModel.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="502" column="54" selection-start-line="502" selection-start-column="54" selection-end-line="502" selection-end-column="54" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TestController.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/controllers/TestController.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="92" column="41" selection-start-line="92" selection-start-column="41" selection-end-line="92" selection-end-column="41" />
+              <caret line="1804" column="50" selection-start-line="1804" selection-start-column="50" selection-end-line="1804" selection-end-column="50" />
               <folding />
             </state>
           </provider>
@@ -100,8 +95,28 @@
       <file leaf-file-name="MainView.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/views/MainView.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.9863791">
-              <caret line="251" column="46" selection-start-line="251" selection-start-column="46" selection-end-line="251" selection-end-column="46" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="688" column="48" selection-start-line="688" selection-start-column="48" selection-end-line="688" selection-end-column="48" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test-main.hbs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tmpl/test-main.hbs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="130" column="100" selection-start-line="130" selection-start-column="100" selection-end-line="130" selection-end-column="100" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test-main.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/test-main.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="616" column="1" selection-start-line="616" selection-start-column="1" selection-end-line="616" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -123,57 +138,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/../react-0.11.2/src/index.js" />
-        <option value="$PROJECT_DIR$/../react-0.11.2/package.json" />
-        <option value="$PROJECT_DIR$/../react-0.11.2/logger.js" />
-        <option value="$PROJECT_DIR$/../webpack/index.html" />
-        <option value="$PROJECT_DIR$/../webpack/package.json" />
-        <option value="$PROJECT_DIR$/../webpack/webpack-production-config.js" />
-        <option value="$PROJECT_DIR$/../webpack/webpack.config.js" />
-        <option value="$PROJECT_DIR$/../webpack/app.js" />
-        <option value="$PROJECT_DIR$/../webpack/logger.js" />
-        <option value="$PROJECT_DIR$/../webpack/bundle.js" />
-        <option value="$PROJECT_DIR$/../webpack/hello.js" />
-        <option value="$PROJECT_DIR$/../webpack/hello-react.html" />
-        <option value="$PROJECT_DIR$/test-data/sd.php" />
-        <option value="$PROJECT_DIR$/test-data/qqq.php" />
-        <option value="$PROJECT_DIR$/snippets/head.inc" />
-        <option value="$PROJECT_DIR$/js/helpers.js" />
-        <option value="$PROJECT_DIR$/tmpl/side-bar.hbs" />
-        <option value="$PROJECT_DIR$/test-data/math 3 - копия.json" />
-        <option value="$PROJECT_DIR$/test-data/ege/math-ege-2 - копия.json" />
-        <option value="$PROJECT_DIR$/test-data/old junk/math-ege-1.json" />
-        <option value="$PROJECT_DIR$/snippets/description.inc" />
-        <option value="$PROJECT_DIR$/views/testMain.php" />
-        <option value="$PROJECT_DIR$/test-data/ege/math-ege-5.json" />
-        <option value="$PROJECT_DIR$/test-data/ege/math-ege-1.json" />
-        <option value="$PROJECT_DIR$/test-data/ege/math-ege-4.json" />
-        <option value="$PROJECT_DIR$/test-data/ege/math-ege-3.json" />
-        <option value="$PROJECT_DIR$/test-data/ege/math-ege-2.json" />
-        <option value="$PROJECT_DIR$/snippets/head-local.inc" />
-        <option value="$PROJECT_DIR$/test-data/math1.json" />
-        <option value="$PROJECT_DIR$/../tests-admin/controllers/testDataToJS.php" />
-        <option value="$PROJECT_DIR$/../tests-production2/test-data/math1.json" />
-        <option value="$PROJECT_DIR$/test.json" />
-        <option value="$PROJECT_DIR$/controllers/testDataToJS.php" />
-        <option value="$PROJECT_DIR$/controllers/testMain.php" />
-        <option value="$PROJECT_DIR$/../tests-production/controllers/testSidebar.php" />
-        <option value="$PROJECT_DIR$/../tests-production/classes/TestsDB2.php" />
-        <option value="$PROJECT_DIR$/../tests-production/controllers/testMain.php" />
-        <option value="$PROJECT_DIR$/controllers/testSidebar.php" />
-        <option value="$PROJECT_DIR$/controllers/testDataAjax.php" />
-        <option value="$PROJECT_DIR$/controllers/trainingAjax.php" />
+        <option value="$PROJECT_DIR$/tests/recognize-fish/test-data/ege/recognize-fish-ege-3.json" />
+        <option value="$PROJECT_DIR$/tests/recognize-fish/test-data/ege/recognize-fish-ege-1.json" />
         <option value="$PROJECT_DIR$/classes/TestsDB2.php" />
-        <option value="$PROJECT_DIR$/controllers/test.json" />
-        <option value="$PROJECT_DIR$/js/views/MainView.js" />
+        <option value="$PROJECT_DIR$/tmpl/test-list.hbs" />
+        <option value="$PROJECT_DIR$/tests/recognize-tree/snippets/head.inc" />
+        <option value="$PROJECT_DIR$/tests/pdd/snippets/head.inc" />
+        <option value="$PROJECT_DIR$/tests/it/snippets/head.inc" />
+        <option value="$PROJECT_DIR$/tests/rus/snippets/head.inc" />
+        <option value="$PROJECT_DIR$/tests/math/snippets/head.inc" />
+        <option value="$PROJECT_DIR$/tests/geography/snippets/head.inc" />
+        <option value="$PROJECT_DIR$/tests/animal-tracking/snippets/head.inc" />
+        <option value="$PROJECT_DIR$/tests/iq/snippets/head.inc" />
+        <option value="$PROJECT_DIR$/tests/gims/boat_vp/snippets/head.inc" />
+        <option value="$PROJECT_DIR$/tests/gims/boat_mp/snippets/head.inc" />
+        <option value="$PROJECT_DIR$/tests/gims/boat_vvp/snippets/head.inc" />
+        <option value="$PROJECT_DIR$/tests/gims/jet_ski_mp/snippets/head.inc" />
+        <option value="$PROJECT_DIR$/tests/gims/jet_ski_mpvpvvp/snippets/head.inc" />
+        <option value="$PROJECT_DIR$/tests/gims/jet_ski_vpvvp/snippets/head.inc" />
+        <option value="$PROJECT_DIR$/tests/gims/boat_mpvvp/snippets/head.inc" />
+        <option value="$PROJECT_DIR$/tests/gims/snippets/head.inc" />
+        <option value="$PROJECT_DIR$/tests/recognize-vegetable/index-local.php" />
+        <option value="$PROJECT_DIR$/tests/recognize-vegetable/index.php" />
+        <option value="$PROJECT_DIR$/tests/recognize-vegetable/snippets/field.inc" />
+        <option value="$PROJECT_DIR$/tests/recognize-vegetable/test-data/ege/recognize-vegetable-ege-1.json" />
+        <option value="$PROJECT_DIR$/tests/recognize-fruit/index.php" />
+        <option value="$PROJECT_DIR$/tests/recognize-fruit/index-local.php" />
+        <option value="$PROJECT_DIR$/tests/recognize-fruit/snippets/field.inc" />
+        <option value="$PROJECT_DIR$/controllers/testDataToJS.php" />
         <option value="$PROJECT_DIR$/js/main2.js" />
-        <option value="$PROJECT_DIR$/js/controllers/TestController.js" />
-        <option value="$PROJECT_DIR$/js/views/ListView.js" />
-        <option value="$PROJECT_DIR$/tmpl/test-main.hbs" />
-        <option value="$PROJECT_DIR$/js/Timer.js" />
-        <option value="$PROJECT_DIR$/snippets/field.inc" />
+        <option value="$PROJECT_DIR$/tests/recognize-fruit/js/main-init.js" />
+        <option value="$PROJECT_DIR$/tests/recognize-vegetable/js/main-init.js" />
+        <option value="$PROJECT_DIR$/tests/recognize-tree/js/main-init.js" />
+        <option value="$PROJECT_DIR$/tests/recognize-fish/js/main-init.js" />
+        <option value="$PROJECT_DIR$/tests/recognize-vegetable/snippets/head.inc" />
+        <option value="$PROJECT_DIR$/tests/recognize-fruit/snippets/head.inc" />
+        <option value="$PROJECT_DIR$/tests/recognize-fish/snippets/head.inc" />
+        <option value="$PROJECT_DIR$/tests/geography/test-data/ege/geography-ege-1.json" />
         <option value="$PROJECT_DIR$/css/test-main.css" />
+        <option value="$PROJECT_DIR$/tmpl/test-main.hbs" />
         <option value="$PROJECT_DIR$/js/models/TestModel.js" />
+        <option value="$PROJECT_DIR$/tests/recognize-flag/index.php" />
+        <option value="$PROJECT_DIR$/tests/recognize-flag/index-local.php" />
+        <option value="$PROJECT_DIR$/tests/recognize-flag/js/main-init.js" />
+        <option value="$PROJECT_DIR$/tests/recognize-flag/snippets/head.inc" />
+        <option value="$PROJECT_DIR$/tests/recognize-fish/css/test-specific.css" />
+        <option value="$PROJECT_DIR$/tests/recognize-fruit/css/test-specific.css" />
+        <option value="$PROJECT_DIR$/tests/recognize-tree/css/test-specific.css" />
+        <option value="$PROJECT_DIR$/tests/recognize-vegetable/css/test-specific.css" />
+        <option value="$PROJECT_DIR$/tests/recognize-flag/snippets/field.inc" />
+        <option value="$PROJECT_DIR$/tests/recognize-flag/css/test-specific.css" />
+        <option value="$PROJECT_DIR$/js/views/MainView.js" />
       </list>
     </option>
   </component>
@@ -211,6 +226,9 @@
             <id>Control flow issuesJavaScript</id>
           </State>
           <State>
+            <id>Data flow issuesJavaScript</id>
+          </State>
+          <State>
             <id>GeneralJavaScript</id>
           </State>
           <State>
@@ -237,7 +255,7 @@
         </expanded-state>
         <selected-state>
           <State>
-            <id>TrivialIfJS</id>
+            <id>UnnecessaryLocalVariableJS</id>
           </State>
         </selected-state>
       </profile-state>
@@ -266,8 +284,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -282,7 +298,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="newtest2" />
+              <option name="myItemId" value="math_test" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -292,21 +308,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="newtest2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="newtest2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="newtest2" />
+              <option name="myItemId" value="math_test" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -320,25 +322,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="newtest2" />
+              <option name="myItemId" value="math_test" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="test-data" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="newtest2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="newtest2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="snippets" />
+              <option name="myItemId" value="tests" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -348,7 +336,87 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="math_test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tests" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="recognize-flag" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
               <option name="myItemId" value="newtest2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="math_test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tests" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="recognize-flag" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="newtest2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="math_test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tests" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="animal-tracking" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="newtest2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="math_test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tests" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="animal-tracking" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="newtest2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="math_test" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -362,7 +430,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="newtest2" />
+              <option name="myItemId" value="math_test" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -380,7 +448,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="newtest2" />
+              <option name="myItemId" value="math_test" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -398,7 +466,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="newtest2" />
+              <option name="myItemId" value="math_test" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -416,21 +484,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="newtest2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="newtest2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="newtest2" />
+              <option name="myItemId" value="math_test" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -444,7 +498,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="newtest2" />
+              <option name="myItemId" value="math_test" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -454,23 +508,41 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../php" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../tests-wp" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="recentsLimit" value="5" />
     <property name="js.buildTools.grunt.node_interpreter" value="" />
     <property name="js.buildTools.grunt.grunt-cli.package" value="" />
     <property name="js.buildTools.gulp.node_interpreter" value="" />
     <property name="js.buildTools.gulp.gulp_package_dir" value="" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.build" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.completion" />
     <property name="settings.editor.splitter.proportion" value="0.21645446" />
     <property name="FullScreen" value="false" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="full.screen.before.presentation.mode" value="false" />
     <property name="last.edited.regexp" value="Sample Text\asf" />
     <property name="JavaScriptLanguageLevel" value="JSX" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="130" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="129" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="130" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="804" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="135" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="134" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="137" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="800" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -485,7 +557,10 @@
       <recent name="C:\Server\apache\htdocs\newtest2\js\old junk" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="PHP Script.makeJson.php">
+    <configuration default="false" name="makeJson.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/controllers/makeJson.php">
+      <method />
+    </configuration>
     <configuration default="true" type="AppEnginePhpConfigurationType" factoryName="App Engine for PHP">
       <method />
     </configuration>
@@ -559,6 +634,14 @@
       <envs />
       <method />
     </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="PHP Script.makeJson.php" />
+    </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="PHP Script.makeJson.php" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
   <component name="SvnConfiguration">
@@ -584,15 +667,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1288" y="48" width="1296" height="1040" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24029127" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2855987" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32857144" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32893288" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928804" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25412542" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39273927" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
@@ -601,9 +683,10 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32967034" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32893288" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="CSS Styles" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32967034" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3190319" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
@@ -628,379 +711,372 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="40" />
+      <option name="time" value="75" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../tests-admin/js/old junk/AdminTest.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.430839">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../tests-admin/js/admin.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="168" column="45" selection-start-line="168" selection-start-column="45" selection-end-line="168" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../tests-admin/js/admin2.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.42630386">
-          <caret line="122" column="30" selection-start-line="122" selection-start-column="30" selection-end-line="122" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../tests-admin/controllers/adminAjax2.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.12616822">
-          <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tmpl/result.hbs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.11929824">
-          <caret line="6" column="29" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tmpl/side-bar.hbs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.07943925">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../tests-admin/js/models/TestInfo.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../tests-admin/js/models/Task.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5975057">
-          <caret line="31" column="36" selection-start-line="31" selection-start-column="36" selection-end-line="31" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/helpers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4217687">
-          <caret line="59" column="47" selection-start-line="59" selection-start-column="47" selection-end-line="59" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/snippets/head.inc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.51635516">
-          <caret line="26" column="30" selection-start-line="26" selection-start-column="30" selection-end-line="26" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../snippets/lg-game-info.htm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.21845794">
-          <caret line="11" column="36" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../lg-template/README.md">
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4982415">
-          <caret line="25" column="17" selection-start-line="25" selection-start-column="2" selection-end-line="25" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index-local.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1588785">
-          <caret line="8" column="45" selection-start-line="8" selection-start-column="45" selection-end-line="8" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/snippets/left.inc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/snippets/description.inc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.05957944">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../snippets/lg-template.inc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../snippets/lg-template-local.inc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.39415205">
-          <caret line="84" column="38" selection-start-line="84" selection-start-column="38" selection-end-line="84" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test-data/ege/math-ege-2.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5204678">
-          <caret line="383" column="638" selection-start-line="383" selection-start-column="637" selection-end-line="383" selection-end-column="638" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test-data/ege/math-ege-3.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3251462">
-          <caret line="383" column="700" selection-start-line="383" selection-start-column="700" selection-end-line="383" selection-end-column="700" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test-data/ege/math-ege-4.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6584795">
-          <caret line="383" column="700" selection-start-line="383" selection-start-column="700" selection-end-line="383" selection-end-column="700" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test-data/ege/math-ege-1.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.47017545">
-          <caret line="383" column="700" selection-start-line="383" selection-start-column="700" selection-end-line="383" selection-end-column="700" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/snippets/head-local.inc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.23859648">
-          <caret line="12" column="48" selection-start-line="12" selection-start-column="48" selection-end-line="12" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test-data/math1.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-20.961403">
-          <caret line="17" column="192" selection-start-line="17" selection-start-column="192" selection-end-line="17" selection-end-column="192" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test-data/ege/math-ege-5.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6725146">
-          <caret line="397" column="704" selection-start-line="397" selection-start-column="704" selection-end-line="397" selection-end-column="704" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../tests-admin/controllers/testDataToJS.php">
+    <entry file="file://$PROJECT_DIR$/tests/animal-tracking/snippets/head.inc">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.099415205">
-          <caret line="5" column="33" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
+          <caret line="5" column="75" selection-start-line="5" selection-start-column="75" selection-end-line="5" selection-end-column="75" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../tests-admin/controllers/test.json">
+    <entry file="file://$PROJECT_DIR$/tests/iq/snippets/head.inc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.099415205">
+          <caret line="5" column="103" selection-start-line="5" selection-start-column="103" selection-end-line="5" selection-end-column="103" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/gims/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/testSidebar.php">
+    <entry file="file://$PROJECT_DIR$/tests/gims/boat_vp/snippets/head.inc">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.07953216">
-          <caret line="6" column="91" selection-start-line="6" selection-start-column="91" selection-end-line="6" selection-end-column="91" />
+        <state vertical-scroll-proportion="0.099415205">
+          <caret line="5" column="130" selection-start-line="5" selection-start-column="130" selection-end-line="5" selection-end-column="130" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/testDataToJS.php">
+    <entry file="file://$PROJECT_DIR$/tests/gims/boat_mp/snippets/head.inc">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.05964912">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.099415205">
+          <caret line="5" column="138" selection-start-line="5" selection-start-column="138" selection-end-line="5" selection-end-column="138" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../tests-production/controllers/testDataToJS.php">
+    <entry file="file://$PROJECT_DIR$/tests/gims/boat_vvp/snippets/head.inc">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.07953216">
-          <caret line="4" column="50" selection-start-line="4" selection-start-column="50" selection-end-line="4" selection-end-column="50" />
+        <state vertical-scroll-proportion="0.099415205">
+          <caret line="5" column="138" selection-start-line="5" selection-start-column="138" selection-end-line="5" selection-end-column="138" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../tests-production/controllers/testSidebar.php">
+    <entry file="file://$PROJECT_DIR$/tests/gims/jet_ski_mp/snippets/head.inc">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.9615384">
-          <caret line="3" column="25" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="25" />
+        <state vertical-scroll-proportion="0.099415205">
+          <caret line="5" column="132" selection-start-line="5" selection-start-column="132" selection-end-line="5" selection-end-column="132" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../tests-production/classes/TestsDB2.php">
+    <entry file="file://$PROJECT_DIR$/tests/gims/jet_ski_mpvpvvp/snippets/head.inc">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.6153846">
-          <caret line="4" column="49" selection-start-line="4" selection-start-column="49" selection-end-line="4" selection-end-column="49" />
+        <state vertical-scroll-proportion="0.099415205">
+          <caret line="5" column="180" selection-start-line="5" selection-start-column="180" selection-end-line="5" selection-end-column="180" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../tests-production/controllers/testMain.php">
+    <entry file="file://$PROJECT_DIR$/tests/gims/jet_ski_vpvvp/snippets/head.inc">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.05964912">
-          <caret line="3" column="25" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="25" />
+        <state vertical-scroll-proportion="0.099415205">
+          <caret line="5" column="110" selection-start-line="5" selection-start-column="110" selection-end-line="5" selection-end-column="110" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/testSidebar.php">
+    <entry file="file://$PROJECT_DIR$/tests/gims/boat_mpvvp/snippets/head.inc">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.07953216">
-          <caret line="4" column="47" selection-start-line="4" selection-start-column="47" selection-end-line="4" selection-end-column="47" />
+        <state vertical-scroll-proportion="0.099415205">
+          <caret line="5" column="165" selection-start-line="5" selection-start-column="165" selection-end-line="5" selection-end-column="165" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/testMain.php">
+    <entry file="file://$PROJECT_DIR$/tests/gims/snippets/head.inc">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.07953216">
-          <caret line="4" column="50" selection-start-line="4" selection-start-column="50" selection-end-line="4" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../tests-admin/classes/search_dir.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.17894737">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/testMain.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="5" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/testDataAjax.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.61637425">
-          <caret line="31" column="33" selection-start-line="31" selection-start-column="33" selection-end-line="31" selection-end-column="33" />
-          <folding />
+        <state vertical-scroll-proportion="0.099415205">
+          <caret line="5" column="72" selection-start-line="5" selection-start-column="72" selection-end-line="5" selection-end-column="72" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/classes/TestsDB2.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.692307">
-          <caret line="219" column="68" selection-start-line="219" selection-start-column="68" selection-end-line="219" selection-end-column="68" />
+        <state vertical-scroll-proportion="0.41520467">
+          <caret line="160" column="50" selection-start-line="160" selection-start-column="50" selection-end-line="160" selection-end-column="50" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/test.json">
+    <entry file="file://$PROJECT_DIR$/tests/recognize-vegetable/index-local.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="0" column="27" selection-start-line="0" selection-start-column="27" selection-end-line="0" selection-end-column="27" />
-          <folding>
-            <marker date="1446824260797" expanded="true" signature="-1:-1" placeholder="[...]" />
-          </folding>
+        <state vertical-scroll-proportion="-3.2692308">
+          <caret line="5" column="35" selection-start-line="5" selection-start-column="35" selection-end-line="5" selection-end-column="35" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/views/ListView.js">
+    <entry file="file://$PROJECT_DIR$/tests/recognize-vegetable/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3632236">
-          <caret line="63" column="0" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="0.099415205">
+          <caret line="5" column="35" selection-start-line="5" selection-start-column="35" selection-end-line="5" selection-end-column="35" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/controllers/TestController.js">
+    <entry file="file://$PROJECT_DIR$/tests/recognize-vegetable/snippets/head-local.inc">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="92" column="41" selection-start-line="92" selection-start-column="41" selection-end-line="92" selection-end-column="41" />
-          <folding />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/Timer.js">
+    <entry file="file://$PROJECT_DIR$/tests/recognize-vegetable/snippets/field.inc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.2666667">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/recognize-vegetable/test-data/ege/recognize-vegetable-ege-1.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8608187">
+          <caret line="321" column="26" selection-start-line="321" selection-start-column="26" selection-end-line="321" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/recognize-fruit/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.099415205">
+          <caret line="5" column="36" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/recognize-fruit/index-local.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.099415205">
+          <caret line="5" column="36" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/recognize-fruit/snippets/field.inc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.1649122">
+          <caret line="8" column="58" selection-start-line="8" selection-start-column="58" selection-end-line="8" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/testDataToJS.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.41754386">
+          <caret line="21" column="4" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/gims/snippets/field.inc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.6502924">
+          <caret line="8" column="48" selection-start-line="8" selection-start-column="48" selection-end-line="8" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/gims/js/main-init.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="98" column="0" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tmpl/test-main.hbs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2982456">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/snippets/field.inc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5777778">
-          <caret line="75" column="56" selection-start-line="75" selection-start-column="56" selection-end-line="75" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/trainingAjax.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.8461537">
-          <caret line="12" column="53" selection-start-line="12" selection-start-column="53" selection-end-line="12" selection-end-column="53" />
-          <folding />
+          <caret line="31" column="32" selection-start-line="31" selection-start-column="32" selection-end-line="31" selection-end-column="32" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/main2.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="234" column="19" selection-start-line="234" selection-start-column="19" selection-end-line="234" selection-end-column="19" />
-          <folding />
+        <state vertical-scroll-proportion="0.38592508">
+          <caret line="125" column="69" selection-start-line="125" selection-start-column="69" selection-end-line="125" selection-end-column="69" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/test-main.css">
+    <entry file="file://$USER_HOME$/Documents/field.inc">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3552781">
-          <caret line="267" column="23" selection-start-line="267" selection-start-column="23" selection-end-line="267" selection-end-column="23" />
-          <folding />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/recognize-vegetable/js/main-init.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5402951">
+          <caret line="28" column="37" selection-start-line="28" selection-start-column="37" selection-end-line="28" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/recognize-tree/js/main-init.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.61748016">
+          <caret line="32" column="33" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/recognize-fruit/js/main-init.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.61748016">
+          <caret line="32" column="33" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/recognize-tree/snippets/head.inc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-23.538462">
+          <caret line="36" column="66" selection-start-line="36" selection-start-column="66" selection-end-line="36" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/recognize-vegetable/snippets/head.inc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-24.192308">
+          <caret line="37" column="68" selection-start-line="37" selection-start-column="68" selection-end-line="37" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/recognize-fruit/snippets/head.inc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-24.192308">
+          <caret line="37" column="68" selection-start-line="37" selection-start-column="68" selection-end-line="37" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/recognize-fish/snippets/head.inc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7157895">
+          <caret line="36" column="66" selection-start-line="36" selection-start-column="66" selection-end-line="36" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/recognize-fish/js/main-init.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3632236">
+          <caret line="30" column="32" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/Fireworks.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.86833143">
+          <caret line="90" column="6" selection-start-line="90" selection-start-column="6" selection-end-line="90" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/models/TestModel.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="502" column="54" selection-start-line="502" selection-start-column="54" selection-end-line="502" selection-end-column="54" />
+          <caret line="1804" column="50" selection-start-line="1804" selection-start-column="50" selection-end-line="1804" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/animal-tracking/css/test-specific.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4324631">
+          <caret line="102" column="0" selection-start-line="102" selection-start-column="0" selection-end-line="102" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/geography/test-data/ege/geography-ege-1.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.61637425">
+          <caret line="43" column="12" selection-start-line="43" selection-start-column="12" selection-end-line="43" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/recognize-flag/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.2692308">
+          <caret line="5" column="43" selection-start-line="5" selection-start-column="43" selection-end-line="5" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/recognize-flag/index-local.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.099415205">
+          <caret line="5" column="41" selection-start-line="5" selection-start-column="41" selection-end-line="5" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/recognize-flag/js/main-init.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.69466513">
+          <caret line="36" column="37" selection-start-line="36" selection-start-column="37" selection-end-line="36" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/recognize-flag/snippets/head.inc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.11929824">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/recognize-flag/test-data/common.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/recognize-fish/css/test-specific.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="115" column="56" selection-start-line="115" selection-start-column="56" selection-end-line="115" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/recognize-fruit/css/test-specific.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="115" column="34" selection-start-line="115" selection-start-column="34" selection-end-line="115" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/recognize-tree/css/test-specific.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="111" column="34" selection-start-line="111" selection-start-column="34" selection-end-line="111" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/recognize-vegetable/css/test-specific.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.47105563">
+          <caret line="115" column="34" selection-start-line="115" selection-start-column="34" selection-end-line="115" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/recognize-flag/snippets/field.inc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.15906432">
+          <caret line="8" column="57" selection-start-line="8" selection-start-column="57" selection-end-line="8" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/recognize-flag/css/test-specific.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.40181613">
+          <caret line="120" column="20" selection-start-line="120" selection-start-column="20" selection-end-line="120" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/test-main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="616" column="1" selection-start-line="616" selection-start-column="1" selection-end-line="616" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tmpl/test-main.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="130" column="100" selection-start-line="130" selection-start-column="100" selection-end-line="130" selection-end-column="100" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/views/MainView.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.9863791">
-          <caret line="251" column="46" selection-start-line="251" selection-start-column="46" selection-end-line="251" selection-end-column="46" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="688" column="48" selection-start-line="688" selection-start-column="48" selection-end-line="688" selection-end-column="48" />
           <folding />
         </state>
       </provider>

@@ -4,7 +4,6 @@
 ?>
 
 <!-- styles -->
-<link rel="shortcut icon" type="image/x-icon" href="http://logic-games.spb.ru/freecell/favicon.ico">
 <link media="screen" href="css/test-main.css" rel="stylesheet" type="text/css">
 
 
@@ -22,6 +21,10 @@
 
 <script id="task-main-tmpl" type="text/x-handlebars-template">
     <?php include 'tmpl/test-main.hbs'; ?>
+</script>
+
+<script id="test-list-tmpl" type="text/x-handlebars-template">
+    <?php include 'tmpl/test-list.hbs'; ?>
 </script>
 
 <!-- thrid-party libraries -->

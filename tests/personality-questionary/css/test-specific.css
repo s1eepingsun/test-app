@@ -1,0 +1,406 @@
+#left-side-bar {
+    height: 780px;
+}
+#field {
+    /*height: 705px;*/
+    min-height: 680px;
+    height: 680px;
+    /*height: 729px;*/
+}
+#field-inside-wrapper {
+    height: 678px !important;
+}
+.single-test-data {
+    min-height: 598px;
+}
+.single-test-data.first-task-style {
+    min-height: 550px;
+}
+
+.single-test-data .task-content {
+    min-height: 88px;
+}
+
+.single-test-data.first-task-style .task-content {
+    min-height: 40px;
+}
+
+.single-test-data .test-button {
+    bottom: 430px;
+}
+#field .start-message > h2 {
+    margin-top: 0;
+}
+
+#left-block {
+    width: 80px;
+}
+#left-side-bar {
+    width: 83px;
+}
+
+#left-side-bar .side-bar-table td:first-child {
+    /*text-align: center;*/
+}
+
+#bottom-block {
+    margin: 1px 150px 0 230px;
+}
+
+#test-result .result {
+    padding-top: 0;
+}
+#test-result .result-alternatives div {
+    display: none;
+}
+#reference-in-result {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+#reference-in-result h3 {
+    margin-bottom: 0.5em;
+}
+#reference-in-result p {
+    text-align: left;
+}
+.result>div:first-child {
+    margin-bottom: 6%;
+}
+#test-result h3.graph-name {
+    margin-top: 10px;
+    margin-bottom: 0;
+    font-size: 27px;
+    font-weight: normal;
+}
+#graphic-result {
+    position: relative;
+    margin-top: 10px;
+    margin-left: 2px;
+}
+#graphic-result > div:first-child {
+    display: none;
+    position: absolute;
+    width: 19px;
+    height: 19px;
+    background: green;
+    opacity: 0.8;
+    border-radius: 9px;
+    top: 53px;
+    left: 93px;
+}
+#temperament-score {
+    margin-top: 20px;
+}
+
+#horizontal-task-list {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    height: 45px;
+}
+
+#horizontal-task-list > div:first-child {
+    width: 1750px;
+}
+
+#reference-book .ref-content > div {
+    height: 520px;
+}
+#immediate-answer-check {
+    display: none;
+}
+#field-inside-wrapper.separator {
+    border-bottom: none;
+}
+
+#graphic-result .temperament-traits {
+    position: absolute;
+    font-size: 19px;
+}
+#graphic-result .temperament-traits h2 {
+    font-size: 18px;
+    text-align: left;
+    margin: 0;
+    font-weight: normal;
+}
+#graphic-result .temperament-traits ul {
+    list-style: none;
+    text-align: left;
+    font-size: 15px;
+    padding-left: 0;
+    margin-top: 2px;
+}
+#graphic-result .temperament-traits li {
+    position: relative;
+}
+#melancholic-traits {
+    top: 100px;
+    left: 100px;
+}
+#melancholic-traits h2 {
+    top: 148px;
+    left: 73px;
+    position: absolute;
+}
+#choleric-traits {
+    top: 100px;
+    left: 341px;
+}
+#choleric-traits h2 {
+    top: 148px;
+    left: -25px;
+    position: absolute;
+}
+#phlegmatic-traits {
+    top: 308px;
+    left: 96px;
+}
+#phlegmatic-traits h2 {
+    top: -8px;
+    left: 75px;
+    position: absolute;
+}
+#sanguine-traits {
+    top: 308px;
+    left: 339px;
+}
+#sanguine-traits h2 {
+    top: -8px;
+    left: -23px;
+    position: absolute;
+}
+#stable-aspect {
+    left: 232px;
+    top: 517px;
+}
+#unstable-aspect {
+    top: 29px;
+    left: 245px;
+}
+#extrovert-aspect {
+    top: 274px;
+    left: 438px;
+}
+#introvert-aspect {
+    top: 274px;
+    left: 36px;
+}
+#eysenck-circle-details {
+    position: absolute;
+    top: 0;
+    left: 1px;
+}
+#graphic-result .temperament-traits h2.actual-type {
+    font-weight: bold;
+    color: #1B5233;
+}
+
+#melancholic-traits li:nth-child(1) {
+    left: -10px;
+}
+#melancholic-traits li:nth-child(2) {
+    left: -24px;
+}
+#melancholic-traits li:nth-child(3) {
+    left: -8px;
+}
+#melancholic-traits li:nth-child(4) {
+    left: -37px;
+}
+#melancholic-traits li:nth-child(5) {
+    left: -30px;
+}
+#melancholic-traits li:nth-child(6) {
+    left: -40px;
+}
+#melancholic-traits li:nth-child(7) {
+    left: -48px;
+}
+#melancholic-traits li:nth-child(8) {
+    left: -40px;
+}
+
+#choleric-traits li:nth-child(1) {
+    left: -16px;
+}
+#choleric-traits li:nth-child(2) {
+    left: 16px;
+}
+#choleric-traits li:nth-child(3) {
+    left: 43px;
+}
+#choleric-traits li:nth-child(4) {
+    left: 65px;
+}
+#choleric-traits li:nth-child(5) {
+    left: 78px;
+}
+#choleric-traits li:nth-child(6) {
+    left: 84px;
+}
+#choleric-traits li:nth-child(7) {
+    left: 106px;
+}
+#choleric-traits li:nth-child(8) {
+    left: 115px;
+}
+
+#phlegmatic-traits li:nth-child(1) {
+    left: -60px;
+}
+#phlegmatic-traits li:nth-child(2) {
+    left: -59px;
+}
+#phlegmatic-traits li:nth-child(3) {
+    left: -48px;
+}
+#phlegmatic-traits li:nth-child(4) {
+    left: -40px;
+}
+#phlegmatic-traits li:nth-child(5) {
+    left: -32px;
+}
+#phlegmatic-traits li:nth-child(6) {
+    left: -11px;
+}
+#phlegmatic-traits li:nth-child(7) {
+    left: -8px;
+}
+#phlegmatic-traits li:nth-child(8) {
+    left: 10px;
+}
+
+#sanguine-traits li:nth-child(1) {
+    left: 122px;
+}
+#sanguine-traits li:nth-child(2) {
+    left: 105px;
+}
+#sanguine-traits li:nth-child(3) {
+    left: 106px;
+}
+#sanguine-traits li:nth-child(4) {
+    left: 97px;
+}
+#sanguine-traits li:nth-child(5) {
+    left: 80px;
+}
+#sanguine-traits li:nth-child(6) {
+    left: 56px;
+}
+#sanguine-traits li:nth-child(7) {
+    left: 28px;
+}
+#sanguine-traits li:nth-child(8) {
+    left: 0;
+}
+
+.rotate90 {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+.rotate180 {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+.rotate270 {
+    -webkit-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    transform: rotate(270deg);
+}
+
+
+#temperament-tabs {
+    padding: 0 10px;
+}
+#temperament-tabs ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+#temperament-tabs > div:first-child {
+    height: 195px;
+}
+#temperament-tabs > div:first-child > div {
+    float: left;
+    margin-left: 45px;
+}
+#temperament-tabs > div:last-child .melancholic {
+    background: #DEC1D8;
+}
+#temperament-tabs > div:last-child .choleric {
+    background: #F0AEA5;
+}
+#temperament-tabs > div:last-child .phlegmatic {
+    background: #B6D5B5;
+}
+#temperament-tabs > div:last-child .sanguine {
+    background: #FFECA5;
+}
+
+#temperament-tabs > div:first-child .melancholic img.active-img {
+    background: #DEC1D8;
+}
+#temperament-tabs > div:first-child .choleric img.active-img {
+    background: #F0AEA5;
+}
+#temperament-tabs > div:first-child .phlegmatic img.active-img {
+    background: #B6D5B5;
+}
+#temperament-tabs > div:first-child .sanguine img.active-img {
+    background: #FFECA5;
+}
+
+#temperament-tabs > div:first-child > div > div.hover-tab {
+    /*color: #2828BF;*/
+    color: #0000EE;
+}
+#temperament-tabs > div:first-child > div > div.active-tab {
+    /*color: #0E0EE6;*/
+    /*color: #0000AA;*/
+}
+#temperament-tabs > div:first-child > div:hover {
+    cursor: pointer;
+}
+#temperament-tabs > div:first-child > div img {
+    width: 90px !important;
+    height: 150px !important;
+}
+#temperament-tabs > div:last-child > div {
+    display: none;
+    padding: 5px 10px 10px;
+    border: 2px solid #222;
+}
+#temperament-tabs > div:last-child p {
+    text-align: left;
+    margin-bottom: 0.2em;
+    margin-top: 0;
+}
+
+#temperament-tabs > div:last-child .phlegmatic {
+    display: block;
+}
+
+#temperament-tabs > div:first-child img {
+    background: #F0F0F0;
+}
+#temperament-tabs > div:first-child img.hover-img {
+    background: #0000EE;
+}
+#temperament-tabs > div:first-child img.active-img {
+    /*background: #0000AA;*/
+    /*background: #FFFFCA;*/
+}
+
+
+.start-message {
+    padding: 0;
+}

@@ -1,0 +1,15 @@
+<table class="side-bar-table" border="0" cellspacing="0" bordercolor="#999" rules="groups">
+    <thead>
+    <tr>
+        <th>№</th><th>Баллы</th>
+    </tr>
+    </thead>
+    <tbody>
+    {{#each tasks}}
+    <tr class="task-item" id="qn{{#plus1}}{{@index}}{{/plus1}}">
+        <td>{{#plus1}}{{@index}}{{/plus1}}</td>
+        <td>{{#sum answer_points}} {{.}} {{/sum}}</td>
+    </tr>
+    {{/each}}
+    </tbody>
+</table>
