@@ -483,7 +483,6 @@ testApp.MainView.prototype = {
             if(diff < 0) {
                 $('#' + id).addClass('long-task');
             }
-            //console.log2('diff', id, diff);
 
             if($('#' + id).find('.answers').hasClass('multiple-wide')) {
                 if(diff < 103) {

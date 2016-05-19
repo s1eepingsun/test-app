@@ -4,6 +4,6 @@ ini_set ( "display_startup_errors", "1");
 ini_set ( "html_errors", "1");
 
 $pageTitle = 'Тест на знание овощей';
-$gvId = 9;
+$gvId = 52;
 
 include('../../../snippets/lg-template.inc');

@@ -4,6 +4,6 @@ ini_set ( "display_startup_errors", "1");
 ini_set ( "html_errors", "1");
 
 $pageTitle = 'Тест на знание флагов стран';
-$gvId = 9;
+$gvId = 53;
 
 include('../../../snippets/lg-template.inc');
