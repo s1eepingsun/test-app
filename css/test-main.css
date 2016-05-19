@@ -1006,8 +1006,12 @@ body {
     /*border-color: #3332ff;*/
     border-color: #000;
 }
-.single-test-data .multiple .answered-basic-border {
-    border: 4px solid #000;
+.single-test-data .multiple .answered-basic-border,
+.single-test-data .multiple-wide .answered-basic-border {
+    border: 3px solid #000;
+}
+.single-test-data .multiple-thin .answered-basic-border {
+    border: 3px solid #000;
 }
 .single-test-data .answered-wrong-border {
     border: 4px solid #f06063;

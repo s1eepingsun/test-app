@@ -6,49 +6,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5f1c9083-e612-4430-86e1-c49db4c5e9d7" name="Default" comment="organized the application properly: made namespace &amp; init function">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/recognize-flag/test-data/mp3/Argentina.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/recognize-flag/test-data/mp3/Australia.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/recognize-flag/test-data/mp3/Belgium.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/recognize-flag/test-data/mp3/Brazil.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/recognize-flag/test-data/mp3/Bulgaria.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/recognize-flag/test-data/mp3/Canada.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/recognize-flag/test-data/mp3/Chile.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/recognize-flag/test-data/mp3/China.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/recognize-flag/test-data/mp3/CzechRepublic.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/recognize-flag/test-data/mp3/Denmark.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/recognize-flag/test-data/mp3/Estonia.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/recognize-flag/test-data/mp3/Finland.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/recognize-flag/test-data/mp3/Germany.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/recognize-flag/test-data/mp3/Greece.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/recognize-flag/test-data/mp3/India.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/recognize-flag/test-data/mp3/Ireland.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/recognize-flag/test-data/mp3/Israel.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/recognize-flag/test-data/mp3/Japan.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/recognize-flag/test-data/mp3/Lithuania.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/recognize-flag/test-data/mp3/Netherlands.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/recognize-flag/test-data/mp3/Peru.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/recognize-flag/test-data/mp3/Poland.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/recognize-flag/test-data/mp3/Russia.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/recognize-flag/test-data/mp3/SouthKorea.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/recognize-flag/test-data/mp3/Spain.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/recognize-flag/test-data/mp3/Sweden.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/recognize-flag/test-data/mp3/Ukraine.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/recognize-flag/test-data/mp3/Uzbekistan.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/recognize-flag/test-data/mp3/Venezuela.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/recognize-flag/test-data/mp3/Vietnam.mp3" />
-      <change type="MOVED" beforePath="C:\Server\apache\htdocs\math_test\js\controllers\testController.js" afterPath="$PROJECT_DIR$/js/controllers/TestController.js" />
-      <change type="MOVED" beforePath="C:\Server\apache\htdocs\math_test\js\models\testModel.js" afterPath="$PROJECT_DIR$/js/models/TestModel.js" />
-      <change type="MOVED" beforePath="C:\Server\apache\htdocs\math_test\js\views\mainView.js" afterPath="$PROJECT_DIR$/js/views/MainView.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/recognize-flag/js/main-init.js" afterPath="$PROJECT_DIR$/tests/recognize-flag/js/main-init.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/main2.js" afterPath="$PROJECT_DIR$/js/main2.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/recognize-flag/test-data/ege/recognize-flag-ege-1.json" afterPath="$PROJECT_DIR$/tests/recognize-flag/test-data/ege/recognize-flag-ege-1.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/recognize-flag/test-data/ege/recognize-flag-ege-2.json" afterPath="$PROJECT_DIR$/tests/recognize-flag/test-data/ege/recognize-flag-ege-2.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/recognize-fruit/test-data/ege/recognize-fruit-ege-1.json" afterPath="$PROJECT_DIR$/tests/recognize-fruit/test-data/ege/recognize-fruit-ege-1.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/test-main.css" afterPath="$PROJECT_DIR$/css/test-main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmpl/test-main.hbs" afterPath="$PROJECT_DIR$/tmpl/test-main.hbs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/geography/css/test-specific.css" afterPath="$PROJECT_DIR$/tests/geography/css/test-specific.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/recognize-flag/css/test-specific.css" afterPath="$PROJECT_DIR$/tests/recognize-flag/css/test-specific.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="newtest2.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -80,16 +39,16 @@
         <entry file="file://$PROJECT_DIR$/js/models/TestModel.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="1137" column="0" selection-start-line="1137" selection-start-column="0" selection-end-line="1137" selection-end-column="0" />
+              <caret line="1106" column="9" selection-start-line="1106" selection-start-column="9" selection-end-line="1106" selection-end-column="9" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainView.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MainView.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/views/MainView.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.46765038">
+            <state vertical-scroll-proportion="0.0">
               <caret line="879" column="6" selection-start-line="879" selection-start-column="6" selection-end-line="879" selection-end-column="6" />
               <folding />
             </state>
@@ -116,31 +75,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test-main.hbs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tmpl/test-main.hbs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="58" column="32" selection-start-line="58" selection-start-column="32" selection-end-line="58" selection-end-column="32" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test-main.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="test-main.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/test-main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="157" column="1" selection-start-line="157" selection-start-column="1" selection-end-line="157" selection-end-column="1" />
+            <state vertical-scroll-proportion="0.3938706">
+              <caret line="1010" column="27" selection-start-line="1010" selection-start-column="27" selection-end-line="1010" selection-end-column="27" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="test-specific.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/recognize-flag/css/test-specific.css">
+        <entry file="file://$PROJECT_DIR$/tests/geography/css/test-specific.css">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
+              <caret line="130" column="19" selection-start-line="130" selection-start-column="19" selection-end-line="130" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -207,12 +156,12 @@
         <option value="$PROJECT_DIR$/tests/recognize-flag/test-data/ege/recognize-flag-ege-1.json" />
         <option value="$PROJECT_DIR$/tests/recognize-flag/test-data/ege/recognize-flag-ege-2.json" />
         <option value="$PROJECT_DIR$/tmpl/test-main.hbs" />
-        <option value="$PROJECT_DIR$/tests/geography/css/test-specific.css" />
         <option value="$PROJECT_DIR$/js/main2.js" />
-        <option value="$PROJECT_DIR$/css/test-main.css" />
         <option value="$PROJECT_DIR$/tests/recognize-flag/css/test-specific.css" />
         <option value="$PROJECT_DIR$/js/models/TestModel.js" />
         <option value="$PROJECT_DIR$/js/views/MainView.js" />
+        <option value="$PROJECT_DIR$/tests/geography/css/test-specific.css" />
+        <option value="$PROJECT_DIR$/css/test-main.css" />
       </list>
     </option>
   </component>
@@ -867,18 +816,6 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/js/models/TestModel.js</url>
-          <line>1115</line>
-          <option name="timeStamp" value="77" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/js/views/MainView.js</url>
-          <line>871</line>
-          <option name="timeStamp" value="78" />
-        </line-breakpoint>
-      </breakpoints>
       <option name="time" value="79" />
     </breakpoint-manager>
     <watches-manager />
@@ -1172,13 +1109,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/geography/css/test-specific.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="129" column="0" selection-start-line="129" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/gims/boat_mp/snippets/field.inc">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.4116959">
@@ -1202,26 +1132,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tmpl/test-main.hbs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="58" column="32" selection-start-line="58" selection-start-column="32" selection-end-line="58" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/test-main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="157" column="1" selection-start-line="157" selection-start-column="1" selection-end-line="157" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/recognize-flag/css/test-specific.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/views/MainView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="879" column="6" selection-start-line="879" selection-start-column="6" selection-end-line="879" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/models/TestModel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1106" column="9" selection-start-line="1106" selection-start-column="9" selection-end-line="1106" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tmpl/test-main.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="58" column="32" selection-start-line="58" selection-start-column="32" selection-end-line="58" selection-end-column="32" />
           <folding />
         </state>
       </provider>
@@ -1234,18 +1172,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/models/TestModel.js">
+    <entry file="file://$PROJECT_DIR$/tests/geography/css/test-specific.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="1137" column="0" selection-start-line="1137" selection-start-column="0" selection-end-line="1137" selection-end-column="0" />
+          <caret line="130" column="19" selection-start-line="130" selection-start-column="19" selection-end-line="130" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/views/MainView.js">
+    <entry file="file://$PROJECT_DIR$/css/test-main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.46765038">
-          <caret line="879" column="6" selection-start-line="879" selection-start-column="6" selection-end-line="879" selection-end-column="6" />
+        <state vertical-scroll-proportion="0.3938706">
+          <caret line="1010" column="27" selection-start-line="1010" selection-start-column="27" selection-end-line="1010" selection-end-column="27" />
           <folding />
         </state>
       </provider>

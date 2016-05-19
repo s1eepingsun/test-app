@@ -129,7 +129,7 @@
 }
 
 /* white answers */
-/*.single-test-data .answer {
+.single-test-data .answer {
     background: #fff;
 }
 .single-test-data .answer.hoverable:hover {
@@ -140,4 +140,13 @@
 }
 .single-test-data .answer2.hoverable:hover {
     background: #f0f0f0;
-}*/
+}
+.single-test-data .answer-chosen {
+    background: #f0f0f0;
+}
+.single-test-data .answered-right {
+    background: #2E8B57;
+}
+.single-test-data .answered-wrong {
+    background: #F08080;
+}
