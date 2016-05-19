@@ -4,7 +4,6 @@
         Тест №<span></span>
         {{/unless}}
         {{test_title}}
-
     </div>
 
     <div class="in-task-description">
@@ -45,12 +44,23 @@
                     {{#unless ../tasksCommonName}} {{#upperFirst}}{{type}}{{/upperFirst}} {{/unless}}
                     {{../tasksCommonName}}
                     {{#unless type}}Задание{{/unless}}
-                    №{{#plus1}}{{@index}}{{/plus1}}</b></div>
+                    №{{#plus1}}{{@index}}{{/plus1}}</b>
+                </div>
                 <div class="task-content">
                     {{#if no_image}}
                         <div class="no-task-image"><div>вопрос без рисунка</div></div>
                     {{/if}}
                     {{{task_content}}}
+                    {{#if soundfile}}
+                    <div class="soundtrack">
+                        <audio controls="">
+                            <source src="test-data/mp3/{{soundfile}}" type="audio/mpeg">
+                            Your browser does not support the audio element.
+                        </audio>
+                        <div>Проиграть гимн страны <span class="tips-left">({{../tips}})</span></div>
+                        <div class="blocking-layer"></div>
+                    </div>
+                    {{/if}}
                 </div>
                 <div class="clear">&nbsp;</div>
                 <div class="answers {{answers_view}}">

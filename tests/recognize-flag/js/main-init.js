@@ -29,6 +29,7 @@ $(function() {
             //multipleChoices: false,
             //resultAnswersStyle: 'wrong-border',
             //navInResult: true,
+            tips: 3,
             fireworks: true,
             calculateMark1: true,
             testTimer: false,

@@ -128,8 +128,8 @@ testApp.loadNewTest2 = function(oldConfig, testNumber) {
     }
 
 
-    console.log2('dir: ', parts, dir);
-    console.log2('testApp.loadNewTest2 oldConfig, testNumber: ', oldConfig, testNumber);
+    //console.log2('dir: ', parts, dir);
+    //console.log2('testApp.loadNewTest2 oldConfig, testNumber: ', oldConfig, testNumber);
 
     function getRandomInt(min, max) {
         return Math.floor(Math.random() * (max - min + 1) + min);
@@ -139,7 +139,7 @@ testApp.loadNewTest2 = function(oldConfig, testNumber) {
 
     var randomTests = window.sessionStorage.randomTests;
 
-    console.log2('typeof testNumber:', typeof testNumber);
+    //console.log2('typeof testNumber:', typeof testNumber);
     if(typeof testNumber === 'undefined') {
         //console.log2('no data.testNumber', typeof testNumber);
         var maxTestNumber = testApp.testModel.maxTestNumber;
@@ -152,10 +152,10 @@ testApp.loadNewTest2 = function(oldConfig, testNumber) {
             }
         } else {
             if(currentTestNumber != maxTestNumber) {
-                console.log2('----------- currentTestNumber != maxTestNumber', currentTestNumber, maxTestNumber);
+                //console.log2('----------- currentTestNumber != maxTestNumber', currentTestNumber, maxTestNumber);
                 testNumber = Number(currentTestNumber) + 1;
             } else {
-                console.log2('----------- currentTestNumber == maxTestNumber');
+                //console.log2('----------- currentTestNumber == maxTestNumber');
                 testNumber = 1;
             }
         }

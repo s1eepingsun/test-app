@@ -1,59 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/js/models/TestModel.js" line="655" mnemonic="G" />
-    <bookmark url="file://$PROJECT_DIR$/js/models/TestModel.js" line="888" mnemonic="C" />
+    <bookmark url="file://$PROJECT_DIR$/js/models/TestModel.js" line="659" mnemonic="G" />
+    <bookmark url="file://$PROJECT_DIR$/js/models/TestModel.js" line="892" mnemonic="C" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5f1c9083-e612-4430-86e1-c49db4c5e9d7" name="Default" comment="organized the application properly: made namespace &amp; init function">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/Fireworks.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/views/HorizontalListView.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/math/js/main-init.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmpl/reference-book.hbs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmpl/result-gims.hbs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmpl/result-iq.hbs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmpl/result-mark.hbs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmpl/result-pdd.hbs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmpl/side-bar-short.hbs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmpl/side-bar-short2.hbs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmpl/task-list-horizontal.hbs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmpl/temperament-result-eng.hbs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmpl/temperament-result.hbs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmpl/test-list.hbs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmpl/test-main-all.hbs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/math/css/test-specific.css" />
-      <change type="DELETED" beforePath="C:\Server\apache\htdocs\math_test\controllers\test.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\Server\apache\htdocs\math_test\snippets\field.inc" afterPath="" />
-      <change type="DELETED" beforePath="C:\Server\apache\htdocs\math_test\test-data\ege\math-ege-1.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\Server\apache\htdocs\math_test\test-data\ege\math-ege-2.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\Server\apache\htdocs\math_test\test-data\ege\math-ege-3.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\Server\apache\htdocs\math_test\test-data\ege\math-ege-4.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\Server\apache\htdocs\math_test\test-data\ege\math-ege-5.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\Server\apache\htdocs\math_test\test-data\math1-short.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\Server\apache\htdocs\math_test\test-data\math1-tmp.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\Server\apache\htdocs\math_test\test-data\math1.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\Server\apache\htdocs\math_test\test-data\math2.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\Server\apache\htdocs\math_test\test-data\test.json" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/recognize-flag/test-data/mp3/Argentina.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/recognize-flag/test-data/mp3/Australia.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/recognize-flag/test-data/mp3/Belgium.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/recognize-flag/test-data/mp3/Brazil.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/recognize-flag/test-data/mp3/Bulgaria.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/recognize-flag/test-data/mp3/Canada.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/recognize-flag/test-data/mp3/Chile.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/recognize-flag/test-data/mp3/China.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/recognize-flag/test-data/mp3/CzechRepublic.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/recognize-flag/test-data/mp3/Denmark.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/recognize-flag/test-data/mp3/Estonia.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/recognize-flag/test-data/mp3/Finland.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/recognize-flag/test-data/mp3/Germany.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/recognize-flag/test-data/mp3/Greece.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/recognize-flag/test-data/mp3/India.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/recognize-flag/test-data/mp3/Ireland.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/recognize-flag/test-data/mp3/Israel.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/recognize-flag/test-data/mp3/Japan.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/recognize-flag/test-data/mp3/Lithuania.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/recognize-flag/test-data/mp3/Netherlands.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/recognize-flag/test-data/mp3/Peru.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/recognize-flag/test-data/mp3/Poland.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/recognize-flag/test-data/mp3/Russia.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/recognize-flag/test-data/mp3/SouthKorea.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/recognize-flag/test-data/mp3/Spain.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/recognize-flag/test-data/mp3/Sweden.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/recognize-flag/test-data/mp3/Ukraine.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/recognize-flag/test-data/mp3/Uzbekistan.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/recognize-flag/test-data/mp3/Venezuela.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/recognize-flag/test-data/mp3/Vietnam.mp3" />
       <change type="MOVED" beforePath="C:\Server\apache\htdocs\math_test\js\controllers\testController.js" afterPath="$PROJECT_DIR$/js/controllers/TestController.js" />
       <change type="MOVED" beforePath="C:\Server\apache\htdocs\math_test\js\models\testModel.js" afterPath="$PROJECT_DIR$/js/models/TestModel.js" />
-      <change type="MOVED" beforePath="C:\Server\apache\htdocs\math_test\js\views\listView.js" afterPath="$PROJECT_DIR$/js/views/ListView.js" />
       <change type="MOVED" beforePath="C:\Server\apache\htdocs\math_test\js\views\mainView.js" afterPath="$PROJECT_DIR$/js/views/MainView.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/TestsDB2.php" afterPath="$PROJECT_DIR$/classes/TestsDB2.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/Timer.js" afterPath="$PROJECT_DIR$/js/Timer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/snippets/head-local.inc" afterPath="$PROJECT_DIR$/snippets/head-local.inc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/snippets/head.inc" afterPath="$PROJECT_DIR$/snippets/head.inc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/helpers.js" afterPath="$PROJECT_DIR$/js/helpers.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/recognize-flag/js/main-init.js" afterPath="$PROJECT_DIR$/tests/recognize-flag/js/main-init.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/main2.js" afterPath="$PROJECT_DIR$/js/main2.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmpl/result.hbs" afterPath="$PROJECT_DIR$/tmpl/result.hbs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmpl/side-bar.hbs" afterPath="$PROJECT_DIR$/tmpl/side-bar.hbs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/recognize-flag/test-data/ege/recognize-flag-ege-1.json" afterPath="$PROJECT_DIR$/tests/recognize-flag/test-data/ege/recognize-flag-ege-1.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/recognize-flag/test-data/ege/recognize-flag-ege-2.json" afterPath="$PROJECT_DIR$/tests/recognize-flag/test-data/ege/recognize-flag-ege-2.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/recognize-fruit/test-data/ege/recognize-fruit-ege-1.json" afterPath="$PROJECT_DIR$/tests/recognize-fruit/test-data/ege/recognize-fruit-ege-1.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/test-main.css" afterPath="$PROJECT_DIR$/css/test-main.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmpl/test-main.hbs" afterPath="$PROJECT_DIR$/tmpl/test-main.hbs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/testDataAjax.php" afterPath="$PROJECT_DIR$/controllers/testDataAjax.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/testDataToJS.php" afterPath="$PROJECT_DIR$/controllers/testDataToJS.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/testMain.php" afterPath="$PROJECT_DIR$/controllers/testMain.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/testMain.php" afterPath="$PROJECT_DIR$/views/testMain.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/testSidebar.php" afterPath="$PROJECT_DIR$/controllers/testSidebar.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/trainingAjax.php" afterPath="$PROJECT_DIR$/controllers/trainingAjax.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/geography/css/test-specific.css" afterPath="$PROJECT_DIR$/tests/geography/css/test-specific.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/recognize-flag/css/test-specific.css" afterPath="$PROJECT_DIR$/tests/recognize-flag/css/test-specific.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="newtest2.iws" />
@@ -86,7 +80,7 @@
         <entry file="file://$PROJECT_DIR$/js/models/TestModel.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="1804" column="50" selection-start-line="1804" selection-start-column="50" selection-end-line="1804" selection-end-column="50" />
+              <caret line="1137" column="0" selection-start-line="1137" selection-start-column="0" selection-end-line="1137" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -95,8 +89,28 @@
       <file leaf-file-name="MainView.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/views/MainView.js">
           <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.46765038">
+              <caret line="879" column="6" selection-start-line="879" selection-start-column="6" selection-end-line="879" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main-init.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/gims/js/main-init.js">
+          <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="688" column="48" selection-start-line="688" selection-start-column="48" selection-end-line="688" selection-end-column="48" />
+              <caret line="29" column="42" selection-start-line="29" selection-start-column="42" selection-end-line="29" selection-end-column="42" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TestController.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/controllers/TestController.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="300" column="38" selection-start-line="300" selection-start-column="38" selection-end-line="300" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -105,8 +119,8 @@
       <file leaf-file-name="test-main.hbs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tmpl/test-main.hbs">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="130" column="100" selection-start-line="130" selection-start-column="100" selection-end-line="130" selection-end-column="100" />
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="58" column="32" selection-start-line="58" selection-start-column="32" selection-end-line="58" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -116,7 +130,17 @@
         <entry file="file://$PROJECT_DIR$/css/test-main.css">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="616" column="1" selection-start-line="616" selection-start-column="1" selection-end-line="616" selection-end-column="1" />
+              <caret line="157" column="1" selection-start-line="157" selection-start-column="1" selection-end-line="157" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test-specific.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/recognize-flag/css/test-specific.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -138,13 +162,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/tests/recognize-fish/test-data/ege/recognize-fish-ege-3.json" />
-        <option value="$PROJECT_DIR$/tests/recognize-fish/test-data/ege/recognize-fish-ege-1.json" />
-        <option value="$PROJECT_DIR$/classes/TestsDB2.php" />
-        <option value="$PROJECT_DIR$/tmpl/test-list.hbs" />
-        <option value="$PROJECT_DIR$/tests/recognize-tree/snippets/head.inc" />
-        <option value="$PROJECT_DIR$/tests/pdd/snippets/head.inc" />
-        <option value="$PROJECT_DIR$/tests/it/snippets/head.inc" />
         <option value="$PROJECT_DIR$/tests/rus/snippets/head.inc" />
         <option value="$PROJECT_DIR$/tests/math/snippets/head.inc" />
         <option value="$PROJECT_DIR$/tests/geography/snippets/head.inc" />
@@ -166,7 +183,6 @@
         <option value="$PROJECT_DIR$/tests/recognize-fruit/index-local.php" />
         <option value="$PROJECT_DIR$/tests/recognize-fruit/snippets/field.inc" />
         <option value="$PROJECT_DIR$/controllers/testDataToJS.php" />
-        <option value="$PROJECT_DIR$/js/main2.js" />
         <option value="$PROJECT_DIR$/tests/recognize-fruit/js/main-init.js" />
         <option value="$PROJECT_DIR$/tests/recognize-vegetable/js/main-init.js" />
         <option value="$PROJECT_DIR$/tests/recognize-tree/js/main-init.js" />
@@ -175,19 +191,27 @@
         <option value="$PROJECT_DIR$/tests/recognize-fruit/snippets/head.inc" />
         <option value="$PROJECT_DIR$/tests/recognize-fish/snippets/head.inc" />
         <option value="$PROJECT_DIR$/tests/geography/test-data/ege/geography-ege-1.json" />
-        <option value="$PROJECT_DIR$/css/test-main.css" />
-        <option value="$PROJECT_DIR$/tmpl/test-main.hbs" />
-        <option value="$PROJECT_DIR$/js/models/TestModel.js" />
         <option value="$PROJECT_DIR$/tests/recognize-flag/index.php" />
         <option value="$PROJECT_DIR$/tests/recognize-flag/index-local.php" />
-        <option value="$PROJECT_DIR$/tests/recognize-flag/js/main-init.js" />
         <option value="$PROJECT_DIR$/tests/recognize-flag/snippets/head.inc" />
         <option value="$PROJECT_DIR$/tests/recognize-fish/css/test-specific.css" />
         <option value="$PROJECT_DIR$/tests/recognize-fruit/css/test-specific.css" />
         <option value="$PROJECT_DIR$/tests/recognize-tree/css/test-specific.css" />
         <option value="$PROJECT_DIR$/tests/recognize-vegetable/css/test-specific.css" />
         <option value="$PROJECT_DIR$/tests/recognize-flag/snippets/field.inc" />
+        <option value="$PROJECT_DIR$/../jPlayer-2.9.2/examples/blue.monday/demo-01.html" />
+        <option value="$PROJECT_DIR$/../amplitudejs-master/examples/single-song/index.php" />
+        <option value="$PROJECT_DIR$/../player3/src/js/js.js" />
+        <option value="$PROJECT_DIR$/tests/recognize-flag/js/main-init.js" />
+        <option value="$PROJECT_DIR$/js/controllers/TestController.js" />
+        <option value="$PROJECT_DIR$/tests/recognize-flag/test-data/ege/recognize-flag-ege-1.json" />
+        <option value="$PROJECT_DIR$/tests/recognize-flag/test-data/ege/recognize-flag-ege-2.json" />
+        <option value="$PROJECT_DIR$/tmpl/test-main.hbs" />
+        <option value="$PROJECT_DIR$/tests/geography/css/test-specific.css" />
+        <option value="$PROJECT_DIR$/js/main2.js" />
+        <option value="$PROJECT_DIR$/css/test-main.css" />
         <option value="$PROJECT_DIR$/tests/recognize-flag/css/test-specific.css" />
+        <option value="$PROJECT_DIR$/js/models/TestModel.js" />
         <option value="$PROJECT_DIR$/js/views/MainView.js" />
       </list>
     </option>
@@ -366,6 +390,28 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="newtest2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="math_test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tests" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="recognize-flag" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -384,7 +430,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="animal-tracking" />
+              <option name="myItemId" value="gims" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -402,7 +448,117 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="animal-tracking" />
+              <option name="myItemId" value="gims" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="snippets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="newtest2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="math_test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tests" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gims" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="newtest2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="math_test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tests" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gims" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="boat_mp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="newtest2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="math_test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tests" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gims" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="boat_mp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="snippets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="newtest2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="math_test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tests" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="geography" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="newtest2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="math_test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tests" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="geography" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -667,9 +823,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1288" y="48" width="1296" height="1040" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2855987" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3050162" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32857144" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32893288" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -711,85 +867,27 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="75" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/js/models/TestModel.js</url>
+          <line>1115</line>
+          <option name="timeStamp" value="77" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/js/views/MainView.js</url>
+          <line>871</line>
+          <option name="timeStamp" value="78" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="79" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/tests/animal-tracking/snippets/head.inc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.099415205">
-          <caret line="5" column="75" selection-start-line="5" selection-start-column="75" selection-end-line="5" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/iq/snippets/head.inc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.099415205">
-          <caret line="5" column="103" selection-start-line="5" selection-start-column="103" selection-end-line="5" selection-end-column="103" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/gims/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/gims/boat_vp/snippets/head.inc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.099415205">
-          <caret line="5" column="130" selection-start-line="5" selection-start-column="130" selection-end-line="5" selection-end-column="130" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/gims/boat_mp/snippets/head.inc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.099415205">
-          <caret line="5" column="138" selection-start-line="5" selection-start-column="138" selection-end-line="5" selection-end-column="138" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/gims/boat_vvp/snippets/head.inc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.099415205">
-          <caret line="5" column="138" selection-start-line="5" selection-start-column="138" selection-end-line="5" selection-end-column="138" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/gims/jet_ski_mp/snippets/head.inc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.099415205">
-          <caret line="5" column="132" selection-start-line="5" selection-start-column="132" selection-end-line="5" selection-end-column="132" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/gims/jet_ski_mpvpvvp/snippets/head.inc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.099415205">
-          <caret line="5" column="180" selection-start-line="5" selection-start-column="180" selection-end-line="5" selection-end-column="180" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/gims/jet_ski_vpvvp/snippets/head.inc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.099415205">
-          <caret line="5" column="110" selection-start-line="5" selection-start-column="110" selection-end-line="5" selection-end-column="110" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/gims/boat_mpvvp/snippets/head.inc">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.099415205">
           <caret line="5" column="165" selection-start-line="5" selection-start-column="165" selection-end-line="5" selection-end-column="165" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/gims/snippets/head.inc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.099415205">
-          <caret line="5" column="72" selection-start-line="5" selection-start-column="72" selection-end-line="5" selection-end-column="72" />
         </state>
       </provider>
     </entry>
@@ -864,30 +962,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/gims/snippets/field.inc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.6502924">
-          <caret line="8" column="48" selection-start-line="8" selection-start-column="48" selection-end-line="8" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/gims/js/main-init.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="31" column="32" selection-start-line="31" selection-start-column="32" selection-end-line="31" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/main2.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.38592508">
-          <caret line="125" column="69" selection-start-line="125" selection-start-column="69" selection-end-line="125" selection-end-column="69" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Documents/field.inc">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -958,14 +1032,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/models/TestModel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1804" column="50" selection-start-line="1804" selection-start-column="50" selection-end-line="1804" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/animal-tracking/css/test-specific.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4324631">
@@ -991,13 +1057,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.099415205">
           <caret line="5" column="41" selection-start-line="5" selection-start-column="41" selection-end-line="5" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/recognize-flag/js/main-init.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.69466513">
-          <caret line="36" column="37" selection-start-line="36" selection-start-column="37" selection-end-line="36" selection-end-column="37" />
         </state>
       </provider>
     </entry>
@@ -1050,17 +1109,95 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/recognize-flag/css/test-specific.css">
+    <entry file="file://$PROJECT_DIR$/../amplitudejs-master/examples/single-song/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.40181613">
-          <caret line="120" column="20" selection-start-line="120" selection-start-column="20" selection-end-line="120" selection-end-column="20" />
+        <state vertical-scroll-proportion="0.21871345">
+          <caret line="17" column="42" selection-start-line="17" selection-start-column="42" selection-end-line="17" selection-end-column="42" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/test-main.css">
+    <entry file="file://$PROJECT_DIR$/../jPlayer-2.9.2/examples/blue.monday/demo-01.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.17894737">
+          <caret line="9" column="87" selection-start-line="9" selection-start-column="87" selection-end-line="9" selection-end-column="87" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../amplitudejs-master/examples/single-song/css/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3280363">
+          <caret line="104" column="17" selection-start-line="104" selection-start-column="17" selection-end-line="104" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../player3/src/js/js.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="616" column="1" selection-start-line="616" selection-start-column="1" selection-end-line="616" selection-end-column="1" />
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/recognize-flag/js/main-init.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="28" column="37" selection-start-line="28" selection-start-column="37" selection-end-line="28" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/recognize-flag/test-data/ege/recognize-flag-ege-1.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.045614034">
+          <caret line="295" column="24" selection-start-line="295" selection-start-column="24" selection-end-line="295" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/recognize-flag/test-data/ege/recognize-flag-ege-2.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-22.346153">
+          <caret line="239" column="22" selection-start-line="239" selection-start-column="22" selection-end-line="239" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/gims/snippets/field.inc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.15906432">
+          <caret line="8" column="48" selection-start-line="8" selection-start-column="48" selection-end-line="8" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/gims/snippets/head.inc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.20467836">
+          <caret line="17" column="49" selection-start-line="17" selection-start-column="49" selection-end-line="17" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/geography/css/test-specific.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="129" column="0" selection-start-line="129" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/gims/boat_mp/snippets/field.inc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.4116959">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/main2.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="124" column="30" selection-start-line="124" selection-start-column="30" selection-end-line="124" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/gims/js/main-init.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="29" column="42" selection-start-line="29" selection-start-column="42" selection-end-line="29" selection-end-column="42" />
           <folding />
         </state>
       </provider>
@@ -1068,15 +1205,47 @@
     <entry file="file://$PROJECT_DIR$/tmpl/test-main.hbs">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="130" column="100" selection-start-line="130" selection-start-column="100" selection-end-line="130" selection-end-column="100" />
+          <caret line="58" column="32" selection-start-line="58" selection-start-column="32" selection-end-line="58" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/test-main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="157" column="1" selection-start-line="157" selection-start-column="1" selection-end-line="157" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/recognize-flag/css/test-specific.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/controllers/TestController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="300" column="38" selection-start-line="300" selection-start-column="38" selection-end-line="300" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/models/TestModel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1137" column="0" selection-start-line="1137" selection-start-column="0" selection-end-line="1137" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/views/MainView.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="688" column="48" selection-start-line="688" selection-start-column="48" selection-end-line="688" selection-end-column="48" />
+        <state vertical-scroll-proportion="0.46765038">
+          <caret line="879" column="6" selection-start-line="879" selection-start-column="6" selection-end-line="879" selection-end-column="6" />
           <folding />
         </state>
       </provider>

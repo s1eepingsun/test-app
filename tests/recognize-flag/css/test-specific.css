@@ -6,14 +6,16 @@
     width: 83px;
 }
 #field {
-    /*height: 697px;*/
-    height: 726px;
+    /*height: 726px;*/
+    height: 745px;
 }
 #field-inside-wrapper {
-    height: 671px;
+    /*height: 671px;*/
+    height: 690px;
 }
 #field-inside-wrapper.training-mode {
-    height: 723px;
+    /*height: 723px;*/
+    height: 743px;
 }
 .test-tasks.scrolling-result {
     margin-top: -30px;
@@ -24,6 +26,25 @@
 }
 .single-test-data p {
     text-align: center;
+    height: 404px;
+}
+.scrolling-result .single-test-data p {
+    height: auto;
+}
+.single-test-data .task-content > div:first-child {
+    height: 404px;
+}
+.scrolling-result .single-test-data .task-content > div:first-child {
+    height: auto;
+}
+#vn1 p {
+    height: 382px;
+}
+.training-mode #vn1 p {
+    height: 404px;
+}
+.scrolling-result #vn1 p {
+    height: auto;
 }
 .single-test-data .answers-wrapper {
     position: absolute;
@@ -99,12 +120,10 @@
     margin-bottom: 10px;
 }
 
-
-
-
 .single-test-data .task-content {
     position: relative;
 }
+
 .single-test-data .task-content p img + img {
     float: right;
     position: absolute;
@@ -115,7 +134,7 @@
 }
 .single-test-data.scrolling-result .task-content p img {
     max-width: 100%;
-    height: auto !important;
+    /*height: auto !important;*/
 }
 .single-test-data .task-content .html-flag {
     max-width: 100%;
@@ -132,10 +151,14 @@
     top: 454px;
 }
 .training-mode .single-test-data {
-    margin-top: 80px;
+    /*margin-top: 80px;*/
+}
+.training-mode .single-test-data.first-task-style {
+    margin-top: 30px;
 }
 .training-mode .single-test-data .answers-wrapper {
-    top: 444px;
+    /*top: 444px;*/
+    top: 454px;
 }
 .single-test-data .test-button {
     top: 488px;
@@ -144,5 +167,5 @@
     top: 466px;
 }
 .training-mode .single-test-data .test-button {
-    top: 478px;
+    top: 488px;
 }

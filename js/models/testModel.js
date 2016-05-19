@@ -47,6 +47,8 @@ testApp.TestModel = function(data) {
     this.lastID = 0; //for training mode
     this.pastTasksLength = 0;
     this.currentCollateAnswer = undefined;
+    this.tipsTaken = [];
+    this.currentlyPlaying = [];
 };
 
 testApp.TestModel.prototype = {
@@ -85,6 +87,8 @@ testApp.TestModel.prototype = {
         if (this.config.freeTaskChange == false) {
             this.fireEvent('model:disableFreeTaskChange');
         }
+
+        if(this.config.tips) this.tipsLeft = this.config.tips;
     },
 
     //заменяет дефолтные параметры конфига на указанные при инициализации
@@ -1103,6 +1107,38 @@ testApp.TestModel.prototype = {
         }
     },
 
+    musicStopClick: function(id) {
+        if(!this.config.tips) return false;
+
+        delete this.currentlyPlaying[id];
+    },
+
+    musicPlayClick: function(id) {
+        if(!this.config.tips) return false;
+
+        this.stopActivePlayer();
+        this.currentlyPlaying[id] = 1;
+
+        if(this.tipsTaken.indexOf(id) == -1) {
+            this.tipsTaken.push(id);
+            if(this.config.trainingMode != true && this.resultMode != true) {
+                this.tipsLeft -= 1;
+                this.fireEvent('model:makePlayerUnblockable', id);
+                this.fireEvent('model:adjustTipsNum', this.tipsLeft);
+            }
+        }
+
+        if(this.tipsLeft == 0 && this.config.trainingMode != true && this.resultMode != true) {
+            this.fireEvent('model:blockAudioPlayers');
+        }
+    },
+
+    stopActivePlayer: function() {
+        if(this.currentlyPlaying.length > 0) {
+            this.fireEvent('model:stopPlayer', this.currentlyPlaying);
+        }
+    },
+
     //заканчивает тест, подсчитывает и показывает результат
     finishTest: function () {
         var that = this;
@@ -1115,6 +1151,8 @@ testApp.TestModel.prototype = {
             this.finishIQ();
             return;
         }
+
+        this.stopActivePlayer();
 
         var correctAnswers = this.correctAnswers;
         var answersGiven = this.answersGiven;

@@ -281,6 +281,22 @@ testApp.MainView.prototype = {
             $('#test-list-wrapper').hide();
         });
 
+        $('.soundtrack').find('audio').bind('play', function(e) {
+            var element = e.currentTarget;
+            var id = $(element).parents('.single-test-data').attr('id');
+            id = Number(id.substring(2));
+
+            that.fireEvent('view:musicPlayClick', id);
+        });
+
+        $('.soundtrack').find('audio').bind('pause', function(e) {
+            var element = e.currentTarget;
+            var id = $(element).parents('.single-test-data').attr('id');
+            id = Number(id.substring(2));
+
+            that.fireEvent('view:musicStopClick', id);
+        });
+
         //добавляет описание теста
         //var description = model.data.description;
         //$('#description .description-container').html(description);
@@ -320,7 +336,8 @@ testApp.MainView.prototype = {
         }
 
         data['maxTestNumber'] = this._model.maxTestNumber;
-        var templateSource = $('#task-main-tmpl').html();
+        if(this._model.config.tips) data['tips'] = this._model.config.tips;
+            var templateSource = $('#task-main-tmpl').html();
         var template = Handlebars.compile(templateSource);
         var rendered = template(data);
 
@@ -651,6 +668,9 @@ testApp.MainView.prototype = {
             $('.single-test-data').find('.test-button').hide();
         }
 
+        $('.single-test-data').find('.blocking-layer').hide();
+        $('.single-test-data').find('.soundtrack').find('span.tips-left').text('');
+
         $('#field').find('.test-number-div').addClass('in-result-margin');
         $('#tb-finish-test').addClass('disabled');
         $('.single-test-data').find('.answers .answer, .answers .answer2').removeClass('hoverable');
@@ -685,6 +705,7 @@ testApp.MainView.prototype = {
         $('#field-inside-wrapper').removeClass('separator');
         $('#field-inside-wrapper').addClass('training-mode');
         $('#field .single-test-data .multiple-confirm').show();
+        $('.single-test-data').find('.soundtrack').find('span.tips-left').text('');
 
         $('.task-top-panel').addClass('hidden');
         $('#field').find('.single-test-data .task-number').addClass('hidden');
@@ -842,6 +863,26 @@ testApp.MainView.prototype = {
 
     optionsFormDataNotValid: function(message) {
         $('.options-response').find('div').text(message);
+    },
+
+    makePlayerUnblockable: function(id) {
+        $('#vn' + id).find('.soundtrack').addClass('unblockable-player');
+    },
+
+    blockAudioPlayers: function() {
+        $('.single-test-data').find('.soundtrack').not('.unblockable-player').find('.blocking-layer').show();
+    },
+
+    adjustTipsNum: function(tipsLeft) {
+        if(this._model.resultMode != true) {
+            $('.single-test-data').find('.soundtrack').find('span.tips-left').text('(' + tipsLeft + ')');
+        }
+    },
+
+    stopPlayer: function(currentlyPlaying) {
+        currentlyPlaying.forEach(function(item, id) {
+            $('#vn' + id).find('.soundtrack audio')[0].pause();
+        });
     },
 
     //визуально отображает данные ответы

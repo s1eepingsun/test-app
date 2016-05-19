@@ -127,3 +127,17 @@
 #field .single-test-data .answers .input-answer {
     bottom: 10px;
 }
+
+/* white answers */
+/*.single-test-data .answer {
+    background: #fff;
+}
+.single-test-data .answer.hoverable:hover {
+    background: #f0f0f0;
+}
+.single-test-data .answer2 {
+    background: #fff;
+}
+.single-test-data .answer2.hoverable:hover {
+    background: #f0f0f0;
+}*/

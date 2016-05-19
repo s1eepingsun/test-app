@@ -48,6 +48,8 @@ testApp.TestController.prototype = {
         this.listen('view:newTestBtnClick', this.newTestBtnClick, this);
         this.listen('view:clickQuitConfirm', this.clickQuitConfirm, this);
         this.listen('view:collateAnswerClick', this.collateAnswerClick1, this);
+        this.listen('view:musicPlayClick', this.musicPlayClick, this);
+        this.listen('view:musicStopClick', this.musicStopClick, this);
 
         this.listen('model:showTask', this.showTask, this);
         this.listen('model:reflectAnswers', this.reflectAnswers, this);
@@ -72,6 +74,10 @@ testApp.TestController.prototype = {
         this.listen('model:collateHighlightChoices', this.collateHighlightChoices, this);
         this.listen('model:collateHighlightComplete', this.collateHighlightComplete, this);
         this.listen('model:collateHighlightOff', this.collateHighlightOff, this);
+        this.listen('model:makePlayerUnblockable', this.makePlayerUnblockable, this);
+        this.listen('model:blockAudioPlayers', this.blockAudioPlayers, this);
+        this.listen('model:adjustTipsNum', this.adjustTipsNum, this);
+        this.listen('model:stopPlayer', this.stopPlayer, this);
 
         this.listen('timer:timerTick', this.timerTick, this);
     },
@@ -249,6 +255,14 @@ testApp.TestController.prototype = {
         this._model.collateAnswerClick(data);
     },
 
+    musicPlayClick: function(observable, eventType, id) {
+        this._model.musicPlayClick(id);
+    },
+
+    musicStopClick: function(observable, eventType, id) {
+        this._model.musicStopClick(id);
+    },
+
     collateHighlightPending: function (observable, eventType, data) {
         this._mainView.collateHighlightPending(data);
     },
@@ -273,6 +287,22 @@ testApp.TestController.prototype = {
 
     promptQuitTest: function (observable, eventType, event) {
         this._mainView.promptQuitTest(event);
+    },
+
+    makePlayerUnblockable: function (observable, eventType, id) {
+        this._mainView.makePlayerUnblockable(id);
+    },
+
+    adjustTipsNum: function (observable, eventType, tipsLeft) {
+        this._mainView.adjustTipsNum(tipsLeft);
+    },
+
+    stopPlayer: function (observable, eventType, id) {
+        this._mainView.stopPlayer(id);
+    },
+
+    blockAudioPlayers: function (observable, eventType, tipsTaken) {
+        this._mainView.blockAudioPlayers(tipsTaken);
     }
 
 
