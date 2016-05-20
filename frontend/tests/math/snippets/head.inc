@@ -36,7 +36,7 @@
 
 <!-- thrid-party libraries -->
 <script type="text/javascript" src="../../js/libs/handlebars-v4.0.5.js"></script>
-<script type="text/javascript" src="//logic-games.spb.ru/js/lib/mathjax//MathJax.js?config=TeX-AMS_HTML"></script>
+<script type="text/javascript" src="../../mathjax/MathJax.js?config=TeX-AMS_HTML"></script>
 
 <!-- modules -->
 <script type="text/javascript" src="../../js/helpers.js"></script>
