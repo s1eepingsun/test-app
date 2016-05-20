@@ -1562,6 +1562,7 @@ testApp.MainView.prototype = {
 
         //перемешивает массив
         function shuffle(array) {
+            console.log('shuffle it');
             var counter = array.length, temp, index;
             while (counter > 0) {
                 index = Math.floor(Math.random() * counter);

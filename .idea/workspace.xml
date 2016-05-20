@@ -1,25 +1,519 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/js/models/TestModel.js" line="659" mnemonic="G" />
-    <bookmark url="file://$PROJECT_DIR$/js/models/TestModel.js" line="892" mnemonic="C" />
-  </component>
   <component name="ChangeListManager">
     <list default="true" id="5f1c9083-e612-4430-86e1-c49db4c5e9d7" name="Default" comment="organized the application properly: made namespace &amp; init function">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/animal-tracking/index-local.php" afterPath="$PROJECT_DIR$/tests/animal-tracking/index-local.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/geography/index-local.php" afterPath="$PROJECT_DIR$/tests/geography/index-local.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/recognize-fish/index-local.php" afterPath="$PROJECT_DIR$/tests/recognize-fish/index-local.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/recognize-flag/index-local.php" afterPath="$PROJECT_DIR$/tests/recognize-flag/index-local.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/recognize-fruit/index-local.php" afterPath="$PROJECT_DIR$/tests/recognize-fruit/index-local.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/recognize-tree/index-local.php" afterPath="$PROJECT_DIR$/tests/recognize-tree/index-local.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/recognize-vegetable/index-local.php" afterPath="$PROJECT_DIR$/tests/recognize-vegetable/index-local.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/animal-tracking/index.php" afterPath="$PROJECT_DIR$/tests/animal-tracking/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/geography/index.php" afterPath="$PROJECT_DIR$/tests/geography/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/recognize-fish/index.php" afterPath="$PROJECT_DIR$/tests/recognize-fish/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/recognize-flag/index.php" afterPath="$PROJECT_DIR$/tests/recognize-flag/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/recognize-fruit/index.php" afterPath="$PROJECT_DIR$/tests/recognize-fruit/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/recognize-tree/index.php" afterPath="$PROJECT_DIR$/tests/recognize-tree/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/recognize-vegetable/index.php" afterPath="$PROJECT_DIR$/tests/recognize-vegetable/index.php" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\classes\TestsDB2.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\controllers\testDataAjax.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\controllers\testDataToJS.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\controllers\testMain.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\controllers\testSidebar.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\controllers\trainingAjax.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\css\game-layout.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\css\jasmine.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\css\main.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\css\shared.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\css\test-main.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\images\Eysenck_circle-bg.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\images\Eysenck_circle-lines.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\images\Eysenck_circle-lines3.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\images\icon_close.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\images\jasmine_favicon.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\index-local.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\index.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\js\Timer.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\js\controllers\testController.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\js\fireworks.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\js\helpers.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\js\libs\handlebars-v3.0.3.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\js\libs\handlebars-v4.0.5.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\js\libs\jasmine\boot.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\js\libs\jasmine\console.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\js\libs\jasmine\jasmine-html.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\js\libs\jasmine\jasmine.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\js\libs\jquery-1.11.3.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\js\libs\underscore-min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\js\main.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\js\main2.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\js\models\testModel.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\js\unitTests.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\js\views\HorizontalListView.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\js\views\ReferenceBookView.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\js\views\listView.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\js\views\mainView.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\snippets\description.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\snippets\field2.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\snippets\head-local.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\snippets\head.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\snippets\left.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\animal-tracking\css\test-specific.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\animal-tracking\index-local.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\animal-tracking\index.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\animal-tracking\js\main-init.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\animal-tracking\snippets\description.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\animal-tracking\snippets\field.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\animal-tracking\snippets\head-local.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\animal-tracking\snippets\head.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\animal-tracking\snippets\left.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\animal-tracking\test-data\common.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\animal-tracking\test-data\ege\animal-tracking-ege-1.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\geography\css\test-specific.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\geography\index-local.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\geography\index.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\geography\js\main-init.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\geography\snippets\description.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\geography\snippets\field.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\geography\snippets\head-local.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\geography\snippets\head.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\geography\snippets\left.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\geography\test-data\common.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\geography\test-data\ege\geography-ege-1 - копия.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\geography\test-data\ege\geography-ege-1.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\boat_mp\css\test-specific.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\boat_mp\index-local.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\boat_mp\index.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\boat_mp\js\main-init.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\boat_mp\snippets\description.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\boat_mp\snippets\field.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\boat_mp\snippets\head-local.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\boat_mp\snippets\head.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\boat_mp\snippets\left.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\boat_mp\test-data\common.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\boat_mp\test-data\ege\boat_mp-ege-1.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\boat_mp\test-data\ege\boat_mp-ege-10.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\boat_mp\test-data\ege\boat_mp-ege-11.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\boat_mp\test-data\ege\boat_mp-ege-12.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\boat_mp\test-data\ege\boat_mp-ege-13.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\boat_mp\test-data\ege\boat_mp-ege-14.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\boat_mp\test-data\ege\boat_mp-ege-15.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\boat_mp\test-data\ege\boat_mp-ege-16.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\boat_mp\test-data\ege\boat_mp-ege-17.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\boat_mp\test-data\ege\boat_mp-ege-18.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\boat_mp\test-data\ege\boat_mp-ege-19.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\boat_mp\test-data\ege\boat_mp-ege-2.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\boat_mp\test-data\ege\boat_mp-ege-20.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\boat_mp\test-data\ege\boat_mp-ege-3.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\boat_mp\test-data\ege\boat_mp-ege-4.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\boat_mp\test-data\ege\boat_mp-ege-5.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\boat_mp\test-data\ege\boat_mp-ege-6.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\boat_mp\test-data\ege\boat_mp-ege-7.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\boat_mp\test-data\ege\boat_mp-ege-8.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\boat_mp\test-data\ege\boat_mp-ege-9.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\boat_mp\test-data\ege\boat_mp-ege-copy.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\boat_mpvvp\css\test-specific.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\boat_mpvvp\index-local.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\boat_mpvvp\index.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\boat_mpvvp\js\main-init.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\boat_mpvvp\js\testing stuff.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\boat_mpvvp\snippets\description.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\boat_mpvvp\snippets\field.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\boat_mpvvp\snippets\head-local.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\boat_mpvvp\snippets\head.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\boat_mpvvp\snippets\left.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\boat_mpvvp\test-data\common.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\boat_mpvvp\test-data\ege\boat_mpvvp-ege-1.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\boat_mpvvp\test-data\ege\boat_mpvvp-ege-10.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\boat_mpvvp\test-data\ege\boat_mpvvp-ege-11.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\boat_mpvvp\test-data\ege\boat_mpvvp-ege-12.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\boat_mpvvp\test-data\ege\boat_mpvvp-ege-13.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\boat_mpvvp\test-data\ege\boat_mpvvp-ege-14.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\boat_mpvvp\test-data\ege\boat_mpvvp-ege-15.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\boat_mpvvp\test-data\ege\boat_mpvvp-ege-16.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\boat_mpvvp\test-data\ege\boat_mpvvp-ege-17.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\boat_mpvvp\test-data\ege\boat_mpvvp-ege-18.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\boat_mpvvp\test-data\ege\boat_mpvvp-ege-19.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\boat_mpvvp\test-data\ege\boat_mpvvp-ege-2.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\boat_mpvvp\test-data\ege\boat_mpvvp-ege-20.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\boat_mpvvp\test-data\ege\boat_mpvvp-ege-3.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\boat_mpvvp\test-data\ege\boat_mpvvp-ege-4.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\boat_mpvvp\test-data\ege\boat_mpvvp-ege-5.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\boat_mpvvp\test-data\ege\boat_mpvvp-ege-6.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\boat_mpvvp\test-data\ege\boat_mpvvp-ege-7.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\boat_mpvvp\test-data\ege\boat_mpvvp-ege-8.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\boat_mpvvp\test-data\ege\boat_mpvvp-ege-9.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\boat_vp\css\test-specific.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\boat_vp\index-local.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\boat_vp\index.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\boat_vp\js\main-init.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\boat_vp\snippets\description.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\boat_vp\snippets\field.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\boat_vp\snippets\head-local.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\boat_vp\snippets\head.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\boat_vp\snippets\left.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\boat_vp\test-data\common.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\boat_vp\test-data\ege\boat_vp-ege-1.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\boat_vp\test-data\ege\boat_vp-ege-10.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\boat_vp\test-data\ege\boat_vp-ege-11.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\boat_vp\test-data\ege\boat_vp-ege-12.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\boat_vp\test-data\ege\boat_vp-ege-13.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\boat_vp\test-data\ege\boat_vp-ege-14.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\boat_vp\test-data\ege\boat_vp-ege-15.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\boat_vp\test-data\ege\boat_vp-ege-2.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\boat_vp\test-data\ege\boat_vp-ege-3.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\boat_vp\test-data\ege\boat_vp-ege-4.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\boat_vp\test-data\ege\boat_vp-ege-5.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\boat_vp\test-data\ege\boat_vp-ege-6.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\boat_vp\test-data\ege\boat_vp-ege-7.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\boat_vp\test-data\ege\boat_vp-ege-8.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\boat_vp\test-data\ege\boat_vp-ege-9.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\boat_vvp\css\test-specific.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\boat_vvp\index-local.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\boat_vvp\index.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\boat_vvp\js\main-init.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\boat_vvp\snippets\description.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\boat_vvp\snippets\field.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\boat_vvp\snippets\head-local.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\boat_vvp\snippets\head.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\boat_vvp\snippets\left.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\boat_vvp\test-data\common.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\boat_vvp\test-data\ege\boat_vvp-ege-1.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\boat_vvp\test-data\ege\boat_vvp-ege-10.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\boat_vvp\test-data\ege\boat_vvp-ege-11.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\boat_vvp\test-data\ege\boat_vvp-ege-12.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\boat_vvp\test-data\ege\boat_vvp-ege-13.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\boat_vvp\test-data\ege\boat_vvp-ege-14.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\boat_vvp\test-data\ege\boat_vvp-ege-15.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\boat_vvp\test-data\ege\boat_vvp-ege-16.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\boat_vvp\test-data\ege\boat_vvp-ege-17.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\boat_vvp\test-data\ege\boat_vvp-ege-18.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\boat_vvp\test-data\ege\boat_vvp-ege-19.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\boat_vvp\test-data\ege\boat_vvp-ege-2.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\boat_vvp\test-data\ege\boat_vvp-ege-20.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\boat_vvp\test-data\ege\boat_vvp-ege-3.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\boat_vvp\test-data\ege\boat_vvp-ege-4.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\boat_vvp\test-data\ege\boat_vvp-ege-5.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\boat_vvp\test-data\ege\boat_vvp-ege-6.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\boat_vvp\test-data\ege\boat_vvp-ege-7.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\boat_vvp\test-data\ege\boat_vvp-ege-8.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\boat_vvp\test-data\ege\boat_vvp-ege-9.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\css\test-specific.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\index-local.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\index.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\jet_ski_mp\css\test-specific.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\jet_ski_mp\index-local.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\jet_ski_mp\index.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\jet_ski_mp\js\main-init.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\jet_ski_mp\snippets\description.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\jet_ski_mp\snippets\field.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\jet_ski_mp\snippets\head-local.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\jet_ski_mp\snippets\head.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\jet_ski_mp\snippets\left.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\jet_ski_mp\test-data\common.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\jet_ski_mp\test-data\ege\jet_ski_mp-ege-1.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\jet_ski_mp\test-data\ege\jet_ski_mp-ege-10.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\jet_ski_mp\test-data\ege\jet_ski_mp-ege-2.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\jet_ski_mp\test-data\ege\jet_ski_mp-ege-3.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\jet_ski_mp\test-data\ege\jet_ski_mp-ege-4.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\jet_ski_mp\test-data\ege\jet_ski_mp-ege-5.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\jet_ski_mp\test-data\ege\jet_ski_mp-ege-6.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\jet_ski_mp\test-data\ege\jet_ski_mp-ege-7.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\jet_ski_mp\test-data\ege\jet_ski_mp-ege-8.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\jet_ski_mp\test-data\ege\jet_ski_mp-ege-9.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\jet_ski_mpvpvvp\css\test-specific.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\jet_ski_mpvpvvp\index-local.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\jet_ski_mpvpvvp\index.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\jet_ski_mpvpvvp\js\main-init.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\jet_ski_mpvpvvp\snippets\description.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\jet_ski_mpvpvvp\snippets\field.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\jet_ski_mpvpvvp\snippets\head-local.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\jet_ski_mpvpvvp\snippets\head.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\jet_ski_mpvpvvp\snippets\left.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\jet_ski_mpvpvvp\test-data\common.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\jet_ski_mpvpvvp\test-data\ege\jet_ski_mpvpvvp-ege-1.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\jet_ski_mpvpvvp\test-data\ege\jet_ski_mpvpvvp-ege-10.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\jet_ski_mpvpvvp\test-data\ege\jet_ski_mpvpvvp-ege-2.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\jet_ski_mpvpvvp\test-data\ege\jet_ski_mpvpvvp-ege-3.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\jet_ski_mpvpvvp\test-data\ege\jet_ski_mpvpvvp-ege-4.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\jet_ski_mpvpvvp\test-data\ege\jet_ski_mpvpvvp-ege-5.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\jet_ski_mpvpvvp\test-data\ege\jet_ski_mpvpvvp-ege-6.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\jet_ski_mpvpvvp\test-data\ege\jet_ski_mpvpvvp-ege-7.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\jet_ski_mpvpvvp\test-data\ege\jet_ski_mpvpvvp-ege-8.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\jet_ski_mpvpvvp\test-data\ege\jet_ski_mpvpvvp-ege-9.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\jet_ski_vpvvp\css\test-specific.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\jet_ski_vpvvp\index-local.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\jet_ski_vpvvp\index.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\jet_ski_vpvvp\js\main-init.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\jet_ski_vpvvp\snippets\description.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\jet_ski_vpvvp\snippets\field.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\jet_ski_vpvvp\snippets\head-local.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\jet_ski_vpvvp\snippets\head.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\jet_ski_vpvvp\snippets\left.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\jet_ski_vpvvp\test-data\common.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\jet_ski_vpvvp\test-data\ege\jet_ski_vpvvp-ege-1.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\jet_ski_vpvvp\test-data\ege\jet_ski_vpvvp-ege-10.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\jet_ski_vpvvp\test-data\ege\jet_ski_vpvvp-ege-2.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\jet_ski_vpvvp\test-data\ege\jet_ski_vpvvp-ege-3.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\jet_ski_vpvvp\test-data\ege\jet_ski_vpvvp-ege-4.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\jet_ski_vpvvp\test-data\ege\jet_ski_vpvvp-ege-5.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\jet_ski_vpvvp\test-data\ege\jet_ski_vpvvp-ege-6.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\jet_ski_vpvvp\test-data\ege\jet_ski_vpvvp-ege-7.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\jet_ski_vpvvp\test-data\ege\jet_ski_vpvvp-ege-8.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\jet_ski_vpvvp\test-data\ege\jet_ski_vpvvp-ege-9.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\js\main-init.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\snippets\description.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\snippets\field.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\snippets\head-local.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\snippets\head.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\snippets\left.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\test-data\common - копия.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\gims\test-data\common.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\iq\css\test-specific.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\iq\index-local.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\iq\index.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\iq\js\main-init.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\iq\snippets\description.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\iq\snippets\field.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\iq\snippets\head-local.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\iq\snippets\head.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\iq\snippets\left.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\iq\test-data\common.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\iq\test-data\ege\iq-ege-1.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\iq\test-data\ege\iq-ege-2.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\iq\test-data\ege\iq-ege-3.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\iq\test-data\ege\iq-ege-4.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\iq\test-data\reference-book.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\it\css\test-specific.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\it\index-local.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\it\index.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\it\js\main-init.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\it\snippets\description.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\it\snippets\field.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\it\snippets\head-local.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\it\snippets\head.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\it\snippets\left.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\it\test-data\common.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\it\test-data\ege\it-ege-1.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\it\test-data\ege\it-ege-10.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\it\test-data\ege\it-ege-2.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\it\test-data\ege\it-ege-3.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\it\test-data\ege\it-ege-4.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\it\test-data\ege\it-ege-5.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\it\test-data\ege\it-ege-6.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\it\test-data\ege\it-ege-7.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\it\test-data\ege\it-ege-8.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\it\test-data\ege\it-ege-9.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\it\test-data\ege\it-ege-basic.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\math\css\test-specific.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\math\index-local.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\math\index.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\math\js\main-init.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\math\snippets\description.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\math\snippets\field.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\math\snippets\head-local.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\math\snippets\head.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\math\snippets\left.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\math\test-data\common.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\math\test-data\ege\math-ege-1.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\math\test-data\ege\math-ege-2.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\math\test-data\ege\math-ege-3.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\math\test-data\ege\math-ege-4.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\math\test-data\ege\math-ege-5.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\math\test-data\reference-book.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\pdd\css\test-specific.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\pdd\index-local.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\pdd\index.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\pdd\js\main-init.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\pdd\snippets\description.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\pdd\snippets\field.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\pdd\snippets\head-local.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\pdd\snippets\head.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\pdd\snippets\left.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\pdd\test-data\common.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\pdd\test-data\ege\pdd-ege-1.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\pdd\test-data\ege\pdd-ege-10.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\pdd\test-data\ege\pdd-ege-11.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\pdd\test-data\ege\pdd-ege-12.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\pdd\test-data\ege\pdd-ege-13.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\pdd\test-data\ege\pdd-ege-14.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\pdd\test-data\ege\pdd-ege-15.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\pdd\test-data\ege\pdd-ege-16.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\pdd\test-data\ege\pdd-ege-17.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\pdd\test-data\ege\pdd-ege-18.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\pdd\test-data\ege\pdd-ege-19.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\pdd\test-data\ege\pdd-ege-2.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\pdd\test-data\ege\pdd-ege-20.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\pdd\test-data\ege\pdd-ege-21.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\pdd\test-data\ege\pdd-ege-22.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\pdd\test-data\ege\pdd-ege-23.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\pdd\test-data\ege\pdd-ege-24.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\pdd\test-data\ege\pdd-ege-25.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\pdd\test-data\ege\pdd-ege-26.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\pdd\test-data\ege\pdd-ege-27.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\pdd\test-data\ege\pdd-ege-28.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\pdd\test-data\ege\pdd-ege-29.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\pdd\test-data\ege\pdd-ege-3.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\pdd\test-data\ege\pdd-ege-30.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\pdd\test-data\ege\pdd-ege-31.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\pdd\test-data\ege\pdd-ege-32.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\pdd\test-data\ege\pdd-ege-33.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\pdd\test-data\ege\pdd-ege-34.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\pdd\test-data\ege\pdd-ege-35.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\pdd\test-data\ege\pdd-ege-36.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\pdd\test-data\ege\pdd-ege-37.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\pdd\test-data\ege\pdd-ege-38.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\pdd\test-data\ege\pdd-ege-39.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\pdd\test-data\ege\pdd-ege-4.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\pdd\test-data\ege\pdd-ege-40.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\pdd\test-data\ege\pdd-ege-5.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\pdd\test-data\ege\pdd-ege-6.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\pdd\test-data\ege\pdd-ege-7.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\pdd\test-data\ege\pdd-ege-8.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\pdd\test-data\ege\pdd-ege-9.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\personality-questionary\css\test-specific.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\personality-questionary\index-local.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\personality-questionary\index.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\personality-questionary\js\main-init.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\personality-questionary\snippets\description.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\personality-questionary\snippets\field.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\personality-questionary\snippets\head-local.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\personality-questionary\snippets\head.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\personality-questionary\snippets\left.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\personality-questionary\test-data\common - копия (2).json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\personality-questionary\test-data\common - копия.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\personality-questionary\test-data\common-eng.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\personality-questionary\test-data\common.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\personality-questionary\test-data\ege\personality-questionary-ege-1-eng.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\personality-questionary\test-data\ege\personality-questionary-ege-1.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\personality-questionary\test-data\ege\personality-questionary-ege-2-eng.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\personality-questionary\test-data\ege\personality-questionary-ege-2.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\personality-questionary\test-data\reference-book-disabled.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\physics\css\test-specific.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\physics\index-local.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\physics\index.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\physics\js\main-init.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\physics\snippets\description.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\physics\snippets\field.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\physics\snippets\head-local.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\physics\snippets\head.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\physics\snippets\left.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\physics\test-data\common.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\physics\test-data\ege\math-ege-2.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\physics\test-data\ege\physics-ege-1.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\physics\test-data\ege\physics-ege-2.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\physics\test-data\ege\physics-ege-3.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\physics\test-data\ege\physics-ege-4.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\physics\test-data\reference-book.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\recognize-fish\css\test-specific.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\recognize-fish\index-local.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\recognize-fish\index.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\recognize-fish\js\main-init.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\recognize-fish\snippets\description.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\recognize-fish\snippets\field.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\recognize-fish\snippets\head-local.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\recognize-fish\snippets\head.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\recognize-fish\snippets\left.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\recognize-fish\test-data\common.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\recognize-fish\test-data\ege\recognize-fish-ege-1 - копия.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\recognize-fish\test-data\ege\recognize-fish-ege-1.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\recognize-fish\test-data\ege\recognize-fish-ege-2 - копия.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\recognize-fish\test-data\ege\recognize-fish-ege-2.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\recognize-fish\test-data\ege\recognize-fish-ege-3 - копия.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\recognize-fish\test-data\ege\recognize-fish-ege-3.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\recognize-flag\css\test-specific.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\recognize-flag\index-local.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\recognize-flag\index.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\recognize-flag\js\main-init.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\recognize-flag\snippets\description.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\recognize-flag\snippets\field.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\recognize-flag\snippets\head-local.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\recognize-flag\snippets\head.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\recognize-flag\snippets\left.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\recognize-flag\test-data\common.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\recognize-flag\test-data\ege\recognize-flag-ege-1.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\recognize-flag\test-data\ege\recognize-flag-ege-2.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\recognize-flag\test-data\mp3\Argentina.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\recognize-flag\test-data\mp3\Australia.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\recognize-flag\test-data\mp3\Belgium.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\recognize-flag\test-data\mp3\Brazil.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\recognize-flag\test-data\mp3\Bulgaria.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\recognize-flag\test-data\mp3\Canada.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\recognize-flag\test-data\mp3\Chile.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\recognize-flag\test-data\mp3\China.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\recognize-flag\test-data\mp3\CzechRepublic.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\recognize-flag\test-data\mp3\Denmark.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\recognize-flag\test-data\mp3\Estonia.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\recognize-flag\test-data\mp3\Finland.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\recognize-flag\test-data\mp3\Germany.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\recognize-flag\test-data\mp3\Greece.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\recognize-flag\test-data\mp3\India.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\recognize-flag\test-data\mp3\Ireland.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\recognize-flag\test-data\mp3\Israel.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\recognize-flag\test-data\mp3\Japan.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\recognize-flag\test-data\mp3\Lithuania.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\recognize-flag\test-data\mp3\Netherlands.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\recognize-flag\test-data\mp3\Peru.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\recognize-flag\test-data\mp3\Poland.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\recognize-flag\test-data\mp3\Russia.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\recognize-flag\test-data\mp3\SouthKorea.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\recognize-flag\test-data\mp3\Spain.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\recognize-flag\test-data\mp3\Sweden.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\recognize-flag\test-data\mp3\Ukraine.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\recognize-flag\test-data\mp3\Uzbekistan.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\recognize-flag\test-data\mp3\Venezuela.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\recognize-flag\test-data\mp3\Vietnam.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\recognize-fruit\css\test-specific.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\recognize-fruit\index-local.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\recognize-fruit\index.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\recognize-fruit\js\main-init.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\recognize-fruit\snippets\description.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\recognize-fruit\snippets\field.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\recognize-fruit\snippets\head-local.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\recognize-fruit\snippets\head.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\recognize-fruit\snippets\left.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\recognize-fruit\test-data\common.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\recognize-fruit\test-data\ege\recognize-fruit-ege-1.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\recognize-tree\css\test-specific.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\recognize-tree\index-local.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\recognize-tree\index.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\recognize-tree\js\main-init.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\recognize-tree\snippets\description.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\recognize-tree\snippets\field.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\recognize-tree\snippets\head-local.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\recognize-tree\snippets\head.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\recognize-tree\snippets\left.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\recognize-tree\test-data\common.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\recognize-tree\test-data\ege\recognize-tree-ege-1.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\recognize-vegetable\css\test-specific.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\recognize-vegetable\index-local.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\recognize-vegetable\index.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\recognize-vegetable\js\main-init.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\recognize-vegetable\snippets\description.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\recognize-vegetable\snippets\field.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\recognize-vegetable\snippets\head-local.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\recognize-vegetable\snippets\head.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\recognize-vegetable\snippets\left.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\recognize-vegetable\test-data\common.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\recognize-vegetable\test-data\ege\recognize-vegetable-ege-1.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\rus\css\test-specific.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\rus\index-local.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\rus\index.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\rus\js\main-init.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\rus\snippets\description.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\rus\snippets\field.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\rus\snippets\head-local.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\rus\snippets\head.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\rus\snippets\left.inc" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\rus\test-data\common.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\rus\test-data\ege\rus-ege-1.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\rus\test-data\ege\rus-ege-2.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tests\rus\test-data\ege\rus-ege-3.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tmpl\reference-book.hbs" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tmpl\result-gims.hbs" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tmpl\result-iq.hbs" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tmpl\result-mark.hbs" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tmpl\result-pdd.hbs" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tmpl\result.hbs" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tmpl\side-bar-short.hbs" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tmpl\side-bar-short2.hbs" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tmpl\side-bar.hbs" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tmpl\task-list-horizontal.hbs" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tmpl\temperament-result-eng.hbs" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tmpl\temperament-result.hbs" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tmpl\test-list.hbs" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tmpl\test-main-all.hbs" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\tmpl\test-main.hbs" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\views\testMain.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\v6-vagrant\v6-env\repos\v6-apps\tests\views\testSidebar.php" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="newtest2.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -47,71 +541,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="TestModel.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/models/TestModel.js">
+      <file leaf-file-name="mainView.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/frontend/js/views/mainView.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="1107" column="6" selection-start-line="1107" selection-start-column="6" selection-end-line="1107" selection-end-column="6" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="head.inc" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/tests/math/snippets/head.inc">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.22456141">
-              <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MainView.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/views/MainView.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="515" column="16" selection-start-line="515" selection-start-column="16" selection-end-line="515" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main-init.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/gims/js/main-init.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="29" column="42" selection-start-line="29" selection-start-column="42" selection-end-line="29" selection-end-column="42" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TestController.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/controllers/TestController.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="300" column="38" selection-start-line="300" selection-start-column="38" selection-end-line="300" selection-end-column="38" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test-main.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/test-main.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="1010" column="27" selection-start-line="1010" selection-start-column="27" selection-end-line="1010" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test-specific.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/geography/css/test-specific.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="130" column="19" selection-start-line="130" selection-start-column="19" selection-end-line="130" selection-end-column="19" />
+            <state vertical-scroll-proportion="0.6333712">
+              <caret line="1562" column="29" selection-start-line="1562" selection-start-column="29" selection-end-line="1562" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -133,7 +567,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/tests/gims/jet_ski_mp/snippets/head.inc" />
         <option value="$PROJECT_DIR$/tests/gims/jet_ski_mpvpvvp/snippets/head.inc" />
         <option value="$PROJECT_DIR$/tests/gims/jet_ski_vpvvp/snippets/head.inc" />
         <option value="$PROJECT_DIR$/tests/gims/boat_mpvvp/snippets/head.inc" />
@@ -184,6 +617,7 @@
         <option value="$PROJECT_DIR$/tests/recognize-tree/index.php" />
         <option value="$PROJECT_DIR$/tests/recognize-vegetable/index-local.php" />
         <option value="$PROJECT_DIR$/tests/recognize-vegetable/index.php" />
+        <option value="$PROJECT_DIR$/frontend/js/views/mainView.js" />
       </list>
     </option>
   </component>
@@ -293,350 +727,14 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="math_test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="newtest2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="math_test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tmpl" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="newtest2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="math_test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="tests" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="newtest2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="math_test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tests" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="recognize-flag" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="newtest2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="math_test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tests" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="recognize-flag" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="newtest2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="math_test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tests" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="recognize-flag" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="newtest2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="math_test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tests" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gims" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="newtest2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="math_test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tests" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gims" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="snippets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="newtest2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="math_test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tests" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gims" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="newtest2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="math_test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tests" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gims" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="boat_mp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="newtest2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="math_test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tests" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gims" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="boat_mp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="snippets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="newtest2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="math_test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tests" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="geography" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="newtest2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="math_test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tests" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="geography" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="newtest2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="math_test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="newtest2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="math_test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="newtest2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="math_test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="newtest2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="math_test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="newtest2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="math_test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="newtest2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="math_test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="classes" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -796,12 +894,11 @@
     <frame x="-1288" y="48" width="1296" height="1040" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3050162" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31472492" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32857144" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32893288" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928804" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3190319" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39273927" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -814,6 +911,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32893288" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="CSS Styles" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32967034" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3190319" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
@@ -843,262 +941,14 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/tests/recognize-tree/snippets/head.inc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-23.538462">
-          <caret line="36" column="66" selection-start-line="36" selection-start-column="66" selection-end-line="36" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/recognize-vegetable/snippets/head.inc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-24.192308">
-          <caret line="37" column="68" selection-start-line="37" selection-start-column="68" selection-end-line="37" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/recognize-fruit/snippets/head.inc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-24.192308">
-          <caret line="37" column="68" selection-start-line="37" selection-start-column="68" selection-end-line="37" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/recognize-fish/snippets/head.inc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7157895">
-          <caret line="36" column="66" selection-start-line="36" selection-start-column="66" selection-end-line="36" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/recognize-fish/js/main-init.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3632236">
-          <caret line="30" column="32" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/Fireworks.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.86833143">
-          <caret line="90" column="6" selection-start-line="90" selection-start-column="6" selection-end-line="90" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/animal-tracking/css/test-specific.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4324631">
-          <caret line="102" column="0" selection-start-line="102" selection-start-column="0" selection-end-line="102" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/geography/test-data/ege/geography-ege-1.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.61637425">
-          <caret line="43" column="12" selection-start-line="43" selection-start-column="12" selection-end-line="43" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/recognize-flag/snippets/head.inc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.11929824">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/recognize-flag/test-data/common.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/recognize-fish/css/test-specific.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="115" column="56" selection-start-line="115" selection-start-column="56" selection-end-line="115" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/recognize-fruit/css/test-specific.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="115" column="34" selection-start-line="115" selection-start-column="34" selection-end-line="115" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/recognize-tree/css/test-specific.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="111" column="34" selection-start-line="111" selection-start-column="34" selection-end-line="111" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/recognize-vegetable/css/test-specific.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.47105563">
-          <caret line="115" column="34" selection-start-line="115" selection-start-column="34" selection-end-line="115" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/recognize-flag/snippets/field.inc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.15906432">
-          <caret line="8" column="57" selection-start-line="8" selection-start-column="57" selection-end-line="8" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../amplitudejs-master/examples/single-song/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.21871345">
-          <caret line="17" column="42" selection-start-line="17" selection-start-column="42" selection-end-line="17" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../jPlayer-2.9.2/examples/blue.monday/demo-01.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.17894737">
-          <caret line="9" column="87" selection-start-line="9" selection-start-column="87" selection-end-line="9" selection-end-column="87" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../amplitudejs-master/examples/single-song/css/styles.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3280363">
-          <caret line="104" column="17" selection-start-line="104" selection-start-column="17" selection-end-line="104" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../player3/src/js/js.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/recognize-flag/js/main-init.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="28" column="37" selection-start-line="28" selection-start-column="37" selection-end-line="28" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/recognize-flag/test-data/ege/recognize-flag-ege-1.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.045614034">
-          <caret line="295" column="24" selection-start-line="295" selection-start-column="24" selection-end-line="295" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/recognize-flag/test-data/ege/recognize-flag-ege-2.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-22.346153">
-          <caret line="239" column="22" selection-start-line="239" selection-start-column="22" selection-end-line="239" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/gims/snippets/field.inc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.15906432">
-          <caret line="8" column="48" selection-start-line="8" selection-start-column="48" selection-end-line="8" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/gims/snippets/head.inc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.20467836">
-          <caret line="17" column="49" selection-start-line="17" selection-start-column="49" selection-end-line="17" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/gims/boat_mp/snippets/field.inc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.4116959">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/main2.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="124" column="30" selection-start-line="124" selection-start-column="30" selection-end-line="124" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/gims/js/main-init.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="29" column="42" selection-start-line="29" selection-start-column="42" selection-end-line="29" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/recognize-flag/css/test-specific.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tmpl/test-main.hbs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="58" column="32" selection-start-line="58" selection-start-column="32" selection-end-line="58" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/controllers/TestController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="300" column="38" selection-start-line="300" selection-start-column="38" selection-end-line="300" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/geography/css/test-specific.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="130" column="19" selection-start-line="130" selection-start-column="19" selection-end-line="130" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/test-main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1010" column="27" selection-start-line="1010" selection-start-column="27" selection-end-line="1010" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/views/MainView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="515" column="16" selection-start-line="515" selection-start-column="16" selection-end-line="515" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/models/TestModel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1107" column="6" selection-start-line="1107" selection-start-column="6" selection-end-line="1107" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/v6-vagrant/v6-env/repos/v6-apps/tests/frontend/js/models/testModel.js">
+    <entry file="file://$PROJECT_DIR$/frontend/js/models/testModel.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.40635642">
           <caret line="1113" column="52" selection-start-line="1113" selection-start-column="52" selection-end-line="1113" selection-end-column="52" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/personality-questionary/index.php">
+    <entry file="file://$PROJECT_DIR$/frontend/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1106,122 +956,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/animal-tracking/index.php">
+    <entry file="file://$PROJECT_DIR$/frontend/tests/recognize-flag/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.099415205">
-          <caret line="5" column="37" selection-start-line="5" selection-start-column="37" selection-end-line="5" selection-end-column="37" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/geography/index.php">
+    <entry file="file://$PROJECT_DIR$/frontend/js/views/mainView.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.05964912">
-          <caret line="3" column="30" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/geography/index-local.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.099415205">
-          <caret line="5" column="39" selection-start-line="5" selection-start-column="39" selection-end-line="5" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/animal-tracking/index-local.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.11929824">
-          <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/recognize-fish/index-local.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.9230769">
-          <caret line="6" column="10" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/recognize-fish/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.11929824">
-          <caret line="6" column="10" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/recognize-flag/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.9230769">
-          <caret line="6" column="10" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/recognize-flag/index-local.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.11929824">
-          <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/recognize-fruit/index-local.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.9230769">
-          <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/recognize-fruit/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.11929824">
-          <caret line="6" column="10" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/recognize-tree/index-local.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.9230769">
-          <caret line="6" column="10" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/recognize-tree/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.05964912">
-          <caret line="3" column="30" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/recognize-vegetable/index-local.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.9230769">
-          <caret line="6" column="10" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/recognize-vegetable/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.099415205">
-          <caret line="5" column="37" selection-start-line="5" selection-start-column="37" selection-end-line="5" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/math/snippets/head.inc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.22456141">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.6333712">
+          <caret line="1562" column="29" selection-start-line="1562" selection-start-column="29" selection-end-line="1562" selection-end-column="29" />
           <folding />
         </state>
       </provider>
