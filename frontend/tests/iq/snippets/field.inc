@@ -37,7 +37,7 @@
                         <td>&nbsp;</td>
 
                         <td width="1%" align="right" style="white-space: nowrap;">
-                            <a href="http://logic-games.spb.ru/" class="titleBandLink">
+                            <a href="/" class="titleBandLink">
                                 Перейти на другие игры
                             </a>
                         </td>
