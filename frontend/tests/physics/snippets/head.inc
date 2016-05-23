@@ -33,7 +33,7 @@
 </script>
 
 <!-- thrid-party libraries -->
-<script type="text/javascript" src="../../js/libs/handlebars-v4.0.5.js"></script>
+<script type="text/javascript" src="../../js/libs/handlebars.min-latest.js"></script>
 <script type="text/javascript" src="//logic-games.spb.ru/js/lib/mathjax//MathJax.js?config=TeX-AMS_HTML"></script>
 
 <!-- modules -->

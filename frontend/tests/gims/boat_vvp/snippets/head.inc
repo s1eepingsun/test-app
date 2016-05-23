@@ -35,7 +35,7 @@ echo "<link media='screen' href='../../../css/game-layout.css?v=$v' rel='stylesh
 </script>
 
 <!-- third-party libraries -->
-<script type="text/javascript" src="../../../js/libs/handlebars-v4.0.5.js"></script>
+<script type="text/javascript" src="../../../js/libs/handlebars.min-latest.js"></script>
 
 <!-- modules -->
 <script type="text/javascript" src="../../../js/helpers.js"></script>
