@@ -21,7 +21,7 @@ testApp.MainView.prototype = {
         var that = this;
         var model = this._model;
         var config = this._config;
-        //console.log2('MainView init', model, model.config);
+        //console.log('MainView init', model, model.config);
 
         if (window._isFb || window._isVk) {
             $('body').addClass('social-bg');
@@ -281,6 +281,30 @@ testApp.MainView.prototype = {
             $('#test-list-wrapper').hide();
         });
 
+        $('.single-test-data').find('.task-switcher .prev-task-switcher').mouseenter(function() {
+            $(this).parent().children('.left-arrow').addClass('highlighted');
+        });
+        $('.single-test-data').find('.task-switcher .prev-task-switcher').mouseleave(function() {
+            $(this).parent().children('.left-arrow').removeClass('highlighted');
+        });
+
+        $('.single-test-data').find('.task-switcher .next-task-switcher').mouseenter(function() {
+            $(this).parent().children('.right-arrow').addClass('highlighted');
+        });
+        $('.single-test-data').find('.task-switcher .next-task-switcher').mouseleave(function() {
+            $(this).parent().children('.right-arrow').removeClass('highlighted');
+        });
+
+        $('.single-test-data').find('.task-switcher .prev-task-switcher').click(function(e) {
+            if ($(e.currentTarget).parent().hasClass('prev-disabled')) return;
+            that.fireEvent('view:clickPrev');
+        });
+
+        $('.single-test-data').find('.task-switcher .next-task-switcher').click(function(e) {
+            if ($(e.currentTarget).parent().hasClass('next-disabled')) return;
+            that.fireEvent('view:clickNext');
+        });
+
         $('.soundtrack').find('audio').bind('play', function(e) {
             var element = e.currentTarget;
             var id = $(element).parents('.single-test-data').attr('id');
@@ -314,6 +338,7 @@ testApp.MainView.prototype = {
         } else {
             $('#options-window form input[value="linear"]').prop('checked', true);
         }
+
     },
 
     //рендерит задания в основном окне
@@ -322,16 +347,21 @@ testApp.MainView.prototype = {
         for(var task in data['tasks']) {
             if(!data['tasks'].hasOwnProperty(task)) continue;
 
-            if(data['tasks'][task]['multiple_answer_view']
-            || data['tasks'][task]['multiple-thin_answer_view']
-            || data['tasks'][task]['multiple-wide_answer_view']
-            || data['tasks'][task]['input1_answer_view']
-            || data['tasks'][task]['collate_answer_view']
-            || data['tasks'][task]['sequence_answer_view']
-            || data['tasks'][task]['sequence-abv_answer_view']) {
+            if(data['tasks'][task]['multiple_answer_view'] ||
+                data['tasks'][task]['multiple-thin_answer_view'] ||
+                data['tasks'][task]['multiple-wide_answer_view'] ||
+                data['tasks'][task]['input1_answer_view'] ||
+                data['tasks'][task]['collate_answer_view'] ||
+                data['tasks'][task]['right-side_answer_view'] ||
+                data['tasks'][task]['sequence_answer_view'] ||
+                data['tasks'][task]['sequence-abv_answer_view']) {
                 //data['complex-answers-view'] = 1;
                 data['tasks'][task]['complex-answers-view'] = 1;
                 //break;
+            }
+
+            if(data['tasks'][task]['right-side_answer_view']) {
+                data['tasks'][task]['answers_view'] = 'right-side';
             }
         }
 
@@ -340,6 +370,8 @@ testApp.MainView.prototype = {
             var templateSource = $('#task-main-tmpl').html();
         var template = Handlebars.compile(templateSource);
         var rendered = template(data);
+
+        console.log('render data', data);
 
         //crutch
         $.when($('#field').html(rendered)).then(function() {
@@ -626,6 +658,10 @@ testApp.MainView.prototype = {
         $('#tb-next-task').removeClass('disabled');
         $('.single-test-data').find('.test-button').show();
 
+        $('.single-test-data').find('.task-switcher').removeClass('prev-disabled');
+        $('.single-test-data').find('.task-switcher').removeClass('next-disabled');
+        $('.single-test-data').find('.task-switcher').show();
+
         if (this._config.testTimer == false) {
             $('#time-left').css('visibility', 'hidden');
             $('#time-spent').css('visibility', 'hidden');
@@ -663,9 +699,12 @@ testApp.MainView.prototype = {
         //отключает навигацию
         $('#tb-prev-task').addClass('disabled');
         $('#tb-next-task').addClass('disabled');
+        $('.single-test-data').find('.task-switcher').hide();
         if(this._config.navInResult != true) {
             $('.single-test-data').find('.test-button').hide();
         }
+
+
 
         $('.single-test-data').find('.blocking-layer').hide();
         $('.single-test-data').find('.soundtrack').find('span.tips-left').text('');
@@ -1490,6 +1529,8 @@ testApp.MainView.prototype = {
         $('#tb-prev-task').addClass('disabled');
         $('.single-test-data').find('.tb-prev-task div:last-child').addClass('disabled');
         $('.single-test-data').find('.tb-prev-task div:last-child').removeClass('hoverable');
+
+        $('.single-test-data').find('.task-switcher').addClass('prev-disabled');
     },
 
     //отключает кнопки "следующий вопрос"
@@ -1497,6 +1538,8 @@ testApp.MainView.prototype = {
         $('#tb-next-task').addClass('disabled');
         $('.single-test-data').find('.tb-next-task div:last-child').addClass('disabled');
         $('.single-test-data').find('.tb-next-task div:last-child').removeClass('hoverable');
+
+        $('.single-test-data').find('.task-switcher').addClass('next-disabled');
     },
 
     //делает кнопки "предыдущий вопрос" активными
@@ -1504,6 +1547,8 @@ testApp.MainView.prototype = {
         $('#tb-prev-task').removeClass('disabled');
         $('.single-test-data').find('.tb-prev-task div:last-child').removeClass('disabled');
         $('.single-test-data').find('.tb-prev-task div:last-child').addClass('hoverable');
+
+        $('.single-test-data').find('.task-switcher').removeClass('prev-disabled');
     },
 
     //делает кнопки "следующий вопрос" активными
@@ -1511,6 +1556,8 @@ testApp.MainView.prototype = {
         $('#tb-next-task').removeClass('disabled');
         $('.single-test-data').find('.tb-next-task div:last-child').removeClass('disabled');
         $('.single-test-data').find('.tb-next-task div:last-child').addClass('hoverable');
+
+        $('.single-test-data').find('.task-switcher').removeClass('next-disabled');
     },
 
     //показывает описание теста
@@ -1531,6 +1578,7 @@ testApp.MainView.prototype = {
         $('.single-test-data').find('.tb-prev-task div:last-child').hide();
         $('#tb-next-task').html('Пропустить вопрос');
         $('.single-test-data').find('.tb-next-task div:last-child').html('Пропустить вопрос');
+        $('.single-test-data').find('.task-switcher').addClass('prev-disabled');
     },
 
     //сортировка вопросов

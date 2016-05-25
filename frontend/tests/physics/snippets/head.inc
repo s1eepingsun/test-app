@@ -45,6 +45,15 @@
 <script type="text/javascript" src="../../js/views/ReferenceBookView.js"></script>
 <script type="text/javascript" src="../../js/controllers/TestController.js"></script>
 
+<script type="text/javascript" src="../../js/helpers.js"></script>
+<script type="text/javascript" src="../../js/timer.js"></script>
+<script type="text/javascript" src="../../js/models/test-model.js"></script>
+<script type="text/javascript" src="../../js/views/list-view.js"></script>
+<script type="text/javascript" src="../../js/views/horizontal-list-view.js"></script>
+<script type="text/javascript" src="../../js/views/main-view.js"></script>
+<script type="text/javascript" src="../../js/views/reference-book-view.js"></script>
+<script type="text/javascript" src="../../js/controllers/test-controller.js"></script>
+
 <!-- application core (should be positioned after modules) -->
 <script type="text/javascript" src="../../js/main2.js"></script>
 <script type="text/javascript" src="js/main-init.js"></script>

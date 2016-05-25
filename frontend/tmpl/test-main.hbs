@@ -154,6 +154,13 @@
                             <div class="test-button multiple-confirm"><div>ОК</div></div>
                         </div>
 
+                        {{else if right-side_answer_view}}
+                        <div class="answers-wrapper right-side-answers">
+                            {{#each answers}}
+                            <div answer="{{@key}}" class="answer hoverable"><div>{{{this}}}</div></div>
+                            {{/each}}
+                        </div>
+
                         {{else if sequence-abv_answer_view}}
                         <div class="sequence_answer_view">
                             {{#each answers}}
@@ -167,8 +174,20 @@
 
                     {{/if}}
 
+                    {{#if right-side_answer_view}}
+                    <div class="task-switcher">
+                        <div class="prev-task-switcher"></div>
+                        <div class="next-task-switcher"></div>
+                        <div class="left-arrow">&larr;</div>
+                        <div class="right-arrow">&rarr;</div>
+                        <div class="text">Вопрос</div>
+                    </div>
+                    {{/if}}
+
+                    {{#unless right-side_answer_view}}
                     <div class="tb-prev-task test-button disabled"><div></div><div>Предыдущий<br>вопрос</div></div>
                     <div class="tb-next-task test-button disabled"><div></div><div>Следующий<br>вопрос</div></div>
+                    {{/unless}}
                 </div>
                 <div class="clear">&nbsp;</div>
                 {{#if explanation}}

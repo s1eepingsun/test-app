@@ -24,7 +24,8 @@ fireworks.Salute.prototype = {
         this.canvas.height = this.canvasHeight;
     },
 
-    launch: function(quantity = 1) {
+    launch: function(quantity) {
+        if(!quantity) quantity = 1;
         var rand1 = Math.random();
         var positionX = Math.floor(this.canvasWidth / 3 + rand1 * this.canvasWidth / 3);
 

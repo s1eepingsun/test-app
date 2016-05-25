@@ -38,12 +38,12 @@ echo "<link media='screen' href='../../../css/game-layout.css?v=$v' rel='stylesh
 
 <!-- modules -->
 <script type="text/javascript" src="../../../js/helpers.js"></script>
-<script type="text/javascript" src="../../../js/Timer.js"></script>
-<script type="text/javascript" src="../../../js/models/TestModel.js"></script>
-<script type="text/javascript" src="../../../js/views/ListView.js"></script>
-<script type="text/javascript" src="../../../js/views/HorizontalListView.js"></script>
-<script type="text/javascript" src="../../../js/views/MainView.js"></script>
-<script type="text/javascript" src="../../../js/controllers/TestController.js"></script>
+<script type="text/javascript" src="../../../js/timer.js"></script>
+<script type="text/javascript" src="../../../js/models/test-model.js"></script>
+<script type="text/javascript" src="../../../js/views/list-view.js"></script>
+<script type="text/javascript" src="../../../js/views/horizontal-list-view.js"></script>
+<script type="text/javascript" src="../../../js/views/main-view.js"></script>
+<script type="text/javascript" src="../../../js/controllers/test-controller.js"></script>
 
 <!-- application core (should be positioned after modules) -->
 <script type="text/javascript" src="../../../js/main2.js"></script>

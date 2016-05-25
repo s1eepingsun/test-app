@@ -1554,7 +1554,8 @@ testApp.TestModel.prototype = {
 
         if (currentTask.answers_view &&
             currentTask.answers_view != 'img1' &&
-            currentTask.answers_view != 'img2') {
+            currentTask.answers_view != 'img2' &&
+            currentTask.answers_view != 'right-side') {
 
             var pointsCountingMethod = currentTask['points_counting_method'];
             var pointsForTask = 0;
@@ -1843,7 +1844,7 @@ testApp.TestModel.prototype = {
         if(this.salute) this.salute.clearCanvas();
     },
 
-    makeUniformString(text) {
+    makeUniformString: function(text) {
         text = text.trim();
         text = text.replace(/\s\s+/g, " ");
         text = text.toLowerCase();

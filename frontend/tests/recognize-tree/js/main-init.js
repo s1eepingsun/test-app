@@ -29,7 +29,7 @@ $(function() {
             //multipleChoices: false,
             //resultAnswersStyle: 'wrong-border',
             //navInResult: true,
-            answersStyle: 'right-side',
+            answersView: 'right-side',
             fireworks: true,
             calculateMark1: true,
             testTimer: false,

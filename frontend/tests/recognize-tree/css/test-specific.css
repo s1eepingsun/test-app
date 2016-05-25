@@ -6,11 +6,10 @@
     width: 83px;
 }
 #field {
-    /*height: 697px;*/
-    height: 726px;
+    height: 576px !important;
 }
 #field-inside-wrapper {
-    height: 671px;
+    height: 550px;
 }
 #field-inside-wrapper.training-mode {
     height: 723px;
@@ -19,7 +18,7 @@
     margin-top: -30px;
 }
 .single-test-data {
-    min-height: 568px;
+    min-height: 450px;
     margin-top: 30px;
 }
 .single-test-data p {
@@ -40,10 +39,10 @@
 }
 .result-field .single-test-data.first-task-style {
     margin-top: 30px;
-    min-height: 568px;
+    min-height: 450px;
 }
 .single-test-data.first-task-style {
-    min-height: 524px;
+    min-height: 420px;
     margin-top: 8px;
 }
 .single-test-data .answer {
@@ -102,14 +101,30 @@
     position: relative;
 }
 .single-test-data .task-content p img + img {
-    float: right;
     position: absolute;
-    /*margin-top: 300px !important;
-    margin-right: 40px !important;*/
     right: 10px;
-    bottom: 10px;
+    bottom: 175px;
+}
+.single-test-data.scrolling-result .task-content p img + img {
+    right: 0;
 }
 .single-test-data.scrolling-result .task-content p img {
+    max-width: 100%;
+    height: auto !important;
+}
+
+.single-test-data .task-content div img + div {
+    position: absolute;
+    right: 10px;
+    bottom: 175px;
+    width: 194px;
+    margin: 0 auto;
+    text-align: center;
+}
+.single-test-data.scrolling-result .task-content div img + div {
+    right: 0;
+}
+.single-test-data.scrolling-result .task-content div img {
     max-width: 100%;
     height: auto !important;
 }
@@ -126,7 +141,10 @@
     top: 454px;
 }
 .training-mode .single-test-data {
-    margin-top: 80px;
+    /*margin-top: 80px;*/
+}
+.training-mode .single-test-data.first-task-style {
+    margin-top: 30px;
 }
 .training-mode .single-test-data .answers-wrapper {
     top: 444px;
@@ -139,4 +157,17 @@
 }
 .training-mode .single-test-data .test-button {
     top: 478px;
+}
+
+/* right-side answers */
+.single-test-data.first-task-style .answers-wrapper.right-side-answers {
+    top: -160px;
+    left: 400px;
+}
+.single-test-data .answers-wrapper.right-side-answers {
+    top: -160px;
+    left: 400px;
+}
+.single-test-data .answers {
+    min-height: 0;
 }

@@ -111,5 +111,3 @@ testApp.ListView.prototype = {
     }
 
 };
-
-
