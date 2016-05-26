@@ -3,6 +3,9 @@ body {
     /*font-family: Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, sans-serif;*/
     font-family: Verdana, Geneva, sans-serif;
     font-size: 14px;
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
 }
 #app-container {
     margin-top: 0;
@@ -222,7 +225,7 @@ body {
     margin: 0 0 5px;
     position: relative;
     border: 1px solid #AAA;
-    padding: 5px;
+    padding: 5px 0 5px;
     cursor: pointer;
     min-width: 20px;
     /*min-height: 38px;*/
@@ -234,7 +237,7 @@ body {
     -ms-border-radius: 5px;
     -khtml-border-radius: 5px;
     border-radius: 5px;
-    width: 241px;
+    width: 247px;
     max-width: none;
 
     min-height: 0;
@@ -272,7 +275,8 @@ body {
 }
 .collate-answers-canvas {
     float: left;
-    margin-left: 12px;
+    /*margin-left: 12px;*/
+    margin-left: 0;
 }
 .single-test-data .correct-answers {
     display: none;
@@ -283,10 +287,10 @@ body {
 
 .single-test-data .answers-wrapper .left-answers {
     float: left;
-    margin-left: 10px;
+    margin-left: 8px;
 }
 .single-test-data .answers-wrapper .right-answers {
-    margin-left: 337px;
+    margin-left: 331px;
 }
 
 .single-test-data .answer > div {
