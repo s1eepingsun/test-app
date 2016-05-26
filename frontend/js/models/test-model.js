@@ -1158,23 +1158,23 @@ testApp.TestModel.prototype = {
         var answersGiven = this.answersGiven;
         console.log2('--- FINISHING TEST answers given, this', answersGiven, this);
 
-        if(this.timer) this.timer.stop();
-
-        //остановка таймера отдельной задачи
-        if (this.taskTimer instanceof Timer) this.taskTimer.stop();
-        console.log2('invoking taskChange from fninishTest');
-        this.saveTaskTimeSpent(); //saves last task time spent
-
-        //затраченное на тест время
         if(this.timer) {
+            this.timer.stop();
+
+            if (this.taskTimer instanceof Timer) this.taskTimer.stop();
+
             var timeSpent;
             this.timeSpent = this.timer.getTimeSpent();
             this.timeSpent = this.timer.timeToObject(this.timeSpent);
-            console.log2(' this.timeSpent ', this.timeSpent);
             timeSpent = this.timeSpent;
         } else {
             timeSpent = {s: 0, m: 0, h: 0};
         }
+
+        //остановка таймера отдельной задачи
+        //console.log2('invoking taskChange from fninishTest');
+        this.saveTaskTimeSpent(); //saves last task time spent
+
 
 
         //создает массив всех данных валидных ответов
