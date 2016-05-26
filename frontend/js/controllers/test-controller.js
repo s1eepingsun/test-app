@@ -78,6 +78,7 @@ testApp.TestController.prototype = {
         this.listen('model:blockAudioPlayers', this.blockAudioPlayers, this);
         this.listen('model:adjustTipsNum', this.adjustTipsNum, this);
         this.listen('model:stopPlayer', this.stopPlayer, this);
+        this.listen('model:hidePromptUnanswered', this.hidePromptUnanswered, this);
 
         this.listen('timer:timerTick', this.timerTick, this);
     },
@@ -303,6 +304,10 @@ testApp.TestController.prototype = {
 
     blockAudioPlayers: function (observable, eventType, tipsTaken) {
         this._mainView.blockAudioPlayers(tipsTaken);
+    },
+
+    hidePromptUnanswered: function () {
+        this._mainView.hidePromptUnanswered();
     }
 
 

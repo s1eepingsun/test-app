@@ -1524,6 +1524,10 @@ testApp.MainView.prototype = {
         //$('#vn' + data['id']).find('.answer2').removeClass('collate-complete');
     },
 
+    hidePromptUnanswered: function() {
+        $('#not-all-answered').hide();
+    },
+
     //отключает кнопки "предыдущий вопрос"
     disablePrevButtons: function () {
         $('#tb-prev-task').addClass('disabled');

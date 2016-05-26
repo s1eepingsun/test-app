@@ -776,7 +776,12 @@ testApp.TestModel.prototype = {
 
             var maxID = this.lastUnanswered;
             if (id < maxID) {
-                this.showTask(id + 1);
+                if(answersGivenCount < this.tasksCount) {
+                    this.showTask(id + 1);
+                } else {
+                    this.fireEvent('model:hidePromptUnanswered');
+                    this.finishTest();
+                }
             } else if (id == maxID && this.config.lastTaskFinish == true) {
                 if(answersGivenCount < this.tasksCount) {
                     this.fireEvent('model:promptUnanswered');
@@ -1050,8 +1055,10 @@ testApp.TestModel.prototype = {
         var answersGivenKeys = [];
         var unanswered = [];
 
+        var totalAnswered = 0;
         answersGiven.forEach(function(item, i) {
             answersGivenKeys.push(i);
+            totalAnswered++;
         });
 
         correctAnswers.forEach(function(item, i) {
@@ -1063,7 +1070,12 @@ testApp.TestModel.prototype = {
         var firstUnanswered = Array.min(unanswered);
         this.lastUnanswered = Array.max(unanswered);
 
-        this.showTask(firstUnanswered);
+        if(unanswered.length == 0) {
+            this.finishTest();
+        } else {
+            this.showTask(firstUnanswered);
+        }
+
     },
 
     showPrevTest: function() {
