@@ -111,6 +111,19 @@
     height: auto !important;
 }
 
+.single-test-data .task-content p {
+    min-height: 425px;
+}
+.single-test-data.first-task-style .task-content p {
+    min-height: 403px;
+}
+.single-test-data.scrolling-result .task-content p {
+    min-height: 0;
+}
+.training-mode .single-test-data.first-task-style .task-content p {
+    min-height: 425px;
+}
+
 
 .single-test-data.first-task-style .answers-wrapper {
     top: 432px;
