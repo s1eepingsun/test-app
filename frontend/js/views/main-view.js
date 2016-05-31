@@ -859,6 +859,8 @@ testApp.MainView.prototype = {
                 id == minID ? this.disablePrevButtons() : this.enablePrevButtons();
             }
         }
+
+        this.hidePromptUnanswered();
     },
 
     readjustTestNumber: function(id) {
