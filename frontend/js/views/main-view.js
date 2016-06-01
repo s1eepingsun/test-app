@@ -178,10 +178,10 @@ testApp.MainView.prototype = {
         $('#immediate-answer-check input').off();
         $('#immediate-answer-check input').change(function() {
             config.immediateAnswers = $('#immediate-answer-check input:checked').length;
-            console.log2('config.immediateAnswers', config.immediateAnswers);
 
             if(config.immediateAnswers == 1) {
-                $('#field .single-test-data .multiple-confirm').show();
+                //$('#field .single-test-data .multiple-confirm').show();
+                that.fireEvent('view:immediateAnswersOn');
             } else {
                 $('#field .single-test-data .multiple-confirm').hide();
             }
@@ -367,11 +367,9 @@ testApp.MainView.prototype = {
 
         data['maxTestNumber'] = this._model.maxTestNumber;
         if(this._model.config.tips) data['tips'] = this._model.config.tips;
-            var templateSource = $('#task-main-tmpl').html();
+        var templateSource = $('#task-main-tmpl').html();
         var template = Handlebars.compile(templateSource);
         var rendered = template(data);
-
-        console.log('render data', data);
 
         //crutch
         $.when($('#field').html(rendered)).then(function() {
@@ -923,6 +921,10 @@ testApp.MainView.prototype = {
         currentlyPlaying.forEach(function(item, id) {
             $('#vn' + id).find('.soundtrack audio')[0].pause();
         });
+    },
+
+    showConfirmButton: function(id) {
+        $('#vn' + id + ' .multiple-confirm').show();
     },
 
     //визуально отображает данные ответы

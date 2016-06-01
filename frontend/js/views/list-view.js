@@ -43,8 +43,10 @@ testApp.ListView.prototype = {
     },
 
     //включение режиа стилей для просмотра результатов теста
-    setModeTestResult: function () {
-        this.removeSelection();
+    setModeTestResult: function (keepActiveSelection) {
+        if(typeof keepActiveSelection === 'undefined') {
+            this.removeSelection();
+        }
     },
 
     removeSelection: function() {
@@ -87,9 +89,10 @@ testApp.ListView.prototype = {
     },
 
     //показывает результат прохождения теста
-    showResult: function (data) {
+    showResult: function (data, keepActiveSelection) {
         //ставит режим стилей для показа результата теста
-        this.setModeTestResult();
+        this.setModeTestResult(keepActiveSelection);
+
         if(this._model.config.immediateAnswersOption == false) return;
 
         //окрашивает задания с данными ответами

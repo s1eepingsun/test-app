@@ -709,6 +709,40 @@ testApp.TestModel.prototype = {
 
     },
 
+    immediateAnswersOn: function() {
+        var that = this;
+
+        if(this.config.immediateAnswers == true) {
+            var answerData = {};
+            this.answersGiven.forEach(function(answer, id) {
+                if(id != that.selectedTaskID) {
+                    answerData['id'] = id;
+                    answerData['answer'] = answer;
+                    that.immediateShowAnswers(answerData);
+                }
+            });
+
+            this.showConfirmButtons();
+        }
+    },
+
+    showConfirmButtons: function() {
+        var that = this;
+        var tasksAnswered = this.answersGiven.map(function(val, i) {
+            if(i != that.selectedTaskID) {
+                return i;
+            }
+        });
+
+        for(taskID in this.data.tasks) {
+            if(!this.data.tasks.hasOwnProperty(taskID)) continue;
+
+            if(tasksAnswered.indexOf(Number(taskID)) == -1) {
+                this.fireEvent('model:showConfirmButton', taskID);
+            }
+        }
+    },
+
     immediateShowAnswers: function(data) {
         var that = this;
         var id = data['id'];
@@ -737,8 +771,8 @@ testApp.TestModel.prototype = {
 
 
         testApp.mainView.showGivenAnswers(testDataChank);
-        if(testApp.horizontalListView) testApp.horizontalListView.showResult(testDataChank);
-        if(testApp.listView) testApp.listView.showResult(testDataChank);
+        if(testApp.horizontalListView) testApp.horizontalListView.showResult(testDataChank, true);
+        if(testApp.listView) testApp.listView.showResult(testDataChank, true);
 
         /*var taskCorrectAnswers = correctAnswers[id];
         if(Object.keys(that.data.tasks[id].answers).length == 1) { //input view

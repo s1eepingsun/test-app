@@ -61,8 +61,10 @@ testApp.HorizontalListView.prototype = {
     },
 
     //включение режиа стилей для просмотра результатов теста
-    setModeTestResult: function () {
-        this.removeSelection();
+    setModeTestResult: function (keepActiveSelection) {
+        if(typeof keepActiveSelection === 'undefined') {
+            this.removeSelection();
+        }
     },
 
     removeSelection: function() {
@@ -115,8 +117,9 @@ testApp.HorizontalListView.prototype = {
         }
     },
 
-    showResult: function (data) {
-        this.setModeTestResult();
+    showResult: function (data, keepActiveSelection) {
+        this.setModeTestResult(keepActiveSelection);
+
         if(this._model.config.immediateAnswersOption == false) return;
 
         //окрашивает задания с данными ответами

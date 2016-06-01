@@ -50,6 +50,7 @@ testApp.TestController.prototype = {
         this.listen('view:collateAnswerClick', this.collateAnswerClick1, this);
         this.listen('view:musicPlayClick', this.musicPlayClick, this);
         this.listen('view:musicStopClick', this.musicStopClick, this);
+        this.listen('view:immediateAnswersOn', this.immediateAnswersOn, this);
 
         this.listen('model:showTask', this.showTask, this);
         this.listen('model:reflectAnswers', this.reflectAnswers, this);
@@ -79,6 +80,7 @@ testApp.TestController.prototype = {
         this.listen('model:adjustTipsNum', this.adjustTipsNum, this);
         this.listen('model:stopPlayer', this.stopPlayer, this);
         this.listen('model:hidePromptUnanswered', this.hidePromptUnanswered, this);
+        this.listen('model:showConfirmButton', this.showConfirmButton, this);
 
         this.listen('timer:timerTick', this.timerTick, this);
     },
@@ -264,6 +266,10 @@ testApp.TestController.prototype = {
         this._model.musicStopClick(id);
     },
 
+    immediateAnswersOn: function() {
+        this._model.immediateAnswersOn();
+    },
+
     collateHighlightPending: function (observable, eventType, data) {
         this._mainView.collateHighlightPending(data);
     },
@@ -304,6 +310,10 @@ testApp.TestController.prototype = {
 
     blockAudioPlayers: function (observable, eventType, tipsTaken) {
         this._mainView.blockAudioPlayers(tipsTaken);
+    },
+
+    showConfirmButton: function (observable, eventType, id) {
+        this._mainView.showConfirmButton(id);
     },
 
     hidePromptUnanswered: function () {
