@@ -3,12 +3,11 @@
     echo "<link media='screen' href='../../css/game-layout.css?v=$v' rel='stylesheet' type='text/css'>\n\r";
 ?>
 
-<meta name="description" content="Пройдите тест на фруктов бесплатно">
+<meta name="description" content="Пройдите тест на знание ягод бесплатно">
 
 <!-- styles -->
 <link media="screen" href="../../css/test-main.css" rel="stylesheet" type="text/css">
 <link media="screen" href="css/test-specific.css" rel="stylesheet" type="text/css">
-
 
 <!-- assigning php data to js variable -->
 <?php include '../../controllers/testDataToJS.php'; ?>
@@ -46,3 +45,4 @@
 <!-- application core (should be positioned after modules) -->
 <script type="text/javascript" src="../../js/main2.js"></script>
 <script type="text/javascript" src="js/main-init.js"></script>
+

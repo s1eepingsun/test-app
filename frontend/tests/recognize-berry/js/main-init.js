@@ -29,12 +29,14 @@ $(function() {
             //multipleChoices: false,
             //resultAnswersStyle: 'wrong-border',
             //navInResult: true,
+            answersView: 'right-side',
             fireworks: true,
             calculateMark1: true,
             testTimer: false,
+            displayTestNumber: false,
             horizontalTaskList: true,
             showWrongs: true,
-            testType: 'recognize-fruit-ege',
+            testType: 'recognize-berry-ege',
             testTypeDir: testTypeDir
 
             //production: false

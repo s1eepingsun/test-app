@@ -6,24 +6,26 @@
     width: 83px;
 }
 #field {
-    /*height: 697px;*/
-    height: 726px;
+    height: 576px !important;
 }
 #field-inside-wrapper {
-    height: 671px;
+    height: 550px;
 }
 #field-inside-wrapper.training-mode {
     height: 723px;
+}
+.start-message {
+    padding-top: 100px;
 }
 .test-tasks.scrolling-result {
     margin-top: -30px;
 }
 .single-test-data {
-    min-height: 568px;
+    min-height: 450px;
     margin-top: 30px;
 }
 .single-test-data p {
-    text-align: center;
+    text-align: left;
 }
 .single-test-data .answers-wrapper {
     position: absolute;
@@ -40,14 +42,10 @@
 }
 .result-field .single-test-data.first-task-style {
     margin-top: 30px;
-    min-height: 568px;
-}
-.result-field .single-test-data.scrolling-result.first-task-style {
-    margin-top: 50px;
     min-height: 0;
 }
 .single-test-data.first-task-style {
-    min-height: 524px;
+    min-height: 420px;
     margin-top: 8px;
 }
 .single-test-data .answer {
@@ -100,24 +98,31 @@
 }
 
 
-
-
 .single-test-data .task-content {
     position: relative;
-}
-.single-test-data .task-content p img + img {
-    float: right;
-    position: absolute;
-    /*margin-top: 300px !important;
-    margin-right: 40px !important;*/
-    right: 10px;
-    bottom: 10px;
 }
 .single-test-data.scrolling-result .task-content p img {
     max-width: 100%;
     height: auto !important;
 }
 
+.single-test-data img {
+    width: 410px !important;
+    height: auto !important;
+}
+
+.single-test-data .task-content p {
+    min-height: 425px;
+}
+.single-test-data.first-task-style .task-content p {
+    min-height: 403px;
+}
+.single-test-data.scrolling-result .task-content p {
+    min-height: 0;
+}
+.training-mode .single-test-data.first-task-style .task-content p {
+    min-height: 425px;
+}
 
 
 .single-test-data.first-task-style .answers-wrapper {
@@ -130,7 +135,10 @@
     top: 454px;
 }
 .training-mode .single-test-data {
-    margin-top: 80px;
+    /*margin-top: 80px;*/
+}
+.training-mode .single-test-data.first-task-style {
+    margin-top: 30px;
 }
 .training-mode .single-test-data .answers-wrapper {
     top: 444px;
@@ -143,4 +151,20 @@
 }
 .training-mode .single-test-data .test-button {
     top: 478px;
+}
+
+/* right-side answers */
+.single-test-data.first-task-style .answers-wrapper.right-side-answers {
+    top: -160px;
+    left: 415px;
+}
+.single-test-data .answers-wrapper.right-side-answers {
+    top: -160px;
+    left: 415px;
+}
+.single-test-data .task-switcher {
+    left: 415px;
+}
+.single-test-data .answers {
+    min-height: 0;
 }

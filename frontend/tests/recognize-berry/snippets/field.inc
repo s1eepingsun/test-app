@@ -6,7 +6,7 @@
                     <tr>
                         <td width="1%" style="white-space: nowrap;">
                                 <span class="titleBandLink" id="title">
-                                    Тест на знание фруктов
+                                    Тест на знание ягод
                                 </span>
                         </td>
 

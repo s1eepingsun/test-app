@@ -42,7 +42,7 @@
 }
 .result-field .single-test-data.first-task-style {
     margin-top: 30px;
-    min-height: 450px;
+    min-height: 0;
 }
 .single-test-data.first-task-style {
     min-height: 420px;
@@ -156,11 +156,14 @@
 /* right-side answers */
 .single-test-data.first-task-style .answers-wrapper.right-side-answers {
     top: -160px;
-    left: 400px;
+    left: 415px;
 }
 .single-test-data .answers-wrapper.right-side-answers {
     top: -160px;
-    left: 400px;
+    left: 415px;
+}
+.single-test-data .task-switcher {
+    left: 415px;
 }
 .single-test-data .answers {
     min-height: 0;

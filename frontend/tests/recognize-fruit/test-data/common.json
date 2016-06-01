@@ -1,8 +1,0 @@
-{
-  "tasks": [],
-  "description": "<h2 style=\"text-align: center;\">Тест на знание видов fruits<\/h2>\r\n\r\n<h4 style=\"text-align: center;\">&nbsp;<\/h4>\r\n",
-  "in_task_description": "<p style=\"text-align: center;\">Вы проходите тест на знание фруктов.<\/p>\r\n\r\n<p style=\"text-align: center;\">Результат вы узнаете сразу после завершения теста.<\/p>\r\n",
-  "start_message": "<h2 style=\"text-align:center\">Тест на знание фруктов<\/h2>\r\n\r\n<p style=\"text-align:center\">&nbsp;<\/p>\r\n\r\n<div class=\"landing-test-start\">\r\n<div>Начать тест<\/div>\r\n<\/div>\r\n\r\n<p style=\"text-align:center\">Тест состоит из 15 заданий<\/p>\r\n\r\n<table align=\"left\" border=\"0\" cellpadding=\"1\" cellspacing=\"1\" class=\"marks-table\">\r\n\t<tbody>\r\n\t\t<tr>\r\n\t\t\t<th>Ошибки<\/th>\r\n\t\t\t<th>Оценка<\/th>\r\n\t\t<\/tr>\r\n\t\t<tr>\r\n\t\t\t<td>0<\/td>\r\n\t\t\t<td>5<\/td>\r\n\t\t<\/tr>\r\n\t\t<tr>\r\n\t\t\t<td>1 - 2<\/td>\r\n\t\t\t<td>4<\/td>\r\n\t\t<\/tr>\r\n\t\t<tr>\r\n\t\t\t<td>3 - 5<\/td>\r\n\t\t\t<td>3<\/td>\r\n\t\t<\/tr>\r\n\t\t<tr>\r\n\t\t\t<td>больше 5<\/td>\r\n\t\t\t<td>2<\/td>\r\n\t\t<\/tr>\r\n\t<\/tbody>\r\n<\/table>\r\n\r\n<p>&nbsp;<\/p>\r\n",
-  "testTimerData": 1800000,
-  "test_title": ""
-}
