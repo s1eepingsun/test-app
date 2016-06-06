@@ -3,9 +3,6 @@ body {
     /*font-family: Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, sans-serif;*/
     font-family: Verdana, Geneva, sans-serif;
     font-size: 14px;
-    /*-moz-transform: scale(1.1);
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);*/
 }
 #app-container {
     margin-top: 0;
@@ -1382,6 +1379,21 @@ body {
     text-align: left !important;
 }
 
+/* test scaling */
+#app-container {
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+iframe #app-container {
+    margin-top: 30px;
+}
+#info-block {
+    min-height: 170px;
+}
+.lg-unwrapped #bottom-block {
+    margin-top: 60px;
+}
 
 /** test list */
 #test-list-wrapper {
