@@ -28,7 +28,7 @@ body {
     border-bottom: 1px solid #aaa;
 }
 #gameArea {
-	background: #e7e7e7;
+	background: none;
     border: none !important;
 }
 #title a {
@@ -1411,7 +1411,7 @@ iframe #app-container {
     padding: 7px;
 }
 #test-list-wrapper .background-mocker {
-    background: #4C4C4C;
+    background: none;
     height: 15px;
     width: 100%;
 }
